@@ -1,0 +1,31 @@
+name: Daily feed fetch
+
+# 11:00 UTC daily, including weekends — threat intel is time-critical.
+# That is morning in America/Sao_Paulo. workflow_dispatch is the dry-run path;
+# CI does not fetch third-party URLs on every pull request.
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Date
+        id: date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+      - name: Fetch cataloged URLs
+        run: bash scripts/fetch.sh output
+      - name: Upload day's artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: threat-intel-${{ steps.date.outputs.date }}
+          path: output/
+          if-no-files-found: error
+          retention-days: 14

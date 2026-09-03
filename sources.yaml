@@ -1,0 +1,153 @@
+# Public catalog of threat-intel RSS/Atom feeds and official JSON catalogs.
+# Package and cite only. No ranking, classes, adapters, or scores live here.
+# URLs below returned HTTP 200 on 2026-09-03.
+
+sources:
+  # --- web2 ---
+  - id: cisa-kev
+    name: CISA KEV catalog JSON
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    format: json
+    surface: web2
+    why: Official KEV catalog; CISA retired the KEV RSS feed in 2025.
+
+  - id: circl-kev
+    name: CIRCL Vulnerability-Lookup CISA KEV Atom
+    url: https://vulnerability.circl.lu/known-exploited-vulnerabilities.atom
+    format: atom
+    surface: web2
+    why: Third-party Atom feed of the same CISA KEV list.
+
+  - id: github-security-blog
+    name: GitHub Security blog RSS
+    url: https://github.blog/security/feed/
+    format: rss
+    surface: web2
+    why: Official GitHub Security blog posts.
+
+  - id: github-advisory-database
+    name: GitHub advisory-database commits Atom
+    url: https://github.com/github/advisory-database/commits/main.atom
+    format: atom
+    surface: web2
+    why: Change signal for the GHSA dump; not a per-advisory RSS.
+
+  - id: msrc-update-guide
+    name: MSRC Security Update Guide RSS
+    url: https://api.msrc.microsoft.com/update-guide/rss
+    format: rss
+    surface: web2
+    why: Microsoft Security Response Center Security Update Guide feed.
+
+  - id: oss-security
+    name: oss-security RSS
+    url: https://seclists.org/rss/oss-sec.rss
+    format: rss
+    surface: web2
+    why: Public oss-security mailing-list archive feed.
+
+  - id: full-disclosure
+    name: Full Disclosure RSS
+    url: https://seclists.org/rss/fulldisclosure.rss
+    format: rss
+    surface: web2
+    why: Public Full Disclosure mailing-list archive feed.
+
+  - id: exploit-db
+    name: Exploit-DB RSS
+    url: https://www.exploit-db.com/rss.xml
+    format: rss
+    surface: web2
+    why: Public Exploit-DB item feed.
+
+  - id: project-zero
+    name: Google Project Zero Atom
+    url: https://googleprojectzero.blogspot.com/feeds/posts/default
+    format: atom
+    surface: web2
+    why: Google Project Zero blog posts.
+
+  - id: trail-of-bits
+    name: Trail of Bits blog RSS
+    url: https://blog.trailofbits.com/feed/
+    format: rss
+    surface: web2
+    why: Trail of Bits security research blog.
+
+  - id: krebs-on-security
+    name: Krebs on Security RSS
+    url: https://krebsonsecurity.com/feed/
+    format: rss
+    surface: web2
+    why: Krebs on Security news posts.
+
+  - id: cloudflare-security
+    name: Cloudflare security RSS
+    url: https://blog.cloudflare.com/tag/security/rss/
+    format: rss
+    surface: web2
+    why: Cloudflare blog posts tagged security.
+
+  - id: nuclei-templates
+    name: Nuclei templates commits Atom
+    url: https://github.com/projectdiscovery/nuclei-templates/commits/main.atom
+    format: atom
+    surface: web2
+    why: Public weaponization index signal from template commits.
+
+  - id: first-epss
+    name: FIRST EPSS JSON
+    url: https://api.first.org/data/v1/epss?limit=100
+    format: json
+    surface: web2
+    why: Official FIRST EPSS catalog slice (no RSS); recent 100 rows only, not the full 367k dump.
+
+  # --- web3 ---
+  - id: immunefi-blog
+    name: Immunefi blog RSS
+    url: https://immunefi.com/blog/rss/
+    format: rss
+    surface: web3
+    why: Official Immunefi blog.
+
+  - id: slowmist-medium
+    name: SlowMist Medium RSS
+    url: https://slowmist.medium.com/feed
+    format: rss
+    surface: web3
+    why: SlowMist public Medium posts.
+
+  - id: peckshield-medium
+    name: PeckShield Medium RSS
+    url: https://peckshield.medium.com/feed
+    format: rss
+    surface: web3
+    why: PeckShield public Medium posts.
+
+  - id: blocksec-medium
+    name: BlockSec Medium RSS
+    url: https://blocksecteam.medium.com/feed
+    format: rss
+    surface: web3
+    why: BlockSec public Medium posts.
+
+  - id: openzeppelin-blog
+    name: OpenZeppelin blog RSS
+    url: https://blog.openzeppelin.com/rss.xml
+    format: rss
+    surface: web3
+    why: Official OpenZeppelin blog.
+
+  - id: defihacklabs
+    name: DeFiHackLabs commits Atom
+    url: https://github.com/SunWeb3Sec/DeFiHackLabs/commits/main.atom
+    format: atom
+    surface: web3
+    why: Public Web3 incident write-up repository commit feed.
+
+  - id: defillama-hacks
+    name: DeFiLlama hacks JSON
+    url: https://api.llama.fi/hacks
+    format: json
+    surface: web3
+    why: Official DeFiLlama incident catalog; not RSS.
