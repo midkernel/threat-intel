@@ -61,18 +61,19 @@ fetch_one() {
   set -e
 
   if [[ $curl_exit -eq 0 ]]; then
-    IFS=$'\t' read -r status ctype bytes <<<"$writeout"
+    IFS=$'\t' read -r status ctype _ <<<"$writeout"
   else
     status=0
     error="$(tr '\n' ' ' <"$err" | head -c 400)"
-    bytes=0
     [[ -f "$body" ]] || : >"$body"
   fi
-  bytes="${bytes:-0}"
-  if [[ -z "$bytes" || "$bytes" == "0" ]]; then
-    if [[ -f "$body" ]]; then
-      bytes="$(wc -c <"$body" | tr -d ' ')"
-    fi
+  # Index the saved body size, not curl's compressed transfer size.
+  bytes=0
+  if [[ -f "$body" ]]; then
+    bytes="$(wc -c <"$body" | tr -d ' ')"
+  fi
+  if [[ ! -s "$err" ]]; then
+    rm -f "$err"
   fi
 
   python3 - "$dir/meta.json" "$id" "$url" "$format" "$status" "$ctype" "$bytes" "$curl_exit" "$error" <<'PY'
