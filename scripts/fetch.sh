@@ -44,6 +44,12 @@ fetch_one() {
   local curl_exit=0
   local error=""
 
+  # FIRST EPSS returns 400 if Accept lists RSS types. JSON catalogs get JSON only.
+  local accept="application/rss+xml, application/atom+xml, application/xml, application/json, text/xml, */*"
+  if [[ "$format" == "json" ]]; then
+    accept="application/json"
+  fi
+
   set +e
   local writeout
   writeout="$(
@@ -51,7 +57,7 @@ fetch_one() {
       --max-time "$TIMEOUT" \
       --connect-timeout 20 \
       -A "$UA" \
-      -H "Accept: application/rss+xml, application/atom+xml, application/xml, application/json, text/xml, */*" \
+      -H "Accept: $accept" \
       -D "$headers" \
       -o "$body" \
       -w '%{http_code}\t%{content_type}\t%{size_download}' \
