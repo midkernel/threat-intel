@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   fetch:
@@ -29,3 +29,49 @@ jobs:
           path: output/
           if-no-files-found: error
           retention-days: 14
+      - name: Pack release assets
+        env:
+          DATE: ${{ steps.date.outputs.date }}
+        run: |
+          set -euo pipefail
+          test -f output/summary.md
+          cp output/summary.md "summary-${DATE}.md"
+          tar czf "threat-intel-${DATE}.tar.gz" output/
+      - name: Write release notes
+        env:
+          DATE: ${{ steps.date.outputs.date }}
+        run: |
+          set -euo pipefail
+          {
+            echo "# Threat-intel fetch — ${DATE} UTC"
+            echo
+            echo "Feeds-only snapshot of cataloged public RSS/Atom/JSON URLs."
+            echo "Raw bodies plus \`summary.md\` in catalog document order."
+            echo "No ranking, classes, adapters, or scores."
+            echo
+            echo "The excerpt below is the first ~80 lines of the day's index."
+            echo "The full index is attached as \`summary-${DATE}.md\`."
+            echo "The same payload as today's Actions artifact is \`threat-intel-${DATE}.tar.gz\`."
+            echo
+            echo "---"
+            echo
+            head -n 80 output/summary.md
+          } > release-notes.md
+      - name: Publish daily Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATE: ${{ steps.date.outputs.date }}
+        run: |
+          set -euo pipefail
+          TAG="daily-${DATE}"
+          TITLE="Threat-intel fetch — ${DATE} UTC"
+          ASSETS=("summary-${DATE}.md" "threat-intel-${DATE}.tar.gz")
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "${ASSETS[@]}" --clobber
+            gh release edit "$TAG" --title "$TITLE" --notes-file release-notes.md --latest
+          else
+            gh release create "$TAG" "${ASSETS[@]}" \
+              --title "$TITLE" \
+              --notes-file release-notes.md \
+              --latest
+          fi
