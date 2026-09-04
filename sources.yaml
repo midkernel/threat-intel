@@ -1,9 +1,9 @@
 # Public catalog of threat-intel RSS/Atom feeds and official JSON catalogs.
 # Package and cite only. No ranking, classes, adapters, or scores live here.
-# URLs below returned HTTP 200 on 2026-09-03.
+# URLs below returned HTTP 200 on 2026-09-04.
 
 sources:
-  # --- web2 ---
+  # --- existing ---
   - id: cisa-kev
     name: CISA KEV catalog JSON
     url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
@@ -102,7 +102,6 @@ sources:
     surface: web2
     why: Official FIRST EPSS catalog slice (no RSS); recent 100 rows only, not the full 367k dump.
 
-  # --- web3 ---
   - id: immunefi-blog
     name: Immunefi blog RSS
     url: https://immunefi.com/blog/rss/
@@ -151,3 +150,376 @@ sources:
     format: json
     surface: web3
     why: Official DeFiLlama incident catalog; not RSS.
+
+  # --- web2 additions ---
+  - id: certcc-vulnerability-notes
+    name: CERT/CC Vulnerability Notes
+    url: https://www.kb.cert.org/vuls/atomfeed/
+    format: atom
+    surface: web2
+    why: Coordinated vulnerability notes with affected-product, impact, mitigation, and vendor context.
+
+  - id: zdi-published-advisories
+    name: Zero Day Initiative Published Advisories
+    url: https://www.zerodayinitiative.com/rss/published/
+    format: rss
+    surface: web2
+    why: Original coordinated vulnerability disclosures with technical and remediation details.
+
+  - id: sans-isc-diary
+    name: SANS Internet Storm Center Handler's Diary
+    url: https://isc.sans.edu/rssfeed_full.xml
+    format: rss
+    surface: web2
+    why: Operational observations on active scanning, exploitation, malware, phishing, and incident patterns.
+
+  - id: dfir-report
+    name: The DFIR Report
+    url: https://thedfirreport.com/feed/
+    format: rss
+    surface: web2
+    why: Evidence-backed intrusion timelines, attacker TTPs, detections, and MITRE ATT&CK mappings.
+
+  - id: google-threat-intelligence
+    name: Google Threat Intelligence
+    url: https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v
+    format: rss
+    surface: web2
+    why: Mandiant and GTIG investigations, threat-actor research, campaign analysis, and mitigation guidance.
+
+  - id: ncsc-threat-reports
+    name: UK NCSC Threat Reports
+    url: https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml
+    format: rss
+    surface: web2
+    why: Vendor-neutral national cyber authority reporting on active threats and major campaigns.
+
+  - id: cisco-psirt-advisories
+    name: Cisco Security Advisories
+    url: https://sec.cloudapps.cisco.com/security/center/psirtrss20/CiscoSecurityAdvisory.xml
+    format: rss
+    surface: web2
+    why: First-party Cisco PSIRT advisories for vulnerabilities requiring customer action.
+
+  - id: debian-security-advisories
+    name: Debian Security Advisories
+    url: https://www.debian.org/security/dsa-long
+    format: rss
+    surface: web2
+    why: First-party Debian security advisories including complete advisory text and fixed package versions.
+
+  - id: ubuntu-security-notices
+    name: Ubuntu Security Notices
+    url: https://ubuntu.com/security/notices/rss.xml
+    format: rss
+    surface: web2
+    why: First-party Ubuntu notices for fixed vulnerabilities across supported releases and packages.
+
+  - id: redhat-security-advisories
+    name: Red Hat Security Advisories
+    url: https://security.access.redhat.com/data/meta/v1/rhsa.rss
+    format: rss
+    surface: web2
+    why: First-party Red Hat Security Advisories released during the feed's recent rolling window.
+
+  - id: gitlab-patch-releases
+    name: GitLab Patch Releases
+    url: https://docs.gitlab.com/releases/patch-releases.xml
+    format: atom
+    surface: web2
+    why: First-party GitLab patch and security releases with affected and fixed versions.
+
+  - id: certfr-threat-reports
+    name: CERT-FR Threat and Incident Reports
+    url: https://www.cert.ssi.gouv.fr/cti/feed/
+    format: rss
+    surface: web2
+    why: ANSSI and CERT-FR analysis of threat actors, campaigns, malware, and incident investigations.
+
+  - id: jpcert-english-alerts
+    name: JPCERT/CC English Alerts
+    url: https://www.jpcert.or.jp/english/rss/jpcert-en.rdf
+    format: rss
+    surface: web2
+    why: English-language security alerts and incident information from Japan's national CSIRT.
+
+  - id: cisa-advisories
+    name: CISA Cybersecurity Advisories RSS
+    url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+    format: rss
+    surface: web2
+    why: Official CISA advisories and alerts feed; KEV RSS is gone but this one still serves.
+
+  - id: cvelistv5-commits
+    name: CVE List V5 commits Atom
+    url: https://github.com/CVEProject/cvelistV5/commits/main.atom
+    format: atom
+    surface: web2
+    why: Change signal for the official CVE record repo; NVD has no RSS.
+
+  - id: metasploit-commits
+    name: Metasploit Framework commits Atom
+    url: https://github.com/rapid7/metasploit-framework/commits/master.atom
+    format: atom
+    surface: web2
+    why: Public weaponization signal from module commits, same idea as nuclei-templates.
+
+  - id: poc-in-github
+    name: PoC-in-GitHub commits Atom
+    url: https://github.com/nomi-sec/PoC-in-GitHub/commits/master.atom
+    format: atom
+    surface: web2
+    why: Auto-collected index of CVE PoCs on GitHub; PoC-availability signal.
+
+  - id: ossf-malicious-packages
+    name: OpenSSF malicious-packages commits Atom
+    url: https://github.com/ossf/malicious-packages/commits/main.atom
+    format: atom
+    surface: web2
+    why: Change signal for the OSSF malicious package reports (npm, PyPI, crates, and more).
+
+  - id: greynoise-blog
+    name: GreyNoise blog RSS
+    url: https://www.greynoise.io/blog/rss.xml
+    format: rss
+    surface: web2
+    why: Mass-exploitation and scanner-traffic analyses per CVE.
+
+  - id: portswigger-research
+    name: PortSwigger Research RSS
+    url: https://portswigger.net/research/rss
+    format: rss
+    surface: web2
+    why: Web application vulnerability-class research (authz, injection, desync).
+
+  - id: watchtowr-labs
+    name: watchTowr Labs RSS
+    url: https://labs.watchtowr.com/rss
+    format: rss
+    surface: web2
+    why: N-day and 0-day exploitation research on edge and enterprise software.
+
+  - id: sonar-research
+    name: Sonar blog RSS
+    url: https://www.sonarsource.com/blog/rss.xml
+    format: rss
+    surface: web2
+    why: Code-level vulnerability research in open-source web apps.
+
+  - id: talos-vuln-reports
+    name: Talos Vulnerability Reports RSS
+    url: https://talosintelligence.com/vulnerability_reports/feed
+    format: rss
+    surface: web2
+    why: Cisco Talos per-vulnerability disclosure reports.
+
+  - id: unit42
+    name: Unit 42 RSS
+    url: https://unit42.paloaltonetworks.com/feed
+    format: rss
+    surface: web2
+    why: Palo Alto Unit 42 threat and exploitation research.
+
+  - id: rapid7-blog
+    name: Rapid7 blog RSS
+    url: https://blog.rapid7.com/rss
+    format: rss
+    surface: web2
+    why: Rapid7 vulnerability analyses and Metasploit wrap-ups.
+
+  - id: checkpoint-research
+    name: Check Point Research RSS
+    url: https://research.checkpoint.com/feed
+    format: rss
+    surface: web2
+    why: Check Point Research vulnerability and malware write-ups.
+
+  - id: qualys-tru
+    name: Qualys Vulnerabilities and Threat Research RSS
+    url: https://blog.qualys.com/vulnerabilities-threat-research/feed
+    format: rss
+    surface: web2
+    why: Qualys TRU disclosures (glibc, OpenSSH, sudo class of bugs).
+
+  - id: vulncheck-blog
+    name: VulnCheck blog Atom
+    url: https://vulncheck.com/feed/blog/atom.xml
+    format: atom
+    surface: web2
+    why: Exploitation-trend and KEV-gap analyses.
+
+  - id: fortinet-psirt
+    name: FortiGuard PSIRT Advisories RSS
+    url: https://filestore.fortinet.com/fortiguard/rss/ir.xml
+    format: rss
+    surface: web2
+    why: Official Fortinet PSIRT advisories.
+
+  - id: paloalto-advisories
+    name: Palo Alto Networks Security Advisories RSS
+    url: https://security.paloaltonetworks.com/rss.xml
+    format: rss
+    surface: web2
+    why: Official Palo Alto Networks security advisories.
+
+  - id: rustsec-advisory-db
+    name: RustSec advisory-db commits Atom
+    url: https://github.com/rustsec/advisory-db/commits/main.atom
+    format: atom
+    surface: web2
+    why: Change signal for Rust crate advisories; upstream of GHSA for crates.
+
+  - id: go-vulndb
+    name: Go vulnerability database commits Atom
+    url: https://github.com/golang/vulndb/commits/master.atom
+    format: atom
+    surface: web2
+    why: Change signal for the official Go vulnerability database.
+
+  - id: pypa-advisory-db
+    name: PyPA advisory-database commits Atom
+    url: https://github.com/pypa/advisory-database/commits/main.atom
+    format: atom
+    surface: web2
+    why: Change signal for the official PyPI advisory database.
+
+  - id: datadog-security-labs
+    name: Datadog Security Labs RSS
+    url: https://securitylabs.datadoghq.com/rss/feed.xml
+    format: rss
+    surface: web2
+    why: Cloud and supply-chain attack research.
+
+  - id: elastic-security-labs
+    name: Elastic Security Labs RSS
+    url: https://www.elastic.co/security-labs/rss/feed.xml
+    format: rss
+    surface: web2
+    why: Malware and intrusion research with detection details.
+
+  - id: wiz-blog
+    name: Wiz blog RSS
+    url: https://www.wiz.io/feed/rss.xml
+    format: rss
+    surface: web2
+    why: Cloud vulnerability research.
+
+  - id: securelist
+    name: Kaspersky Securelist RSS
+    url: https://securelist.com/feed
+    format: rss
+    surface: web2
+    why: Securelist threat research.
+
+  - id: welivesecurity
+    name: ESET WeLiveSecurity RSS
+    url: https://www.welivesecurity.com/en/rss/feed
+    format: rss
+    surface: web2
+    why: ESET threat research.
+
+  - id: microsoft-security-blog
+    name: Microsoft Security blog RSS
+    url: https://www.microsoft.com/en-us/security/blog/feed
+    format: rss
+    surface: web2
+    why: Microsoft Threat Intelligence posts; complements the MSRC update guide.
+
+  - id: bleepingcomputer
+    name: BleepingComputer RSS
+    url: https://www.bleepingcomputer.com/feed
+    format: rss
+    surface: web2
+    why: Fast news on actively exploited bugs and breaches.
+
+  - id: the-record
+    name: The Record RSS
+    url: https://therecord.media/feed
+    format: rss
+    surface: web2
+    why: Recorded Future News; cybercrime and policy coverage.
+
+  # --- web3 additions ---
+  - id: seal-radar
+    name: Security Alliance Radar
+    url: https://radar.securityalliance.org/rss/
+    format: rss
+    surface: web3
+    why: Crypto-native threat intelligence covering incidents, IOCs, drainers, phishing, DPRK, and supply-chain campaigns.
+
+  - id: web3-is-going-great
+    name: Web3 Is Going Just Great
+    url: https://www.web3isgoinggreat.com/feed.xml
+    format: atom
+    surface: web3
+    why: Continuously updated chronology of Web3 hacks, scams, bugs, collapses, and affected technologies.
+
+  - id: zellic-research
+    name: Zellic Research
+    url: https://www.zellic.io/blog/rss.xml
+    format: rss
+    surface: web3
+    why: Technical smart-contract and protocol vulnerability research with exploit and incident analysis.
+
+  - id: halborn-blog
+    name: Halborn Security Blog
+    url: https://www.halborn.com/blog/feed.xml
+    format: rss
+    surface: web3
+    why: Recurring explanations of blockchain hacks, exploit mechanisms, and defensive lessons.
+
+  - id: rekt-news
+    name: Rekt RSS
+    url: https://rekt.news/rss/feed.xml
+    format: rss
+    surface: web3
+    why: Live Rekt feed; research pieces only, not the hack post-mortems.
+
+  - id: solidity-bugs-json
+    name: Solidity known compiler bugs JSON
+    url: https://raw.githubusercontent.com/ethereum/solidity/develop/docs/bugs.json
+    format: json
+    surface: web3
+    why: Official catalog of Solidity compiler bugs (uid, severity, affected versions).
+
+  - id: solidity-bugs-commits
+    name: Solidity bugs.json commits Atom
+    url: https://github.com/ethereum/solidity/commits/develop/docs/bugs.json.atom
+    format: atom
+    surface: web3
+    why: Change signal scoped to the compiler bug catalog file.
+
+  - id: solidity-security-alerts
+    name: Solidity blog Security Alerts RSS
+    url: https://soliditylang.org/security-alerts/feed.xml
+    format: rss
+    surface: web3
+    why: Official Solidity security-alert posts.
+
+  - id: blockthreat
+    name: BlockThreat RSS
+    url: https://blockthreat.com/rss/
+    format: rss
+    surface: web3
+    why: Weekly blockchain security briefing.
+
+  - id: neodyme
+    name: Neodyme blog RSS
+    url: https://neodyme.io/rss.xml
+    format: rss
+    surface: web3
+    why: Solana and cross-chain security research; non-EVM coverage.
+
+  - id: chainalysis-blog
+    name: Chainalysis blog RSS
+    url: https://blog.chainalysis.com/feed
+    format: rss
+    surface: web3
+    why: Hack and crypto-crime reporting with fund-flow analysis.
+
+  - id: ackee-blockchain
+    name: Ackee Blockchain blog RSS
+    url: https://ackee.xyz/blog/feed
+    format: rss
+    surface: web3
+    why: Audit firm research posts (Solana, EVM).

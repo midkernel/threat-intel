@@ -42,14 +42,66 @@ ATOM = b"""<?xml version="1.0"?>
 </feed>
 """
 
+RDF = b"""<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel rdf:about="https://example.invalid/dsa.rdf">
+    <title>Example RDF</title>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="https://example.invalid/1"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="https://example.invalid/1">
+    <title>RDF advisory</title>
+    <link>https://example.invalid/1</link>
+    <dc:date>2026-09-04T11:00:00Z</dc:date>
+  </item>
+</rdf:RDF>
+"""
+
 
 class CatalogTests(unittest.TestCase):
     def test_sources_yaml_validates(self) -> None:
         sources = load_sources(ROOT / "sources.yaml")
-        self.assertGreaterEqual(len(sources), 1)
+        self.assertEqual(len(sources), 74)
         self.assertEqual(validate_sources(sources), [])
+        ids = [src["id"] for src in sources]
+        self.assertEqual(ids[:21], [
+            "cisa-kev",
+            "circl-kev",
+            "github-security-blog",
+            "github-advisory-database",
+            "msrc-update-guide",
+            "oss-security",
+            "full-disclosure",
+            "exploit-db",
+            "project-zero",
+            "trail-of-bits",
+            "krebs-on-security",
+            "cloudflare-security",
+            "nuclei-templates",
+            "first-epss",
+            "immunefi-blog",
+            "slowmist-medium",
+            "peckshield-medium",
+            "blocksec-medium",
+            "openzeppelin-blog",
+            "defihacklabs",
+            "defillama-hacks",
+        ])
+        by_id = {src["id"]: src for src in sources}
+        self.assertEqual(by_id["rekt-news"]["url"], "https://rekt.news/rss/feed.xml")
+        self.assertEqual(
+            by_id["certcc-vulnerability-notes"]["url"],
+            "https://www.kb.cert.org/vuls/atomfeed/",
+        )
+        self.assertFalse(any("vulfeed" in src["url"] for src in sources))
         for src in sources:
             self.assertTrue(src["url"].startswith("https://"))
+            self.assertNotIn("[curl]", src["why"])
 
     def test_rejects_http_url(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -81,6 +133,13 @@ class IndexTests(unittest.TestCase):
         self.assertEqual(kind, "atom")
         self.assertEqual(items[0]["title"], "Commit signal")
         self.assertEqual(items[0]["link"], "https://example.invalid/c")
+
+    def test_rdf_rss10_items(self) -> None:
+        kind, items = feed_items(RDF)
+        self.assertEqual(kind, "rss")
+        self.assertEqual(items[0]["title"], "RDF advisory")
+        self.assertEqual(items[0]["link"], "https://example.invalid/1")
+        self.assertIn("2026-09-04", items[0]["pubDate"])
 
     def test_kev_json_preview_uses_cve_and_date(self) -> None:
         data = {
@@ -124,6 +183,27 @@ class IndexTests(unittest.TestCase):
         count, lines = json_preview(data)
         self.assertEqual(count, 2)
         self.assertTrue(lines[0].startswith("NewHack"))
+
+    def test_solidity_bugs_json_uses_uid_severity_name(self) -> None:
+        data = [
+            {
+                "uid": "SOL-2026-3",
+                "name": "NewBug",
+                "severity": "very low",
+                "introduced": "0.8.0",
+            },
+            {
+                "uid": "SOL-2016-1",
+                "name": "OldBug",
+                "severity": "low",
+            },
+        ]
+        count, lines = json_preview(data)
+        self.assertEqual(count, 2)
+        self.assertTrue(lines[0].startswith("SOL-2026-3"))
+        self.assertIn("very low", lines[0])
+        self.assertIn("NewBug", lines[0])
+        self.assertNotIn("None", "\n".join(lines))
 
 
 if __name__ == "__main__":

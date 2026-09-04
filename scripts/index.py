@@ -131,6 +131,18 @@ def json_preview(data: object) -> tuple[int, list[str]]:
         return count, lines
 
     if isinstance(data, list):
+        if data and isinstance(data[0], dict) and data[0].get("uid"):
+            lines = []
+            for row in data[:JSON_CAP]:
+                if not isinstance(row, dict):
+                    continue
+                uid = str(row.get("uid") or "").strip()
+                sev = str(row.get("severity") or "").strip()
+                name = str(row.get("name") or "").strip()
+                bit = "  ".join(part for part in (uid, sev, name) if part)
+                if bit:
+                    lines.append(bit)
+            return len(data), lines
         dated = []
         for row in data:
             if not isinstance(row, dict):
