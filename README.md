@@ -4,15 +4,15 @@ Public catalog of threat-intel **RSS/Atom** feeds and a few official **JSON** ca
 
 We **package and cite**. We do not originate. We do not rank here.
 
-The public git product is this catalog plus a GitHub Action that fetches the listed URLs once a day and uploads a snapshot as an Actions artifact (raw bodies + a day's index). Aggregation, ranking, and class mapping live elsewhere (private).
+The public git product is this catalog plus a GitHub Action that fetches the listed URLs once a day and publishes a snapshot as a GitHub Release (raw bodies + a day's index). Aggregation, ranking, and class mapping live elsewhere (private).
 
 ## What this repo is
 
 - `sources.yaml` — the catalog (name, url, format, surface, one-line why)
-- `.github/workflows/daily.yml` — daily fetch + artifact upload
+- `.github/workflows/daily.yml` — daily fetch, artifact upload, and a soft Release
 - A tiny fetch/index script (bash `curl` + Python stdlib XML/JSON). No ranking library, no ML, no class mapping
 
-Daily dumps are **not** committed to git. They can be large. Download the `threat-intel-YYYY-MM-DD` artifact from the Action run.
+Daily dumps are **not** committed to git. They can be large. Download `daily-YYYY-MM-DD` from [Releases](https://github.com/midkernel/threat-intel/releases). Actions artifacts remain a 14-day debug cache.
 
 ## What this repo is not
 
@@ -139,7 +139,9 @@ These are documented so nobody “fixes” the catalog with a dead or wrong URL:
 - User-Agent: `MidkernelThreatIntel/0.1 (+https://github.com/midkernel/threat-intel)`
 - Each listed URL is fetched with `curl` (timeout, follow redirects). Raw bodies land under `output/<id>/`. JSON sources send `Accept: application/json` only — FIRST EPSS returns 400 if Accept lists RSS types.
 - `summary.md` lists, for each source: name, url, HTTP status, content-type, byte size. For RSS/Atom it copies item titles, links, and pubDates from the feed (document order, not ranked). For JSON catalogs it copies a count and the newest few ids/names the JSON already contains (KEV `cveID`, DeFiLlama hacks `name`/`date`, Solidity bugs `uid`). This is an index, not intelligence.
-- The job uploads **one** artifact named `threat-intel-YYYY-MM-DD` containing the raw files and `summary.md`.
+- After the fetch, the job publishes a soft GitHub Release tagged `daily-YYYY-MM-DD` (title `Threat-intel fetch — YYYY-MM-DD UTC`) with the same payload as today's artifact: `summary-YYYY-MM-DD.md` (the day's index) and `threat-intel-YYYY-MM-DD.tar.gz` (`output/` — raw bodies + `summary.md` in document order). That is the durable public download path — browse [Releases](https://github.com/midkernel/threat-intel/releases) without an Actions login.
+- The same `output/` tree is also uploaded as an Actions artifact named `threat-intel-YYYY-MM-DD` (14-day debug cache).
+- Dumps stay out of git. Do not commit `output/`.
 - **Failure policy:** a single source 5xx is a warning. The job fails only if a **majority** of sources fail. One dead blog must not kill the daily run.
 
 ```bash
