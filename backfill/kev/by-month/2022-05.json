@@ -1,0 +1,748 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-05",
+  "days": [
+    {
+      "day": "2022-05-01",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-05-02",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-05-03",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-05-04",
+      "added": [
+        {
+          "cveId": "CVE-2014-0160",
+          "vendorProject": "OpenSSL",
+          "product": "OpenSSL",
+          "vulnerabilityName": "OpenSSL Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-0322",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-4113",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-8506",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-1789",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-05",
+      "added": [],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-06",
+      "added": [],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-07",
+      "added": [],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-08",
+      "added": [],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-09",
+      "added": [],
+      "cumulative_count": 659
+    },
+    {
+      "day": "2022-05-10",
+      "added": [
+        {
+          "cveId": "CVE-2022-1388",
+          "vendorProject": "F5",
+          "product": "BIG-IP",
+          "vulnerabilityName": "F5 BIG-IP Missing Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-11",
+      "added": [],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-12",
+      "added": [],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-13",
+      "added": [],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-14",
+      "added": [],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-15",
+      "added": [],
+      "cumulative_count": 660
+    },
+    {
+      "day": "2022-05-16",
+      "added": [
+        {
+          "cveId": "CVE-2022-22947",
+          "vendorProject": "VMware",
+          "product": "Spring Cloud Gateway",
+          "vulnerabilityName": "VMware Spring Cloud Gateway Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-30525",
+          "vendorProject": "Zyxel",
+          "product": "Multiple Firewalls",
+          "vulnerabilityName": "Zyxel Multiple Firewalls OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-17",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-18",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-19",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-20",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-21",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-22",
+      "added": [],
+      "cumulative_count": 662
+    },
+    {
+      "day": "2022-05-23",
+      "added": [
+        {
+          "cveId": "CVE-2018-5002",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Stack-based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-8589",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-0676",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-0703",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SMB Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-0880",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-1130",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows AppX Deployment Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-11707",
+          "vendorProject": "Mozilla",
+          "product": "Firefox and Thunderbird",
+          "vulnerabilityName": "Mozilla Firefox and Thunderbird Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-11708",
+          "vendorProject": "Mozilla",
+          "product": "Firefox and Thunderbird",
+          "vulnerabilityName": "Mozilla Firefox and Thunderbird Sandbox Escape Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-13720",
+          "vendorProject": "Google",
+          "product": "Chrome WebAudio",
+          "vulnerabilityName": "Google Chrome WebAudio Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-1385",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows AppX Deployment Extensions Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-18426",
+          "vendorProject": "Meta Platforms",
+          "product": "WhatsApp",
+          "vulnerabilityName": "WhatsApp Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-5786",
+          "vendorProject": "Google",
+          "product": "Chrome Blink",
+          "vulnerabilityName": "Google Chrome Blink Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-7286",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-7287",
+          "vendorProject": "Apple",
+          "product": "iOS",
+          "vulnerabilityName": "Apple iOS Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-8720",
+          "vendorProject": "WebKitGTK",
+          "product": "WebKitGTK",
+          "vulnerabilityName": "WebKitGTK Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-0638",
+          "vendorProject": "Microsoft",
+          "product": "Update Notification Manager",
+          "vulnerabilityName": "Microsoft Update Notification Manager Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2020-1027",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-0920",
+          "vendorProject": "Android",
+          "product": "Kernel",
+          "vulnerabilityName": "Android Kernel Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-1048",
+          "vendorProject": "Android",
+          "product": "Kernel",
+          "vulnerabilityName": "Android Kernel Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-30883",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-20821",
+          "vendorProject": "Cisco",
+          "product": "IOS XR",
+          "vulnerabilityName": "Cisco IOS XR Open Port Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 683
+    },
+    {
+      "day": "2022-05-24",
+      "added": [
+        {
+          "cveId": "CVE-2016-0162",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-3298",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Messaging API Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-3351",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer and Edge",
+          "vulnerabilityName": "Microsoft Internet Explorer and Edge Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2016-4655",
+          "vendorProject": "Apple",
+          "product": "iOS",
+          "vulnerabilityName": "Apple iOS Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-4656",
+          "vendorProject": "Apple",
+          "product": "iOS",
+          "vulnerabilityName": "Apple iOS Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-4657",
+          "vendorProject": "Apple",
+          "product": "iOS",
+          "vulnerabilityName": "Apple iOS Webkit Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-6366",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA)",
+          "vulnerabilityName": "Cisco Adaptive Security Appliance (ASA) SNMP Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-6367",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA)",
+          "vulnerabilityName": "Cisco Adaptive Security Appliance (ASA) CLI Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0005",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Graphics Device Interface (GDI) Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0022",
+          "vendorProject": "Microsoft",
+          "product": "XML Core Services",
+          "vulnerabilityName": "Microsoft XML Core Services Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0147",
+          "vendorProject": "Microsoft",
+          "product": "SMBv1 server",
+          "vulnerabilityName": "Microsoft Windows SMBv1 Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-0149",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0210",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-18362",
+          "vendorProject": "Kaseya",
+          "product": "Virtual System/Server Administrator (VSA)",
+          "vulnerabilityName": "Kaseya VSA SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-8291",
+          "vendorProject": "Artifex",
+          "product": "Ghostscript",
+          "vulnerabilityName": "Artifex Ghostscript Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-8543",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Search Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-19943",
+          "vendorProject": "QNAP",
+          "product": "Network Attached Storage (NAS)",
+          "vulnerabilityName": "QNAP NAS File Station Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-19949",
+          "vendorProject": "QNAP",
+          "product": "Network Attached Storage (NAS)",
+          "vulnerabilityName": "QNAP NAS File Station Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-19953",
+          "vendorProject": "QNAP",
+          "product": "Network Attached Storage (NAS)",
+          "vulnerabilityName": "QNAP NAS File Station Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-8611",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 703
+    },
+    {
+      "day": "2022-05-25",
+      "added": [
+        {
+          "cveId": "CVE-2010-0738",
+          "vendorProject": "Red Hat",
+          "product": "JBoss",
+          "vulnerabilityName": "Red Hat JBoss Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2010-0840",
+          "vendorProject": "Oracle",
+          "product": "Java Runtime Environment (JRE)",
+          "vulnerabilityName": "Oracle JRE Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-1428",
+          "vendorProject": "Red Hat",
+          "product": "JBoss",
+          "vulnerabilityName": "Red Hat JBoss Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2012-1710",
+          "vendorProject": "Oracle",
+          "product": "Fusion Middleware",
+          "vulnerabilityName": "Oracle Fusion Middleware Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2013-0074",
+          "vendorProject": "Microsoft",
+          "product": "Silverlight",
+          "vulnerabilityName": "Microsoft Silverlight Double Dereference Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2013-0422",
+          "vendorProject": "Oracle",
+          "product": "Java Runtime Environment (JRE)",
+          "vulnerabilityName": "Oracle JRE Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2013-0431",
+          "vendorProject": "Oracle",
+          "product": "Java Runtime Environment (JRE)",
+          "vulnerabilityName": "Oracle JRE Sandbox Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2013-2423",
+          "vendorProject": "Oracle",
+          "product": "Java Runtime Environment (JRE)",
+          "vulnerabilityName": "Oracle JRE Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-3896",
+          "vendorProject": "Microsoft",
+          "product": "Silverlight",
+          "vulnerabilityName": "Microsoft Silverlight Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-3993",
+          "vendorProject": "IBM",
+          "product": "InfoSphere BigInsights",
+          "vulnerabilityName": "IBM InfoSphere BigInsights Invalid Input Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2013-7331",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-0546",
+          "vendorProject": "Adobe",
+          "product": "Reader and Acrobat",
+          "vulnerabilityName": "Adobe Reader and Acrobat Sandbox Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-2817",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-3153",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-4077",
+          "vendorProject": "Microsoft",
+          "product": "Input Method Editor (IME) Japanese",
+          "vulnerabilityName": "Microsoft IME Japanese Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-4123",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-4148",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-8439",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Dereferenced Pointer Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-0016",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows TS WebProxy Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-0071",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer ASLR Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-0310",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player ASLR Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-1671",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-1769",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Mount Manager Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-2360",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-2425",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-4495",
+          "vendorProject": "Mozilla",
+          "product": "Firefox",
+          "vulnerabilityName": "Mozilla Firefox Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-6175",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-8651",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-0034",
+          "vendorProject": "Microsoft",
+          "product": "Silverlight",
+          "vulnerabilityName": "Microsoft Silverlight Runtime Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2016-0984",
+          "vendorProject": "Adobe",
+          "product": "Flash Player and AIR",
+          "vulnerabilityName": "Adobe Flash Player and AIR Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-1010",
+          "vendorProject": "Adobe",
+          "product": "Flash Player and AIR",
+          "vulnerabilityName": "Adobe Flash Player and AIR Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-3393",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Graphics Device Interface (GDI) Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-7256",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Open Type Font Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-3010",
+          "vendorProject": "Oracle",
+          "product": "Solaris",
+          "vulnerabilityName": "Oracle Solaris Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-26",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-27",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-28",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-29",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-30",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-05-31",
+      "added": [],
+      "cumulative_count": 737
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-02",
+  "days": [
+    {
+      "day": "2024-02-01",
+      "added": [],
+      "cumulative_count": 1074
+    },
+    {
+      "day": "2024-02-02",
+      "added": [],
+      "cumulative_count": 1074
+    },
+    {
+      "day": "2024-02-03",
+      "added": [],
+      "cumulative_count": 1074
+    },
+    {
+      "day": "2024-02-04",
+      "added": [],
+      "cumulative_count": 1074
+    },
+    {
+      "day": "2024-02-05",
+      "added": [],
+      "cumulative_count": 1074
+    },
+    {
+      "day": "2024-02-06",
+      "added": [
+        {
+          "cveId": "CVE-2023-4762",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1075
+    },
+    {
+      "day": "2024-02-07",
+      "added": [],
+      "cumulative_count": 1075
+    },
+    {
+      "day": "2024-02-08",
+      "added": [],
+      "cumulative_count": 1075
+    },
+    {
+      "day": "2024-02-09",
+      "added": [
+        {
+          "cveId": "CVE-2024-21762",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS",
+          "vulnerabilityName": "Fortinet FortiOS Out-of-Bound Write Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1076
+    },
+    {
+      "day": "2024-02-10",
+      "added": [],
+      "cumulative_count": 1076
+    },
+    {
+      "day": "2024-02-11",
+      "added": [],
+      "cumulative_count": 1076
+    },
+    {
+      "day": "2024-02-12",
+      "added": [
+        {
+          "cveId": "CVE-2023-43770",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "Roundcube Webmail Persistent Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1077
+    },
+    {
+      "day": "2024-02-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-21351",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-21412",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Internet Shortcut Files Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1079
+    },
+    {
+      "day": "2024-02-14",
+      "added": [],
+      "cumulative_count": 1079
+    },
+    {
+      "day": "2024-02-15",
+      "added": [
+        {
+          "cveId": "CVE-2020-3259",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+          "vulnerabilityName": "Cisco ASA and FTD Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-21410",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-16",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-17",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-18",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-19",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-20",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-21",
+      "added": [],
+      "cumulative_count": 1081
+    },
+    {
+      "day": "2024-02-22",
+      "added": [
+        {
+          "cveId": "CVE-2024-1709",
+          "vendorProject": "ConnectWise",
+          "product": "ScreenConnect",
+          "vulnerabilityName": "ConnectWise ScreenConnect Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-23",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-24",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-25",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-26",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-27",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-28",
+      "added": [],
+      "cumulative_count": 1082
+    },
+    {
+      "day": "2024-02-29",
+      "added": [
+        {
+          "cveId": "CVE-2023-29360",
+          "vendorProject": "Microsoft",
+          "product": "Streaming Service",
+          "vulnerabilityName": "Microsoft Streaming Service Untrusted Pointer Dereference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1083
+    }
+  ]
+}

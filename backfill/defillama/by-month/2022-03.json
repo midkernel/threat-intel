@@ -1,0 +1,297 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-03",
+  "days": [
+    {
+      "day": "2022-03-03",
+      "incidents": [
+        {
+          "name": "Treasure",
+          "date": "2022-03-03",
+          "amount": 1400000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "1350",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-05",
+      "incidents": [
+        {
+          "name": "Bacon Protocol",
+          "date": "2022-03-05",
+          "amount": 1000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-09",
+      "incidents": [
+        {
+          "name": "Fantasm Finance",
+          "date": "2022-03-09",
+          "amount": 2622097,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Pirate X",
+          "date": "2022-03-09",
+          "amount": 78000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-13",
+      "incidents": [
+        {
+          "name": "Paraluni Masterchef",
+          "date": "2022-03-13",
+          "amount": 1700000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "1520",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-15",
+      "incidents": [
+        {
+          "name": "Agave",
+          "date": "2022-03-15",
+          "amount": 5500000,
+          "chain": [
+            "Gnosis Chain"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "696",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "DEUS Finance",
+          "date": "2022-03-15",
+          "amount": 3000000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1387",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Hundred Finance",
+          "date": "2022-03-15",
+          "amount": 6200000,
+          "chain": [
+            "Gnosis Chain"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "607",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-17",
+      "incidents": [
+        {
+          "name": "ApeCoin",
+          "date": "2022-03-17",
+          "amount": 820000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Flashloan Governance Attack",
+          "defillamaId": "2665",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-20",
+      "incidents": [
+        {
+          "name": "Umbrella Network",
+          "date": "2022-03-20",
+          "amount": 700000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-21",
+      "incidents": [
+        {
+          "name": "LI.FI",
+          "date": "2022-03-21",
+          "amount": 600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "One Ring Finance",
+          "date": "2022-03-21",
+          "amount": 1400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-23",
+      "incidents": [
+        {
+          "name": "Cashio",
+          "date": "2022-03-23",
+          "amount": 52800000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "793",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Ronin Bridge",
+          "date": "2022-03-23",
+          "amount": 624000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "defillamaId": "4440",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-26",
+      "incidents": [
+        {
+          "name": "Auctus",
+          "date": "2022-03-26",
+          "amount": 726000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "216",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-27",
+      "incidents": [
+        {
+          "name": "Revest Finance",
+          "date": "2022-03-27",
+          "amount": 2010000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "830",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-28",
+      "incidents": [
+        {
+          "name": "Cryptovoxels",
+          "date": "2022-03-28",
+          "amount": 171000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-30",
+      "incidents": [
+        {
+          "name": "BasketDAO",
+          "date": "2022-03-30",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "250",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-03-31",
+      "incidents": [
+        {
+          "name": "Ola Finance",
+          "date": "2022-03-31",
+          "amount": 4670000,
+          "chain": [
+            "Fuse"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

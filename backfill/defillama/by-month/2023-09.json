@@ -1,0 +1,233 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-09",
+  "days": [
+    {
+      "day": "2023-09-01",
+      "incidents": [
+        {
+          "name": "SharedStake",
+          "date": "2023-09-01",
+          "amount": 175000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Ownership Takeover",
+          "defillamaId": "275",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-02",
+      "incidents": [
+        {
+          "name": "DAppSocial",
+          "date": "2023-09-02",
+          "amount": 16000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-04",
+      "incidents": [
+        {
+          "name": "Stake.com",
+          "date": "2023-09-04",
+          "amount": 41300000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-05",
+      "incidents": [
+        {
+          "name": "Floor Dao",
+          "date": "2023-09-05",
+          "amount": 64200,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "1505",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-06",
+      "incidents": [
+        {
+          "name": "GMBL.COMPUTER",
+          "date": "2023-09-06",
+          "amount": 770000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-07",
+      "incidents": [
+        {
+          "name": "Fortress Trust",
+          "date": "2023-09-07",
+          "amount": 12000000,
+          "chain": [
+            "Ethereum",
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-11",
+      "incidents": [
+        {
+          "name": "Milady Maker",
+          "date": "2023-09-11",
+          "amount": 1000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-12",
+      "incidents": [
+        {
+          "name": "CoinEx",
+          "date": "2023-09-12",
+          "amount": 55000000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Bitcoin",
+            "Tron",
+            "Kadena",
+            "Solana",
+            "Dagger",
+            "XRP",
+            "BitcoinCash",
+            "Polygon",
+            "Stellar",
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-15",
+      "incidents": [
+        {
+          "name": "Remitano",
+          "date": "2023-09-15",
+          "amount": 2700000,
+          "chain": [
+            "Ethereum",
+            "Tron",
+            "BitcoinCash"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-16",
+      "incidents": [
+        {
+          "name": "uniclyNFT",
+          "date": "2023-09-16",
+          "amount": 2000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-19",
+      "incidents": [
+        {
+          "name": "Balancer V2",
+          "date": "2023-09-19",
+          "amount": 238000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "defillamaId": "2611",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-23",
+      "incidents": [
+        {
+          "name": "Mixin Network",
+          "date": "2023-09-23",
+          "amount": 200000000,
+          "chain": [
+            "Mixin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Database Breach",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-09-25",
+      "incidents": [
+        {
+          "name": "HTX",
+          "date": "2023-09-25",
+          "amount": 8000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

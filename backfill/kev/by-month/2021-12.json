@@ -1,0 +1,304 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2021-12",
+  "days": [
+    {
+      "day": "2021-12-01",
+      "added": [
+        {
+          "cveId": "CVE-2018-14847",
+          "vendorProject": "MikroTik",
+          "product": "RouterOS",
+          "vulnerabilityName": "MikroTik Router OS Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-11261",
+          "vendorProject": "Qualcomm",
+          "product": "Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-37415",
+          "vendorProject": "Zoho",
+          "product": "ManageEngine ServiceDesk Plus (SDP)",
+          "vulnerabilityName": "Zoho ManageEngine ServiceDesk Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-40438",
+          "vendorProject": "Apache",
+          "product": "Apache",
+          "vulnerabilityName": "Apache HTTP Server-Side Request Forgery (SSRF)",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-44077",
+          "vendorProject": "Zoho",
+          "product": "ManageEngine ServiceDesk Plus (SDP) / SupportCenter Plus",
+          "vulnerabilityName": "Zoho ManageEngine ServiceDesk Plus Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-02",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-03",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-04",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-05",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-06",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-07",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-08",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-09",
+      "added": [],
+      "cumulative_count": 296
+    },
+    {
+      "day": "2021-12-10",
+      "added": [
+        {
+          "cveId": "CVE-2010-1871",
+          "vendorProject": "Red Hat",
+          "product": "JBoss Seam 2",
+          "vulnerabilityName": "Red Hat Linux JBoss Seam 2 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-12149",
+          "vendorProject": "Red Hat",
+          "product": "JBoss Application Server",
+          "vulnerabilityName": "Red Hat JBoss Application Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-17562",
+          "vendorProject": "Embedthis",
+          "product": "GoAhead",
+          "vulnerabilityName": "Embedthis GoAhead Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-0193",
+          "vendorProject": "Apache",
+          "product": "Solr",
+          "vulnerabilityName": "Apache Solr DataImportHandler Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-10758",
+          "vendorProject": "MongoDB",
+          "product": "mongo-express",
+          "vulnerabilityName": "MongoDB mongo-express Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-13272",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-7238",
+          "vendorProject": "Sonatype",
+          "product": "Nexus Repository Manager",
+          "vulnerabilityName": "Sonatype Nexus Repository Manager Incorrect Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-17463",
+          "vendorProject": "Fuel CMS",
+          "product": "Fuel CMS",
+          "vulnerabilityName": "Fuel CMS SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-8816",
+          "vendorProject": "Pi-hole",
+          "product": "AdminLTE",
+          "vulnerabilityName": "Pi-Hole AdminLTE Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-35394",
+          "vendorProject": "Realtek",
+          "product": "Jungle Software Development Kit (SDK)",
+          "vulnerabilityName": "Realtek Jungle SDK Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-44168",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS",
+          "vulnerabilityName": "Fortinet FortiOS Arbitrary File Download",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-44228",
+          "vendorProject": "Apache",
+          "product": "Log4j2",
+          "vulnerabilityName": "Apache Log4j2 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-44515",
+          "vendorProject": "Zoho",
+          "product": "Desktop Central",
+          "vulnerabilityName": "Zoho Desktop Central Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 309
+    },
+    {
+      "day": "2021-12-11",
+      "added": [],
+      "cumulative_count": 309
+    },
+    {
+      "day": "2021-12-12",
+      "added": [],
+      "cumulative_count": 309
+    },
+    {
+      "day": "2021-12-13",
+      "added": [],
+      "cumulative_count": 309
+    },
+    {
+      "day": "2021-12-14",
+      "added": [],
+      "cumulative_count": 309
+    },
+    {
+      "day": "2021-12-15",
+      "added": [
+        {
+          "cveId": "CVE-2021-4102",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-43890",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows AppX Installer Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-16",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-17",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-18",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-19",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-20",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-21",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-22",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-23",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-24",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-25",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-26",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-27",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-28",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-29",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-30",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2021-12-31",
+      "added": [],
+      "cumulative_count": 311
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-11",
+  "days": [
+    {
+      "day": "2025-11-01",
+      "added": [],
+      "cumulative_count": 1453
+    },
+    {
+      "day": "2025-11-02",
+      "added": [],
+      "cumulative_count": 1453
+    },
+    {
+      "day": "2025-11-03",
+      "added": [],
+      "cumulative_count": 1453
+    },
+    {
+      "day": "2025-11-04",
+      "added": [
+        {
+          "cveId": "CVE-2025-11371",
+          "vendorProject": "Gladinet",
+          "product": "CentreStack and Triofox",
+          "vulnerabilityName": "Gladinet CentreStack and Triofox Files or Directories Accessible to External Parties Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48703",
+          "vendorProject": "CWP",
+          "product": "Control Web Panel",
+          "vulnerabilityName": "CWP Control Web Panel OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-05",
+      "added": [],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-06",
+      "added": [],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-07",
+      "added": [],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-08",
+      "added": [],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-09",
+      "added": [],
+      "cumulative_count": 1455
+    },
+    {
+      "day": "2025-11-10",
+      "added": [
+        {
+          "cveId": "CVE-2025-21042",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1456
+    },
+    {
+      "day": "2025-11-11",
+      "added": [],
+      "cumulative_count": 1456
+    },
+    {
+      "day": "2025-11-12",
+      "added": [
+        {
+          "cveId": "CVE-2025-12480",
+          "vendorProject": "Gladinet",
+          "product": "Triofox",
+          "vulnerabilityName": "Gladinet Triofox Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-62215",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-9242",
+          "vendorProject": "WatchGuard",
+          "product": "Firebox",
+          "vulnerabilityName": "WatchGuard Firebox Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1459
+    },
+    {
+      "day": "2025-11-13",
+      "added": [],
+      "cumulative_count": 1459
+    },
+    {
+      "day": "2025-11-14",
+      "added": [
+        {
+          "cveId": "CVE-2025-64446",
+          "vendorProject": "Fortinet",
+          "product": "FortiWeb",
+          "vulnerabilityName": "Fortinet FortiWeb Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1460
+    },
+    {
+      "day": "2025-11-15",
+      "added": [],
+      "cumulative_count": 1460
+    },
+    {
+      "day": "2025-11-16",
+      "added": [],
+      "cumulative_count": 1460
+    },
+    {
+      "day": "2025-11-17",
+      "added": [],
+      "cumulative_count": 1460
+    },
+    {
+      "day": "2025-11-18",
+      "added": [
+        {
+          "cveId": "CVE-2025-58034",
+          "vendorProject": "Fortinet",
+          "product": "FortiWeb",
+          "vulnerabilityName": "Fortinet FortiWeb OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1461
+    },
+    {
+      "day": "2025-11-19",
+      "added": [
+        {
+          "cveId": "CVE-2025-13223",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1462
+    },
+    {
+      "day": "2025-11-20",
+      "added": [],
+      "cumulative_count": 1462
+    },
+    {
+      "day": "2025-11-21",
+      "added": [
+        {
+          "cveId": "CVE-2025-61757",
+          "vendorProject": "Oracle",
+          "product": "Fusion Middleware",
+          "vulnerabilityName": "Oracle Fusion Middleware Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-22",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-23",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-24",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-25",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-26",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-27",
+      "added": [],
+      "cumulative_count": 1463
+    },
+    {
+      "day": "2025-11-28",
+      "added": [
+        {
+          "cveId": "CVE-2021-26829",
+          "vendorProject": "OpenPLC",
+          "product": "ScadaBR",
+          "vulnerabilityName": "OpenPLC ScadaBR Cross-site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1464
+    },
+    {
+      "day": "2025-11-29",
+      "added": [],
+      "cumulative_count": 1464
+    },
+    {
+      "day": "2025-11-30",
+      "added": [],
+      "cumulative_count": 1464
+    }
+  ]
+}

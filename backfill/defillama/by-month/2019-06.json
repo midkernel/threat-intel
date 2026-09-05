@@ -1,0 +1,72 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-06",
+  "days": [
+    {
+      "day": "2019-06-02",
+      "incidents": [
+        {
+          "name": "Kraken",
+          "date": "2019-06-02",
+          "amount": 10450000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-06-06",
+      "incidents": [
+        {
+          "name": "GateHub",
+          "date": "2019-06-06",
+          "amount": 9500000,
+          "chain": [
+            "Ripple"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-06-25",
+      "incidents": [
+        {
+          "name": "Synthetix v1+v2",
+          "date": "2019-06-25",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "115",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2019-06-27",
+      "incidents": [
+        {
+          "name": "Bitrue",
+          "date": "2019-06-27",
+          "amount": 4700000,
+          "chain": [
+            "Ripple",
+            "Cardano"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "5731",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

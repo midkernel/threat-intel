@@ -1,0 +1,38 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2015-02",
+  "days": [
+    {
+      "day": "2015-02-17",
+      "incidents": [
+        {
+          "name": "BTER",
+          "date": "2015-02-17",
+          "amount": 1750000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2015-02-18",
+      "incidents": [
+        {
+          "name": "KipCoin",
+          "date": "2015-02-18",
+          "amount": 728000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

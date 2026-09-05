@@ -1,0 +1,417 @@
+#!/usr/bin/env python3
+"""Offline backfill tests. Fixture catalogs only — no live URLs."""
+
+from __future__ import annotations
+
+import datetime
+import io
+import json
+import sys
+import tempfile
+import unittest
+from contextlib import redirect_stderr, redirect_stdout
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent.parent
+sys.path.insert(0, str(HERE))
+
+from common import (  # noqa: E402
+    LAST_DAY,
+    SCHEMA_DEFILLAMA,
+    SCHEMA_EPSS,
+    SCHEMA_KEV,
+    SCHEMA_MANIFEST,
+    BodyTooLargeError,
+    assert_no_forbidden_keys,
+    decompress_gzip_capped,
+    dump_simple_yaml,
+    load_simple_yaml,
+    read_capped,
+)
+from validate import resolve_under_root, validate_tree  # noqa: E402
+from defillama import derive_defillama_days, load_hacks  # noqa: E402
+from epss import derive_epss_day, derive_epss_day_from_api, derive_epss_from_dir  # noqa: E402
+from generate import main as generate_main  # noqa: E402
+from kev import derive_kev_days, load_kev_catalog  # noqa: E402
+
+FIXTURES = HERE / "fixtures"
+
+
+class KevDeriveTests(unittest.TestCase):
+    def test_buckets_seed_day_and_cumulative(self) -> None:
+        catalog = load_kev_catalog((FIXTURES / "kev.json").read_bytes())
+        days, meta = derive_kev_days(
+            catalog,
+            first_day=__import__("datetime").date(2021, 11, 3),
+            last_day=__import__("datetime").date(2021, 11, 4),
+        )
+        self.assertEqual(len(days), 2)
+        seed = days[0]
+        self.assertEqual(seed["day"], "2021-11-03")
+        self.assertEqual([row["cveId"] for row in seed["added"]], ["CVE-2021-0001", "CVE-2021-0002"])
+        self.assertEqual(seed["cumulative_count"], 2)
+        nxt = days[1]
+        self.assertEqual(nxt["day"], "2021-11-04")
+        self.assertEqual([row["cveId"] for row in nxt["added"]], ["CVE-2021-0003"])
+        self.assertEqual(nxt["cumulative_count"], 3)
+        self.assertEqual(meta["window_added"], 3)
+        # 2022 backlog row is outside this smoke window.
+        assert_no_forbidden_keys(days)
+
+    def test_full_window_keeps_2022_row_but_does_not_label_it(self) -> None:
+        catalog = load_kev_catalog((FIXTURES / "kev.json").read_bytes())
+        days, _meta = derive_kev_days(
+            catalog,
+            first_day=__import__("datetime").date(2021, 11, 3),
+            last_day=__import__("datetime").date(2022, 3, 15),
+        )
+        by_day = {row["day"]: row for row in days}
+        self.assertEqual(len(by_day["2022-03-15"]["added"]), 1)
+        self.assertEqual(by_day["2022-03-15"]["added"][0]["cveId"], "CVE-2017-0144")
+        blob = json.dumps(by_day["2022-03-15"])
+        self.assertNotIn("active-exploit", blob)
+        self.assertNotIn("trending", blob)
+
+
+class EpssDeriveTests(unittest.TestCase):
+    def test_fixture_csv_high_count_document_order_sample(self) -> None:
+        raw = (FIXTURES / "epss" / "epss_scores-2021-04-14.csv").read_bytes()
+        day = derive_epss_day(raw, __import__("datetime").date(2021, 4, 14))
+        self.assertEqual(day["day"], "2021-04-14")
+        self.assertEqual(day["scored_total"], 6)
+        self.assertEqual(day["high_count"], 3)
+        self.assertEqual(day["high_threshold"], 0.5)
+        self.assertEqual(
+            [row["cve"] for row in day["sample_cves"]],
+            ["CVE-2020-5902", "CVE-2019-0232", "CVE-2021-0001"],
+        )
+        self.assertNotIn("model_version", day)
+        assert_no_forbidden_keys(day)
+
+    def test_comment_header_and_below_threshold(self) -> None:
+        raw = (FIXTURES / "epss" / "epss_scores-2021-04-15.csv").read_bytes()
+        day = derive_epss_day(raw, __import__("datetime").date(2021, 4, 15))
+        self.assertEqual(day["high_count"], 1)
+        self.assertEqual(day["sample_cves"][0]["cve"], "CVE-2019-0232")
+        self.assertEqual(day["model_version"], "v2021.04.14")
+        self.assertEqual(day["scored_total"], 3)
+
+    def test_dir_reader_skips_missing_days(self) -> None:
+        days, missing = derive_epss_from_dir(
+            FIXTURES / "epss",
+            first_day=__import__("datetime").date(2021, 4, 14),
+            last_day=__import__("datetime").date(2021, 4, 16),
+        )
+        self.assertEqual([row["day"] for row in days], ["2021-04-14", "2021-04-15"])
+        self.assertEqual(missing, ["2021-04-16"])
+
+    def test_api_high_count_uses_total_not_sample_len(self) -> None:
+        day = derive_epss_day_from_api(
+            {
+                "total": 235,
+                "scored_total": 64712,
+                "data": [
+                    {"cve": "CVE-2020-5902", "epss": "0.65117"},
+                    {"cve": "CVE-2019-0232", "epss": "0.99457"},
+                ],
+            },
+            datetime.date(2021, 4, 14),
+        )
+        self.assertEqual(day["high_count"], 235)
+        self.assertEqual(len(day["sample_cves"]), 2)
+        self.assertEqual(day["scored_total"], 64712)
+
+    def test_api_refuses_high_count_from_sample_len(self) -> None:
+        with self.assertRaises(ValueError) as ctx:
+            derive_epss_day_from_api(
+                {
+                    "data": [
+                        {"cve": "CVE-2020-5902", "epss": "0.65117"},
+                    ]
+                },
+                datetime.date(2021, 4, 14),
+            )
+        self.assertIn("refuse high_count=len(sample)", str(ctx.exception))
+
+
+class DefillamaDeriveTests(unittest.TestCase):
+    def test_buckets_and_clips_after_last_day(self) -> None:
+        rows = load_hacks((FIXTURES / "hacks.json").read_bytes())
+        days, meta = derive_defillama_days(rows, last_day=LAST_DAY)
+        by_day = {row["day"]: row for row in days}
+        self.assertIn("2019-06-26", by_day)
+        self.assertEqual(by_day["2019-06-26"]["incidents"][0]["name"], "OldBridge")
+        self.assertEqual(by_day["2019-06-26"]["incidents"][0]["url"], "https://example.invalid/oldbridge")
+        self.assertIn("2021-04-14", by_day)
+        self.assertNotIn("2026-09-08", by_day)
+        self.assertEqual(meta["after_last_day"], 1)
+        self.assertEqual(meta["incidents"], 3)
+        assert_no_forbidden_keys(days)
+
+    def test_from_day_clips_pre_window_incidents(self) -> None:
+        rows = load_hacks((FIXTURES / "hacks.json").read_bytes())
+        days, meta = derive_defillama_days(
+            rows,
+            first_day=datetime.date(2021, 4, 14),
+            last_day=LAST_DAY,
+        )
+        by_day = {row["day"]: row for row in days}
+        self.assertNotIn("2019-06-26", by_day)
+        self.assertIn("2021-04-14", by_day)
+        self.assertEqual(meta["before_first_day"], 1)
+        self.assertEqual(meta["incidents"], 2)
+
+
+class SmokeGenerateTests(unittest.TestCase):
+    def test_smoke_writes_monthly_shards_and_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            rc = generate_main(["--smoke", "--out", str(out)])
+            self.assertEqual(rc, 0)
+            errors = validate_tree(out)
+            self.assertEqual(errors, [])
+            manifest = load_simple_yaml(out / "manifest.yaml")
+            self.assertEqual(manifest["schema"], SCHEMA_MANIFEST)
+            self.assertFalse(manifest["ranking"])
+            self.assertFalse(manifest["class_taxonomy"])
+            self.assertFalse(manifest["invented_daily_releases"])
+            ids = [src["id"] for src in manifest["sources"]]
+            self.assertEqual(ids, ["kev", "epss", "defillama"])
+
+            kev = json.loads((out / "kev" / "by-month" / "2021-11.json").read_text(encoding="utf-8"))
+            self.assertEqual(kev["schema"], SCHEMA_KEV)
+            self.assertEqual(kev["month"], "2021-11")
+            self.assertEqual(kev["days"][0]["cumulative_count"], 2)
+
+            epss = json.loads((out / "epss" / "by-month" / "2021-04.json").read_text(encoding="utf-8"))
+            self.assertEqual(epss["schema"], SCHEMA_EPSS)
+            self.assertEqual(len(epss["days"]), 2)
+            self.assertEqual(epss["days"][0]["high_count"], 3)
+
+            llama = json.loads((out / "defillama" / "by-month" / "2019-06.json").read_text(encoding="utf-8"))
+            self.assertEqual(llama["schema"], SCHEMA_DEFILLAMA)
+            self.assertEqual(llama["days"][0]["incidents"][0]["name"], "OldBridge")
+
+            # Raw EPSS CSVs must not land in the backfill tree.
+            csvs = list(out.rglob("*.csv")) + list(out.rglob("*.csv.gz"))
+            self.assertEqual(csvs, [])
+
+    def test_smoke_is_deterministic(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            a = Path(tmp) / "a"
+            b = Path(tmp) / "b"
+            self.assertEqual(generate_main(["--smoke", "--out", str(a)]), 0)
+            self.assertEqual(generate_main(["--smoke", "--out", str(b)]), 0)
+            files_a = sorted(p.relative_to(a) for p in a.rglob("*") if p.is_file())
+            files_b = sorted(p.relative_to(b) for p in b.rglob("*") if p.is_file())
+            self.assertEqual(files_a, files_b)
+            for rel in files_a:
+                self.assertEqual(
+                    (a / rel).read_bytes(),
+                    (b / rel).read_bytes(),
+                    rel,
+                )
+
+    def test_from_day_honored_for_defillama_generate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            rc = generate_main(
+                [
+                    "--sources",
+                    "defillama",
+                    "--hacks-input",
+                    str(FIXTURES / "hacks.json"),
+                    "--from-day",
+                    "2021-04-14",
+                    "--to-day",
+                    "2021-11-04",
+                    "--out",
+                    str(out),
+                ]
+            )
+            self.assertEqual(rc, 0)
+            self.assertFalse((out / "defillama" / "by-month" / "2019-06.json").exists())
+            llama = json.loads(
+                (out / "defillama" / "by-month" / "2021-04.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(llama["days"][0]["incidents"][0]["name"], "WindowStartHack")
+
+    def test_to_day_clamped_before_daily_releases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            err = io.StringIO()
+            with redirect_stderr(err):
+                rc = generate_main(
+                    [
+                        "--sources",
+                        "defillama",
+                        "--hacks-input",
+                        str(FIXTURES / "hacks.json"),
+                        "--to-day",
+                        "2026-09-10",
+                        "--out",
+                        str(out),
+                    ]
+                )
+            self.assertEqual(rc, 0)
+            self.assertIn("clamping --to-day", err.getvalue())
+            self.assertFalse((out / "defillama" / "by-month" / "2026-09.json").exists())
+
+    def test_allow_past_last_day_writes_overlap_window(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            rc = generate_main(
+                [
+                    "--sources",
+                    "defillama",
+                    "--hacks-input",
+                    str(FIXTURES / "hacks.json"),
+                    "--to-day",
+                    "2026-09-10",
+                    "--allow-past-last-day",
+                    "--out",
+                    str(out),
+                ]
+            )
+            self.assertEqual(rc, 0)
+            late = json.loads(
+                (out / "defillama" / "by-month" / "2026-09.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(late["days"][0]["incidents"][0]["name"], "AfterLastDay")
+
+    def test_dry_run_prints_counts_and_writes_nothing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                rc = generate_main(["--smoke", "--dry-run", "--out", str(out)])
+            self.assertEqual(rc, 0)
+            text = buf.getvalue()
+            self.assertIn("dry-run", text)
+            self.assertIn("KEV:", text)
+            self.assertIn("EPSS:", text)
+            self.assertIn("DeFiLlama:", text)
+            self.assertFalse(out.exists())
+
+
+class SecurityGuardTests(unittest.TestCase):
+    def test_read_capped_rejects_oversize(self) -> None:
+        with self.assertRaises(BodyTooLargeError):
+            read_capped(io.BytesIO(b"x" * 200), max_bytes=50, label="test")
+
+    def test_gzip_decompress_capped_rejects_zip_bomb(self) -> None:
+        import gzip
+
+        raw = gzip.compress(b"A" * 200_000)
+        self.assertLess(len(raw), 2000)
+        with self.assertRaises(BodyTooLargeError):
+            decompress_gzip_capped(raw, max_bytes=8_000, label="bomb")
+
+    def test_resolve_under_root_rejects_escape(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            root.mkdir()
+            ok = resolve_under_root(root, "kev/by-month/")
+            self.assertTrue(ok.is_relative_to(root.resolve()))
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "/etc/passwd")
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "../secrets")
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "kev/../../etc")
+
+    def test_validate_rejects_escaped_manifest_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            (root / "kev" / "by-month").mkdir(parents=True)
+            (root / "manifest.yaml").write_text(
+                dump_simple_yaml(
+                    {
+                        "schema": SCHEMA_MANIFEST,
+                        "ranking": False,
+                        "class_taxonomy": False,
+                        "invented_daily_releases": False,
+                        "sources": [
+                            {
+                                "id": "kev",
+                                "schema": SCHEMA_KEV,
+                                "path": "../outside/",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("path rejected" in err or "escapes" in err for err in errors), errors)
+
+    def test_validate_pins_missing_txt_to_omitted_epss_days(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            month_dir = root / "epss" / "by-month"
+            month_dir.mkdir(parents=True)
+            (month_dir / "2021-04.json").write_text(
+                json.dumps(
+                    {
+                        "schema": SCHEMA_EPSS,
+                        "month": "2021-04",
+                        "days": [
+                            {
+                                "day": "2021-04-14",
+                                "high_count": 3,
+                                "high_threshold": 0.5,
+                                "sample_cves": [{"cve": "CVE-2020-5902", "epss": "0.65"}],
+                            },
+                            {
+                                "day": "2021-04-15",
+                                "high_count": 1,
+                                "high_threshold": 0.5,
+                                "sample_cves": [{"cve": "CVE-2019-0232", "epss": "0.51"}],
+                            },
+                        ],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (root / "manifest.yaml").write_text(
+                dump_simple_yaml(
+                    {
+                        "schema": SCHEMA_MANIFEST,
+                        "ranking": False,
+                        "class_taxonomy": False,
+                        "invented_daily_releases": False,
+                        "sources": [
+                            {
+                                "id": "epss",
+                                "schema": SCHEMA_EPSS,
+                                "path": "epss/by-month/",
+                                "first_day": "2021-04-14",
+                                "last_day": "2021-04-16",
+                                "files": 1,
+                                "derived_days": 2,
+                                "missing_days": 1,
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("not listed" in err for err in errors), errors)
+
+            (root / "epss" / "missing.txt").write_text(
+                "2021-04-16:archive_unavailable\n", encoding="utf-8"
+            )
+            self.assertEqual(validate_tree(root), [])
+
+            (root / "epss" / "missing.txt").write_text(
+                "2021-04-15:archive_unavailable\n", encoding="utf-8"
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("also present in shards" in err for err in errors), errors)
+
+
+if __name__ == "__main__":
+    unittest.main()

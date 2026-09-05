@@ -1,0 +1,215 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-07",
+  "days": [
+    {
+      "day": "2021-07-02",
+      "incidents": [
+        {
+          "name": "ChainSwap",
+          "date": "2021-07-02",
+          "amount": 800000,
+          "chain": [
+            "Ethereum",
+            "Binance Smart Chain"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "XDX Swap",
+          "date": "2021-07-02",
+          "amount": 176000,
+          "chain": [
+            "Huobi Eco Chain"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-03",
+      "incidents": [
+        {
+          "name": "Haven Protocol",
+          "date": "2021-07-03",
+          "amount": 8187000,
+          "chain": [
+            "Haven"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-10",
+      "incidents": [
+        {
+          "name": "Multichain",
+          "date": "2021-07-10",
+          "amount": 7900000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Fantom"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "defillamaId": "591",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-11",
+      "incidents": [
+        {
+          "name": "ChainSwap Bridge",
+          "date": "2021-07-11",
+          "amount": 4400000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-13",
+      "incidents": [
+        {
+          "name": "DeFiPie",
+          "date": "2021-07-13",
+          "amount": 124999,
+          "chain": [
+            "Ethereum",
+            "Binance Smart Chain"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-14",
+      "incidents": [
+        {
+          "name": "ApeRocket",
+          "date": "2021-07-14",
+          "amount": 1260000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "401",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-15",
+      "incidents": [
+        {
+          "name": "Bondly",
+          "date": "2021-07-15",
+          "amount": 5900000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "THORChain DEX",
+          "date": "2021-07-15",
+          "amount": 5000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "defillamaId": "412",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-16",
+      "incidents": [
+        {
+          "name": "Bunny",
+          "date": "2021-07-16",
+          "amount": 2400000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Unbacked Mint",
+          "defillamaId": "254",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-22",
+      "incidents": [
+        {
+          "name": "THORChain DEX",
+          "date": "2021-07-22",
+          "amount": 8000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "412",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-28",
+      "incidents": [
+        {
+          "name": "PolyYeld Finance",
+          "date": "2021-07-28",
+          "amount": 250000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "809",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-07-30",
+      "incidents": [
+        {
+          "name": "Levyathan",
+          "date": "2021-07-30",
+          "amount": 1500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Stored Publicly",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-06",
+  "days": [
+    {
+      "day": "2025-06-01",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-06-02",
+      "added": [
+        {
+          "cveId": "CVE-2021-32030",
+          "vendorProject": "ASUS",
+          "product": "Routers",
+          "vulnerabilityName": "ASUS Routers Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-39780",
+          "vendorProject": "ASUS",
+          "product": "RT-AX55 Routers",
+          "vulnerabilityName": "ASUS RT-AX55 Routers OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-56145",
+          "vendorProject": "Craft CMS",
+          "product": "Craft CMS",
+          "vulnerabilityName": "Craft CMS Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-35939",
+          "vendorProject": "Craft CMS",
+          "product": "Craft CMS",
+          "vulnerabilityName": "Craft CMS External Control of Assumed-Immutable Web Parameter Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-3935",
+          "vendorProject": "ConnectWise",
+          "product": "ScreenConnect",
+          "vulnerabilityName": "ConnectWise ScreenConnect Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1356
+    },
+    {
+      "day": "2025-06-03",
+      "added": [
+        {
+          "cveId": "CVE-2025-21479",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21480",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-27038",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1359
+    },
+    {
+      "day": "2025-06-04",
+      "added": [],
+      "cumulative_count": 1359
+    },
+    {
+      "day": "2025-06-05",
+      "added": [
+        {
+          "cveId": "CVE-2025-5419",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1360
+    },
+    {
+      "day": "2025-06-06",
+      "added": [],
+      "cumulative_count": 1360
+    },
+    {
+      "day": "2025-06-07",
+      "added": [],
+      "cumulative_count": 1360
+    },
+    {
+      "day": "2025-06-08",
+      "added": [],
+      "cumulative_count": 1360
+    },
+    {
+      "day": "2025-06-09",
+      "added": [
+        {
+          "cveId": "CVE-2024-42009",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "RoundCube Webmail Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32433",
+          "vendorProject": "Erlang",
+          "product": "Erlang/OTP",
+          "vulnerabilityName": "Erlang Erlang/OTP SSH Server Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1362
+    },
+    {
+      "day": "2025-06-10",
+      "added": [
+        {
+          "cveId": "CVE-2025-24016",
+          "vendorProject": "Wazuh",
+          "product": "Wazuh Server",
+          "vulnerabilityName": "Wazuh Server Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-33053",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows External Control of File Name or Path Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-11",
+      "added": [],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-12",
+      "added": [],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-13",
+      "added": [],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-14",
+      "added": [],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-15",
+      "added": [],
+      "cumulative_count": 1364
+    },
+    {
+      "day": "2025-06-16",
+      "added": [
+        {
+          "cveId": "CVE-2023-33538",
+          "vendorProject": "TP-Link",
+          "product": "Multiple Routers",
+          "vulnerabilityName": "TP-Link Multiple Routers Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-43200",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1366
+    },
+    {
+      "day": "2025-06-17",
+      "added": [
+        {
+          "cveId": "CVE-2023-0386",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Improper Ownership Management Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-18",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-19",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-20",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-21",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-22",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-23",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-24",
+      "added": [],
+      "cumulative_count": 1367
+    },
+    {
+      "day": "2025-06-25",
+      "added": [
+        {
+          "cveId": "CVE-2019-6693",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS",
+          "vulnerabilityName": "Fortinet FortiOS Use of Hard-Coded Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-0769",
+          "vendorProject": "D-Link",
+          "product": "DIR-859 Router",
+          "vulnerabilityName": "D-Link DIR-859 Router Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-54085",
+          "vendorProject": "AMI",
+          "product": "MegaRAC SPx",
+          "vulnerabilityName": "AMI MegaRAC SPx Authentication Bypass by Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1370
+    },
+    {
+      "day": "2025-06-26",
+      "added": [],
+      "cumulative_count": 1370
+    },
+    {
+      "day": "2025-06-27",
+      "added": [],
+      "cumulative_count": 1370
+    },
+    {
+      "day": "2025-06-28",
+      "added": [],
+      "cumulative_count": 1370
+    },
+    {
+      "day": "2025-06-29",
+      "added": [],
+      "cumulative_count": 1370
+    },
+    {
+      "day": "2025-06-30",
+      "added": [
+        {
+          "cveId": "CVE-2025-6543",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and Gateway Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1371
+    }
+  ]
+}

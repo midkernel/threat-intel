@@ -1,0 +1,497 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-06",
+  "days": [
+    {
+      "day": "2022-06-01",
+      "added": [],
+      "cumulative_count": 737
+    },
+    {
+      "day": "2022-06-02",
+      "added": [
+        {
+          "cveId": "CVE-2022-26134",
+          "vendorProject": "Atlassian",
+          "product": "Confluence Server/Data Center",
+          "vulnerabilityName": "Atlassian Confluence Server and Data Center Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-03",
+      "added": [],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-04",
+      "added": [],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-05",
+      "added": [],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-06",
+      "added": [],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-07",
+      "added": [],
+      "cumulative_count": 738
+    },
+    {
+      "day": "2022-06-08",
+      "added": [
+        {
+          "cveId": "CVE-2006-2492",
+          "vendorProject": "Microsoft",
+          "product": "Word",
+          "vulnerabilityName": "Microsoft Word Malformed Object Pointer Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2007-5659",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2008-0655",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-0557",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Object Record Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-0563",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-1862",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader, Flash Player",
+          "vulnerabilityName": "Adobe Acrobat and Reader, Flash Player Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-3953",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Universal 3D Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-4324",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-1297",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-2572",
+          "vendorProject": "Microsoft",
+          "product": "PowerPoint",
+          "vulnerabilityName": "Microsoft PowerPoint Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-2883",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2011-0609",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2011-2462",
+          "vendorProject": "Adobe",
+          "product": "Reader and Acrobat",
+          "vulnerabilityName": "Adobe Reader and Acrobat Universal 3D Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-0151",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Authenticode Signature Verification Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-0754",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-0767",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-1889",
+          "vendorProject": "Microsoft",
+          "product": "XML Core Services",
+          "vulnerabilityName": "Microsoft XML Core Services Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-4969",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-5054",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-1331",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-1646",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-5198",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Memory Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-5030",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-5070",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-6862",
+          "vendorProject": "NETGEAR",
+          "product": "Multiple Devices",
+          "vulnerabilityName": "NETGEAR Multiple Devices Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-17463",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-17480",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-4990",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Double Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-6065",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-15271",
+          "vendorProject": "Cisco",
+          "product": "RV Series Routers",
+          "vulnerabilityName": "Cisco RV Series Routers Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-5825",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-7192",
+          "vendorProject": "QNAP",
+          "product": "Photo Station",
+          "vulnerabilityName": "QNAP Photo Station Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-7193",
+          "vendorProject": "QNAP",
+          "product": "QTS",
+          "vulnerabilityName": "QNAP QTS Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-7194",
+          "vendorProject": "QNAP",
+          "product": "Photo Station",
+          "vulnerabilityName": "QNAP Photo Station Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-7195",
+          "vendorProject": "QNAP",
+          "product": "Photo Station",
+          "vulnerabilityName": "QNAP Photo Station Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 773
+    },
+    {
+      "day": "2022-06-09",
+      "added": [
+        {
+          "cveId": "CVE-2016-2386",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-2388",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-38163",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver Unrestricted File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 776
+    },
+    {
+      "day": "2022-06-10",
+      "added": [],
+      "cumulative_count": 776
+    },
+    {
+      "day": "2022-06-11",
+      "added": [],
+      "cumulative_count": 776
+    },
+    {
+      "day": "2022-06-12",
+      "added": [],
+      "cumulative_count": 776
+    },
+    {
+      "day": "2022-06-13",
+      "added": [],
+      "cumulative_count": 776
+    },
+    {
+      "day": "2022-06-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-30190",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Support Diagnostic Tool (MSDT) Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-15",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-16",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-17",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-18",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-19",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-20",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-21",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-22",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-23",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-24",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-25",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-26",
+      "added": [],
+      "cumulative_count": 777
+    },
+    {
+      "day": "2022-06-27",
+      "added": [
+        {
+          "cveId": "CVE-2018-4344",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-8605",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-3837",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-9907",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-30533",
+          "vendorProject": "Google",
+          "product": "Chromium PopupBlocker",
+          "vulnerabilityName": "Google Chromium PopupBlocker Security Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-30983",
+          "vendorProject": "Apple",
+          "product": "iOS and iPadOS",
+          "vulnerabilityName": "Apple iOS and iPadOS Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-4034",
+          "vendorProject": "Red Hat",
+          "product": "Polkit",
+          "vulnerabilityName": "Red Hat Polkit Out-of-Bounds Read and Write Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-29499",
+          "vendorProject": "Mitel",
+          "product": "MiVoice Connect",
+          "vulnerabilityName": "Mitel MiVoice Connect Data Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 785
+    },
+    {
+      "day": "2022-06-28",
+      "added": [],
+      "cumulative_count": 785
+    },
+    {
+      "day": "2022-06-29",
+      "added": [],
+      "cumulative_count": 785
+    },
+    {
+      "day": "2022-06-30",
+      "added": [],
+      "cumulative_count": 785
+    }
+  ]
+}

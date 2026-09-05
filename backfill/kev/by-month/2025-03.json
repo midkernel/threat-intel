@@ -1,0 +1,396 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-03",
+  "days": [
+    {
+      "day": "2025-03-01",
+      "added": [],
+      "cumulative_count": 1280
+    },
+    {
+      "day": "2025-03-02",
+      "added": [],
+      "cumulative_count": 1280
+    },
+    {
+      "day": "2025-03-03",
+      "added": [
+        {
+          "cveId": "CVE-2018-8639",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Win32k Improper Resource Shutdown or Release Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-43769",
+          "vendorProject": "Hitachi Vantara",
+          "product": "Pentaho Business Analytics (BA) Server",
+          "vulnerabilityName": "Hitachi Vantara Pentaho BA Server Special Element Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-43939",
+          "vendorProject": "Hitachi Vantara",
+          "product": "Pentaho Business Analytics (BA) Server",
+          "vulnerabilityName": "Hitachi Vantara Pentaho BA Server Authorization Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-20118",
+          "vendorProject": "Cisco",
+          "product": "Small Business RV Series Routers",
+          "vulnerabilityName": "Cisco Small Business RV Series Routers Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-4885",
+          "vendorProject": "Progress",
+          "product": "WhatsUp Gold",
+          "vulnerabilityName": "Progress WhatsUp Gold Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1285
+    },
+    {
+      "day": "2025-03-04",
+      "added": [
+        {
+          "cveId": "CVE-2024-50302",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Use of Uninitialized Resource Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-22224",
+          "vendorProject": "VMware",
+          "product": "ESXi and Workstation",
+          "vulnerabilityName": "VMware ESXi and Workstation TOCTOU Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-22225",
+          "vendorProject": "VMware",
+          "product": "ESXi",
+          "vulnerabilityName": "VMware ESXi Arbitrary Write Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-22226",
+          "vendorProject": "VMware",
+          "product": "ESXi, Workstation, and Fusion",
+          "vulnerabilityName": "VMware ESXi, Workstation, and Fusion Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-05",
+      "added": [],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-06",
+      "added": [],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-07",
+      "added": [],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-08",
+      "added": [],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-09",
+      "added": [],
+      "cumulative_count": 1289
+    },
+    {
+      "day": "2025-03-10",
+      "added": [
+        {
+          "cveId": "CVE-2024-13159",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager (EPM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager (EPM) Absolute Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-13160",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager (EPM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager (EPM) Absolute Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-13161",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager (EPM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager (EPM) Absolute Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-57968",
+          "vendorProject": "Advantive",
+          "product": "VeraCore",
+          "vulnerabilityName": "Advantive VeraCore Unrestricted File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-25181",
+          "vendorProject": "Advantive",
+          "product": "VeraCore",
+          "vulnerabilityName": "Advantive VeraCore SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1294
+    },
+    {
+      "day": "2025-03-11",
+      "added": [
+        {
+          "cveId": "CVE-2025-24983",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Win32k Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24984",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NTFS Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24985",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Fast FAT File System Driver Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24991",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NTFS Out-Of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24993",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NTFS Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-26633",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Management Console (MMC) Improper Neutralization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1300
+    },
+    {
+      "day": "2025-03-12",
+      "added": [],
+      "cumulative_count": 1300
+    },
+    {
+      "day": "2025-03-13",
+      "added": [
+        {
+          "cveId": "CVE-2025-21590",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS Improper Isolation or Compartmentalization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24201",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1302
+    },
+    {
+      "day": "2025-03-14",
+      "added": [],
+      "cumulative_count": 1302
+    },
+    {
+      "day": "2025-03-15",
+      "added": [],
+      "cumulative_count": 1302
+    },
+    {
+      "day": "2025-03-16",
+      "added": [],
+      "cumulative_count": 1302
+    },
+    {
+      "day": "2025-03-17",
+      "added": [],
+      "cumulative_count": 1302
+    },
+    {
+      "day": "2025-03-18",
+      "added": [
+        {
+          "cveId": "CVE-2025-24472",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiProxy",
+          "vulnerabilityName": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-30066",
+          "vendorProject": "tj-actions",
+          "product": "changed-files GitHub Action",
+          "vulnerabilityName": "tj-actions/changed-files GitHub Action Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1304
+    },
+    {
+      "day": "2025-03-19",
+      "added": [
+        {
+          "cveId": "CVE-2017-12637",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-48248",
+          "vendorProject": "NAKIVO",
+          "product": "Backup and Replication",
+          "vulnerabilityName": "NAKIVO Backup and Replication Absolute Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-1316",
+          "vendorProject": "Edimax",
+          "product": "IC-7100 IP Camera",
+          "vulnerabilityName": "Edimax IC-7100 IP Camera OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1307
+    },
+    {
+      "day": "2025-03-20",
+      "added": [],
+      "cumulative_count": 1307
+    },
+    {
+      "day": "2025-03-21",
+      "added": [],
+      "cumulative_count": 1307
+    },
+    {
+      "day": "2025-03-22",
+      "added": [],
+      "cumulative_count": 1307
+    },
+    {
+      "day": "2025-03-23",
+      "added": [],
+      "cumulative_count": 1307
+    },
+    {
+      "day": "2025-03-24",
+      "added": [
+        {
+          "cveId": "CVE-2025-30154",
+          "vendorProject": "reviewdog",
+          "product": "action-setup GitHub Action",
+          "vulnerabilityName": "reviewdog/action-setup GitHub Action Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1308
+    },
+    {
+      "day": "2025-03-25",
+      "added": [],
+      "cumulative_count": 1308
+    },
+    {
+      "day": "2025-03-26",
+      "added": [
+        {
+          "cveId": "CVE-2019-9874",
+          "vendorProject": "Sitecore",
+          "product": "CMS and Experience Platform (XP)",
+          "vulnerabilityName": "Sitecore CMS and Experience Platform (XP) Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-9875",
+          "vendorProject": "Sitecore",
+          "product": "CMS and Experience Platform (XP)",
+          "vulnerabilityName": "Sitecore CMS and Experience Platform (XP) Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1310
+    },
+    {
+      "day": "2025-03-27",
+      "added": [
+        {
+          "cveId": "CVE-2025-2783",
+          "vendorProject": "Google",
+          "product": "Chromium Mojo",
+          "vulnerabilityName": "Google Chromium Mojo Sandbox Escape Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1311
+    },
+    {
+      "day": "2025-03-28",
+      "added": [],
+      "cumulative_count": 1311
+    },
+    {
+      "day": "2025-03-29",
+      "added": [],
+      "cumulative_count": 1311
+    },
+    {
+      "day": "2025-03-30",
+      "added": [],
+      "cumulative_count": 1311
+    },
+    {
+      "day": "2025-03-31",
+      "added": [
+        {
+          "cveId": "CVE-2024-20439",
+          "vendorProject": "Cisco",
+          "product": "Smart Licensing Utility",
+          "vulnerabilityName": "Cisco Smart Licensing Utility Static Credential Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1312
+    }
+  ]
+}

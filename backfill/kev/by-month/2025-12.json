@@ -1,0 +1,314 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-12",
+  "days": [
+    {
+      "day": "2025-12-01",
+      "added": [],
+      "cumulative_count": 1464
+    },
+    {
+      "day": "2025-12-02",
+      "added": [
+        {
+          "cveId": "CVE-2025-48572",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48633",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1466
+    },
+    {
+      "day": "2025-12-03",
+      "added": [
+        {
+          "cveId": "CVE-2021-26828",
+          "vendorProject": "OpenPLC",
+          "product": "ScadaBR",
+          "vulnerabilityName": "OpenPLC ScadaBR Unrestricted Upload of File with Dangerous Type Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1467
+    },
+    {
+      "day": "2025-12-04",
+      "added": [],
+      "cumulative_count": 1467
+    },
+    {
+      "day": "2025-12-05",
+      "added": [
+        {
+          "cveId": "CVE-2025-55182",
+          "vendorProject": "Meta",
+          "product": "React Server Components",
+          "vulnerabilityName": "Meta React Server Components Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1468
+    },
+    {
+      "day": "2025-12-06",
+      "added": [],
+      "cumulative_count": 1468
+    },
+    {
+      "day": "2025-12-07",
+      "added": [],
+      "cumulative_count": 1468
+    },
+    {
+      "day": "2025-12-08",
+      "added": [
+        {
+          "cveId": "CVE-2022-37055",
+          "vendorProject": "D-Link",
+          "product": "Routers",
+          "vulnerabilityName": "D-Link Routers Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-66644",
+          "vendorProject": "Array Networks",
+          "product": "ArrayOS AG",
+          "vulnerabilityName": "Array Networks ArrayOS AG OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1470
+    },
+    {
+      "day": "2025-12-09",
+      "added": [
+        {
+          "cveId": "CVE-2025-6218",
+          "vendorProject": "RARLAB",
+          "product": "WinRAR",
+          "vulnerabilityName": "RARLAB WinRAR Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-62221",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Use After Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1472
+    },
+    {
+      "day": "2025-12-10",
+      "added": [],
+      "cumulative_count": 1472
+    },
+    {
+      "day": "2025-12-11",
+      "added": [
+        {
+          "cveId": "CVE-2025-58360",
+          "vendorProject": "OSGeo",
+          "product": "GeoServer",
+          "vulnerabilityName": "OSGeo GeoServer Improper Restriction of XML External Entity Reference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1473
+    },
+    {
+      "day": "2025-12-12",
+      "added": [
+        {
+          "cveId": "CVE-2018-4063",
+          "vendorProject": "Sierra Wireless",
+          "product": "AirLink ALEOS",
+          "vulnerabilityName": "Sierra Wireless AirLink ALEOS Unrestricted Upload of File with Dangerous Type Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-14174",
+          "vendorProject": "Google",
+          "product": "Chromium",
+          "vulnerabilityName": "Google Chromium Out of Bounds Memory Access Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1475
+    },
+    {
+      "day": "2025-12-13",
+      "added": [],
+      "cumulative_count": 1475
+    },
+    {
+      "day": "2025-12-14",
+      "added": [],
+      "cumulative_count": 1475
+    },
+    {
+      "day": "2025-12-15",
+      "added": [
+        {
+          "cveId": "CVE-2025-14611",
+          "vendorProject": "Gladinet",
+          "product": "CentreStack and Triofox",
+          "vulnerabilityName": "Gladinet CentreStack and Triofox Hard Coded Cryptographic Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-43529",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Use-After-Free WebKit Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1477
+    },
+    {
+      "day": "2025-12-16",
+      "added": [
+        {
+          "cveId": "CVE-2025-59718",
+          "vendorProject": "Fortinet",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Fortinet Multiple Products Improper Verification of Cryptographic Signature Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1478
+    },
+    {
+      "day": "2025-12-17",
+      "added": [
+        {
+          "cveId": "CVE-2025-20393",
+          "vendorProject": "Cisco",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Cisco Multiple Products Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-40602",
+          "vendorProject": "SonicWall",
+          "product": "SMA1000 appliance",
+          "vulnerabilityName": "SonicWall SMA1000 Missing Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-59374",
+          "vendorProject": "ASUS",
+          "product": "Live Update",
+          "vulnerabilityName": "ASUS Live Update Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1481
+    },
+    {
+      "day": "2025-12-18",
+      "added": [],
+      "cumulative_count": 1481
+    },
+    {
+      "day": "2025-12-19",
+      "added": [
+        {
+          "cveId": "CVE-2025-14733",
+          "vendorProject": "WatchGuard",
+          "product": "Firebox",
+          "vulnerabilityName": "WatchGuard Firebox Out of Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1482
+    },
+    {
+      "day": "2025-12-20",
+      "added": [],
+      "cumulative_count": 1482
+    },
+    {
+      "day": "2025-12-21",
+      "added": [],
+      "cumulative_count": 1482
+    },
+    {
+      "day": "2025-12-22",
+      "added": [
+        {
+          "cveId": "CVE-2023-52163",
+          "vendorProject": "Digiever",
+          "product": "DS-2105 Pro",
+          "vulnerabilityName": "Digiever DS-2105 Pro Missing Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-23",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-24",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-25",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-26",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-27",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-28",
+      "added": [],
+      "cumulative_count": 1483
+    },
+    {
+      "day": "2025-12-29",
+      "added": [
+        {
+          "cveId": "CVE-2025-14847",
+          "vendorProject": "MongoDB",
+          "product": "MongoDB and MongoDB Server",
+          "vulnerabilityName": "MongoDB and MongoDB Server Improper Handling of Length Parameter Inconsistency Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2025-12-30",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2025-12-31",
+      "added": [],
+      "cumulative_count": 1484
+    }
+  ]
+}

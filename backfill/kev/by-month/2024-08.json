@@ -1,0 +1,304 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-08",
+  "days": [
+    {
+      "day": "2024-08-01",
+      "added": [],
+      "cumulative_count": 1140
+    },
+    {
+      "day": "2024-08-02",
+      "added": [],
+      "cumulative_count": 1140
+    },
+    {
+      "day": "2024-08-03",
+      "added": [],
+      "cumulative_count": 1140
+    },
+    {
+      "day": "2024-08-04",
+      "added": [],
+      "cumulative_count": 1140
+    },
+    {
+      "day": "2024-08-05",
+      "added": [
+        {
+          "cveId": "CVE-2018-0824",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft COM for Windows Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1141
+    },
+    {
+      "day": "2024-08-06",
+      "added": [],
+      "cumulative_count": 1141
+    },
+    {
+      "day": "2024-08-07",
+      "added": [
+        {
+          "cveId": "CVE-2024-32113",
+          "vendorProject": "Apache",
+          "product": "OFBiz",
+          "vulnerabilityName": "Apache OFBiz Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-36971",
+          "vendorProject": "Android",
+          "product": "Kernel",
+          "vulnerabilityName": "Android Kernel Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-08",
+      "added": [],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-09",
+      "added": [],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-10",
+      "added": [],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-11",
+      "added": [],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-12",
+      "added": [],
+      "cumulative_count": 1143
+    },
+    {
+      "day": "2024-08-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-38106",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38107",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Power Dependency Coordinator Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38178",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Scripting Engine Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38189",
+          "vendorProject": "Microsoft",
+          "product": "Project",
+          "vulnerabilityName": "Microsoft Project Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38193",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38213",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1149
+    },
+    {
+      "day": "2024-08-14",
+      "added": [],
+      "cumulative_count": 1149
+    },
+    {
+      "day": "2024-08-15",
+      "added": [
+        {
+          "cveId": "CVE-2024-28986",
+          "vendorProject": "SolarWinds",
+          "product": "Web Help Desk",
+          "vulnerabilityName": "SolarWinds Web Help Desk Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1150
+    },
+    {
+      "day": "2024-08-16",
+      "added": [],
+      "cumulative_count": 1150
+    },
+    {
+      "day": "2024-08-17",
+      "added": [],
+      "cumulative_count": 1150
+    },
+    {
+      "day": "2024-08-18",
+      "added": [],
+      "cumulative_count": 1150
+    },
+    {
+      "day": "2024-08-19",
+      "added": [
+        {
+          "cveId": "CVE-2024-23897",
+          "vendorProject": "Jenkins",
+          "product": "Jenkins Command Line Interface (CLI)",
+          "vulnerabilityName": "Jenkins Command Line Interface (CLI) Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1151
+    },
+    {
+      "day": "2024-08-20",
+      "added": [],
+      "cumulative_count": 1151
+    },
+    {
+      "day": "2024-08-21",
+      "added": [
+        {
+          "cveId": "CVE-2021-31196",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-33044",
+          "vendorProject": "Dahua",
+          "product": "IP Camera Firmware",
+          "vulnerabilityName": "Dahua IP Camera Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-33045",
+          "vendorProject": "Dahua",
+          "product": "IP Camera Firmware",
+          "vulnerabilityName": "Dahua IP Camera Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-0185",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1155
+    },
+    {
+      "day": "2024-08-22",
+      "added": [],
+      "cumulative_count": 1155
+    },
+    {
+      "day": "2024-08-23",
+      "added": [
+        {
+          "cveId": "CVE-2024-39717",
+          "vendorProject": "Versa",
+          "product": "Director",
+          "vulnerabilityName": "Versa Director Dangerous File Type Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1156
+    },
+    {
+      "day": "2024-08-24",
+      "added": [],
+      "cumulative_count": 1156
+    },
+    {
+      "day": "2024-08-25",
+      "added": [],
+      "cumulative_count": 1156
+    },
+    {
+      "day": "2024-08-26",
+      "added": [
+        {
+          "cveId": "CVE-2024-7971",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1157
+    },
+    {
+      "day": "2024-08-27",
+      "added": [
+        {
+          "cveId": "CVE-2024-38856",
+          "vendorProject": "Apache",
+          "product": "OFBiz",
+          "vulnerabilityName": "Apache OFBiz Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1158
+    },
+    {
+      "day": "2024-08-28",
+      "added": [
+        {
+          "cveId": "CVE-2024-7965",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Inappropriate Implementation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1159
+    },
+    {
+      "day": "2024-08-29",
+      "added": [],
+      "cumulative_count": 1159
+    },
+    {
+      "day": "2024-08-30",
+      "added": [],
+      "cumulative_count": 1159
+    },
+    {
+      "day": "2024-08-31",
+      "added": [],
+      "cumulative_count": 1159
+    }
+  ]
+}

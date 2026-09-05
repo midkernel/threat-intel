@@ -1,0 +1,277 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-07",
+  "days": [
+    {
+      "day": "2024-07-02",
+      "incidents": [
+        {
+          "name": "Bittensor",
+          "date": "2024-07-02",
+          "amount": 8000000,
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "defillamaId": "4547",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "MintRisesPrices",
+          "date": "2024-07-02",
+          "amount": 59000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-05",
+      "incidents": [
+        {
+          "name": "DefiPlaza",
+          "date": "2024-07-05",
+          "amount": 200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "728",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-11",
+      "incidents": [
+        {
+          "name": "OPSEC",
+          "date": "2024-07-11",
+          "amount": 100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-12",
+      "incidents": [
+        {
+          "name": "CoinStats",
+          "date": "2024-07-12",
+          "amount": 2200000,
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Other"
+        },
+        {
+          "name": "Dough Finance",
+          "date": "2024-07-12",
+          "amount": 1960000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "5109",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-15",
+      "incidents": [
+        {
+          "name": "Minterest",
+          "date": "2024-07-15",
+          "amount": 1400000,
+          "chain": [
+            "Mantle"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-16",
+      "incidents": [
+        {
+          "name": "LiFi Finance",
+          "date": "2024-07-16",
+          "amount": 9730000,
+          "chain": [
+            "zkSync Era",
+            "Linea",
+            "Metis"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-18",
+      "incidents": [
+        {
+          "name": "WazirX: India",
+          "date": "2024-07-18",
+          "amount": 234900000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Signer Phishing",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-19",
+      "incidents": [
+        {
+          "name": "Rho Markets",
+          "date": "2024-07-19",
+          "amount": 7600000,
+          "chain": [
+            "Scroll"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "4808",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-21",
+      "incidents": [
+        {
+          "name": "UtopiaSphere",
+          "date": "2024-07-21",
+          "amount": 521000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-22",
+      "incidents": [
+        {
+          "name": "ETHTrustFund",
+          "date": "2024-07-22",
+          "amount": 2100000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Rugpull",
+          "technique": "Treasury Misappropriation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-23",
+      "incidents": [
+        {
+          "name": "DeltaPrime",
+          "date": "2024-07-23",
+          "amount": 1000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Ownership Takeover",
+          "defillamaId": "2479",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "dYdX V3",
+          "date": "2024-07-23",
+          "amount": 31000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "144",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-24",
+      "incidents": [
+        {
+          "name": "Spectra Finance",
+          "date": "2024-07-24",
+          "amount": 73000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-26",
+      "incidents": [
+        {
+          "name": "Solrise Finance",
+          "date": "2024-07-26",
+          "amount": 6700000,
+          "chain": [
+            "Casper"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1537",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-07-31",
+      "incidents": [
+        {
+          "name": "Monoswap",
+          "date": "2024-07-31",
+          "amount": 1300000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Terra 2.0",
+          "date": "2024-07-31",
+          "amount": 6400000,
+          "chain": [
+            "Terra2"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

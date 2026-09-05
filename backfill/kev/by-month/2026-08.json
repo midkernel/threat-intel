@@ -1,0 +1,393 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-08",
+  "days": [
+    {
+      "day": "2026-08-01",
+      "added": [],
+      "cumulative_count": 1656
+    },
+    {
+      "day": "2026-08-02",
+      "added": [],
+      "cumulative_count": 1656
+    },
+    {
+      "day": "2026-08-03",
+      "added": [
+        {
+          "cveId": "CVE-2026-18577",
+          "vendorProject": "N-able",
+          "product": "N-central",
+          "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1657
+    },
+    {
+      "day": "2026-08-04",
+      "added": [
+        {
+          "cveId": "CVE-2026-18556",
+          "vendorProject": "N-able",
+          "product": "N-central",
+          "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34486",
+          "vendorProject": "Apache",
+          "product": "Tomcat",
+          "vulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-9198",
+          "vendorProject": "IBM",
+          "product": "Langflow",
+          "vulnerabilityName": "IBM Langflow Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1660
+    },
+    {
+      "day": "2026-08-05",
+      "added": [
+        {
+          "cveId": "CVE-2026-63077",
+          "vendorProject": "JetBrains",
+          "product": "TeamCity",
+          "vulnerabilityName": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1661
+    },
+    {
+      "day": "2026-08-06",
+      "added": [],
+      "cumulative_count": 1661
+    },
+    {
+      "day": "2026-08-07",
+      "added": [
+        {
+          "cveId": "CVE-2026-8037",
+          "vendorProject": "Progress",
+          "product": "LoadMaster",
+          "vulnerabilityName": "Progress LoadMaster Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1662
+    },
+    {
+      "day": "2026-08-08",
+      "added": [],
+      "cumulative_count": 1662
+    },
+    {
+      "day": "2026-08-09",
+      "added": [],
+      "cumulative_count": 1662
+    },
+    {
+      "day": "2026-08-10",
+      "added": [],
+      "cumulative_count": 1662
+    },
+    {
+      "day": "2026-08-11",
+      "added": [
+        {
+          "cveId": "CVE-2026-20349",
+          "vendorProject": "Cisco",
+          "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD)",
+          "vulnerabilityName": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-68820",
+          "vendorProject": "Microsoft",
+          "product": "Windows Ancillary Function Driver for WinSock",
+          "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-72898",
+          "vendorProject": "Metabase",
+          "product": "Metabase",
+          "vulnerabilityName": "Metabase SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-12",
+      "added": [],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-13",
+      "added": [],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-14",
+      "added": [],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-15",
+      "added": [],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-16",
+      "added": [],
+      "cumulative_count": 1665
+    },
+    {
+      "day": "2026-08-17",
+      "added": [
+        {
+          "cveId": "CVE-2025-62593",
+          "vendorProject": "Ray-Project",
+          "product": "Ray",
+          "vulnerabilityName": "Ray-Project Ray Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1666
+    },
+    {
+      "day": "2026-08-18",
+      "added": [
+        {
+          "cveId": "CVE-2026-33824",
+          "vendorProject": "Microsoft",
+          "product": "Internet Key Exchange (IKE) Service Extensions",
+          "vulnerabilityName": "Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-55040",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint",
+          "vulnerabilityName": "Microsoft SharePoint Weak Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-59310",
+          "vendorProject": "Broadcom",
+          "product": "VMware vCenter",
+          "vulnerabilityName": "Broadcom VMware vCenter Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-65400",
+          "vendorProject": "Apple",
+          "product": "macOS",
+          "vulnerabilityName": "Apple macOS Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1670
+    },
+    {
+      "day": "2026-08-19",
+      "added": [
+        {
+          "cveId": "CVE-2026-64849",
+          "vendorProject": "MLflow",
+          "product": "MLflow",
+          "vulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1671
+    },
+    {
+      "day": "2026-08-20",
+      "added": [
+        {
+          "cveId": "CVE-2026-72529",
+          "vendorProject": "TrueConf",
+          "product": "Server",
+          "vulnerabilityName": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-72530",
+          "vendorProject": "TrueConf",
+          "product": "Server",
+          "vulnerabilityName": "TrueConf Server Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1673
+    },
+    {
+      "day": "2026-08-21",
+      "added": [
+        {
+          "cveId": "CVE-2026-73570",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1674
+    },
+    {
+      "day": "2026-08-22",
+      "added": [],
+      "cumulative_count": 1674
+    },
+    {
+      "day": "2026-08-23",
+      "added": [],
+      "cumulative_count": 1674
+    },
+    {
+      "day": "2026-08-24",
+      "added": [
+        {
+          "cveId": "CVE-2026-21962",
+          "vendorProject": "Oracle",
+          "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
+          "vulnerabilityName": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1675
+    },
+    {
+      "day": "2026-08-25",
+      "added": [
+        {
+          "cveId": "CVE-2026-60004",
+          "vendorProject": "Gitea",
+          "product": "Gitea",
+          "vulnerabilityName": "Gitea Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1676
+    },
+    {
+      "day": "2026-08-26",
+      "added": [
+        {
+          "cveId": "CVE-2015-3246",
+          "vendorProject": "Red Hat",
+          "product": "Libuser",
+          "vulnerabilityName": "Red Hat Libuser Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-5287",
+          "vendorProject": "Red Hat",
+          "product": "Automatic Bug Reporting Tool",
+          "vulnerabilityName": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-1068",
+          "vendorProject": "Microsoft",
+          "product": "SQL Server",
+          "vulnerabilityName": "Microsoft SQL Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-23758",
+          "vendorProject": "Ajax.NET Professional",
+          "product": "Ajax.NET Professional",
+          "vulnerabilityName": "Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-0995",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-8452",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and NetScaler Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1682
+    },
+    {
+      "day": "2026-08-27",
+      "added": [
+        {
+          "cveId": "CVE-2023-49105",
+          "vendorProject": "ownCloud",
+          "product": "ownCloud",
+          "vulnerabilityName": "ownCloud Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-53362",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-66384",
+          "vendorProject": "JFrog",
+          "product": "Artifactory",
+          "vulnerabilityName": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1685
+    },
+    {
+      "day": "2026-08-28",
+      "added": [],
+      "cumulative_count": 1685
+    },
+    {
+      "day": "2026-08-29",
+      "added": [],
+      "cumulative_count": 1685
+    },
+    {
+      "day": "2026-08-30",
+      "added": [],
+      "cumulative_count": 1685
+    },
+    {
+      "day": "2026-08-31",
+      "added": [
+        {
+          "cveId": "CVE-2026-81578",
+          "vendorProject": "PaperCut",
+          "product": "NG/MF",
+          "vulnerabilityName": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-82078",
+          "vendorProject": "PaperCut",
+          "product": "NG/MF",
+          "vulnerabilityName": "PaperCut NG/MF Unsafe Reflection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1687
+    }
+  ]
+}

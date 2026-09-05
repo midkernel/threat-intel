@@ -1,0 +1,53 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2017-12",
+  "days": [
+    {
+      "day": "2017-12-08",
+      "incidents": [
+        {
+          "name": "NiceHash",
+          "date": "2017-12-08",
+          "amount": 64000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2017-12-19",
+      "incidents": [
+        {
+          "name": "Youbit",
+          "date": "2017-12-19",
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2017-12-20",
+      "incidents": [
+        {
+          "name": "EtherDelta",
+          "date": "2017-12-20",
+          "amount": 1400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

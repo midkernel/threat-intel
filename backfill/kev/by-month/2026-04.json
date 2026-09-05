@@ -1,0 +1,386 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-04",
+  "days": [
+    {
+      "day": "2026-04-01",
+      "added": [
+        {
+          "cveId": "CVE-2026-5281",
+          "vendorProject": "Google",
+          "product": "Dawn",
+          "vulnerabilityName": "Google Dawn Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1556
+    },
+    {
+      "day": "2026-04-02",
+      "added": [
+        {
+          "cveId": "CVE-2026-3502",
+          "vendorProject": "TrueConf",
+          "product": "Client",
+          "vulnerabilityName": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1557
+    },
+    {
+      "day": "2026-04-03",
+      "added": [],
+      "cumulative_count": 1557
+    },
+    {
+      "day": "2026-04-04",
+      "added": [],
+      "cumulative_count": 1557
+    },
+    {
+      "day": "2026-04-05",
+      "added": [],
+      "cumulative_count": 1557
+    },
+    {
+      "day": "2026-04-06",
+      "added": [
+        {
+          "cveId": "CVE-2026-35616",
+          "vendorProject": "Fortinet",
+          "product": "FortiClient EMS",
+          "vulnerabilityName": "Fortinet FortiClient EMS Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1558
+    },
+    {
+      "day": "2026-04-07",
+      "added": [],
+      "cumulative_count": 1558
+    },
+    {
+      "day": "2026-04-08",
+      "added": [
+        {
+          "cveId": "CVE-2026-1340",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1559
+    },
+    {
+      "day": "2026-04-09",
+      "added": [],
+      "cumulative_count": 1559
+    },
+    {
+      "day": "2026-04-10",
+      "added": [],
+      "cumulative_count": 1559
+    },
+    {
+      "day": "2026-04-11",
+      "added": [],
+      "cumulative_count": 1559
+    },
+    {
+      "day": "2026-04-12",
+      "added": [],
+      "cumulative_count": 1559
+    },
+    {
+      "day": "2026-04-13",
+      "added": [
+        {
+          "cveId": "CVE-2012-1854",
+          "vendorProject": "Microsoft",
+          "product": "Visual Basic for Applications (VBA)",
+          "vulnerabilityName": "Microsoft Visual Basic for Applications Insecure Library Loading Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-9715",
+          "vendorProject": "Adobe",
+          "product": "Acrobat",
+          "vulnerabilityName": "Adobe Acrobat Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-21529",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-36424",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-60710",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Link Following Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-21643",
+          "vendorProject": "Fortinet",
+          "product": "FortiClient EMS",
+          "vulnerabilityName": "Fortinet FortiClient EMS SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34621",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Prototype Pollution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1566
+    },
+    {
+      "day": "2026-04-14",
+      "added": [
+        {
+          "cveId": "CVE-2009-0238",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Remote Code Execution",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-32201",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint Server",
+          "vulnerabilityName": "Microsoft SharePoint Server Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1568
+    },
+    {
+      "day": "2026-04-15",
+      "added": [],
+      "cumulative_count": 1568
+    },
+    {
+      "day": "2026-04-16",
+      "added": [
+        {
+          "cveId": "CVE-2026-34197",
+          "vendorProject": "Apache",
+          "product": "ActiveMQ",
+          "vulnerabilityName": "Apache ActiveMQ Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1569
+    },
+    {
+      "day": "2026-04-17",
+      "added": [],
+      "cumulative_count": 1569
+    },
+    {
+      "day": "2026-04-18",
+      "added": [],
+      "cumulative_count": 1569
+    },
+    {
+      "day": "2026-04-19",
+      "added": [],
+      "cumulative_count": 1569
+    },
+    {
+      "day": "2026-04-20",
+      "added": [
+        {
+          "cveId": "CVE-2023-27351",
+          "vendorProject": "PaperCut",
+          "product": "NG/MF",
+          "vulnerabilityName": "PaperCut NG/MF Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-27199",
+          "vendorProject": "JetBrains",
+          "product": "TeamCity",
+          "vulnerabilityName": "JetBrains TeamCity Relative Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-2749",
+          "vendorProject": "Kentico",
+          "product": "Kentico Xperience",
+          "vulnerabilityName": "Kentico Xperience Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32975",
+          "vendorProject": "Quest",
+          "product": "KACE Systems Management Appliance (SMA)",
+          "vulnerabilityName": "Quest KACE Systems Management Appliance (SMA) Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48700",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20122",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Manger",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20128",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Manager",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Storing Passwords in a Recoverable Format Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20133",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Manager",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1577
+    },
+    {
+      "day": "2026-04-21",
+      "added": [],
+      "cumulative_count": 1577
+    },
+    {
+      "day": "2026-04-22",
+      "added": [
+        {
+          "cveId": "CVE-2026-33825",
+          "vendorProject": "Microsoft",
+          "product": "Defender",
+          "vulnerabilityName": "Microsoft Defender Insufficient Granularity of Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1578
+    },
+    {
+      "day": "2026-04-23",
+      "added": [
+        {
+          "cveId": "CVE-2026-39987",
+          "vendorProject": "Marimo",
+          "product": "Marimo",
+          "vulnerabilityName": "Marimo Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1579
+    },
+    {
+      "day": "2026-04-24",
+      "added": [
+        {
+          "cveId": "CVE-2024-57726",
+          "vendorProject": "SimpleHelp",
+          "product": "SimpleHelp",
+          "vulnerabilityName": "SimpleHelp Missing Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-57728",
+          "vendorProject": "SimpleHelp",
+          "product": "SimpleHelp",
+          "vulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-7399",
+          "vendorProject": "Samsung",
+          "product": "MagicINFO 9 Server",
+          "vulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-29635",
+          "vendorProject": "D-Link",
+          "product": "DIR-823X",
+          "vulnerabilityName": "D-Link DIR-823X Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1583
+    },
+    {
+      "day": "2026-04-25",
+      "added": [],
+      "cumulative_count": 1583
+    },
+    {
+      "day": "2026-04-26",
+      "added": [],
+      "cumulative_count": 1583
+    },
+    {
+      "day": "2026-04-27",
+      "added": [],
+      "cumulative_count": 1583
+    },
+    {
+      "day": "2026-04-28",
+      "added": [
+        {
+          "cveId": "CVE-2024-1708",
+          "vendorProject": "ConnectWise",
+          "product": "ScreenConnect",
+          "vulnerabilityName": "ConnectWise ScreenConnect Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-32202",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Protection Mechanism Failure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1585
+    },
+    {
+      "day": "2026-04-29",
+      "added": [],
+      "cumulative_count": 1585
+    },
+    {
+      "day": "2026-04-30",
+      "added": [
+        {
+          "cveId": "CVE-2026-41940",
+          "vendorProject": "WebPros",
+          "product": "cPanel & WHM and WP2 (WordPress Squared)",
+          "vulnerabilityName": "WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1586
+    }
+  ]
+}

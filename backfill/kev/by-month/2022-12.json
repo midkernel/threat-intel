@@ -1,0 +1,228 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-12",
+  "days": [
+    {
+      "day": "2022-12-01",
+      "added": [],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-12-02",
+      "added": [],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-12-03",
+      "added": [],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-12-04",
+      "added": [],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-12-05",
+      "added": [
+        {
+          "cveId": "CVE-2022-4262",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-06",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-07",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-08",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-09",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-10",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-11",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-12",
+      "added": [],
+      "cumulative_count": 858
+    },
+    {
+      "day": "2022-12-13",
+      "added": [
+        {
+          "cveId": "CVE-2022-26500",
+          "vendorProject": "Veeam",
+          "product": "Backup & Replication",
+          "vulnerabilityName": "Veeam Backup & Replication Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-26501",
+          "vendorProject": "Veeam",
+          "product": "Backup & Replication",
+          "vulnerabilityName": "Veeam Backup & Replication Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-27518",
+          "vendorProject": "Citrix",
+          "product": "Application Delivery Controller (ADC) and Gateway",
+          "vulnerabilityName": "Citrix Application Delivery Controller (ADC) and Gateway Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-42475",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS",
+          "vulnerabilityName": "Fortinet FortiOS Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-44698",
+          "vendorProject": "Microsoft",
+          "product": "Defender",
+          "vulnerabilityName": "Microsoft Defender SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 863
+    },
+    {
+      "day": "2022-12-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-42856",
+          "vendorProject": "Apple",
+          "product": "iOS",
+          "vulnerabilityName": "Apple iOS Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-15",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-16",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-17",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-18",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-19",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-20",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-21",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-22",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-23",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-24",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-25",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-26",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-27",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-28",
+      "added": [],
+      "cumulative_count": 864
+    },
+    {
+      "day": "2022-12-29",
+      "added": [
+        {
+          "cveId": "CVE-2018-18809",
+          "vendorProject": "TIBCO",
+          "product": "JasperReports",
+          "vulnerabilityName": "TIBCO JasperReports Library Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-5430",
+          "vendorProject": "TIBCO",
+          "product": "JasperReports",
+          "vulnerabilityName": "TIBCO JasperReports Server Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2022-12-30",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2022-12-31",
+      "added": [],
+      "cumulative_count": 866
+    }
+  ]
+}

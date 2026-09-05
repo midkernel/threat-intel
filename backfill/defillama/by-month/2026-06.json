@@ -1,0 +1,506 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-06",
+  "days": [
+    {
+      "day": "2026-06-01",
+      "incidents": [
+        {
+          "name": "Gnosis Pay",
+          "date": "2026-06-01",
+          "amount": 1500000,
+          "chain": [
+            "Gnosis Chain"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "7364",
+          "targetType": "Other"
+        },
+        {
+          "name": "TSR",
+          "date": "2026-06-01",
+          "amount": 2500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "Token"
+        },
+        {
+          "name": "TesseraDAO",
+          "date": "2026-06-01",
+          "amount": 2400000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-03",
+      "incidents": [
+        {
+          "name": "ATM",
+          "date": "2026-06-03",
+          "amount": 243000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "GPU.NET",
+          "date": "2026-06-03",
+          "amount": 10600,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-07",
+      "incidents": [
+        {
+          "name": "Ambient",
+          "date": "2026-06-07",
+          "amount": 110600,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "defillamaId": "3104",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Syscoin Bridge",
+          "date": "2026-06-07",
+          "amount": 10000000,
+          "chain": [
+            "Syscoin"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-08",
+      "incidents": [
+        {
+          "name": "Flooring Protocol",
+          "date": "2026-06-08",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "3644",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "Humanity",
+          "date": "2026-06-08",
+          "amount": 32000000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "7848",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-09",
+      "incidents": [
+        {
+          "name": "Asterix",
+          "date": "2026-06-09",
+          "amount": 40000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "NovaBox",
+          "date": "2026-06-09",
+          "amount": 107000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Chain"
+        },
+        {
+          "name": "Token of Power",
+          "date": "2026-06-09",
+          "amount": 1580000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-10",
+      "incidents": [
+        {
+          "name": "Axelar Secret IBC Bridge",
+          "date": "2026-06-10",
+          "amount": 4670000,
+          "chain": [
+            "Ethereum",
+            "Secret"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Unbacked Cross-Chain Mint",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Raydium AMM",
+          "date": "2026-06-10",
+          "amount": 1340000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "214",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-14",
+      "incidents": [
+        {
+          "name": "Aztec Connect",
+          "date": "2026-06-14",
+          "amount": 2100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "defillamaId": "1016",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-15",
+      "incidents": [
+        {
+          "name": "Thetanuts Finance",
+          "date": "2026-06-15",
+          "amount": 2100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "1085",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-16",
+      "incidents": [
+        {
+          "name": "RetoSwap",
+          "date": "2026-06-16",
+          "amount": 2700000,
+          "chain": [
+            "Monero"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-17",
+      "incidents": [
+        {
+          "name": "Aztec Bridge",
+          "date": "2026-06-17",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "DIP",
+          "date": "2026-06-17",
+          "amount": 111000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "Little Boy Plus",
+          "date": "2026-06-17",
+          "amount": 367000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-19",
+      "incidents": [
+        {
+          "name": "JB",
+          "date": "2026-06-19",
+          "amount": 50000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "Namada Shielded Pools",
+          "date": "2026-06-19",
+          "amount": 600000,
+          "chain": [
+            "Namada"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Unbacked Cross-Chain Mint",
+          "defillamaId": "6295",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Secret Network",
+          "date": "2026-06-19",
+          "amount": 4670000,
+          "chain": [
+            "Secret"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Unbacked Cross-Chain Mint",
+          "targetType": "Chain"
+        },
+        {
+          "name": "mySwap CL",
+          "date": "2026-06-19",
+          "amount": 305000,
+          "chain": [
+            "Starknet"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-20",
+      "incidents": [
+        {
+          "name": "JaredFromSubway MEV Bot",
+          "date": "2026-06-20",
+          "amount": 7500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "MEV Bot Drained",
+          "targetType": "Other"
+        },
+        {
+          "name": "LABUBU/OLPC",
+          "date": "2026-06-20",
+          "amount": 1100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Decimal Miscalculation",
+          "targetType": "Liquidity Pool"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-21",
+      "incidents": [
+        {
+          "name": "Quicksilver Zone",
+          "date": "2026-06-21",
+          "amount": 3500,
+          "chain": [
+            "Quicksilver"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Unbacked Mint",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Taiko Bridge",
+          "date": "2026-06-21",
+          "amount": 1700000,
+          "chain": [
+            "Taiko"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "defillamaId": "4692",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-23",
+      "incidents": [
+        {
+          "name": "Royal.io",
+          "date": "2026-06-23",
+          "amount": 263000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "SecondFi",
+          "date": "2026-06-23",
+          "amount": 2400000,
+          "chain": [
+            "Cardano"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-24",
+      "incidents": [
+        {
+          "name": "DLMC",
+          "date": "2026-06-24",
+          "amount": 222600,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-25",
+      "incidents": [
+        {
+          "name": "Lixir Finance",
+          "date": "2026-06-25",
+          "amount": 12300,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "465",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Ocean Protocol",
+          "date": "2026-06-25",
+          "amount": 127861,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Polymarket International",
+          "date": "2026-06-25",
+          "amount": 3000000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "defillamaId": "711",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-28",
+      "incidents": [
+        {
+          "name": "AIDC",
+          "date": "2026-06-28",
+          "amount": 121000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-06-30",
+      "incidents": [
+        {
+          "name": "Edel",
+          "date": "2026-06-30",
+          "amount": 403000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "7578",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

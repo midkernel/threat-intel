@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-11",
+  "days": [
+    {
+      "day": "2019-11-08",
+      "incidents": [
+        {
+          "name": "VinDAX",
+          "date": "2019-11-08",
+          "amount": 500000,
+          "chain": [
+            "Ethereum",
+            "Multiple"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-11-27",
+      "incidents": [
+        {
+          "name": "Upbit",
+          "date": "2019-11-27",
+          "amount": 49300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

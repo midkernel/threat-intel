@@ -1,0 +1,164 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-10",
+  "days": [
+    {
+      "day": "2021-10-01",
+      "incidents": [
+        {
+          "name": "Coinbase",
+          "date": "2021-10-01",
+          "classification": "Frontend & Infrastructure",
+          "technique": "Session Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-04",
+      "incidents": [
+        {
+          "name": "pNetwork",
+          "date": "2021-10-04",
+          "amount": 13000000,
+          "chain": [
+            "BSC",
+            "Bitcoin"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Spoofed Event Log",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-08",
+      "incidents": [
+        {
+          "name": "Mirror",
+          "date": "2021-10-08",
+          "amount": 90000000,
+          "chain": [
+            "Terra"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "260",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-14",
+      "incidents": [
+        {
+          "name": "Indexed Finance",
+          "date": "2021-10-14",
+          "amount": 16000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "188",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-18",
+      "incidents": [
+        {
+          "name": "Glide Finance",
+          "date": "2021-10-18",
+          "amount": 300000,
+          "chain": [
+            "Elastos"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "806",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-23",
+      "incidents": [
+        {
+          "name": "Alpha Homora",
+          "date": "2021-10-23",
+          "amount": 147000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-27",
+      "incidents": [
+        {
+          "name": "CREAM Lending",
+          "date": "2021-10-27",
+          "amount": 130000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "121",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-29",
+      "incidents": [
+        {
+          "name": "AnubisDAO",
+          "date": "2021-10-29",
+          "amount": 60000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "AutoShark",
+          "date": "2021-10-29",
+          "amount": 580000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "1074",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-10-30",
+      "incidents": [
+        {
+          "name": "BXH",
+          "date": "2021-10-30",
+          "amount": 139000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "404",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

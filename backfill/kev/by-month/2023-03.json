@@ -1,0 +1,292 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-03",
+  "days": [
+    {
+      "day": "2023-03-01",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-02",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-03",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-04",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-05",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-06",
+      "added": [],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-03-07",
+      "added": [
+        {
+          "cveId": "CVE-2022-28810",
+          "vendorProject": "Zoho",
+          "product": "ManageEngine",
+          "vulnerabilityName": "Zoho ManageEngine ADSelfService Plus Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-33891",
+          "vendorProject": "Apache",
+          "product": "Spark",
+          "vulnerabilityName": "Apache Spark Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-35914",
+          "vendorProject": "Teclib",
+          "product": "GLPI",
+          "vulnerabilityName": "Teclib GLPI Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 888
+    },
+    {
+      "day": "2023-03-08",
+      "added": [],
+      "cumulative_count": 888
+    },
+    {
+      "day": "2023-03-09",
+      "added": [],
+      "cumulative_count": 888
+    },
+    {
+      "day": "2023-03-10",
+      "added": [
+        {
+          "cveId": "CVE-2020-5741",
+          "vendorProject": "Plex",
+          "product": "Media Server",
+          "vulnerabilityName": "Plex Media Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-39144",
+          "vendorProject": "XStream",
+          "product": "XStream",
+          "vulnerabilityName": "XStream Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 890
+    },
+    {
+      "day": "2023-03-11",
+      "added": [],
+      "cumulative_count": 890
+    },
+    {
+      "day": "2023-03-12",
+      "added": [],
+      "cumulative_count": 890
+    },
+    {
+      "day": "2023-03-13",
+      "added": [],
+      "cumulative_count": 890
+    },
+    {
+      "day": "2023-03-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-41328",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS",
+          "vulnerabilityName": "Fortinet FortiOS Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-23397",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Outlook Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-24880",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 893
+    },
+    {
+      "day": "2023-03-15",
+      "added": [
+        {
+          "cveId": "CVE-2023-26360",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-16",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-17",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-18",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-19",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-20",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-21",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-22",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-23",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-24",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-25",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-26",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-27",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-28",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-29",
+      "added": [],
+      "cumulative_count": 894
+    },
+    {
+      "day": "2023-03-30",
+      "added": [
+        {
+          "cveId": "CVE-2013-3163",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-7494",
+          "vendorProject": "Samba",
+          "product": "Samba",
+          "vulnerabilityName": "Samba Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-30900",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22706",
+          "vendorProject": "Arm",
+          "product": "Mali Graphics Processing Unit (GPU)",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-3038",
+          "vendorProject": "Google",
+          "product": "Chromium Network Service",
+          "vulnerabilityName": "Google Chromium Network Service Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-38181",
+          "vendorProject": "Arm",
+          "product": "Mali Graphics Processing Unit (GPU)",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-39197",
+          "vendorProject": "Fortra",
+          "product": "Cobalt Strike",
+          "vulnerabilityName": "Fortra Cobalt Strike Teamserver Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-42948",
+          "vendorProject": "Fortra",
+          "product": "Cobalt Strike",
+          "vulnerabilityName": "Fortra Cobalt Strike User Interface Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-0266",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 903
+    },
+    {
+      "day": "2023-03-31",
+      "added": [],
+      "cumulative_count": 903
+    }
+  ]
+}

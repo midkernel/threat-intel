@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-01",
+  "days": [
+    {
+      "day": "2018-01-26",
+      "incidents": [
+        {
+          "name": "Coincheck",
+          "date": "2018-01-26",
+          "amount": 534000000,
+          "chain": [
+            "NEM"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

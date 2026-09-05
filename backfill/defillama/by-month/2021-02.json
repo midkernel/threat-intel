@@ -1,0 +1,105 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-02",
+  "days": [
+    {
+      "day": "2021-02-01",
+      "incidents": [
+        {
+          "name": "Cryptopia",
+          "date": "2021-02-01",
+          "amount": 45000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-02-05",
+      "incidents": [
+        {
+          "name": "Yearn Finance",
+          "date": "2021-02-05",
+          "amount": 11000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "113",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-02-09",
+      "incidents": [
+        {
+          "name": "Growth DeFi",
+          "date": "2021-02-09",
+          "amount": 1400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "159",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-02-12",
+      "incidents": [
+        {
+          "name": "BT Finance",
+          "date": "2021-02-12",
+          "amount": 1500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-02-13",
+      "incidents": [
+        {
+          "name": "Alpha Finance",
+          "date": "2021-02-13",
+          "amount": 37500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Borrow Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-02-27",
+      "incidents": [
+        {
+          "name": "Furucombo",
+          "date": "2021-02-27",
+          "amount": 14000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Delegatecall Hijack",
+          "defillamaId": "742",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

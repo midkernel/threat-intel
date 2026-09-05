@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2014-07",
+  "days": [
+    {
+      "day": "2014-07-13",
+      "incidents": [
+        {
+          "name": "Mintpal",
+          "date": "2014-07-13",
+          "amount": 2000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2014-07-29",
+      "incidents": [
+        {
+          "name": "Cryptsy",
+          "date": "2014-07-29",
+          "amount": 9580000,
+          "chain": [
+            "Bitcoin",
+            "Litecoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

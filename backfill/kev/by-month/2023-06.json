@@ -1,0 +1,331 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-06",
+  "days": [
+    {
+      "day": "2023-06-01",
+      "added": [],
+      "cumulative_count": 939
+    },
+    {
+      "day": "2023-06-02",
+      "added": [
+        {
+          "cveId": "CVE-2023-34362",
+          "vendorProject": "Progress",
+          "product": "MOVEit Transfer",
+          "vulnerabilityName": "Progress MOVEit Transfer SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 940
+    },
+    {
+      "day": "2023-06-03",
+      "added": [],
+      "cumulative_count": 940
+    },
+    {
+      "day": "2023-06-04",
+      "added": [],
+      "cumulative_count": 940
+    },
+    {
+      "day": "2023-06-05",
+      "added": [
+        {
+          "cveId": "CVE-2023-33009",
+          "vendorProject": "Zyxel",
+          "product": "Multiple Firewalls",
+          "vulnerabilityName": "Zyxel Multiple Firewalls Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-33010",
+          "vendorProject": "Zyxel",
+          "product": "Multiple Firewalls",
+          "vulnerabilityName": "Zyxel Multiple Firewalls Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 942
+    },
+    {
+      "day": "2023-06-06",
+      "added": [],
+      "cumulative_count": 942
+    },
+    {
+      "day": "2023-06-07",
+      "added": [
+        {
+          "cveId": "CVE-2023-3079",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-08",
+      "added": [],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-09",
+      "added": [],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-10",
+      "added": [],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-11",
+      "added": [],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-12",
+      "added": [],
+      "cumulative_count": 943
+    },
+    {
+      "day": "2023-06-13",
+      "added": [
+        {
+          "cveId": "CVE-2023-27997",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiProxy SSL-VPN",
+          "vulnerabilityName": "Fortinet FortiOS and FortiProxy SSL-VPN Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-14",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-15",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-16",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-17",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-18",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-19",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-20",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-21",
+      "added": [],
+      "cumulative_count": 944
+    },
+    {
+      "day": "2023-06-22",
+      "added": [
+        {
+          "cveId": "CVE-2016-0165",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-9079",
+          "vendorProject": "Mozilla",
+          "product": "Firefox, Firefox ESR, and Thunderbird",
+          "vulnerabilityName": "Mozilla Firefox, Firefox ESR, and Thunderbird Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-12641",
+          "vendorProject": "Roundcube",
+          "product": "Roundcube Webmail",
+          "vulnerabilityName": "Roundcube Webmail Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-35730",
+          "vendorProject": "Roundcube",
+          "product": "Roundcube Webmail",
+          "vulnerabilityName": "Roundcube Webmail Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-44026",
+          "vendorProject": "Roundcube",
+          "product": "Roundcube Webmail",
+          "vulnerabilityName": "Roundcube Webmail SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-20887",
+          "vendorProject": "VMware",
+          "product": "Aria Operations for Networks",
+          "vulnerabilityName": "Vmware Aria Operations for Networks Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 950
+    },
+    {
+      "day": "2023-06-23",
+      "added": [
+        {
+          "cveId": "CVE-2023-20867",
+          "vendorProject": "VMware",
+          "product": "Tools",
+          "vulnerabilityName": "VMware Tools Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-27992",
+          "vendorProject": "Zyxel",
+          "product": "Multiple Network-Attached Storage (NAS) Devices",
+          "vulnerabilityName": "Zyxel Multiple NAS Devices Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-32434",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-32435",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-32439",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-24",
+      "added": [],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-25",
+      "added": [],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-26",
+      "added": [],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-27",
+      "added": [],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-28",
+      "added": [],
+      "cumulative_count": 955
+    },
+    {
+      "day": "2023-06-29",
+      "added": [
+        {
+          "cveId": "CVE-2019-17621",
+          "vendorProject": "D-Link",
+          "product": "DIR-859 Router",
+          "vulnerabilityName": "D-Link DIR-859 Router Command Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-20500",
+          "vendorProject": "D-Link",
+          "product": "DWL-2600AP Access Point",
+          "vulnerabilityName": "D-Link DWL-2600AP Access Point Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25371",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25372",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Improper Boundary Check Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25394",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25395",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25487",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25489",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-06-30",
+      "added": [],
+      "cumulative_count": 963
+    }
+  ]
+}

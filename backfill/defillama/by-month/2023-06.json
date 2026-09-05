@@ -1,0 +1,274 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-06",
+  "days": [
+    {
+      "day": "2023-06-01",
+      "incidents": [
+        {
+          "name": "Cellframe",
+          "date": "2023-06-01",
+          "amount": 76112,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-02",
+      "incidents": [
+        {
+          "name": "Hector Lending",
+          "date": "2023-06-02",
+          "amount": 653000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "2761",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-03",
+      "incidents": [
+        {
+          "name": "Atomic Wallet",
+          "date": "2023-06-03",
+          "amount": 100000000,
+          "chain": [
+            "Ethereum",
+            "Tron",
+            "BSC",
+            "Bitcoin",
+            "Polkadot",
+            "Avalanche"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Supply Chain Attack",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-10",
+      "incidents": [
+        {
+          "name": "Atlantis Loans",
+          "date": "2023-06-10",
+          "amount": 2500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "745",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-11",
+      "incidents": [
+        {
+          "name": "Floating Point Group",
+          "date": "2023-06-11",
+          "amount": 15000000,
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-12",
+      "incidents": [
+        {
+          "name": "Keep3r Network",
+          "date": "2023-06-12",
+          "amount": 200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "defillamaId": "636",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Sturdy V1",
+          "date": "2023-06-12",
+          "amount": 775000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Read-Only Reentrancy",
+          "defillamaId": "1577",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-14",
+      "incidents": [
+        {
+          "name": "Tropykus RSK",
+          "date": "2023-06-14",
+          "amount": 150000,
+          "chain": [
+            "Rootstock"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "1464",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-15",
+      "incidents": [
+        {
+          "name": "CFC",
+          "date": "2023-06-15",
+          "amount": 16000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Hashflow",
+          "date": "2023-06-15",
+          "amount": 605000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum",
+            "Avalanche",
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "1447",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Hyperliquid",
+          "date": "2023-06-15",
+          "amount": 37000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "defillamaId": "2862",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-17",
+      "incidents": [
+        {
+          "name": "Midas Capital",
+          "date": "2023-06-17",
+          "amount": 340000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "1925",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Pawnfi",
+          "date": "2023-06-17",
+          "amount": 820000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-19",
+      "incidents": [
+        {
+          "name": "Ara Finance",
+          "date": "2023-06-19",
+          "amount": 125000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "1099",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-23",
+      "incidents": [
+        {
+          "name": "Shido",
+          "date": "2023-06-23",
+          "amount": 238500,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-27",
+      "incidents": [
+        {
+          "name": "Themis Protocol",
+          "date": "2023-06-27",
+          "amount": 370000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "3158",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-06-30",
+      "incidents": [
+        {
+          "name": "Biswap",
+          "date": "2023-06-30",
+          "amount": 72000,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

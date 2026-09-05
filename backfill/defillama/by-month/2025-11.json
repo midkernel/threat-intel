@@ -1,0 +1,233 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-11",
+  "days": [
+    {
+      "day": "2025-11-03",
+      "incidents": [
+        {
+          "name": "Balancer V2",
+          "date": "2025-11-03",
+          "amount": 128000000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum",
+            "Base",
+            "Polygon",
+            "Sonic",
+            "Optimism"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "2611",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-04",
+      "incidents": [
+        {
+          "name": "Moonwell Lending",
+          "date": "2025-11-04",
+          "amount": 1000000,
+          "chain": [
+            "Base",
+            "Optimism"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1853",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-07",
+      "incidents": [
+        {
+          "name": "DIMO",
+          "date": "2025-11-07",
+          "amount": 40000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-10",
+      "incidents": [
+        {
+          "name": "DRLVaultV3",
+          "date": "2025-11-10",
+          "amount": 100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-11",
+      "incidents": [
+        {
+          "name": "Impermax V3",
+          "date": "2025-11-11",
+          "amount": 380000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Liquidation Logic Flaw",
+          "defillamaId": "5981",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Polymarket",
+          "date": "2025-11-11",
+          "amount": 500000,
+          "chain": [
+            "Polygon",
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-20",
+      "incidents": [
+        {
+          "name": "Dexmax AI",
+          "date": "2025-11-20",
+          "amount": 130000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "Token"
+        },
+        {
+          "name": "GANA Payment",
+          "date": "2025-11-20",
+          "amount": 3100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-21",
+      "incidents": [
+        {
+          "name": "Aerodrome V1",
+          "date": "2025-11-21",
+          "amount": 700000,
+          "chain": [
+            "Ethereum",
+            "Optimism"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "3450",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-22",
+      "incidents": [
+        {
+          "name": "Raga Finance",
+          "date": "2025-11-22",
+          "amount": 18500,
+          "chain": [
+            "Hyperliquid L1"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-23",
+      "incidents": [
+        {
+          "name": "Port3 Network",
+          "date": "2025-11-23",
+          "amount": 166000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-24",
+      "incidents": [
+        {
+          "name": "Agentic FoF",
+          "date": "2025-11-24",
+          "amount": 531000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-26",
+      "incidents": [
+        {
+          "name": "Upbit",
+          "date": "2025-11-26",
+          "amount": 36000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-11-30",
+      "incidents": [
+        {
+          "name": "Yearn Ether",
+          "date": "2025-11-30",
+          "amount": 9000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "3973",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

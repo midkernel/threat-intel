@@ -1,0 +1,270 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-04",
+  "days": [
+    {
+      "day": "2025-04-01",
+      "added": [
+        {
+          "cveId": "CVE-2025-24813",
+          "vendorProject": "Apache",
+          "product": "Tomcat",
+          "vulnerabilityName": "Apache Tomcat Path Equivalence Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1313
+    },
+    {
+      "day": "2025-04-02",
+      "added": [],
+      "cumulative_count": 1313
+    },
+    {
+      "day": "2025-04-03",
+      "added": [],
+      "cumulative_count": 1313
+    },
+    {
+      "day": "2025-04-04",
+      "added": [
+        {
+          "cveId": "CVE-2025-22457",
+          "vendorProject": "Ivanti",
+          "product": "Connect Secure, Policy Secure, and ZTA Gateways",
+          "vulnerabilityName": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1314
+    },
+    {
+      "day": "2025-04-05",
+      "added": [],
+      "cumulative_count": 1314
+    },
+    {
+      "day": "2025-04-06",
+      "added": [],
+      "cumulative_count": 1314
+    },
+    {
+      "day": "2025-04-07",
+      "added": [
+        {
+          "cveId": "CVE-2025-31161",
+          "vendorProject": "CrushFTP",
+          "product": "CrushFTP",
+          "vulnerabilityName": "CrushFTP Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1315
+    },
+    {
+      "day": "2025-04-08",
+      "added": [
+        {
+          "cveId": "CVE-2025-29824",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-30406",
+          "vendorProject": "Gladinet",
+          "product": "CentreStack",
+          "vulnerabilityName": "Gladinet CentreStack and Triofox Use of Hard-coded Cryptographic Key Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1317
+    },
+    {
+      "day": "2025-04-09",
+      "added": [
+        {
+          "cveId": "CVE-2024-53150",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-53197",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Out-of-Bounds Access Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-10",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-11",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-12",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-13",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-14",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-15",
+      "added": [],
+      "cumulative_count": 1319
+    },
+    {
+      "day": "2025-04-16",
+      "added": [
+        {
+          "cveId": "CVE-2021-20035",
+          "vendorProject": "SonicWall",
+          "product": "SMA100 Appliances",
+          "vulnerabilityName": "SonicWall SMA100 Appliances OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1320
+    },
+    {
+      "day": "2025-04-17",
+      "added": [
+        {
+          "cveId": "CVE-2025-24054",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NTLM Hash Disclosure Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-31200",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-31201",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Arbitrary Read and Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-18",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-19",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-20",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-21",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-22",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-23",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-24",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-25",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-26",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-27",
+      "added": [],
+      "cumulative_count": 1323
+    },
+    {
+      "day": "2025-04-28",
+      "added": [
+        {
+          "cveId": "CVE-2025-1976",
+          "vendorProject": "Broadcom",
+          "product": "Brocade Fabric OS",
+          "vulnerabilityName": "Broadcom Brocade Fabric OS Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-3928",
+          "vendorProject": "Commvault",
+          "product": "Web Server",
+          "vulnerabilityName": "Commvault Web Server Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-42599",
+          "vendorProject": "Qualitia",
+          "product": "Active! Mail",
+          "vulnerabilityName": "Qualitia Active! Mail Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1326
+    },
+    {
+      "day": "2025-04-29",
+      "added": [
+        {
+          "cveId": "CVE-2025-31324",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver Unrestricted File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1327
+    },
+    {
+      "day": "2025-04-30",
+      "added": [],
+      "cumulative_count": 1327
+    }
+  ]
+}

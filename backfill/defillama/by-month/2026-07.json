@@ -1,0 +1,556 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-07",
+  "days": [
+    {
+      "day": "2026-07-02",
+      "incidents": [
+        {
+          "name": "Hinkal",
+          "date": "2026-07-02",
+          "amount": 820000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "defillamaId": "4487",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-05",
+      "incidents": [
+        {
+          "name": "Lazy Summer Protocol",
+          "date": "2026-07-05",
+          "amount": 6040000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "5796",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-06",
+      "incidents": [
+        {
+          "name": "BonkDAO",
+          "date": "2026-07-06",
+          "amount": 20000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-08",
+      "incidents": [
+        {
+          "name": "BFB",
+          "date": "2026-07-08",
+          "amount": 197800,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-11",
+      "incidents": [
+        {
+          "name": "BlueMove DEX",
+          "date": "2026-07-11",
+          "amount": 529000,
+          "chain": [
+            "Sui"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "2941",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Bonzo Lend",
+          "date": "2026-07-11",
+          "amount": 9050000,
+          "chain": [
+            "Hedera"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "5287",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-12",
+      "incidents": [
+        {
+          "name": "PHX",
+          "date": "2026-07-12",
+          "amount": 89500,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-13",
+      "incidents": [
+        {
+          "name": "Chi Protocol",
+          "date": "2026-07-13",
+          "amount": 8500,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Redeem Logic Flaw",
+          "defillamaId": "4617",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Lumi Finance",
+          "date": "2026-07-13",
+          "amount": 270000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "3890",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-14",
+      "incidents": [
+        {
+          "name": "BarnBridge",
+          "date": "2026-07-14",
+          "amount": 776000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "131",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Drips Network",
+          "date": "2026-07-14",
+          "amount": 24883,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-15",
+      "incidents": [
+        {
+          "name": "Cascade Liquidity Strategy",
+          "date": "2026-07-15",
+          "amount": 1340000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Ostium",
+          "date": "2026-07-15",
+          "amount": 23750000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "4932",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TeleSwap",
+          "date": "2026-07-15",
+          "amount": 735000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "5350",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-16",
+      "incidents": [
+        {
+          "name": "CrowdRingCircle",
+          "date": "2026-07-16",
+          "amount": 209100,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        },
+        {
+          "name": "DefiTuna Lending",
+          "date": "2026-07-16",
+          "amount": 580000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "6653",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-17",
+      "incidents": [
+        {
+          "name": "Across",
+          "date": "2026-07-17",
+          "amount": 4500000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Spoofed Event Log",
+          "defillamaId": "1207",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "FlyCow",
+          "date": "2026-07-17",
+          "amount": 65300,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-19",
+      "incidents": [
+        {
+          "name": "Allbridge Core",
+          "date": "2026-07-19",
+          "amount": 1650000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "3944",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-21",
+      "incidents": [
+        {
+          "name": "42DAO",
+          "date": "2026-07-21",
+          "amount": 912000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "FlashTrade",
+          "date": "2026-07-21",
+          "amount": 98000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "4107",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Wanchain",
+          "date": "2026-07-21",
+          "amount": 10000000,
+          "chain": [
+            "Cardano"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-22",
+      "incidents": [
+        {
+          "name": "AFX Bridge",
+          "date": "2026-07-22",
+          "amount": 24150000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "defillamaId": "8006",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Verus-Ethereum Bridge",
+          "date": "2026-07-22",
+          "amount": 7530000,
+          "chain": [
+            "Verus"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Zilliqa",
+          "date": "2026-07-22",
+          "amount": 1640000,
+          "chain": [
+            "Zilliqa"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-23",
+      "incidents": [
+        {
+          "name": "Lien",
+          "date": "2026-07-23",
+          "amount": 542000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "339",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Solido Cash",
+          "date": "2026-07-23",
+          "amount": 900000,
+          "chain": [
+            "Supra"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "6058",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-24",
+      "incidents": [
+        {
+          "name": "Triple-A",
+          "date": "2026-07-24",
+          "amount": 9700000,
+          "chain": [
+            "Ethereum",
+            "Tron",
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Payments"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-25",
+      "incidents": [
+        {
+          "name": "Bankr",
+          "date": "2026-07-25",
+          "amount": 479885,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Social Account Takeover",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Projekt",
+          "date": "2026-07-25",
+          "amount": 560000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-26",
+      "incidents": [
+        {
+          "name": "ChainConnect",
+          "date": "2026-07-26",
+          "amount": 650000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Avalanche",
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Garden",
+          "date": "2026-07-26",
+          "amount": 450000,
+          "chain": [
+            "Ethereum",
+            "Base",
+            "Arbitrum",
+            "BSC"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Database Breach",
+          "defillamaId": "4086",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WEMIX.FI Lend",
+          "date": "2026-07-26",
+          "amount": 737000,
+          "chain": [
+            "WEMIX3.0"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "2705",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-28",
+      "incidents": [
+        {
+          "name": "Crypto DAO",
+          "date": "2026-07-28",
+          "amount": 8200000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LULA",
+          "date": "2026-07-28",
+          "amount": 578000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-30",
+      "incidents": [
+        {
+          "name": "Set Protocol",
+          "date": "2026-07-30",
+          "amount": 9600,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "266",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Swan Treasury",
+          "date": "2026-07-30",
+          "amount": 625000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-07-31",
+      "incidents": [
+        {
+          "name": "COLDCARD",
+          "date": "2026-07-31",
+          "amount": 116000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "Wallet"
+        }
+      ]
+    }
+  ]
+}

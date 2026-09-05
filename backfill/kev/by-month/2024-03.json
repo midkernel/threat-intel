@@ -1,0 +1,237 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-03",
+  "days": [
+    {
+      "day": "2024-03-01",
+      "added": [],
+      "cumulative_count": 1083
+    },
+    {
+      "day": "2024-03-02",
+      "added": [],
+      "cumulative_count": 1083
+    },
+    {
+      "day": "2024-03-03",
+      "added": [],
+      "cumulative_count": 1083
+    },
+    {
+      "day": "2024-03-04",
+      "added": [
+        {
+          "cveId": "CVE-2024-21338",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel Exposed IOCTL with Insufficient Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1084
+    },
+    {
+      "day": "2024-03-05",
+      "added": [
+        {
+          "cveId": "CVE-2021-36380",
+          "vendorProject": "Sunhillo",
+          "product": "SureLine",
+          "vulnerabilityName": "Sunhillo SureLine OS Command Injection Vulnerablity",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-21237",
+          "vendorProject": "Android",
+          "product": "Pixel",
+          "vulnerabilityName": "Android Pixel Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1086
+    },
+    {
+      "day": "2024-03-06",
+      "added": [
+        {
+          "cveId": "CVE-2024-23225",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-23296",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1088
+    },
+    {
+      "day": "2024-03-07",
+      "added": [
+        {
+          "cveId": "CVE-2024-27198",
+          "vendorProject": "JetBrains",
+          "product": "TeamCity",
+          "vulnerabilityName": "JetBrains TeamCity Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-08",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-09",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-10",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-11",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-12",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-13",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-14",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-15",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-16",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-17",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-18",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-19",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-20",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-21",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-22",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-23",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-24",
+      "added": [],
+      "cumulative_count": 1089
+    },
+    {
+      "day": "2024-03-25",
+      "added": [
+        {
+          "cveId": "CVE-2019-7256",
+          "vendorProject": "Nice",
+          "product": "Linear eMerge E3-Series",
+          "vulnerabilityName": "Nice Linear eMerge E3-Series OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-44529",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Cloud Service Appliance (EPM CSA)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Cloud Service Appliance (EPM CSA) Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-48788",
+          "vendorProject": "Fortinet",
+          "product": "FortiClient EMS",
+          "vulnerabilityName": "Fortinet FortiClient EMS SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1092
+    },
+    {
+      "day": "2024-03-26",
+      "added": [
+        {
+          "cveId": "CVE-2023-24955",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint Server",
+          "vulnerabilityName": "Microsoft SharePoint Server Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-03-27",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-03-28",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-03-29",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-03-30",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-03-31",
+      "added": [],
+      "cumulative_count": 1093
+    }
+  ]
+}

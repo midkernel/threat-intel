@@ -1,0 +1,55 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-07",
+  "days": [
+    {
+      "day": "2020-07-01",
+      "incidents": [
+        {
+          "name": "Vether",
+          "date": "2020-07-01",
+          "amount": 450000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-07-11",
+      "incidents": [
+        {
+          "name": "Cashaa",
+          "date": "2020-07-11",
+          "amount": 3100000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-07-31",
+      "incidents": [
+        {
+          "name": "2gether",
+          "date": "2020-07-31",
+          "amount": 1183000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

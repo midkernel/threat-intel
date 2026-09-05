@@ -1,0 +1,293 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-04",
+  "days": [
+    {
+      "day": "2024-04-01",
+      "incidents": [
+        {
+          "name": "OpenLeverage",
+          "date": "2024-04-01",
+          "amount": 236000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "1208",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-08",
+      "incidents": [
+        {
+          "name": "SQUID",
+          "date": "2024-04-08",
+          "amount": 87000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-09",
+      "incidents": [
+        {
+          "name": "xBlast",
+          "date": "2024-04-09",
+          "amount": 84500,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-12",
+      "incidents": [
+        {
+          "name": "Sumer.money",
+          "date": "2024-04-12",
+          "amount": 350000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "3814",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Zest",
+          "date": "2024-04-12",
+          "amount": 1000000,
+          "chain": [
+            "Stacks"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-15",
+      "incidents": [
+        {
+          "name": "Chainge Finance",
+          "date": "2024-04-15",
+          "amount": 716000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "704",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Grand Base",
+          "date": "2024-04-15",
+          "amount": 1700000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-19",
+      "incidents": [
+        {
+          "name": "Hedgey",
+          "date": "2024-04-19",
+          "amount": 44700000,
+          "chain": [
+            "Arbitrum",
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-20",
+      "incidents": [
+        {
+          "name": "Rico",
+          "date": "2024-04-20",
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-22",
+      "incidents": [
+        {
+          "name": "Z123",
+          "date": "2024-04-22",
+          "amount": 136000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-23",
+      "incidents": [
+        {
+          "name": "Magpie Protocol",
+          "date": "2024-04-23",
+          "amount": 129000,
+          "chain": [
+            "Ethereum",
+            "Polygon",
+            "BSC",
+            "Blast",
+            "Avalanche",
+            "Arbitrum",
+            "Optimism",
+            "Base",
+            "zkSync Era",
+            "Polygon zkEVM"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-24",
+      "incidents": [
+        {
+          "name": "XBridge",
+          "date": "2024-04-24",
+          "amount": 1440000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "YIEDL",
+          "date": "2024-04-24",
+          "amount": 150000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-25",
+      "incidents": [
+        {
+          "name": "FENGSHOU",
+          "date": "2024-04-25",
+          "amount": 191000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-27",
+      "incidents": [
+        {
+          "name": "BNBX",
+          "date": "2024-04-27",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-29",
+      "incidents": [
+        {
+          "name": "Rain",
+          "date": "2024-04-29",
+          "amount": 14800000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "XRP",
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-04-30",
+      "incidents": [
+        {
+          "name": "Pike V1",
+          "date": "2024-04-30",
+          "amount": 1600000,
+          "chain": [
+            "Ethereum",
+            "Optimism",
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Proxy Upgrade Hijack",
+          "defillamaId": "4100",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Yield Protocol",
+          "date": "2024-04-30",
+          "amount": 181000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "876",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

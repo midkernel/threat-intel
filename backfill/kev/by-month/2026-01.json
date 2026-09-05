@@ -1,0 +1,289 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-01",
+  "days": [
+    {
+      "day": "2026-01-01",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-02",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-03",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-04",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-05",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-06",
+      "added": [],
+      "cumulative_count": 1484
+    },
+    {
+      "day": "2026-01-07",
+      "added": [
+        {
+          "cveId": "CVE-2009-0556",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office PowerPoint Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-37164",
+          "vendorProject": "Hewlett Packard Enterprise (HPE)",
+          "product": "OneView",
+          "vulnerabilityName": "Hewlett Packard Enterprise (HPE) OneView Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1486
+    },
+    {
+      "day": "2026-01-08",
+      "added": [],
+      "cumulative_count": 1486
+    },
+    {
+      "day": "2026-01-09",
+      "added": [],
+      "cumulative_count": 1486
+    },
+    {
+      "day": "2026-01-10",
+      "added": [],
+      "cumulative_count": 1486
+    },
+    {
+      "day": "2026-01-11",
+      "added": [],
+      "cumulative_count": 1486
+    },
+    {
+      "day": "2026-01-12",
+      "added": [
+        {
+          "cveId": "CVE-2025-8110",
+          "vendorProject": "Gogs",
+          "product": "Gogs",
+          "vulnerabilityName": "Gogs Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1487
+    },
+    {
+      "day": "2026-01-13",
+      "added": [
+        {
+          "cveId": "CVE-2026-20805",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-14",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-15",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-16",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-17",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-18",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-19",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-20",
+      "added": [],
+      "cumulative_count": 1488
+    },
+    {
+      "day": "2026-01-21",
+      "added": [
+        {
+          "cveId": "CVE-2026-20045",
+          "vendorProject": "Cisco",
+          "product": "Unified Communications Manager",
+          "vulnerabilityName": "Cisco Unified Communications Products Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1489
+    },
+    {
+      "day": "2026-01-22",
+      "added": [
+        {
+          "cveId": "CVE-2025-31125",
+          "vendorProject": "Vite",
+          "product": "Vitejs",
+          "vulnerabilityName": "Vite Vitejs Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-34026",
+          "vendorProject": "Versa",
+          "product": "Concerto",
+          "vulnerabilityName": "Versa Concerto Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-54313",
+          "vendorProject": "Prettier",
+          "product": "eslint-config-prettier",
+          "vulnerabilityName": "Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-68645",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) PHP Remote File Inclusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1493
+    },
+    {
+      "day": "2026-01-23",
+      "added": [
+        {
+          "cveId": "CVE-2024-37079",
+          "vendorProject": "Broadcom",
+          "product": "VMware vCenter Server",
+          "vulnerabilityName": "Broadcom VMware vCenter Server Out-of-bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1494
+    },
+    {
+      "day": "2026-01-24",
+      "added": [],
+      "cumulative_count": 1494
+    },
+    {
+      "day": "2026-01-25",
+      "added": [],
+      "cumulative_count": 1494
+    },
+    {
+      "day": "2026-01-26",
+      "added": [
+        {
+          "cveId": "CVE-2018-14634",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-52691",
+          "vendorProject": "SmarterTools",
+          "product": "SmarterMail",
+          "vulnerabilityName": "SmarterTools SmarterMail Unrestricted Upload of File with Dangerous Type Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-21509",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-23760",
+          "vendorProject": "SmarterTools",
+          "product": "SmarterMail",
+          "vulnerabilityName": "SmarterTools SmarterMail Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-24061",
+          "vendorProject": "GNU",
+          "product": "InetUtils",
+          "vulnerabilityName": "GNU InetUtils Argument Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1499
+    },
+    {
+      "day": "2026-01-27",
+      "added": [
+        {
+          "cveId": "CVE-2026-24858",
+          "vendorProject": "Fortinet",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Fortinet Multiple Products Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1500
+    },
+    {
+      "day": "2026-01-28",
+      "added": [],
+      "cumulative_count": 1500
+    },
+    {
+      "day": "2026-01-29",
+      "added": [
+        {
+          "cveId": "CVE-2026-1281",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1501
+    },
+    {
+      "day": "2026-01-30",
+      "added": [],
+      "cumulative_count": 1501
+    },
+    {
+      "day": "2026-01-31",
+      "added": [],
+      "cumulative_count": 1501
+    }
+  ]
+}

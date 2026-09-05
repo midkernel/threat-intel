@@ -1,0 +1,262 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-08",
+  "days": [
+    {
+      "day": "2023-08-01",
+      "incidents": [
+        {
+          "name": "LeetSwap",
+          "date": "2023-08-01",
+          "amount": 620000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "2745",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Neutra Finance",
+          "date": "2023-08-01",
+          "amount": 36450,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2459",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-02",
+      "incidents": [
+        {
+          "name": "Bald",
+          "date": "2023-08-02",
+          "amount": 23000000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Uwerx",
+          "date": "2023-08-02",
+          "amount": 327000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-07",
+      "incidents": [
+        {
+          "name": "Cypher",
+          "date": "2023-08-07",
+          "amount": 1035000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2575",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-08",
+      "incidents": [
+        {
+          "name": "Steadefi",
+          "date": "2023-08-08",
+          "amount": 1157000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "defillamaId": "2972",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-09",
+      "incidents": [
+        {
+          "name": "Earning.Farm",
+          "date": "2023-08-09",
+          "amount": 540000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-13",
+      "incidents": [
+        {
+          "name": "Zunami Protocol",
+          "date": "2023-08-13",
+          "amount": 2100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1201",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-15",
+      "incidents": [
+        {
+          "name": "RocketSwap Base",
+          "date": "2023-08-15",
+          "amount": 865000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "3314",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-18",
+      "incidents": [
+        {
+          "name": "Exactly",
+          "date": "2023-08-18",
+          "amount": 7600000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "2385",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-19",
+      "incidents": [
+        {
+          "name": "Harbor Protocol",
+          "date": "2023-08-19",
+          "amount": 250000,
+          "chain": [
+            "Comdex"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2388",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-24",
+      "incidents": [
+        {
+          "name": "GSS",
+          "date": "2023-08-24",
+          "amount": 25000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-25",
+      "incidents": [
+        {
+          "name": "Magnate Finance",
+          "date": "2023-08-25",
+          "amount": 6500000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Rugpull",
+          "technique": "Treasury Misappropriation",
+          "defillamaId": "3342",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-26",
+      "incidents": [
+        {
+          "name": "PEPE",
+          "date": "2023-08-26",
+          "amount": 15080000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-27",
+      "incidents": [
+        {
+          "name": "Balancer V2",
+          "date": "2023-08-27",
+          "amount": 800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2611",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-08-29",
+      "incidents": [
+        {
+          "name": "EAC",
+          "date": "2023-08-29",
+          "amount": 6376,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    }
+  ]
+}

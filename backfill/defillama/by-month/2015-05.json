@@ -1,0 +1,23 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2015-05",
+  "days": [
+    {
+      "day": "2015-05-22",
+      "incidents": [
+        {
+          "name": "Bitfinex",
+          "date": "2015-05-22",
+          "amount": 329000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "2275",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

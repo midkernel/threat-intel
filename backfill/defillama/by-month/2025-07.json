@@ -1,0 +1,215 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-07",
+  "days": [
+    {
+      "day": "2025-07-02",
+      "incidents": [
+        {
+          "name": "Future Protocol",
+          "date": "2025-07-02",
+          "amount": 4600000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-05",
+      "incidents": [
+        {
+          "name": "RANT",
+          "date": "2025-07-05",
+          "amount": 204000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Fee Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-08",
+      "incidents": [
+        {
+          "name": "Peapods Finance",
+          "date": "2025-07-08",
+          "amount": 207000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-09",
+      "incidents": [
+        {
+          "name": "GMX V1 Perps",
+          "date": "2025-07-09",
+          "amount": 42000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "337",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Texture",
+          "date": "2025-07-09",
+          "amount": 2200000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ZKSwap",
+          "date": "2025-07-09",
+          "amount": 5000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-10",
+      "incidents": [
+        {
+          "name": "Kinto Bridge",
+          "date": "2025-07-10",
+          "amount": 1550000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "defillamaId": "4336",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-15",
+      "incidents": [
+        {
+          "name": "Arcadia V2",
+          "date": "2025-07-15",
+          "amount": 2500000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "4455",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-16",
+      "incidents": [
+        {
+          "name": "BigONE",
+          "date": "2025-07-16",
+          "amount": 27000000,
+          "chain": [
+            "Bitcoin",
+            "BSC",
+            "Ethereum",
+            "Solana",
+            "TRON"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Supply Chain Attack",
+          "defillamaId": "4928",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-19",
+      "incidents": [
+        {
+          "name": "CoinDCX",
+          "date": "2025-07-19",
+          "amount": 44200000,
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "4042",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-20",
+      "incidents": [
+        {
+          "name": "Stepp2p",
+          "date": "2025-07-20",
+          "amount": 43000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-24",
+      "incidents": [
+        {
+          "name": "WOO X",
+          "date": "2025-07-24",
+          "amount": 14000000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "Arbitrum",
+            "BSC"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "2346",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-07-28",
+      "incidents": [
+        {
+          "name": "SuperRare",
+          "date": "2025-07-28",
+          "amount": 730000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Merkle Proof Forgery",
+          "defillamaId": "3144",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

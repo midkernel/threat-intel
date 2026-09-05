@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2016-05",
+  "days": [
+    {
+      "day": "2016-05-14",
+      "incidents": [
+        {
+          "name": "Gatecoin",
+          "date": "2016-05-14",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

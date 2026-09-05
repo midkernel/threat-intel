@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2016-10",
+  "days": [
+    {
+      "day": "2016-10-13",
+      "incidents": [
+        {
+          "name": "Bitcurex",
+          "date": "2016-10-13",
+          "amount": 1500000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

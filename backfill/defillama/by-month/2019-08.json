@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-08",
+  "days": [
+    {
+      "day": "2019-08-17",
+      "incidents": [
+        {
+          "name": "CoinTiger (PTT)",
+          "date": "2019-08-17",
+          "amount": 9200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-04",
+  "days": [
+    {
+      "day": "2020-04-08",
+      "incidents": [
+        {
+          "name": "Bisq",
+          "date": "2020-04-08",
+          "amount": 248000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "2588",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-04-18",
+      "incidents": [
+        {
+          "name": "Uniswap V1",
+          "date": "2020-04-18",
+          "amount": 220000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "2196",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-04-19",
+      "incidents": [
+        {
+          "name": "dForce Lending",
+          "date": "2020-04-19",
+          "amount": 25000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "123",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-04-25",
+      "incidents": [
+        {
+          "name": "Hegic",
+          "date": "2020-04-25",
+          "amount": 28537,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "defillamaId": "128",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-09",
+  "days": [
+    {
+      "day": "2019-09-28",
+      "incidents": [
+        {
+          "name": "Chain Fusion",
+          "date": "2019-09-28",
+          "amount": 6400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "3948",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

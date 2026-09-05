@@ -1,0 +1,44 @@
+schema: midkernel.threat-intel.backfill.manifest/v1
+first_day: 2021-04-14
+last_day: 2026-09-04
+layout: monthly-shards
+layout_note: Days are packed as kev|epss|defillama/by-month/YYYY-MM.json so the repo stays well under a few thousand files.
+additive_only: true
+ranking: false
+class_taxonomy: false
+midkernel_scores: false
+invented_daily_releases: false
+sources:
+  - id: kev
+    schema: midkernel.threat-intel.backfill.kev/v1
+    method: parse official CISA KEV JSON; bucket by dateAdded
+    url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    first_day: 2021-11-03
+    last_day: 2026-09-04
+    path: kev/by-month/
+    catalog_version: 2026.09.04
+    date_released: "2026-09-04T16:47:03.5197Z"
+    files: 59
+    window_added: 1695
+  - id: epss
+    schema: midkernel.threat-intel.backfill.epss/v1
+    method: download empiricalsec daily CSV; derive high_count; never commit CSV
+    url: "https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz (github.com/empiricalsec/epss_scores fallback)"
+    first_day: 2021-04-14
+    last_day: 2026-09-04
+    path: epss/by-month/
+    high_threshold: 0.5
+    files: 66
+    derived_days: 1961
+    missing_days: 9
+  - id: defillama
+    schema: midkernel.threat-intel.backfill.defillama/v1
+    method: parse official DeFiLlama hacks JSON; bucket by incident date
+    url: "https://api.llama.fi/hacks"
+    first_day: 2011-06-19
+    last_day: 2026-09-04
+    path: defillama/by-month/
+    files: 123
+    incidents: 1253
+    incident_days: 972
+    after_last_day: 2

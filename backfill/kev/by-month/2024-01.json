@@ -1,0 +1,318 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-01",
+  "days": [
+    {
+      "day": "2024-01-01",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2024-01-02",
+      "added": [
+        {
+          "cveId": "CVE-2023-7024",
+          "vendorProject": "Google",
+          "product": "Chromium WebRTC",
+          "vulnerabilityName": "Google Chromium WebRTC Heap Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-7101",
+          "vendorProject": "Spreadsheet::ParseExcel",
+          "product": "Spreadsheet::ParseExcel",
+          "vulnerabilityName": "Spreadsheet::ParseExcel Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-03",
+      "added": [],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-04",
+      "added": [],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-05",
+      "added": [],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-06",
+      "added": [],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-07",
+      "added": [],
+      "cumulative_count": 1055
+    },
+    {
+      "day": "2024-01-08",
+      "added": [
+        {
+          "cveId": "CVE-2016-20017",
+          "vendorProject": "D-Link",
+          "product": "DSL-2750B Devices",
+          "vulnerabilityName": "D-Link DSL-2750B Devices Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-23752",
+          "vendorProject": "Joomla!",
+          "product": "Joomla!",
+          "vulnerabilityName": "Joomla! Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-27524",
+          "vendorProject": "Apache",
+          "product": "Superset",
+          "vulnerabilityName": "Apache Superset Insecure Default Initialization of Resource Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-29300",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-38203",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-41990",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1061
+    },
+    {
+      "day": "2024-01-09",
+      "added": [],
+      "cumulative_count": 1061
+    },
+    {
+      "day": "2024-01-10",
+      "added": [
+        {
+          "cveId": "CVE-2023-29357",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint Server",
+          "vulnerabilityName": "Microsoft SharePoint Server Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-46805",
+          "vendorProject": "Ivanti",
+          "product": "Connect Secure and Policy Secure",
+          "vulnerabilityName": "Ivanti Connect Secure and Policy Secure Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-21887",
+          "vendorProject": "Ivanti",
+          "product": "Connect Secure and Policy Secure",
+          "vulnerabilityName": "Ivanti Connect Secure and Policy Secure Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-11",
+      "added": [],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-12",
+      "added": [],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-13",
+      "added": [],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-14",
+      "added": [],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-15",
+      "added": [],
+      "cumulative_count": 1064
+    },
+    {
+      "day": "2024-01-16",
+      "added": [
+        {
+          "cveId": "CVE-2018-15133",
+          "vendorProject": "Laravel",
+          "product": "Laravel Framework",
+          "vulnerabilityName": "Laravel Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1065
+    },
+    {
+      "day": "2024-01-17",
+      "added": [
+        {
+          "cveId": "CVE-2023-6548",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and NetScaler Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-6549",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and NetScaler Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-0519",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Memory Access Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1068
+    },
+    {
+      "day": "2024-01-18",
+      "added": [
+        {
+          "cveId": "CVE-2023-35082",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM) and MobileIron Core",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) and MobileIron Core Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1069
+    },
+    {
+      "day": "2024-01-19",
+      "added": [],
+      "cumulative_count": 1069
+    },
+    {
+      "day": "2024-01-20",
+      "added": [],
+      "cumulative_count": 1069
+    },
+    {
+      "day": "2024-01-21",
+      "added": [],
+      "cumulative_count": 1069
+    },
+    {
+      "day": "2024-01-22",
+      "added": [
+        {
+          "cveId": "CVE-2023-34048",
+          "vendorProject": "VMware",
+          "product": "vCenter Server",
+          "vulnerabilityName": "VMware vCenter Server Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1070
+    },
+    {
+      "day": "2024-01-23",
+      "added": [
+        {
+          "cveId": "CVE-2024-23222",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1071
+    },
+    {
+      "day": "2024-01-24",
+      "added": [
+        {
+          "cveId": "CVE-2023-22527",
+          "vendorProject": "Atlassian",
+          "product": "Confluence Data Center and Server",
+          "vulnerabilityName": "Atlassian Confluence Data Center and Server Template Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-25",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-26",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-27",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-28",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-29",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-30",
+      "added": [],
+      "cumulative_count": 1072
+    },
+    {
+      "day": "2024-01-31",
+      "added": [
+        {
+          "cveId": "CVE-2022-48618",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-21893",
+          "vendorProject": "Ivanti",
+          "product": "Connect Secure, Policy Secure, and Neurons",
+          "vulnerabilityName": "Ivanti Connect Secure, Policy Secure, and Neurons Server-Side Request Forgery (SSRF) Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1074
+    }
+  ]
+}

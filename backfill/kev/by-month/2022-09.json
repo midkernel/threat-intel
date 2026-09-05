@@ -1,0 +1,330 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-09",
+  "days": [
+    {
+      "day": "2022-09-01",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-02",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-03",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-04",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-05",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-06",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-07",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-09-08",
+      "added": [
+        {
+          "cveId": "CVE-2011-1823",
+          "vendorProject": "Android",
+          "product": "Android OS",
+          "vulnerabilityName": "Android OS Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2011-4723",
+          "vendorProject": "D-Link",
+          "product": "DIR-300 Router",
+          "vulnerabilityName": "D-Link DIR-300 Router Cleartext Storage of a Password Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-5521",
+          "vendorProject": "NETGEAR",
+          "product": "Multiple Devices",
+          "vulnerabilityName": "NETGEAR Multiple Devices Exposure of Sensitive Information Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-13374",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiADC",
+          "vulnerabilityName": "Fortinet FortiOS and FortiADC Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-2628",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-6530",
+          "vendorProject": "D-Link",
+          "product": "Multiple Routers",
+          "vulnerabilityName": "D-Link Multiple Routers OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-7445",
+          "vendorProject": "MikroTik",
+          "product": "RouterOS",
+          "vulnerabilityName": "MikroTik RouterOS Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-9934",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-26258",
+          "vendorProject": "D-Link",
+          "product": "DIR-820L",
+          "vulnerabilityName": "D-Link DIR-820L Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-27593",
+          "vendorProject": "QNAP",
+          "product": "Photo Station",
+          "vulnerabilityName": "QNAP Photo Station Externally Controlled Reference Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-3075",
+          "vendorProject": "Google",
+          "product": "Chromium Mojo",
+          "vulnerabilityName": "Google Chromium Mojo Insufficient Data Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-09",
+      "added": [],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-10",
+      "added": [],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-11",
+      "added": [],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-12",
+      "added": [],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-13",
+      "added": [],
+      "cumulative_count": 822
+    },
+    {
+      "day": "2022-09-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-32917",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-37969",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 824
+    },
+    {
+      "day": "2022-09-15",
+      "added": [
+        {
+          "cveId": "CVE-2010-2568",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-2094",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-2596",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-2597",
+          "vendorProject": "Code Aurora",
+          "product": "ACDB Audio Driver",
+          "vulnerabilityName": "Code Aurora ACDB Audio Driver Stack-based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-6282",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-40139",
+          "vendorProject": "Trend Micro",
+          "product": "Apex One and Apex One as a Service",
+          "vulnerabilityName": "Trend Micro Apex One and Apex One as a Service Improper Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-16",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-17",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-18",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-19",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-20",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-21",
+      "added": [],
+      "cumulative_count": 830
+    },
+    {
+      "day": "2022-09-22",
+      "added": [
+        {
+          "cveId": "CVE-2022-35405",
+          "vendorProject": "Zoho",
+          "product": "ManageEngine",
+          "vulnerabilityName": "Zoho ManageEngine Multiple Products Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 831
+    },
+    {
+      "day": "2022-09-23",
+      "added": [
+        {
+          "cveId": "CVE-2022-3236",
+          "vendorProject": "Sophos",
+          "product": "Firewall",
+          "vulnerabilityName": "Sophos Firewall Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-24",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-25",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-26",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-27",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-28",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-29",
+      "added": [],
+      "cumulative_count": 832
+    },
+    {
+      "day": "2022-09-30",
+      "added": [
+        {
+          "cveId": "CVE-2022-36804",
+          "vendorProject": "Atlassian",
+          "product": "Bitbucket Server and Data Center",
+          "vulnerabilityName": "Atlassian Bitbucket Server and Data Center Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-41040",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Server-Side Request Forgery Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-41082",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 835
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-11",
+  "days": [
+    {
+      "day": "2021-11-03",
+      "incidents": [
+        {
+          "name": "Squid Games",
+          "date": "2021-11-03",
+          "amount": 3380000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "targetType": "Gaming"
+        },
+        {
+          "name": "Vesper Finance",
+          "date": "2021-11-03",
+          "amount": 3370000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-05",
+      "incidents": [
+        {
+          "name": "Ooki",
+          "date": "2021-11-05",
+          "amount": 55000000,
+          "chain": [
+            "Polygon",
+            "BSC"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "197",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-07",
+      "incidents": [
+        {
+          "name": "ChainSwap",
+          "date": "2021-11-07",
+          "amount": 4400000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Caller Impersonation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-15",
+      "incidents": [
+        {
+          "name": "Nerve",
+          "date": "2021-11-15",
+          "amount": 537000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "301",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-19",
+      "incidents": [
+        {
+          "name": "Phantom Galaxies",
+          "date": "2021-11-19",
+          "amount": 1100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-23",
+      "incidents": [
+        {
+          "name": "Ploutoz",
+          "date": "2021-11-23",
+          "amount": 365000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-25",
+      "incidents": [
+        {
+          "name": "Snowdog",
+          "date": "2021-11-25",
+          "amount": 18100000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "defillamaId": "859",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-27",
+      "incidents": [
+        {
+          "name": "Lever",
+          "date": "2021-11-27",
+          "amount": 652000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Borrow Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-28",
+      "incidents": [
+        {
+          "name": "Visor Finance",
+          "date": "2021-11-28",
+          "amount": 975720,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-11-30",
+      "incidents": [
+        {
+          "name": "MonoX",
+          "date": "2021-11-30",
+          "amount": 31400000,
+          "chain": [
+            "Ethereum",
+            "Polygon"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "948",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

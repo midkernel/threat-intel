@@ -1,0 +1,283 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-04",
+  "days": [
+    {
+      "day": "2023-04-01",
+      "added": [],
+      "cumulative_count": 903
+    },
+    {
+      "day": "2023-04-02",
+      "added": [],
+      "cumulative_count": 903
+    },
+    {
+      "day": "2023-04-03",
+      "added": [
+        {
+          "cveId": "CVE-2022-27926",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 904
+    },
+    {
+      "day": "2023-04-04",
+      "added": [],
+      "cumulative_count": 904
+    },
+    {
+      "day": "2023-04-05",
+      "added": [],
+      "cumulative_count": 904
+    },
+    {
+      "day": "2023-04-06",
+      "added": [],
+      "cumulative_count": 904
+    },
+    {
+      "day": "2023-04-07",
+      "added": [
+        {
+          "cveId": "CVE-2019-1388",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Certificate Dialog Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-27876",
+          "vendorProject": "Veritas",
+          "product": "Backup Exec Agent",
+          "vulnerabilityName": "Veritas Backup Exec Agent File Access Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-27877",
+          "vendorProject": "Veritas",
+          "product": "Backup Exec Agent",
+          "vulnerabilityName": "Veritas Backup Exec Agent Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-27878",
+          "vendorProject": "Veritas",
+          "product": "Backup Exec Agent",
+          "vulnerabilityName": "Veritas Backup Exec Agent Command Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-26083",
+          "vendorProject": "Arm",
+          "product": "Mali Graphics Processing Unit (GPU)",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 909
+    },
+    {
+      "day": "2023-04-08",
+      "added": [],
+      "cumulative_count": 909
+    },
+    {
+      "day": "2023-04-09",
+      "added": [],
+      "cumulative_count": 909
+    },
+    {
+      "day": "2023-04-10",
+      "added": [
+        {
+          "cveId": "CVE-2023-28205",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-28206",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS IOSurfaceAccelerator Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 911
+    },
+    {
+      "day": "2023-04-11",
+      "added": [
+        {
+          "cveId": "CVE-2023-28252",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 912
+    },
+    {
+      "day": "2023-04-12",
+      "added": [],
+      "cumulative_count": 912
+    },
+    {
+      "day": "2023-04-13",
+      "added": [
+        {
+          "cveId": "CVE-2023-20963",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-29492",
+          "vendorProject": "Novi Survey",
+          "product": "Novi Survey",
+          "vulnerabilityName": "Novi Survey Insecure Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 914
+    },
+    {
+      "day": "2023-04-14",
+      "added": [],
+      "cumulative_count": 914
+    },
+    {
+      "day": "2023-04-15",
+      "added": [],
+      "cumulative_count": 914
+    },
+    {
+      "day": "2023-04-16",
+      "added": [],
+      "cumulative_count": 914
+    },
+    {
+      "day": "2023-04-17",
+      "added": [
+        {
+          "cveId": "CVE-2019-8526",
+          "vendorProject": "Apple",
+          "product": "macOS",
+          "vulnerabilityName": "Apple macOS Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-2033",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 916
+    },
+    {
+      "day": "2023-04-18",
+      "added": [],
+      "cumulative_count": 916
+    },
+    {
+      "day": "2023-04-19",
+      "added": [
+        {
+          "cveId": "CVE-2017-6742",
+          "vendorProject": "Cisco",
+          "product": "IOS and IOS XE Software",
+          "vulnerabilityName": "Cisco IOS and IOS XE Software SNMP Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 917
+    },
+    {
+      "day": "2023-04-20",
+      "added": [],
+      "cumulative_count": 917
+    },
+    {
+      "day": "2023-04-21",
+      "added": [
+        {
+          "cveId": "CVE-2023-2136",
+          "vendorProject": "Google",
+          "product": "Chromium Skia",
+          "vulnerabilityName": "Google Chrome Skia Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-27350",
+          "vendorProject": "PaperCut",
+          "product": "MF/NG",
+          "vulnerabilityName": "PaperCut MF/NG Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-28432",
+          "vendorProject": "MinIO",
+          "product": "MinIO",
+          "vulnerabilityName": "MinIO Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-22",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-23",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-24",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-25",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-26",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-27",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-28",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-29",
+      "added": [],
+      "cumulative_count": 920
+    },
+    {
+      "day": "2023-04-30",
+      "added": [],
+      "cumulative_count": 920
+    }
+  ]
+}

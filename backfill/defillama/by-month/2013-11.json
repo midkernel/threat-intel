@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2013-11",
+  "days": [
+    {
+      "day": "2013-11-11",
+      "incidents": [
+        {
+          "name": "Bitcash",
+          "date": "2013-11-11",
+          "amount": 100000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

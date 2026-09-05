@@ -1,0 +1,341 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-09",
+  "days": [
+    {
+      "day": "2024-09-01",
+      "added": [],
+      "cumulative_count": 1159
+    },
+    {
+      "day": "2024-09-02",
+      "added": [],
+      "cumulative_count": 1159
+    },
+    {
+      "day": "2024-09-03",
+      "added": [
+        {
+          "cveId": "CVE-2021-20123",
+          "vendorProject": "DrayTek",
+          "product": "VigorConnect",
+          "vulnerabilityName": "Draytek VigorConnect Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-20124",
+          "vendorProject": "DrayTek",
+          "product": "VigorConnect",
+          "vulnerabilityName": "Draytek VigorConnect Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-7262",
+          "vendorProject": "Kingsoft",
+          "product": "WPS Office",
+          "vulnerabilityName": "Kingsoft WPS Office Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-04",
+      "added": [],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-05",
+      "added": [],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-06",
+      "added": [],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-07",
+      "added": [],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-08",
+      "added": [],
+      "cumulative_count": 1162
+    },
+    {
+      "day": "2024-09-09",
+      "added": [
+        {
+          "cveId": "CVE-2016-3714",
+          "vendorProject": "ImageMagick",
+          "product": "ImageMagick",
+          "vulnerabilityName": "ImageMagick Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-1000253",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel PIE Stack Buffer Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-40766",
+          "vendorProject": "SonicWall",
+          "product": "SonicOS",
+          "vulnerabilityName": "SonicWall SonicOS Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1165
+    },
+    {
+      "day": "2024-09-10",
+      "added": [
+        {
+          "cveId": "CVE-2024-38014",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Installer Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38217",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Mark of the Web (MOTW) Protection Mechanism Failure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38226",
+          "vendorProject": "Microsoft",
+          "product": "Publisher",
+          "vulnerabilityName": "Microsoft Publisher Protection Mechanism Failure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1168
+    },
+    {
+      "day": "2024-09-11",
+      "added": [],
+      "cumulative_count": 1168
+    },
+    {
+      "day": "2024-09-12",
+      "added": [],
+      "cumulative_count": 1168
+    },
+    {
+      "day": "2024-09-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-8190",
+          "vendorProject": "Ivanti",
+          "product": "Cloud Services Appliance",
+          "vulnerabilityName": "Ivanti Cloud Services Appliance OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1169
+    },
+    {
+      "day": "2024-09-14",
+      "added": [],
+      "cumulative_count": 1169
+    },
+    {
+      "day": "2024-09-15",
+      "added": [],
+      "cumulative_count": 1169
+    },
+    {
+      "day": "2024-09-16",
+      "added": [
+        {
+          "cveId": "CVE-2024-43461",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows MSHTML Platform Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-6670",
+          "vendorProject": "Progress",
+          "product": "WhatsUp Gold",
+          "vulnerabilityName": "Progress WhatsUp Gold SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1171
+    },
+    {
+      "day": "2024-09-17",
+      "added": [
+        {
+          "cveId": "CVE-2013-0643",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Incorrect Default Permissions Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-0648",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-0497",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Integer Underflow Vulnerablity",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-0502",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Double Free Vulnerablity",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1175
+    },
+    {
+      "day": "2024-09-18",
+      "added": [
+        {
+          "cveId": "CVE-2020-0618",
+          "vendorProject": "Microsoft",
+          "product": "SQL Server",
+          "vulnerabilityName": "Microsoft SQL Server Reporting Services Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2020-14644",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-21445",
+          "vendorProject": "Oracle",
+          "product": "ADF Faces",
+          "vulnerabilityName": "Oracle ADF Faces Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-27348",
+          "vendorProject": "Apache",
+          "product": "HugeGraph-Server",
+          "vulnerabilityName": "Apache HugeGraph-Server Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1179
+    },
+    {
+      "day": "2024-09-19",
+      "added": [
+        {
+          "cveId": "CVE-2024-8963",
+          "vendorProject": "Ivanti",
+          "product": "Cloud Services Appliance (CSA)",
+          "vulnerabilityName": "Ivanti Cloud Services Appliance (CSA) Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1180
+    },
+    {
+      "day": "2024-09-20",
+      "added": [],
+      "cumulative_count": 1180
+    },
+    {
+      "day": "2024-09-21",
+      "added": [],
+      "cumulative_count": 1180
+    },
+    {
+      "day": "2024-09-22",
+      "added": [],
+      "cumulative_count": 1180
+    },
+    {
+      "day": "2024-09-23",
+      "added": [],
+      "cumulative_count": 1180
+    },
+    {
+      "day": "2024-09-24",
+      "added": [
+        {
+          "cveId": "CVE-2024-7593",
+          "vendorProject": "Ivanti",
+          "product": "Virtual Traffic Manager",
+          "vulnerabilityName": "Ivanti Virtual Traffic Manager Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-25",
+      "added": [],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-26",
+      "added": [],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-27",
+      "added": [],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-28",
+      "added": [],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-29",
+      "added": [],
+      "cumulative_count": 1181
+    },
+    {
+      "day": "2024-09-30",
+      "added": [
+        {
+          "cveId": "CVE-2019-0344",
+          "vendorProject": "SAP",
+          "product": "Commerce Cloud",
+          "vulnerabilityName": "SAP Commerce Cloud Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-15415",
+          "vendorProject": "DrayTek",
+          "product": "Multiple Vigor Routers",
+          "vulnerabilityName": "DrayTek Multiple Vigor Routers OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-25280",
+          "vendorProject": "D-Link",
+          "product": "DIR-820 Router",
+          "vulnerabilityName": "D-Link DIR-820 Router OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1184
+    }
+  ]
+}

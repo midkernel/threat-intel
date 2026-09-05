@@ -1,0 +1,158 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-09",
+  "days": [
+    {
+      "day": "2022-09-01",
+      "incidents": [
+        {
+          "name": "KyberSwap Classic",
+          "date": "2022-09-01",
+          "amount": 265000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "CDN Compromise",
+          "defillamaId": "127",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-02",
+      "incidents": [
+        {
+          "name": "Bad Guys by RPF",
+          "date": "2022-09-02",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "ShadowFi",
+          "date": "2022-09-02",
+          "amount": 301000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-05",
+      "incidents": [
+        {
+          "name": "DAO Swap",
+          "date": "2022-09-05",
+          "amount": 580000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "2167",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-06",
+      "incidents": [
+        {
+          "name": "Nereus Finance",
+          "date": "2022-09-06",
+          "amount": 371000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-07",
+      "incidents": [
+        {
+          "name": "GERA",
+          "date": "2022-09-07",
+          "amount": 1480000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-08",
+      "incidents": [
+        {
+          "name": "New Free DAO",
+          "date": "2022-09-08",
+          "amount": 1250000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Ragnarok Online Invasion",
+          "date": "2022-09-08",
+          "amount": 44000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-18",
+      "incidents": [
+        {
+          "name": "GMX V1 Perps",
+          "date": "2022-09-18",
+          "amount": 565000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Stale Price Arbitrage",
+          "defillamaId": "337",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-09-20",
+      "incidents": [
+        {
+          "name": "Wintermute",
+          "date": "2022-09-20",
+          "amount": 160000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Other"
+        }
+      ]
+    }
+  ]
+}

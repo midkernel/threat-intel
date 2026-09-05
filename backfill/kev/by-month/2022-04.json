@@ -1,0 +1,479 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-04",
+  "days": [
+    {
+      "day": "2022-04-01",
+      "added": [],
+      "cumulative_count": 609
+    },
+    {
+      "day": "2022-04-02",
+      "added": [],
+      "cumulative_count": 609
+    },
+    {
+      "day": "2022-04-03",
+      "added": [],
+      "cumulative_count": 609
+    },
+    {
+      "day": "2022-04-04",
+      "added": [
+        {
+          "cveId": "CVE-2021-45382",
+          "vendorProject": "D-Link",
+          "product": "Multiple Routers",
+          "vulnerabilityName": "D-Link Multiple Routers Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22674",
+          "vendorProject": "Apple",
+          "product": "macOS",
+          "vulnerabilityName": "Apple macOS Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22675",
+          "vendorProject": "Apple",
+          "product": "macOS",
+          "vulnerabilityName": "Apple macOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22965",
+          "vendorProject": "VMware",
+          "product": "Spring Framework",
+          "vulnerabilityName": "Spring Framework JDK 9+ Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 613
+    },
+    {
+      "day": "2022-04-05",
+      "added": [],
+      "cumulative_count": 613
+    },
+    {
+      "day": "2022-04-06",
+      "added": [
+        {
+          "cveId": "CVE-2017-0148",
+          "vendorProject": "Microsoft",
+          "product": "SMBv1 server",
+          "vulnerabilityName": "Microsoft SMBv1 Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-31166",
+          "vendorProject": "Microsoft",
+          "product": "HTTP Protocol Stack",
+          "vulnerabilityName": "Microsoft HTTP Protocol Stack Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-3156",
+          "vendorProject": "Sudo",
+          "product": "Sudo",
+          "vulnerabilityName": "Sudo Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 616
+    },
+    {
+      "day": "2022-04-07",
+      "added": [],
+      "cumulative_count": 616
+    },
+    {
+      "day": "2022-04-08",
+      "added": [],
+      "cumulative_count": 616
+    },
+    {
+      "day": "2022-04-09",
+      "added": [],
+      "cumulative_count": 616
+    },
+    {
+      "day": "2022-04-10",
+      "added": [],
+      "cumulative_count": 616
+    },
+    {
+      "day": "2022-04-11",
+      "added": [
+        {
+          "cveId": "CVE-2017-11317",
+          "vendorProject": "Telerik",
+          "product": "User Interface (UI) for ASP.NET AJAX",
+          "vulnerabilityName": "Telerik UI for ASP.NET AJAX Unrestricted File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-2509",
+          "vendorProject": "QNAP",
+          "product": "QNAP Network-Attached Storage (NAS)",
+          "vulnerabilityName": "QNAP Network-Attached Storage (NAS) Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-22600",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-27852",
+          "vendorProject": "Checkbox",
+          "product": "Checkbox Survey",
+          "vulnerabilityName": "Checkbox Survey Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-39793",
+          "vendorProject": "Google",
+          "product": "Pixel",
+          "vulnerabilityName": "Google Pixel Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-42278",
+          "vendorProject": "Microsoft",
+          "product": "Active Directory",
+          "vulnerabilityName": "Microsoft Active Directory Domain Services Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-42287",
+          "vendorProject": "Microsoft",
+          "product": "Active Directory",
+          "vulnerabilityName": "Microsoft Active Directory Domain Services Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-23176",
+          "vendorProject": "WatchGuard",
+          "product": "Firebox and XTM",
+          "vulnerabilityName": "WatchGuard Firebox and XTM Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 624
+    },
+    {
+      "day": "2022-04-12",
+      "added": [],
+      "cumulative_count": 624
+    },
+    {
+      "day": "2022-04-13",
+      "added": [
+        {
+          "cveId": "CVE-2014-9163",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-0311",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-0313",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-2502",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-3113",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-5122",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-5123",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-20753",
+          "vendorProject": "Kaseya",
+          "product": "Virtual System/Server Administrator (VSA)",
+          "vulnerabilityName": "Kaseya VSA Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-7602",
+          "vendorProject": "Drupal",
+          "product": "Core",
+          "vulnerabilityName": "Drupal Core Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-24521",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows CLFS Driver Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 634
+    },
+    {
+      "day": "2022-04-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-22954",
+          "vendorProject": "VMware",
+          "product": "Workspace ONE Access and Identity Manager",
+          "vulnerabilityName": "VMware Workspace ONE Access and Identity Manager Server-Side Template Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 635
+    },
+    {
+      "day": "2022-04-15",
+      "added": [
+        {
+          "cveId": "CVE-2007-3010",
+          "vendorProject": "Alcatel",
+          "product": "OmniPCX Enterprise",
+          "vulnerabilityName": "Alcatel OmniPCX Enterprise Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-5330",
+          "vendorProject": "Ubiquiti",
+          "product": "AirOS",
+          "vulnerabilityName": "Ubiquiti AirOS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-0780",
+          "vendorProject": "InduSoft",
+          "product": "Web Studio",
+          "vulnerabilityName": "InduSoft Web Studio NTWebServer Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-4523",
+          "vendorProject": "Trihedral",
+          "product": "VTScada (formerly VTS)",
+          "vulnerabilityName": "Trihedral VTScada (formerly VTS) Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-7841",
+          "vendorProject": "Schneider Electric",
+          "product": "U.motion Builder",
+          "vulnerabilityName": "Schneider Electric U.motion Builder SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-16057",
+          "vendorProject": "D-Link",
+          "product": "DNS-320 Storage Device",
+          "vulnerabilityName": "D-Link DNS-320 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-3929",
+          "vendorProject": "Crestron",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Crestron Multiple Products Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-1364",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22960",
+          "vendorProject": "VMware",
+          "product": "Multiple Products",
+          "vulnerabilityName": "VMware Multiple Products Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 644
+    },
+    {
+      "day": "2022-04-16",
+      "added": [],
+      "cumulative_count": 644
+    },
+    {
+      "day": "2022-04-17",
+      "added": [],
+      "cumulative_count": 644
+    },
+    {
+      "day": "2022-04-18",
+      "added": [],
+      "cumulative_count": 644
+    },
+    {
+      "day": "2022-04-19",
+      "added": [
+        {
+          "cveId": "CVE-2018-6882",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-3568",
+          "vendorProject": "Meta Platforms",
+          "product": "WhatsApp",
+          "vulnerabilityName": "WhatsApp VOIP Stack Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22718",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Print Spooler Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-20",
+      "added": [],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-21",
+      "added": [],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-22",
+      "added": [],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-23",
+      "added": [],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-24",
+      "added": [],
+      "cumulative_count": 647
+    },
+    {
+      "day": "2022-04-25",
+      "added": [
+        {
+          "cveId": "CVE-2019-1003029",
+          "vendorProject": "Jenkins",
+          "product": "Script Security Plugin",
+          "vulnerabilityName": "Jenkins Script Security Plugin Sandbox Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-40450",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-41357",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-0847",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-21919",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows User Profile Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-26904",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows User Profile Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-29464",
+          "vendorProject": "WSO2",
+          "product": "Multiple Products",
+          "vulnerabilityName": "WSO2 Multiple Products Unrestrictive Upload of File Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-04-26",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-04-27",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-04-28",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-04-29",
+      "added": [],
+      "cumulative_count": 654
+    },
+    {
+      "day": "2022-04-30",
+      "added": [],
+      "cumulative_count": 654
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-02",
+  "days": [
+    {
+      "day": "2025-02-01",
+      "incidents": [
+        {
+          "name": "Sirio Finance",
+          "date": "2025-02-01",
+          "amount": 2000000,
+          "chain": [
+            "Hedera"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "5706",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-04",
+      "incidents": [
+        {
+          "name": "Ionic Protocol",
+          "date": "2025-02-04",
+          "amount": 8600000,
+          "chain": [
+            "Mode"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "defillamaId": "4070",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-11",
+      "incidents": [
+        {
+          "name": "four.meme",
+          "date": "2025-02-11",
+          "amount": 183000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "5174",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "zkLend",
+          "date": "2025-02-11",
+          "amount": 9550000,
+          "chain": [
+            "Starknet"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "First Depositor Attack",
+          "defillamaId": "3079",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-18",
+      "incidents": [
+        {
+          "name": "Cardex",
+          "date": "2025-02-18",
+          "amount": 400000,
+          "chain": [
+            "Abstract"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-21",
+      "incidents": [
+        {
+          "name": "Bybit",
+          "date": "2025-02-21",
+          "amount": 1400000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Signer Phishing",
+          "defillamaId": "2286",
+          "targetType": "CEX"
+        },
+        {
+          "name": "StepHeroNFTs",
+          "date": "2025-02-21",
+          "amount": 90000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-22",
+      "incidents": [
+        {
+          "name": "Unverified_35bc",
+          "date": "2025-02-22",
+          "amount": 6700,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-24",
+      "incidents": [
+        {
+          "name": "Infini",
+          "date": "2025-02-24",
+          "amount": 49500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-02-28",
+      "incidents": [
+        {
+          "name": "Wemix",
+          "date": "2025-02-28",
+          "amount": 6220000,
+          "chain": [
+            "Wemix"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

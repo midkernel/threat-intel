@@ -1,0 +1,347 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-02",
+  "days": [
+    {
+      "day": "2025-02-01",
+      "added": [],
+      "cumulative_count": 1253
+    },
+    {
+      "day": "2025-02-02",
+      "added": [],
+      "cumulative_count": 1253
+    },
+    {
+      "day": "2025-02-03",
+      "added": [],
+      "cumulative_count": 1253
+    },
+    {
+      "day": "2025-02-04",
+      "added": [
+        {
+          "cveId": "CVE-2018-19410",
+          "vendorProject": "Paessler",
+          "product": "PRTG Network Monitor",
+          "vulnerabilityName": "Paessler PRTG Network Monitor Local File Inclusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-9276",
+          "vendorProject": "Paessler",
+          "product": "PRTG Network Monitor",
+          "vulnerabilityName": "Paessler PRTG Network Monitor OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-29059",
+          "vendorProject": "Microsoft",
+          "product": ".NET Framework",
+          "vulnerabilityName": "Microsoft .NET Framework Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-45195",
+          "vendorProject": "Apache",
+          "product": "OFBiz",
+          "vulnerabilityName": "Apache OFBiz Forced Browsing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1257
+    },
+    {
+      "day": "2025-02-05",
+      "added": [
+        {
+          "cveId": "CVE-2024-53104",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1258
+    },
+    {
+      "day": "2025-02-06",
+      "added": [
+        {
+          "cveId": "CVE-2020-15069",
+          "vendorProject": "Sophos",
+          "product": "XG Firewall",
+          "vulnerabilityName": "Sophos XG Firewall Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-29574",
+          "vendorProject": "Sophos",
+          "product": "CyberoamOS",
+          "vulnerabilityName": "CyberoamOS (CROS) SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-23748",
+          "vendorProject": "Audinate",
+          "product": "Dante Discovery",
+          "vulnerabilityName": "Dante Discovery Process Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-21413",
+          "vendorProject": "Microsoft",
+          "product": "Office Outlook",
+          "vulnerabilityName": "Microsoft Outlook Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-0411",
+          "vendorProject": "7-Zip",
+          "product": "7-Zip",
+          "vulnerabilityName": "7-Zip Mark of the Web Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1263
+    },
+    {
+      "day": "2025-02-07",
+      "added": [
+        {
+          "cveId": "CVE-2025-0994",
+          "vendorProject": "Trimble",
+          "product": "Cityworks",
+          "vulnerabilityName": "Trimble Cityworks Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1264
+    },
+    {
+      "day": "2025-02-08",
+      "added": [],
+      "cumulative_count": 1264
+    },
+    {
+      "day": "2025-02-09",
+      "added": [],
+      "cumulative_count": 1264
+    },
+    {
+      "day": "2025-02-10",
+      "added": [],
+      "cumulative_count": 1264
+    },
+    {
+      "day": "2025-02-11",
+      "added": [
+        {
+          "cveId": "CVE-2024-40890",
+          "vendorProject": "Zyxel",
+          "product": "DSL CPE Devices",
+          "vulnerabilityName": "Zyxel DSL CPE OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-40891",
+          "vendorProject": "Zyxel",
+          "product": "DSL CPE Devices",
+          "vulnerabilityName": "Zyxel DSL CPE OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21391",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Storage Link Following Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21418",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1268
+    },
+    {
+      "day": "2025-02-12",
+      "added": [
+        {
+          "cveId": "CVE-2024-41710",
+          "vendorProject": "Mitel",
+          "product": "SIP Phones",
+          "vulnerabilityName": "Mitel SIP Phones Argument Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24200",
+          "vendorProject": "Apple",
+          "product": "iOS and iPadOS",
+          "vulnerabilityName": "Apple iOS and iPadOS Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1270
+    },
+    {
+      "day": "2025-02-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-57727",
+          "vendorProject": "SimpleHelp",
+          "product": "SimpleHelp",
+          "vulnerabilityName": "SimpleHelp Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1271
+    },
+    {
+      "day": "2025-02-14",
+      "added": [],
+      "cumulative_count": 1271
+    },
+    {
+      "day": "2025-02-15",
+      "added": [],
+      "cumulative_count": 1271
+    },
+    {
+      "day": "2025-02-16",
+      "added": [],
+      "cumulative_count": 1271
+    },
+    {
+      "day": "2025-02-17",
+      "added": [],
+      "cumulative_count": 1271
+    },
+    {
+      "day": "2025-02-18",
+      "added": [
+        {
+          "cveId": "CVE-2024-53704",
+          "vendorProject": "SonicWall",
+          "product": "SonicOS",
+          "vulnerabilityName": "SonicWall SonicOS SSLVPN Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-0108",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1273
+    },
+    {
+      "day": "2025-02-19",
+      "added": [],
+      "cumulative_count": 1273
+    },
+    {
+      "day": "2025-02-20",
+      "added": [
+        {
+          "cveId": "CVE-2025-0111",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS File Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-23209",
+          "vendorProject": "Craft CMS",
+          "product": "Craft CMS",
+          "vulnerabilityName": "Craft CMS Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1275
+    },
+    {
+      "day": "2025-02-21",
+      "added": [
+        {
+          "cveId": "CVE-2025-24989",
+          "vendorProject": "Microsoft",
+          "product": "Power Pages",
+          "vulnerabilityName": "Microsoft Power Pages Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1276
+    },
+    {
+      "day": "2025-02-22",
+      "added": [],
+      "cumulative_count": 1276
+    },
+    {
+      "day": "2025-02-23",
+      "added": [],
+      "cumulative_count": 1276
+    },
+    {
+      "day": "2025-02-24",
+      "added": [
+        {
+          "cveId": "CVE-2017-3066",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-20953",
+          "vendorProject": "Oracle",
+          "product": "Agile Product Lifecycle Management (PLM)",
+          "vulnerabilityName": "Oracle Agile Product Lifecycle Management (PLM) Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1278
+    },
+    {
+      "day": "2025-02-25",
+      "added": [
+        {
+          "cveId": "CVE-2023-34192",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-49035",
+          "vendorProject": "Microsoft",
+          "product": "Partner Center",
+          "vulnerabilityName": "Microsoft Partner Center Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1280
+    },
+    {
+      "day": "2025-02-26",
+      "added": [],
+      "cumulative_count": 1280
+    },
+    {
+      "day": "2025-02-27",
+      "added": [],
+      "cumulative_count": 1280
+    },
+    {
+      "day": "2025-02-28",
+      "added": [],
+      "cumulative_count": 1280
+    }
+  ]
+}

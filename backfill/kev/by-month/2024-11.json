@@ -1,0 +1,318 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-11",
+  "days": [
+    {
+      "day": "2024-11-01",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-11-02",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-11-03",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-11-04",
+      "added": [
+        {
+          "cveId": "CVE-2024-8956",
+          "vendorProject": "PTZOptics",
+          "product": "PT30X-SDI/NDI Cameras",
+          "vulnerabilityName": "PTZOptics PT30X-SDI/NDI Cameras Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-8957",
+          "vendorProject": "PTZOptics",
+          "product": "PT30X-SDI/NDI Cameras",
+          "vulnerabilityName": "PTZOptics PT30X-SDI/NDI Cameras OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1203
+    },
+    {
+      "day": "2024-11-05",
+      "added": [],
+      "cumulative_count": 1203
+    },
+    {
+      "day": "2024-11-06",
+      "added": [],
+      "cumulative_count": 1203
+    },
+    {
+      "day": "2024-11-07",
+      "added": [
+        {
+          "cveId": "CVE-2019-16278",
+          "vendorProject": "Nostromo",
+          "product": "nhttpd",
+          "vulnerabilityName": "Nostromo nhttpd Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-43093",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-51567",
+          "vendorProject": "CyberPersons",
+          "product": "CyberPanel",
+          "vulnerabilityName": "CyberPanel Incorrect Default Permissions Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-5910",
+          "vendorProject": "Palo Alto Networks",
+          "product": "Expedition",
+          "vulnerabilityName": "Palo Alto Networks Expedition Missing Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1207
+    },
+    {
+      "day": "2024-11-08",
+      "added": [],
+      "cumulative_count": 1207
+    },
+    {
+      "day": "2024-11-09",
+      "added": [],
+      "cumulative_count": 1207
+    },
+    {
+      "day": "2024-11-10",
+      "added": [],
+      "cumulative_count": 1207
+    },
+    {
+      "day": "2024-11-11",
+      "added": [],
+      "cumulative_count": 1207
+    },
+    {
+      "day": "2024-11-12",
+      "added": [
+        {
+          "cveId": "CVE-2014-2120",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA)",
+          "vulnerabilityName": "Cisco Adaptive Security Appliance (ASA) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-26086",
+          "vendorProject": "Atlassian",
+          "product": "Jira Server and Data Center",
+          "vulnerabilityName": "Atlassian Jira Server and Data Center Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-41277",
+          "vendorProject": "Metabase",
+          "product": "Metabase",
+          "vulnerabilityName": "Metabase GeoJSON API Local File Inclusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-43451",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NTLMv2 Hash Disclosure Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-49039",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Task Scheduler Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1212
+    },
+    {
+      "day": "2024-11-13",
+      "added": [],
+      "cumulative_count": 1212
+    },
+    {
+      "day": "2024-11-14",
+      "added": [
+        {
+          "cveId": "CVE-2024-9463",
+          "vendorProject": "Palo Alto Networks",
+          "product": "Expedition",
+          "vulnerabilityName": "Palo Alto Networks Expedition OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-9465",
+          "vendorProject": "Palo Alto Networks",
+          "product": "Expedition",
+          "vulnerabilityName": "Palo Alto Networks Expedition SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1214
+    },
+    {
+      "day": "2024-11-15",
+      "added": [],
+      "cumulative_count": 1214
+    },
+    {
+      "day": "2024-11-16",
+      "added": [],
+      "cumulative_count": 1214
+    },
+    {
+      "day": "2024-11-17",
+      "added": [],
+      "cumulative_count": 1214
+    },
+    {
+      "day": "2024-11-18",
+      "added": [
+        {
+          "cveId": "CVE-2024-0012",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Management Interface Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-1212",
+          "vendorProject": "Progress",
+          "product": "Kemp LoadMaster",
+          "vulnerabilityName": "Progress Kemp LoadMaster OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-9474",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Management Interface OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1217
+    },
+    {
+      "day": "2024-11-19",
+      "added": [],
+      "cumulative_count": 1217
+    },
+    {
+      "day": "2024-11-20",
+      "added": [
+        {
+          "cveId": "CVE-2024-38812",
+          "vendorProject": "VMware",
+          "product": "vCenter Server",
+          "vulnerabilityName": "VMware vCenter Server Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38813",
+          "vendorProject": "VMware",
+          "product": "vCenter Server",
+          "vulnerabilityName": "VMware vCenter Server Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1219
+    },
+    {
+      "day": "2024-11-21",
+      "added": [
+        {
+          "cveId": "CVE-2024-21287",
+          "vendorProject": "Oracle",
+          "product": "Agile Product Lifecycle Management (PLM)",
+          "vulnerabilityName": "Oracle Agile Product Lifecycle Management (PLM) Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-44308",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-44309",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1222
+    },
+    {
+      "day": "2024-11-22",
+      "added": [],
+      "cumulative_count": 1222
+    },
+    {
+      "day": "2024-11-23",
+      "added": [],
+      "cumulative_count": 1222
+    },
+    {
+      "day": "2024-11-24",
+      "added": [],
+      "cumulative_count": 1222
+    },
+    {
+      "day": "2024-11-25",
+      "added": [
+        {
+          "cveId": "CVE-2023-28461",
+          "vendorProject": "Array Networks",
+          "product": "AG/vxAG ArrayOS",
+          "vulnerabilityName": "Array Networks AG and vxAG ArrayOS Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-11-26",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-11-27",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-11-28",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-11-29",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-11-30",
+      "added": [],
+      "cumulative_count": 1223
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-01",
+  "days": [
+    {
+      "day": "2022-01-01",
+      "incidents": [
+        {
+          "name": "Tinyman",
+          "date": "2022-01-01",
+          "amount": 3000000,
+          "chain": [
+            "Algorand"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "680",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-04",
+      "incidents": [
+        {
+          "name": "Arbix Finance",
+          "date": "2022-01-04",
+          "amount": 10000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-08",
+      "incidents": [
+        {
+          "name": "LCX",
+          "date": "2022-01-08",
+          "amount": 7940000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-10",
+      "incidents": [
+        {
+          "name": "Lympo",
+          "date": "2022-01-10",
+          "amount": 18700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "2323",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-15",
+      "incidents": [
+        {
+          "name": "CityDAO",
+          "date": "2022-01-15",
+          "amount": 95000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DAO"
+        },
+        {
+          "name": "Float Protocol",
+          "date": "2022-01-15",
+          "amount": 1160000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "497",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-17",
+      "incidents": [
+        {
+          "name": "Crypto Burger",
+          "date": "2022-01-17",
+          "amount": 770000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-18",
+      "incidents": [
+        {
+          "name": "Crosswise",
+          "date": "2022-01-18",
+          "amount": 879000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Crypto.com",
+          "date": "2022-01-18",
+          "amount": 33700000,
+          "chain": [
+            "Ethereum",
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Session Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Multichain",
+          "date": "2022-01-18",
+          "amount": 1400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "591",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-25",
+      "incidents": [
+        {
+          "name": "OpenSea",
+          "date": "2022-01-25",
+          "amount": 1000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-01-28",
+      "incidents": [
+        {
+          "name": "Qubit",
+          "date": "2022-01-28",
+          "amount": 80000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "516",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

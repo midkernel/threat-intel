@@ -1,0 +1,194 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-04",
+  "days": [
+    {
+      "day": "2022-04-02",
+      "incidents": [
+        {
+          "name": "Inverse Finance Frontier",
+          "date": "2022-04-02",
+          "amount": 15600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "338",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-07",
+      "incidents": [
+        {
+          "name": "Starstream Finance",
+          "date": "2022-04-07",
+          "amount": 4000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WonderHero",
+          "date": "2022-04-07",
+          "amount": 320000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-11",
+      "incidents": [
+        {
+          "name": "CF Token",
+          "date": "2022-04-11",
+          "amount": 1900000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-12",
+      "incidents": [
+        {
+          "name": "Elephant Money",
+          "date": "2022-04-12",
+          "amount": 22200000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1378",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-15",
+      "incidents": [
+        {
+          "name": "Rikkei Finance",
+          "date": "2022-04-15",
+          "amount": 1100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1570",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-17",
+      "incidents": [
+        {
+          "name": "Beanstalk",
+          "date": "2022-04-17",
+          "amount": 181000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Flashloan Governance Attack",
+          "defillamaId": "631",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-21",
+      "incidents": [
+        {
+          "name": "Terra (LUNA)",
+          "date": "2022-04-21",
+          "amount": 4310000,
+          "chain": [
+            "Terra"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Chain"
+        },
+        {
+          "name": "Zeed Finance",
+          "date": "2022-04-21",
+          "amount": 1000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-24",
+      "incidents": [
+        {
+          "name": "Wiener DOGE",
+          "date": "2022-04-24",
+          "amount": 30000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-28",
+      "incidents": [
+        {
+          "name": "DEUS Finance",
+          "date": "2022-04-28",
+          "amount": 13400000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1387",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-04-30",
+      "incidents": [
+        {
+          "name": "Saddle Finance",
+          "date": "2022-04-30",
+          "amount": 11000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "202",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

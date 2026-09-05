@@ -1,0 +1,157 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-10",
+  "days": [
+    {
+      "day": "2025-10-04",
+      "incidents": [
+        {
+          "name": "Abracadabra Spell",
+          "date": "2025-10-04",
+          "amount": 1700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "347",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-07",
+      "incidents": [
+        {
+          "name": "TokenHolder",
+          "date": "2025-10-07",
+          "amount": 26000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-09",
+      "incidents": [
+        {
+          "name": "Astera.fi",
+          "date": "2025-10-09",
+          "amount": 573000,
+          "chain": [
+            "Linea"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-15",
+      "incidents": [
+        {
+          "name": "Typus Perp",
+          "date": "2025-10-15",
+          "amount": 3440000,
+          "chain": [
+            "Sui"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "6014",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-19",
+      "incidents": [
+        {
+          "name": "Astra Nova",
+          "date": "2025-10-19",
+          "amount": 9090000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "AI Agent"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-20",
+      "incidents": [
+        {
+          "name": "Sharwa.Finance",
+          "date": "2025-10-20",
+          "amount": 146000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "6876",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-21",
+      "incidents": [
+        {
+          "name": "DoodiPals",
+          "date": "2025-10-21",
+          "amount": 171000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-27",
+      "incidents": [
+        {
+          "name": "402bridge",
+          "date": "2025-10-27",
+          "amount": 17693,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Stored Publicly",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-10-30",
+      "incidents": [
+        {
+          "name": "Garden",
+          "date": "2025-10-30",
+          "amount": 11400000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum",
+            "Base",
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "4086",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

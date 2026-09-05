@@ -1,0 +1,290 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-11",
+  "days": [
+    {
+      "day": "2023-11-01",
+      "added": [],
+      "cumulative_count": 1024
+    },
+    {
+      "day": "2023-11-02",
+      "added": [
+        {
+          "cveId": "CVE-2023-46604",
+          "vendorProject": "Apache",
+          "product": "ActiveMQ",
+          "vulnerabilityName": "Apache ActiveMQ Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1025
+    },
+    {
+      "day": "2023-11-03",
+      "added": [],
+      "cumulative_count": 1025
+    },
+    {
+      "day": "2023-11-04",
+      "added": [],
+      "cumulative_count": 1025
+    },
+    {
+      "day": "2023-11-05",
+      "added": [],
+      "cumulative_count": 1025
+    },
+    {
+      "day": "2023-11-06",
+      "added": [],
+      "cumulative_count": 1025
+    },
+    {
+      "day": "2023-11-07",
+      "added": [
+        {
+          "cveId": "CVE-2023-22518",
+          "vendorProject": "Atlassian",
+          "product": "Confluence Data Center and Server",
+          "vulnerabilityName": "Atlassian Confluence Data Center and Server Improper Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1026
+    },
+    {
+      "day": "2023-11-08",
+      "added": [
+        {
+          "cveId": "CVE-2023-29552",
+          "vendorProject": "IETF",
+          "product": "Service Location Protocol (SLP)",
+          "vulnerabilityName": "Service Location Protocol (SLP) Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1027
+    },
+    {
+      "day": "2023-11-09",
+      "added": [],
+      "cumulative_count": 1027
+    },
+    {
+      "day": "2023-11-10",
+      "added": [],
+      "cumulative_count": 1027
+    },
+    {
+      "day": "2023-11-11",
+      "added": [],
+      "cumulative_count": 1027
+    },
+    {
+      "day": "2023-11-12",
+      "added": [],
+      "cumulative_count": 1027
+    },
+    {
+      "day": "2023-11-13",
+      "added": [
+        {
+          "cveId": "CVE-2023-36844",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS EX Series PHP External Variable Modification Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36845",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS EX Series and SRX Series PHP External Variable Modification Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36846",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS SRX Series Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36847",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS EX Series Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36851",
+          "vendorProject": "Juniper",
+          "product": "Junos OS",
+          "vulnerabilityName": "Juniper Junos OS SRX Series Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-47246",
+          "vendorProject": "SysAid",
+          "product": "SysAid Server",
+          "vulnerabilityName": "SysAid Server Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1033
+    },
+    {
+      "day": "2023-11-14",
+      "added": [
+        {
+          "cveId": "CVE-2023-36025",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36033",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Desktop Window Manager (DWM) Core Library Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36036",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Cloud Files Mini Filter Driver Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1036
+    },
+    {
+      "day": "2023-11-15",
+      "added": [],
+      "cumulative_count": 1036
+    },
+    {
+      "day": "2023-11-16",
+      "added": [
+        {
+          "cveId": "CVE-2020-2551",
+          "vendorProject": "Oracle",
+          "product": "Fusion Middleware",
+          "vulnerabilityName": "Oracle Fusion Middleware Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-1671",
+          "vendorProject": "Sophos",
+          "product": "Web Appliance",
+          "vulnerabilityName": "Sophos Web Appliance Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36584",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Mark of the Web (MOTW) Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1039
+    },
+    {
+      "day": "2023-11-17",
+      "added": [],
+      "cumulative_count": 1039
+    },
+    {
+      "day": "2023-11-18",
+      "added": [],
+      "cumulative_count": 1039
+    },
+    {
+      "day": "2023-11-19",
+      "added": [],
+      "cumulative_count": 1039
+    },
+    {
+      "day": "2023-11-20",
+      "added": [],
+      "cumulative_count": 1039
+    },
+    {
+      "day": "2023-11-21",
+      "added": [
+        {
+          "cveId": "CVE-2023-4911",
+          "vendorProject": "GNU",
+          "product": "GNU C Library",
+          "vulnerabilityName": "GNU C Library Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-22",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-23",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-24",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-25",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-26",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-27",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-28",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-29",
+      "added": [],
+      "cumulative_count": 1040
+    },
+    {
+      "day": "2023-11-30",
+      "added": [
+        {
+          "cveId": "CVE-2023-49103",
+          "vendorProject": "ownCloud",
+          "product": "ownCloud graphapi",
+          "vulnerabilityName": "ownCloud graphapi Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-6345",
+          "vendorProject": "Google",
+          "product": "Chromium Skia",
+          "vulnerabilityName": "Google Skia Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1042
+    }
+  ]
+}

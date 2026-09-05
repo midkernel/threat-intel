@@ -1,0 +1,54 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-06",
+  "days": [
+    {
+      "day": "2018-06-02",
+      "incidents": [
+        {
+          "name": "ZenCash",
+          "date": "2018-06-02",
+          "amount": 550000,
+          "chain": [
+            "ZenCash"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2018-06-10",
+      "incidents": [
+        {
+          "name": "Coinrail",
+          "date": "2018-06-10",
+          "amount": 37200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2018-06-21",
+      "incidents": [
+        {
+          "name": "Bithumb",
+          "date": "2018-06-21",
+          "amount": 31000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

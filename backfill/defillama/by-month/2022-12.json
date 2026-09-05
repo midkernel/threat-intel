@@ -1,0 +1,336 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-12",
+  "days": [
+    {
+      "day": "2022-12-01",
+      "incidents": [
+        {
+          "name": "APC",
+          "date": "2022-12-01",
+          "amount": 6000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-02",
+      "incidents": [
+        {
+          "name": "Ankr",
+          "date": "2022-12-02",
+          "amount": 5000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "278",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Overnight Finance",
+          "date": "2022-12-02",
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "5710",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-03",
+      "incidents": [
+        {
+          "name": "BTC.com",
+          "date": "2022-12-03",
+          "amount": 3000000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Ratio Finance",
+          "date": "2022-12-03",
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Key Brute Forced",
+          "defillamaId": "1841",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-05",
+      "incidents": [
+        {
+          "name": "BBOX",
+          "date": "2022-12-05",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "RFB",
+          "date": "2022-12-05",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-07",
+      "incidents": [
+        {
+          "name": "AES",
+          "date": "2022-12-07",
+          "amount": 61608,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-09",
+      "incidents": [
+        {
+          "name": "NOVAToken",
+          "date": "2022-12-09",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-10",
+      "incidents": [
+        {
+          "name": "Lodestar V0",
+          "date": "2022-12-10",
+          "amount": 6900000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2339",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "MU&MUG",
+          "date": "2022-12-10",
+          "amount": 57000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "TiFi",
+          "date": "2022-12-10",
+          "amount": 43500,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2031",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-11",
+      "incidents": [
+        {
+          "name": "3Commas",
+          "date": "2022-12-11",
+          "amount": 20000000,
+          "chain": [
+            "Multi-Chain"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Database Breach",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-12",
+      "incidents": [
+        {
+          "name": "BGLD",
+          "date": "2022-12-12",
+          "amount": 18000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-13",
+      "incidents": [
+        {
+          "name": "ElasticSwap",
+          "date": "2022-12-13",
+          "amount": 850000,
+          "chain": [
+            "Avalanche",
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1919",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-14",
+      "incidents": [
+        {
+          "name": "FPR",
+          "date": "2022-12-14",
+          "amount": 29000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Nimbus",
+          "date": "2022-12-14",
+          "amount": 76000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-16",
+      "incidents": [
+        {
+          "name": "Raydium AMM",
+          "date": "2022-12-16",
+          "amount": 4400000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "defillamaId": "214",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-24",
+      "incidents": [
+        {
+          "name": "Defrost",
+          "date": "2022-12-24",
+          "amount": 12000000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "913",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-25",
+      "incidents": [
+        {
+          "name": "Rubic",
+          "date": "2022-12-25",
+          "amount": 1410000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "1282",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-26",
+      "incidents": [
+        {
+          "name": "Amun",
+          "date": "2022-12-26",
+          "amount": 300000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "400",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-12-29",
+      "incidents": [
+        {
+          "name": "Jaypeggers",
+          "date": "2022-12-29",
+          "amount": 18500,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "4406",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

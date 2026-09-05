@@ -1,0 +1,145 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-06",
+  "days": [
+    {
+      "day": "2025-06-06",
+      "incidents": [
+        {
+          "name": "ALEX",
+          "date": "2025-06-06",
+          "amount": 8373000,
+          "chain": [
+            "Stacks"
+          ],
+          "classification": "Access Control",
+          "technique": "Caller Impersonation",
+          "defillamaId": "1466",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ForceBridge",
+          "date": "2025-06-06",
+          "amount": 3900000,
+          "chain": [
+            "Nervos"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-15",
+      "incidents": [
+        {
+          "name": "FixedTokenBSwap",
+          "date": "2025-06-15",
+          "amount": 2200,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-17",
+      "incidents": [
+        {
+          "name": "Meta Pool",
+          "date": "2025-06-17",
+          "amount": 130000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-18",
+      "incidents": [
+        {
+          "name": "Nobitex",
+          "date": "2025-06-18",
+          "amount": 82000000,
+          "chain": [
+            "Tron",
+            "Ethereum",
+            "BSC",
+            "Avalanche",
+            "Arbitrum",
+            "Polygon",
+            "Bitcoin"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-19",
+      "incidents": [
+        {
+          "name": "Bankroll Network",
+          "date": "2025-06-19",
+          "amount": 65000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-20",
+      "incidents": [
+        {
+          "name": "Hacken Token",
+          "date": "2025-06-20",
+          "amount": 250000,
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2025-06-25",
+      "incidents": [
+        {
+          "name": "Resupply",
+          "date": "2025-06-25",
+          "amount": 9600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "5963",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Silo Finance",
+          "date": "2025-06-25",
+          "amount": 546000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

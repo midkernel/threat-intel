@@ -1,0 +1,269 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-05",
+  "days": [
+    {
+      "day": "2023-05-01",
+      "incidents": [
+        {
+          "name": "Level Perps",
+          "date": "2023-05-01",
+          "amount": 1100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "2395",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "pcash",
+          "date": "2023-05-01",
+          "amount": 2000000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-05",
+      "incidents": [
+        {
+          "name": "DEUS Finance",
+          "date": "2023-05-05",
+          "amount": 6500000,
+          "chain": [
+            "Arbitrum",
+            "BSC",
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "1387",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-06",
+      "incidents": [
+        {
+          "name": "Melo",
+          "date": "2023-05-06",
+          "amount": 90000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-07",
+      "incidents": [
+        {
+          "name": "Art Coin",
+          "date": "2023-05-07",
+          "amount": 331000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-10",
+      "incidents": [
+        {
+          "name": "SNK (Snooker)",
+          "date": "2023-05-10",
+          "amount": 197725,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-12",
+      "incidents": [
+        {
+          "name": "LW Token",
+          "date": "2023-05-12",
+          "amount": 50000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-19",
+      "incidents": [
+        {
+          "name": "Swaprum",
+          "date": "2023-05-19",
+          "amount": 3000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "defillamaId": "2903",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WDZD Swap",
+          "date": "2023-05-19",
+          "amount": 1000000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-20",
+      "incidents": [
+        {
+          "name": "Swap-LP",
+          "date": "2023-05-20",
+          "amount": 1100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Tornado Cash",
+          "date": "2023-05-20",
+          "amount": 2173500,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "148",
+          "targetType": "DAO"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-23",
+      "incidents": [
+        {
+          "name": "LunaFi",
+          "date": "2023-05-23",
+          "amount": 35000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "2424",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-24",
+      "incidents": [
+        {
+          "name": "Local Traders",
+          "date": "2023-05-24",
+          "amount": 118000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-26",
+      "incidents": [
+        {
+          "name": "Patricia",
+          "date": "2023-05-26",
+          "amount": 2000000,
+          "classification": "Frontend & Infrastructure",
+          "technique": "Database Breach",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-28",
+      "incidents": [
+        {
+          "name": "Jimbos Protocol",
+          "date": "2023-05-28",
+          "amount": 7500000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-30",
+      "incidents": [
+        {
+          "name": "El Dorado Exchange",
+          "date": "2023-05-30",
+          "amount": 120000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "2356",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-05-31",
+      "incidents": [
+        {
+          "name": "unshETH",
+          "date": "2023-05-31",
+          "amount": 375000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Stored Publicly",
+          "defillamaId": "2539",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

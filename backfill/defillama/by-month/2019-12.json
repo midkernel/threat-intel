@@ -1,0 +1,55 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-12",
+  "days": [
+    {
+      "day": "2019-12-02",
+      "incidents": [
+        {
+          "name": "Vertcoin",
+          "date": "2019-12-02",
+          "amount": 29,
+          "chain": [
+            "Vertcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "targetType": "Layer 1"
+        }
+      ]
+    },
+    {
+      "day": "2019-12-14",
+      "incidents": [
+        {
+          "name": "VeChain",
+          "date": "2019-12-14",
+          "amount": 6500000,
+          "chain": [
+            "VeChain"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Layer 1"
+        }
+      ]
+    },
+    {
+      "day": "2019-12-23",
+      "incidents": [
+        {
+          "name": "Nuls",
+          "date": "2019-12-23",
+          "amount": 480000,
+          "chain": [
+            "NULS"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "518",
+          "targetType": "Layer 1"
+        }
+      ]
+    }
+  ]
+}

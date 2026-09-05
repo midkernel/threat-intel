@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2011-06",
+  "days": [
+    {
+      "day": "2011-06-19",
+      "incidents": [
+        {
+          "name": "Mt. Gox",
+          "date": "2011-06-19",
+          "amount": 8750000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-12",
+  "days": [
+    {
+      "day": "2024-12-01",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-12-02",
+      "added": [],
+      "cumulative_count": 1223
+    },
+    {
+      "day": "2024-12-03",
+      "added": [
+        {
+          "cveId": "CVE-2023-45727",
+          "vendorProject": "North Grid",
+          "product": "Proself",
+          "vulnerabilityName": "North Grid Proself Improper Restriction of XML External Entity (XXE) Reference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-11667",
+          "vendorProject": "Zyxel",
+          "product": "Multiple Firewalls",
+          "vulnerabilityName": "Zyxel Multiple Firewalls Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-11680",
+          "vendorProject": "ProjectSend",
+          "product": "ProjectSend",
+          "vulnerabilityName": "ProjectSend Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1226
+    },
+    {
+      "day": "2024-12-04",
+      "added": [
+        {
+          "cveId": "CVE-2024-51378",
+          "vendorProject": "CyberPersons",
+          "product": "CyberPanel",
+          "vulnerabilityName": "CyberPanel Incorrect Default Permissions Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-05",
+      "added": [],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-06",
+      "added": [],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-07",
+      "added": [],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-08",
+      "added": [],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-09",
+      "added": [],
+      "cumulative_count": 1227
+    },
+    {
+      "day": "2024-12-10",
+      "added": [
+        {
+          "cveId": "CVE-2024-49138",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1228
+    },
+    {
+      "day": "2024-12-11",
+      "added": [],
+      "cumulative_count": 1228
+    },
+    {
+      "day": "2024-12-12",
+      "added": [],
+      "cumulative_count": 1228
+    },
+    {
+      "day": "2024-12-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-50623",
+          "vendorProject": "Cleo",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Cleo Multiple Products Unrestricted File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1229
+    },
+    {
+      "day": "2024-12-14",
+      "added": [],
+      "cumulative_count": 1229
+    },
+    {
+      "day": "2024-12-15",
+      "added": [],
+      "cumulative_count": 1229
+    },
+    {
+      "day": "2024-12-16",
+      "added": [
+        {
+          "cveId": "CVE-2024-20767",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-35250",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel-Mode Driver Untrusted Pointer Dereference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1231
+    },
+    {
+      "day": "2024-12-17",
+      "added": [
+        {
+          "cveId": "CVE-2024-55956",
+          "vendorProject": "Cleo",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Cleo Multiple Products Unauthenticated File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1232
+    },
+    {
+      "day": "2024-12-18",
+      "added": [
+        {
+          "cveId": "CVE-2018-14933",
+          "vendorProject": "NUUO",
+          "product": "NVRmini Devices",
+          "vulnerabilityName": "NUUO NVRmini Devices OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-11001",
+          "vendorProject": "Reolink",
+          "product": "Multiple IP Cameras",
+          "vulnerabilityName": "Reolink Multiple IP Cameras OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-40407",
+          "vendorProject": "Reolink",
+          "product": "RLC-410W IP Camera",
+          "vulnerabilityName": "Reolink RLC-410W IP Camera OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-23227",
+          "vendorProject": "NUUO",
+          "product": "NVRmini2 Devices",
+          "vulnerabilityName": "NUUO NVRmini2 Devices Missing Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1236
+    },
+    {
+      "day": "2024-12-19",
+      "added": [
+        {
+          "cveId": "CVE-2024-12356",
+          "vendorProject": "BeyondTrust",
+          "product": "Privileged Remote Access (PRA) and Remote Support (RS)",
+          "vulnerabilityName": "BeyondTrust Privileged Remote Access (PRA) and Remote Support (RS) Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1237
+    },
+    {
+      "day": "2024-12-20",
+      "added": [],
+      "cumulative_count": 1237
+    },
+    {
+      "day": "2024-12-21",
+      "added": [],
+      "cumulative_count": 1237
+    },
+    {
+      "day": "2024-12-22",
+      "added": [],
+      "cumulative_count": 1237
+    },
+    {
+      "day": "2024-12-23",
+      "added": [
+        {
+          "cveId": "CVE-2021-44207",
+          "vendorProject": "Acclaim Systems",
+          "product": "USAHERDS",
+          "vulnerabilityName": "Acclaim Systems USAHERDS Use of Hard-Coded Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-24",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-25",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-26",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-27",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-28",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-29",
+      "added": [],
+      "cumulative_count": 1238
+    },
+    {
+      "day": "2024-12-30",
+      "added": [
+        {
+          "cveId": "CVE-2024-3393",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Malicious DNS Packet Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2024-12-31",
+      "added": [],
+      "cumulative_count": 1239
+    }
+  ]
+}

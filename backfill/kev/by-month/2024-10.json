@@ -1,0 +1,290 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-10",
+  "days": [
+    {
+      "day": "2024-10-01",
+      "added": [],
+      "cumulative_count": 1184
+    },
+    {
+      "day": "2024-10-02",
+      "added": [
+        {
+          "cveId": "CVE-2024-29824",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager (EPM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager (EPM) SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1185
+    },
+    {
+      "day": "2024-10-03",
+      "added": [
+        {
+          "cveId": "CVE-2024-45519",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Command Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1186
+    },
+    {
+      "day": "2024-10-04",
+      "added": [],
+      "cumulative_count": 1186
+    },
+    {
+      "day": "2024-10-05",
+      "added": [],
+      "cumulative_count": 1186
+    },
+    {
+      "day": "2024-10-06",
+      "added": [],
+      "cumulative_count": 1186
+    },
+    {
+      "day": "2024-10-07",
+      "added": [],
+      "cumulative_count": 1186
+    },
+    {
+      "day": "2024-10-08",
+      "added": [
+        {
+          "cveId": "CVE-2024-43047",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-43572",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Management Console Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-43573",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows MSHTML Platform Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1189
+    },
+    {
+      "day": "2024-10-09",
+      "added": [
+        {
+          "cveId": "CVE-2024-23113",
+          "vendorProject": "Fortinet",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Fortinet Multiple Products Format String Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-9379",
+          "vendorProject": "Ivanti",
+          "product": "Cloud Services Appliance (CSA)",
+          "vulnerabilityName": "Ivanti Cloud Services Appliance (CSA) SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-9380",
+          "vendorProject": "Ivanti",
+          "product": "Cloud Services Appliance (CSA)",
+          "vulnerabilityName": "Ivanti Cloud Services Appliance (CSA) OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-10",
+      "added": [],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-11",
+      "added": [],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-12",
+      "added": [],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-13",
+      "added": [],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-14",
+      "added": [],
+      "cumulative_count": 1192
+    },
+    {
+      "day": "2024-10-15",
+      "added": [
+        {
+          "cveId": "CVE-2024-28987",
+          "vendorProject": "SolarWinds",
+          "product": "Web Help Desk",
+          "vulnerabilityName": "SolarWinds Web Help Desk Hardcoded Credential Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-30088",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Kernel TOCTOU Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-9680",
+          "vendorProject": "Mozilla",
+          "product": "Firefox",
+          "vulnerabilityName": "Mozilla Firefox Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1195
+    },
+    {
+      "day": "2024-10-16",
+      "added": [],
+      "cumulative_count": 1195
+    },
+    {
+      "day": "2024-10-17",
+      "added": [
+        {
+          "cveId": "CVE-2024-40711",
+          "vendorProject": "Veeam",
+          "product": "Backup & Replication",
+          "vulnerabilityName": "Veeam Backup and Replication Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1196
+    },
+    {
+      "day": "2024-10-18",
+      "added": [],
+      "cumulative_count": 1196
+    },
+    {
+      "day": "2024-10-19",
+      "added": [],
+      "cumulative_count": 1196
+    },
+    {
+      "day": "2024-10-20",
+      "added": [],
+      "cumulative_count": 1196
+    },
+    {
+      "day": "2024-10-21",
+      "added": [
+        {
+          "cveId": "CVE-2024-9537",
+          "vendorProject": "ScienceLogic",
+          "product": "SL1",
+          "vulnerabilityName": "ScienceLogic SL1 Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1197
+    },
+    {
+      "day": "2024-10-22",
+      "added": [
+        {
+          "cveId": "CVE-2024-38094",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint",
+          "vulnerabilityName": "Microsoft SharePoint Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1198
+    },
+    {
+      "day": "2024-10-23",
+      "added": [
+        {
+          "cveId": "CVE-2024-47575",
+          "vendorProject": "Fortinet",
+          "product": "FortiManager",
+          "vulnerabilityName": "Fortinet FortiManager Missing Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1199
+    },
+    {
+      "day": "2024-10-24",
+      "added": [
+        {
+          "cveId": "CVE-2024-20481",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+          "vulnerabilityName": "Cisco ASA and FTD Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-37383",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "RoundCube Webmail Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-25",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-26",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-27",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-28",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-29",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-30",
+      "added": [],
+      "cumulative_count": 1201
+    },
+    {
+      "day": "2024-10-31",
+      "added": [],
+      "cumulative_count": 1201
+    }
+  ]
+}

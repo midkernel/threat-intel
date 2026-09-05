@@ -1,0 +1,280 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-01",
+  "days": [
+    {
+      "day": "2026-01-01",
+      "incidents": [
+        {
+          "name": "PRXVT",
+          "date": "2026-01-01",
+          "amount": 97000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Staking Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-05",
+      "incidents": [
+        {
+          "name": "TMX TRIBE",
+          "date": "2026-01-05",
+          "amount": 1400000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "USDGambit and TLP",
+          "date": "2026-01-05",
+          "amount": 1500000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-06",
+      "incidents": [
+        {
+          "name": "Fusion by IPOR",
+          "date": "2026-01-06",
+          "amount": 336000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "5145",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-07",
+      "incidents": [
+        {
+          "name": "Polycule",
+          "date": "2026-01-07",
+          "amount": 230000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "7125",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-08",
+      "incidents": [
+        {
+          "name": "Truebit",
+          "date": "2026-01-08",
+          "amount": 26400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-10",
+      "incidents": [
+        {
+          "name": "FutureSwap",
+          "date": "2026-01-10",
+          "amount": 395000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-13",
+      "incidents": [
+        {
+          "name": "YO Protocol",
+          "date": "2026-01-13",
+          "amount": 3600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Missing Slippage Check",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-17",
+      "incidents": [
+        {
+          "name": "Meteora DAMM V2",
+          "date": "2026-01-17",
+          "amount": 1500000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "defillamaId": "6288",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-19",
+      "incidents": [
+        {
+          "name": "Makina",
+          "date": "2026-01-19",
+          "amount": 4200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "6964",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-20",
+      "incidents": [
+        {
+          "name": "SynapLogic",
+          "date": "2026-01-20",
+          "amount": 144000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-21",
+      "incidents": [
+        {
+          "name": "Saga",
+          "date": "2026-01-21",
+          "amount": 7000000,
+          "chain": [
+            "Saga"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "4639",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-25",
+      "incidents": [
+        {
+          "name": "Aperture LM",
+          "date": "2026-01-25",
+          "amount": 3670000,
+          "chain": [
+            "Ethereum",
+            "Base",
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "1582",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Matcha",
+          "date": "2026-01-25",
+          "amount": 13430000,
+          "chain": [
+            "Base",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "defillamaId": "7555",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-27",
+      "incidents": [
+        {
+          "name": "PGNLZ",
+          "date": "2026-01-27",
+          "amount": 100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-29",
+      "incidents": [
+        {
+          "name": "Revert Lend",
+          "date": "2026-01-29",
+          "amount": 50000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Staking Logic Flaw",
+          "defillamaId": "6216",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-01-31",
+      "incidents": [
+        {
+          "name": "Step Finance",
+          "date": "2026-01-31",
+          "amount": 40000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "4837",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

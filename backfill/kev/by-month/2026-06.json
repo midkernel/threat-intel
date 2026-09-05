@@ -1,0 +1,331 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-06",
+  "days": [
+    {
+      "day": "2026-06-01",
+      "added": [
+        {
+          "cveId": "CVE-2024-21182",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1608
+    },
+    {
+      "day": "2026-06-02",
+      "added": [
+        {
+          "cveId": "CVE-2022-0492",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48595",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1610
+    },
+    {
+      "day": "2026-06-03",
+      "added": [
+        {
+          "cveId": "CVE-2026-45247",
+          "vendorProject": "Mirasvit",
+          "product": "Mirasvit Full Page Cache Warmer",
+          "vulnerabilityName": "Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1611
+    },
+    {
+      "day": "2026-06-04",
+      "added": [],
+      "cumulative_count": 1611
+    },
+    {
+      "day": "2026-06-05",
+      "added": [
+        {
+          "cveId": "CVE-2026-28318",
+          "vendorProject": "SolarWinds",
+          "product": "Serv-U",
+          "vulnerabilityName": "SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1612
+    },
+    {
+      "day": "2026-06-06",
+      "added": [],
+      "cumulative_count": 1612
+    },
+    {
+      "day": "2026-06-07",
+      "added": [],
+      "cumulative_count": 1612
+    },
+    {
+      "day": "2026-06-08",
+      "added": [
+        {
+          "cveId": "CVE-2026-42271",
+          "vendorProject": "BerriAI",
+          "product": "LiteLLM",
+          "vulnerabilityName": "BerriAI LiteLLM Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-50751",
+          "vendorProject": "Check Point",
+          "product": "Security Gateway",
+          "vulnerabilityName": "Check Point Security Gateway Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1614
+    },
+    {
+      "day": "2026-06-09",
+      "added": [
+        {
+          "cveId": "CVE-2026-11645",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20245",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Manager",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Improper Encoding or Escaping of Output Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-7473",
+          "vendorProject": "Arista",
+          "product": "Extensible Operating System",
+          "vulnerabilityName": "Arista Extensible Operating System Incomplete Comparison with Missing Factors Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1617
+    },
+    {
+      "day": "2026-06-10",
+      "added": [],
+      "cumulative_count": 1617
+    },
+    {
+      "day": "2026-06-11",
+      "added": [
+        {
+          "cveId": "CVE-2026-10520",
+          "vendorProject": "Ivanti",
+          "product": "Sentry",
+          "vulnerabilityName": "Ivanti Sentry OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1618
+    },
+    {
+      "day": "2026-06-12",
+      "added": [
+        {
+          "cveId": "CVE-2026-35273",
+          "vendorProject": "Oracle",
+          "product": "PeopleSoft Enterprise PeopleTools",
+          "vulnerabilityName": "Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1619
+    },
+    {
+      "day": "2026-06-13",
+      "added": [],
+      "cumulative_count": 1619
+    },
+    {
+      "day": "2026-06-14",
+      "added": [],
+      "cumulative_count": 1619
+    },
+    {
+      "day": "2026-06-15",
+      "added": [
+        {
+          "cveId": "CVE-2026-20262",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Manager",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-54420",
+          "vendorProject": "LiteSpeed",
+          "product": "cPanel Plugin",
+          "vulnerabilityName": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1621
+    },
+    {
+      "day": "2026-06-16",
+      "added": [
+        {
+          "cveId": "CVE-2026-48907",
+          "vendorProject": "Widget Factory",
+          "product": "Joomla Content Editor",
+          "vulnerabilityName": "Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1622
+    },
+    {
+      "day": "2026-06-17",
+      "added": [],
+      "cumulative_count": 1622
+    },
+    {
+      "day": "2026-06-18",
+      "added": [
+        {
+          "cveId": "CVE-2026-20253",
+          "vendorProject": "Splunk",
+          "product": "Enterprise",
+          "vulnerabilityName": "Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1623
+    },
+    {
+      "day": "2026-06-19",
+      "added": [],
+      "cumulative_count": 1623
+    },
+    {
+      "day": "2026-06-20",
+      "added": [],
+      "cumulative_count": 1623
+    },
+    {
+      "day": "2026-06-21",
+      "added": [],
+      "cumulative_count": 1623
+    },
+    {
+      "day": "2026-06-22",
+      "added": [],
+      "cumulative_count": 1623
+    },
+    {
+      "day": "2026-06-23",
+      "added": [
+        {
+          "cveId": "CVE-2025-67038",
+          "vendorProject": "Lantronix",
+          "product": "EDS5000",
+          "vulnerabilityName": "Lantronix EDS5000 Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34908",
+          "vendorProject": "Ubiquiti",
+          "product": "UniFi OS",
+          "vulnerabilityName": "Ubiquiti UniFi OS Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34909",
+          "vendorProject": "Ubiquiti",
+          "product": "UniFi OS",
+          "vulnerabilityName": "Ubiquiti UniFi OS Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34910",
+          "vendorProject": "Ubiquiti",
+          "product": "UniFi OS",
+          "vulnerabilityName": "Ubiquiti UniFi OS Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1627
+    },
+    {
+      "day": "2026-06-24",
+      "added": [],
+      "cumulative_count": 1627
+    },
+    {
+      "day": "2026-06-25",
+      "added": [
+        {
+          "cveId": "CVE-2026-12569",
+          "vendorProject": "PTC",
+          "product": "Windchill and FlexPLM",
+          "vulnerabilityName": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-20230",
+          "vendorProject": "Cisco",
+          "product": "Unified Communications Manager",
+          "vulnerabilityName": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1629
+    },
+    {
+      "day": "2026-06-26",
+      "added": [],
+      "cumulative_count": 1629
+    },
+    {
+      "day": "2026-06-27",
+      "added": [],
+      "cumulative_count": 1629
+    },
+    {
+      "day": "2026-06-28",
+      "added": [],
+      "cumulative_count": 1629
+    },
+    {
+      "day": "2026-06-29",
+      "added": [
+        {
+          "cveId": "CVE-2026-48558",
+          "vendorProject": "SimpleHelp",
+          "product": "SimpleHelp",
+          "vulnerabilityName": "SimpleHelp Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1630
+    },
+    {
+      "day": "2026-06-30",
+      "added": [],
+      "cumulative_count": 1630
+    }
+  ]
+}

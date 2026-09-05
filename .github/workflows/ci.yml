@@ -17,3 +17,7 @@ jobs:
         run: python3 scripts/validate_sources.py
       - name: Offline index tests
         run: python3 scripts/test_index.py
+      - name: Offline backfill tests
+        run: python3 scripts/backfill/test_backfill.py
+      - name: Validate committed backfill
+        run: python3 scripts/backfill/validate.py

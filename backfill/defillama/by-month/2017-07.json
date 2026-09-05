@@ -1,0 +1,38 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2017-07",
+  "days": [
+    {
+      "day": "2017-07-01",
+      "incidents": [
+        {
+          "name": "Parity",
+          "date": "2017-07-01",
+          "amount": 30000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2017-07-18",
+      "incidents": [
+        {
+          "name": "CoinDash",
+          "date": "2017-07-18",
+          "amount": 7700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "targetType": "ICO"
+        }
+      ]
+    }
+  ]
+}

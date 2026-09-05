@@ -1,0 +1,229 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-11",
+  "days": [
+    {
+      "day": "2022-11-01",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-02",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-03",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-04",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-05",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-06",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-07",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-11-08",
+      "added": [
+        {
+          "cveId": "CVE-2021-25337",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25369",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25370",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-41073",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Print Spooler Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-41091",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Mark of the Web (MOTW) Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-41125",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows CNG Key Isolation Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-41128",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Scripting Languages Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-09",
+      "added": [],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-10",
+      "added": [],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-11",
+      "added": [],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-12",
+      "added": [],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-13",
+      "added": [],
+      "cumulative_count": 854
+    },
+    {
+      "day": "2022-11-14",
+      "added": [
+        {
+          "cveId": "CVE-2022-41049",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Mark of the Web (MOTW) Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-15",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-16",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-17",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-18",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-19",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-20",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-21",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-22",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-23",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-24",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-25",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-26",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-27",
+      "added": [],
+      "cumulative_count": 855
+    },
+    {
+      "day": "2022-11-28",
+      "added": [
+        {
+          "cveId": "CVE-2021-35587",
+          "vendorProject": "Oracle",
+          "product": "Fusion Middleware",
+          "vulnerabilityName": "Oracle Fusion Middleware Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-4135",
+          "vendorProject": "Google",
+          "product": "Chromium GPU",
+          "vulnerabilityName": "Google Chromium GPU Heap Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-11-29",
+      "added": [],
+      "cumulative_count": 857
+    },
+    {
+      "day": "2022-11-30",
+      "added": [],
+      "cumulative_count": 857
+    }
+  ]
+}

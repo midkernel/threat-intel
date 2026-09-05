@@ -1,0 +1,356 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-03",
+  "days": [
+    {
+      "day": "2026-03-01",
+      "added": [],
+      "cumulative_count": 1529
+    },
+    {
+      "day": "2026-03-02",
+      "added": [],
+      "cumulative_count": 1529
+    },
+    {
+      "day": "2026-03-03",
+      "added": [
+        {
+          "cveId": "CVE-2026-21385",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-22719",
+          "vendorProject": "Broadcom",
+          "product": "VMware Aria Operations",
+          "vulnerabilityName": "Broadcom VMware Aria Operations Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1531
+    },
+    {
+      "day": "2026-03-04",
+      "added": [],
+      "cumulative_count": 1531
+    },
+    {
+      "day": "2026-03-05",
+      "added": [
+        {
+          "cveId": "CVE-2017-7921",
+          "vendorProject": "Hikvision",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Hikvision Multiple Products Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-22681",
+          "vendorProject": "Rockwell",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Rockwell Multiple Products Insufficient Protected Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-30952",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Integer Overflow or Wraparound Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-41974",
+          "vendorProject": "Apple",
+          "product": "iOS and iPadOS",
+          "vulnerabilityName": "Apple iOS and iPadOS Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-43000",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple products Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1536
+    },
+    {
+      "day": "2026-03-06",
+      "added": [],
+      "cumulative_count": 1536
+    },
+    {
+      "day": "2026-03-07",
+      "added": [],
+      "cumulative_count": 1536
+    },
+    {
+      "day": "2026-03-08",
+      "added": [],
+      "cumulative_count": 1536
+    },
+    {
+      "day": "2026-03-09",
+      "added": [
+        {
+          "cveId": "CVE-2021-22054",
+          "vendorProject": "Omnissa",
+          "product": "Workspace One UEM",
+          "vulnerabilityName": "Omnissa Workspace ONE Server-Side Request Forgery",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-26399",
+          "vendorProject": "SolarWinds",
+          "product": "Web Help Desk",
+          "vulnerabilityName": "SolarWinds Web Help Desk Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-1603",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager (EPM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager (EPM) Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1539
+    },
+    {
+      "day": "2026-03-10",
+      "added": [],
+      "cumulative_count": 1539
+    },
+    {
+      "day": "2026-03-11",
+      "added": [
+        {
+          "cveId": "CVE-2025-68613",
+          "vendorProject": "n8n",
+          "product": "n8n",
+          "vulnerabilityName": "n8n Improper Control of Dynamically-Managed Code Resources Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1540
+    },
+    {
+      "day": "2026-03-12",
+      "added": [],
+      "cumulative_count": 1540
+    },
+    {
+      "day": "2026-03-13",
+      "added": [
+        {
+          "cveId": "CVE-2026-3909",
+          "vendorProject": "Google",
+          "product": "Skia",
+          "vulnerabilityName": "Google Skia Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-3910",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Improper Restriction of Operations Within the Bounds of a Memory Buffer Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1542
+    },
+    {
+      "day": "2026-03-14",
+      "added": [],
+      "cumulative_count": 1542
+    },
+    {
+      "day": "2026-03-15",
+      "added": [],
+      "cumulative_count": 1542
+    },
+    {
+      "day": "2026-03-16",
+      "added": [
+        {
+          "cveId": "CVE-2025-47813",
+          "vendorProject": "Wing FTP Server",
+          "product": "Wing FTP Server",
+          "vulnerabilityName": "Wing FTP Server Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1543
+    },
+    {
+      "day": "2026-03-17",
+      "added": [],
+      "cumulative_count": 1543
+    },
+    {
+      "day": "2026-03-18",
+      "added": [
+        {
+          "cveId": "CVE-2025-66376",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20963",
+          "vendorProject": "Microsoft",
+          "product": "SharePoint",
+          "vulnerabilityName": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1545
+    },
+    {
+      "day": "2026-03-19",
+      "added": [
+        {
+          "cveId": "CVE-2026-20131",
+          "vendorProject": "Cisco",
+          "product": "Secure Firewall Management Center (FMC)",
+          "vulnerabilityName": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1546
+    },
+    {
+      "day": "2026-03-20",
+      "added": [
+        {
+          "cveId": "CVE-2025-31277",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32432",
+          "vendorProject": "Craft CMS",
+          "product": "Craft CMS",
+          "vulnerabilityName": "Craft CMS Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-43510",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Improper Locking Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-43520",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Classic Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-54068",
+          "vendorProject": "Laravel",
+          "product": "Livewire",
+          "vulnerabilityName": "Laravel Livewire Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1551
+    },
+    {
+      "day": "2026-03-21",
+      "added": [],
+      "cumulative_count": 1551
+    },
+    {
+      "day": "2026-03-22",
+      "added": [],
+      "cumulative_count": 1551
+    },
+    {
+      "day": "2026-03-23",
+      "added": [],
+      "cumulative_count": 1551
+    },
+    {
+      "day": "2026-03-24",
+      "added": [],
+      "cumulative_count": 1551
+    },
+    {
+      "day": "2026-03-25",
+      "added": [
+        {
+          "cveId": "CVE-2026-33017",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1552
+    },
+    {
+      "day": "2026-03-26",
+      "added": [
+        {
+          "cveId": "CVE-2026-33634",
+          "vendorProject": "Aquasecurity",
+          "product": "Trivy",
+          "vulnerabilityName": "Aquasecurity Trivy Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1553
+    },
+    {
+      "day": "2026-03-27",
+      "added": [
+        {
+          "cveId": "CVE-2025-53521",
+          "vendorProject": "F5",
+          "product": "BIG-IP",
+          "vulnerabilityName": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1554
+    },
+    {
+      "day": "2026-03-28",
+      "added": [],
+      "cumulative_count": 1554
+    },
+    {
+      "day": "2026-03-29",
+      "added": [],
+      "cumulative_count": 1554
+    },
+    {
+      "day": "2026-03-30",
+      "added": [
+        {
+          "cveId": "CVE-2026-3055",
+          "vendorProject": "Citrix",
+          "product": "NetScaler",
+          "vulnerabilityName": "Citrix NetScaler Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1555
+    },
+    {
+      "day": "2026-03-31",
+      "added": [],
+      "cumulative_count": 1555
+    }
+  ]
+}

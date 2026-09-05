@@ -1,0 +1,281 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-10",
+  "days": [
+    {
+      "day": "2024-10-01",
+      "incidents": [
+        {
+          "name": "FireToken",
+          "date": "2024-10-01",
+          "amount": 20000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-05",
+      "incidents": [
+        {
+          "name": "EigenLayer",
+          "date": "2024-10-05",
+          "amount": 5700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-14",
+      "incidents": [
+        {
+          "name": "Kalax",
+          "date": "2024-10-14",
+          "amount": 350000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "defillamaId": "4677",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LeadBlock's Morpho Blue Market",
+          "date": "2024-10-14",
+          "amount": 250000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-16",
+      "incidents": [
+        {
+          "name": "Radiant V2",
+          "date": "2024-10-16",
+          "amount": 50000000,
+          "chain": [
+            "BSC",
+            "Arbitrum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Blind Signing",
+          "defillamaId": "2706",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-17",
+      "incidents": [
+        {
+          "name": "Ambient",
+          "date": "2024-10-17",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "3104",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-18",
+      "incidents": [
+        {
+          "name": "Tapioca DAO",
+          "date": "2024-10-18",
+          "amount": 4700000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-22",
+      "incidents": [
+        {
+          "name": "Erc20transfer",
+          "date": "2024-10-22",
+          "amount": 14800,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        },
+        {
+          "name": "Vista Finance",
+          "date": "2024-10-22",
+          "amount": 28000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-24",
+      "incidents": [
+        {
+          "name": "Cryptobottle",
+          "date": "2024-10-24",
+          "amount": 490000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "Ramses Exchange",
+          "date": "2024-10-24",
+          "amount": 93000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "US Government Crypto Wallet",
+          "date": "2024-10-24",
+          "amount": 20000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-25",
+      "incidents": [
+        {
+          "name": "AARK (Aark Digital)",
+          "date": "2024-10-25",
+          "amount": 1900000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Decimal Miscalculation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Base Lending",
+          "date": "2024-10-25",
+          "amount": 1000000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-29",
+      "incidents": [
+        {
+          "name": "BUBAI",
+          "date": "2024-10-29",
+          "amount": 131000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-30",
+      "incidents": [
+        {
+          "name": "SUNRAY·FINANCE",
+          "date": "2024-10-30",
+          "amount": 2855000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Shoebill Finance",
+          "date": "2024-10-30",
+          "amount": 1520000,
+          "chain": [
+            "BOB"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-10-31",
+      "incidents": [
+        {
+          "name": "1inch Swap",
+          "date": "2024-10-31",
+          "amount": 723000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Supply Chain Attack",
+          "defillamaId": "189",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "M2 Exchange",
+          "date": "2024-10-31",
+          "amount": 13700000,
+          "chain": [
+            "Ethereum",
+            "Solana",
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

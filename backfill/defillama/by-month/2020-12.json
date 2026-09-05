@@ -1,0 +1,154 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-12",
+  "days": [
+    {
+      "day": "2020-12-02",
+      "incidents": [
+        {
+          "name": "Compounder Finance",
+          "date": "2020-12-02",
+          "amount": 12464316,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-08",
+      "incidents": [
+        {
+          "name": "Aeternity",
+          "date": "2020-12-08",
+          "amount": 5201000,
+          "chain": [
+            "Aeternity"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-14",
+      "incidents": [
+        {
+          "name": "Nexus Mutual",
+          "date": "2020-12-14",
+          "amount": 8000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "122",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-18",
+      "incidents": [
+        {
+          "name": "Warp Protocol",
+          "date": "2020-12-18",
+          "amount": 7800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "601",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-21",
+      "incidents": [
+        {
+          "name": "Exmo",
+          "date": "2020-12-21",
+          "amount": 10500000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "5254",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-24",
+      "incidents": [
+        {
+          "name": "Livecoin",
+          "date": "2020-12-24",
+          "amount": 3300000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-26",
+      "incidents": [
+        {
+          "name": "Altilly",
+          "date": "2020-12-26",
+          "amount": 750000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-28",
+      "incidents": [
+        {
+          "name": "LuBian",
+          "date": "2020-12-28",
+          "amount": 3500000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2020-12-29",
+      "incidents": [
+        {
+          "name": "Cover Protocol",
+          "date": "2020-12-29",
+          "amount": 9400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "165",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

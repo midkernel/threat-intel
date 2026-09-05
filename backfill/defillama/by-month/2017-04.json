@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2017-04",
+  "days": [
+    {
+      "day": "2017-04-27",
+      "incidents": [
+        {
+          "name": "Yapizon",
+          "date": "2017-04-27",
+          "amount": 4800000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

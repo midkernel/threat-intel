@@ -1,0 +1,54 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-01",
+  "days": [
+    {
+      "day": "2019-01-06",
+      "incidents": [
+        {
+          "name": "Ethereum Classic",
+          "date": "2019-01-06",
+          "amount": 219500,
+          "chain": [
+            "Ethereum Classic"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2019-01-14",
+      "incidents": [
+        {
+          "name": "Cryptopia",
+          "date": "2019-01-14",
+          "amount": 16000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-01-26",
+      "incidents": [
+        {
+          "name": "LocalBitcoins",
+          "date": "2019-01-26",
+          "amount": 27000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

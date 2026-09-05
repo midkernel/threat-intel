@@ -1,0 +1,261 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-08",
+  "days": [
+    {
+      "day": "2021-08-03",
+      "incidents": [
+        {
+          "name": "Popsicle Finance",
+          "date": "2021-08-03",
+          "amount": 20700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "585",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-04",
+      "incidents": [
+        {
+          "name": "WaultSwap",
+          "date": "2021-08-04",
+          "amount": 930000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-08",
+      "incidents": [
+        {
+          "name": "Zerogoki",
+          "date": "2021-08-08",
+          "amount": 670000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-10",
+      "incidents": [
+        {
+          "name": "Poly Network",
+          "date": "2021-08-10",
+          "amount": 611000000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1796",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Punk Protocol",
+          "date": "2021-08-10",
+          "amount": 8950000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Delegatecall Hijack",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-12",
+      "incidents": [
+        {
+          "name": "DAO Maker Vesting",
+          "date": "2021-08-12",
+          "amount": 7000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "921",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-13",
+      "incidents": [
+        {
+          "name": "Acala Network",
+          "date": "2021-08-13",
+          "amount": 1600000,
+          "chain": [
+            "Acala"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "NEKO",
+          "date": "2021-08-13",
+          "amount": 2200000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "3896",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-15",
+      "incidents": [
+        {
+          "name": "Ref Finance",
+          "date": "2021-08-15",
+          "amount": 3203000,
+          "chain": [
+            "NEAR"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-17",
+      "incidents": [
+        {
+          "name": "SurgeBNB",
+          "date": "2021-08-17",
+          "amount": 5000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-19",
+      "incidents": [
+        {
+          "name": "Liquid Global",
+          "date": "2021-08-19",
+          "amount": 91350000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Pinecone Finance",
+          "date": "2021-08-19",
+          "amount": 200000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Solend",
+          "date": "2021-08-19",
+          "amount": 16000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-25",
+      "incidents": [
+        {
+          "name": "Dot.Finance",
+          "date": "2021-08-25",
+          "amount": 429724,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-29",
+      "incidents": [
+        {
+          "name": "Bilaxy",
+          "date": "2021-08-29",
+          "amount": 21700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "xToken",
+          "date": "2021-08-29",
+          "amount": 4500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "206",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-08-30",
+      "incidents": [
+        {
+          "name": "CREAM Lending",
+          "date": "2021-08-30",
+          "amount": 18800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "121",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

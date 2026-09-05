@@ -1,0 +1,23 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2016-04",
+  "days": [
+    {
+      "day": "2016-04-07",
+      "incidents": [
+        {
+          "name": "ShapeShift",
+          "date": "2016-04-07",
+          "amount": 230000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "598",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}
