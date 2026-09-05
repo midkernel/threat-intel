@@ -14,6 +14,7 @@ from catalog import load_sources
 
 ITEM_CAP = 25
 JSON_CAP = 8
+INDEX_SCHEMA = "midkernel.threat-intel.index/v1"
 
 
 def _local(tag: str) -> str:
@@ -27,13 +28,40 @@ def _child_text(node: ET.Element, name: str) -> str:
     return ""
 
 
+def _attr(node: ET.Element, name: str) -> str:
+    for key, value in node.attrib.items():
+        if _local(key) == name and value:
+            return value.strip()
+    return ""
+
+
+def _nz(value: object) -> str:
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
+def _index_item(
+    title: str,
+    url: str = "",
+    published_at: str = "",
+    item_id: str = "",
+) -> dict[str, str | None]:
+    return {
+        "title": title or "(untitled)",
+        "url": url or None,
+        "published_at": published_at or None,
+        "id": item_id or None,
+    }
+
+
 def _strip_bom(raw: bytes) -> bytes:
     if raw.startswith(b"\xef\xbb\xbf"):
         return raw[3:]
     return raw
 
 
-def feed_items(raw: bytes) -> tuple[str, list[dict[str, str]]]:
+def feed_items(raw: bytes) -> tuple[str, list[dict[str, str | None]]]:
     """Return ('rss'|'atom'|'unknown', items in document order)."""
     try:
         root = ET.fromstring(_strip_bom(raw))
@@ -41,20 +69,21 @@ def feed_items(raw: bytes) -> tuple[str, list[dict[str, str]]]:
         return "unknown", []
 
     kind = _local(root.tag).lower()
-    items: list[dict[str, str]] = []
+    items: list[dict[str, str | None]] = []
 
     if kind == "rss" or kind == "rdf":
         for node in root.iter():
             if _local(node.tag) != "item":
                 continue
-            link = _child_text(node, "link")
-            pub = _child_text(node, "pubDate") or _child_text(node, "date")
             items.append(
-                {
-                    "title": _child_text(node, "title") or "(untitled)",
-                    "link": link,
-                    "pubDate": pub,
-                }
+                _index_item(
+                    _child_text(node, "title"),
+                    _child_text(node, "link"),
+                    _child_text(node, "pubDate") or _child_text(node, "date"),
+                    _child_text(node, "guid")
+                    or _child_text(node, "id")
+                    or _attr(node, "about"),
+                )
             )
         return "rss", items
 
@@ -74,12 +103,12 @@ def feed_items(raw: bytes) -> tuple[str, list[dict[str, str]]]:
                 if href and not link:
                     link = href
             items.append(
-                {
-                    "title": _child_text(node, "title") or "(untitled)",
-                    "link": link,
-                    "pubDate": _child_text(node, "published")
-                    or _child_text(node, "updated"),
-                }
+                _index_item(
+                    _child_text(node, "title"),
+                    link,
+                    _child_text(node, "published") or _child_text(node, "updated"),
+                    _child_text(node, "id"),
+                )
             )
         return "atom", items
 
@@ -155,12 +184,90 @@ def json_preview(data: object) -> tuple[int, list[str]]:
     return 0, ["(no catalog rows recognized; raw body is in the artifact)"]
 
 
+def json_items(data: object) -> list[dict[str, str | None]]:
+    """Copy catalog rows already in the JSON. Document order. No scores."""
+    if isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list):
+        items: list[dict[str, str | None]] = []
+        for row in data["vulnerabilities"]:
+            if not isinstance(row, dict):
+                continue
+            cve = _nz(row.get("cveID"))
+            items.append(
+                _index_item(
+                    _nz(row.get("vulnerabilityName")) or cve,
+                    "",
+                    _nz(row.get("dateAdded")),
+                    cve,
+                )
+            )
+        return items
+
+    if isinstance(data, dict) and isinstance(data.get("data"), list):
+        items = []
+        for row in data["data"]:
+            if not isinstance(row, dict):
+                continue
+            cve = _nz(row.get("cve"))
+            items.append(_index_item(cve, "", _nz(row.get("date")), cve))
+        return items
+
+    if isinstance(data, list):
+        if data and isinstance(data[0], dict) and data[0].get("uid"):
+            items = []
+            for row in data:
+                if not isinstance(row, dict):
+                    continue
+                uid = _nz(row.get("uid"))
+                items.append(_index_item(_nz(row.get("name")) or uid, "", "", uid))
+            return items
+        items = []
+        for row in data:
+            if not isinstance(row, dict):
+                continue
+            name = _nz(row.get("name"))
+            if not name:
+                continue
+            items.append(
+                _index_item(
+                    name,
+                    _nz(row.get("link") or row.get("url")),
+                    _as_date(row.get("date")) if row.get("date") not in (None, "") else "",
+                    _nz(row.get("id")),
+                )
+            )
+        return items
+
+    return []
+
+
 def _read_meta(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def build_summary(output_dir: Path, sources: list[dict[str, str]]) -> str:
-    day = time.strftime("%Y-%m-%d", time.gmtime())
+def _body_path(output_dir: Path, src_id: str) -> Path:
+    body_path = output_dir / src_id / "body"
+    for ext in (".json", ".xml", ""):
+        candidate = output_dir / src_id / f"body{ext}"
+        if candidate.exists():
+            return candidate
+    return body_path
+
+
+def _utc_now() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def _utc_day() -> str:
+    return time.strftime("%Y-%m-%d", time.gmtime())
+
+
+def build_summary(
+    output_dir: Path,
+    sources: list[dict[str, str]],
+    *,
+    day: str | None = None,
+) -> str:
+    day = day or _utc_day()
     lines = [
         f"# Threat-intel fetch index — {day} UTC",
         "",
@@ -171,12 +278,7 @@ def build_summary(output_dir: Path, sources: list[dict[str, str]]) -> str:
 
     for src in sources:
         meta_path = output_dir / src["id"] / "meta.json"
-        body_path = output_dir / src["id"] / "body"
-        for ext in (".json", ".xml", ""):
-            candidate = output_dir / src["id"] / f"body{ext}"
-            if candidate.exists():
-                body_path = candidate
-                break
+        body_path = _body_path(output_dir, src["id"])
 
         lines.append(f"## {src['name']}")
         lines.append("")
@@ -211,10 +313,10 @@ def build_summary(output_dir: Path, sources: list[dict[str, str]]) -> str:
                     lines.append("Items (document order; not ranked):")
                     for item in shown:
                         bit = f"- {item['title']}"
-                        if item.get("pubDate"):
-                            bit += f"  ({item['pubDate']})"
-                        if item.get("link"):
-                            bit += f"  {item['link']}"
+                        if item.get("published_at"):
+                            bit += f"  ({item['published_at']})"
+                        if item.get("url"):
+                            bit += f"  {item['url']}"
                         lines.append(bit)
                     if len(items) > ITEM_CAP:
                         lines.append(
@@ -237,14 +339,115 @@ def build_summary(output_dir: Path, sources: list[dict[str, str]]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def _source_items(
+    src: dict[str, str],
+    meta: dict | None,
+    body_path: Path,
+) -> list[dict[str, str | None]]:
+    if not meta:
+        return []
+    status = meta.get("status")
+    status_ok = isinstance(status, int) and 200 <= status < 300
+    if not status_ok or not body_path.exists():
+        return []
+    raw = body_path.read_bytes()
+    if src["format"] in {"rss", "atom"}:
+        _kind, items = feed_items(raw)
+        return items
+    if src["format"] == "json":
+        try:
+            data = json.loads(raw.decode("utf-8"))
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            return []
+        return json_items(data)
+    return []
+
+
+def build_index(
+    output_dir: Path,
+    sources: list[dict[str, str]],
+    *,
+    day: str | None = None,
+    generated_at: str | None = None,
+) -> dict:
+    """Structured day's index. Not ranking, not a class taxonomy."""
+    day = day or _utc_day()
+    generated_at = generated_at or _utc_now()
+    rows: list[dict] = []
+    for src in sources:
+        meta_path = output_dir / src["id"] / "meta.json"
+        body_path = _body_path(output_dir, src["id"])
+        meta = _read_meta(meta_path) if meta_path.exists() else None
+        items = _source_items(src, meta, body_path)
+        status = meta.get("status") if meta else None
+        fetched_at = None
+        if meta and meta.get("fetched_at"):
+            fetched_at = str(meta["fetched_at"]).strip() or None
+        rows.append(
+            {
+                "id": src["id"],
+                "name": src["name"],
+                "url": src["url"],
+                "format": src["format"],
+                "surface": src["surface"],
+                "http_status": status if isinstance(status, int) else None,
+                "fetched_at": fetched_at,
+                "item_count": len(items),
+                "items": items,
+            }
+        )
+    return {
+        "schema": INDEX_SCHEMA,
+        "day": day,
+        "generated_at": generated_at,
+        "note": (
+            "Day's index of fetched public feeds. Not ranking, not a class "
+            "taxonomy, and not Midkernel intelligence."
+        ),
+        "sources": rows,
+    }
+
+
+def write_outputs(
+    output_dir: Path,
+    sources: list[dict[str, str]],
+    *,
+    day: str | None = None,
+    generated_at: str | None = None,
+) -> tuple[Path, Path]:
+    day = day or _utc_day()
+    generated_at = generated_at or _utc_now()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    summary_path = output_dir / "summary.md"
+    index_path = output_dir / "index.json"
+    summary_path.write_text(
+        build_summary(output_dir, sources, day=day),
+        encoding="utf-8",
+    )
+    index_path.write_text(
+        json.dumps(
+            build_index(
+                output_dir,
+                sources,
+                day=day,
+                generated_at=generated_at,
+            ),
+            indent=2,
+            ensure_ascii=False,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return summary_path, index_path
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     output = Path(sys.argv[1]) if len(sys.argv) > 1 else root / "output"
     sources = load_sources(root / "sources.yaml")
-    text = build_summary(output, sources)
-    summary = output / "summary.md"
-    summary.write_text(text, encoding="utf-8")
+    summary, index = write_outputs(output, sources)
     print(f"wrote {summary}")
+    print(f"wrote {index}")
     return 0
 
 
