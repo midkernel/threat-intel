@@ -1,0 +1,216 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-02",
+  "days": [
+    {
+      "day": "2022-02-01",
+      "incidents": [
+        {
+          "name": "BNS",
+          "date": "2022-02-01",
+          "amount": 7500000,
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-02",
+      "incidents": [
+        {
+          "name": "Portal",
+          "date": "2022-02-02",
+          "amount": 326000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "1541",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-03",
+      "incidents": [
+        {
+          "name": "KlaySwap",
+          "date": "2022-02-03",
+          "amount": 1900000,
+          "chain": [
+            "Klaytn"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-06",
+      "incidents": [
+        {
+          "name": "Meter",
+          "date": "2022-02-06",
+          "amount": 7700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-08",
+      "incidents": [
+        {
+          "name": "Superfluid",
+          "date": "2022-02-08",
+          "amount": 8700000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "693",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-10",
+      "incidents": [
+        {
+          "name": "Dego Finance",
+          "date": "2022-02-10",
+          "amount": 10000000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Cronos"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-12",
+      "incidents": [
+        {
+          "name": "IRA Financial / Gemini",
+          "date": "2022-02-12",
+          "amount": 36000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-14",
+      "incidents": [
+        {
+          "name": "Titano Finance",
+          "date": "2022-02-14",
+          "amount": 1949000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-15",
+      "incidents": [
+        {
+          "name": "Build Finance",
+          "date": "2022-02-15",
+          "amount": 470000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-17",
+      "incidents": [
+        {
+          "name": "TopGoal",
+          "date": "2022-02-17",
+          "amount": 1100000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-18",
+      "incidents": [
+        {
+          "name": "Rigoblock",
+          "date": "2022-02-18",
+          "amount": 464000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "3002",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-20",
+      "incidents": [
+        {
+          "name": "OpenSea",
+          "date": "2022-02-20",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-02-23",
+      "incidents": [
+        {
+          "name": "Flurry Finance",
+          "date": "2022-02-23",
+          "amount": 293000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-02",
+  "days": [
+    {
+      "day": "2024-02-01",
+      "incidents": [
+        {
+          "name": "Affine Protocol",
+          "date": "2024-02-01",
+          "amount": 88000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-08",
+      "incidents": [
+        {
+          "name": "Starlay Finance",
+          "date": "2024-02-08",
+          "amount": 2100000,
+          "chain": [
+            "Acala"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Redeem Logic Flaw",
+          "defillamaId": "1497",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-09",
+      "incidents": [
+        {
+          "name": "PlayDapp",
+          "date": "2024-02-09",
+          "amount": 290000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-13",
+      "incidents": [
+        {
+          "name": "DuelBits",
+          "date": "2024-02-13",
+          "amount": 4600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-15",
+      "incidents": [
+        {
+          "name": "DualPools",
+          "date": "2024-02-15",
+          "amount": 41000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Miner",
+          "date": "2024-02-15",
+          "amount": 466000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-16",
+      "incidents": [
+        {
+          "name": "ParticleTrade",
+          "date": "2024-02-16",
+          "amount": 140000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-18",
+      "incidents": [
+        {
+          "name": "FixedFloat",
+          "date": "2024-02-18",
+          "amount": 26100000,
+          "chain": [
+            "Ethereum",
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-19",
+      "incidents": [
+        {
+          "name": "RuggedArt",
+          "date": "2024-02-19",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-21",
+      "incidents": [
+        {
+          "name": "DeezNutz 404",
+          "date": "2024-02-21",
+          "amount": 170000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "Token"
+        },
+        {
+          "name": "Gain",
+          "date": "2024-02-21",
+          "amount": 3010000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "5244",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-22",
+      "incidents": [
+        {
+          "name": "Swarm Markets",
+          "date": "2024-02-22",
+          "amount": 472892,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "956",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Tectonic",
+          "date": "2024-02-22",
+          "amount": 250000,
+          "chain": [
+            "Cronos"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "1115",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-24",
+      "incidents": [
+        {
+          "name": "BlueBerry",
+          "date": "2024-02-24",
+          "amount": 1340000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ZoomerCoin",
+          "date": "2024-02-24",
+          "amount": 41000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Flashloan Governance Attack",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-25",
+      "incidents": [
+        {
+          "name": "RiskOnBlast",
+          "date": "2024-02-25",
+          "amount": 1300000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Rugpull",
+          "technique": "Exit Scam",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-28",
+      "incidents": [
+        {
+          "name": "Seneca",
+          "date": "2024-02-28",
+          "amount": 6400000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "4137",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Serenity Shield",
+          "date": "2024-02-28",
+          "amount": 586000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Token"
+        },
+        {
+          "name": "Smoofs",
+          "date": "2024-02-28",
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-02-29",
+      "incidents": [
+        {
+          "name": "Shido",
+          "date": "2024-02-29",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    }
+  ]
+}

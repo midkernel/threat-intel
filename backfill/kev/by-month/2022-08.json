@@ -1,0 +1,328 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-08",
+  "days": [
+    {
+      "day": "2022-08-01",
+      "added": [],
+      "cumulative_count": 788
+    },
+    {
+      "day": "2022-08-02",
+      "added": [],
+      "cumulative_count": 788
+    },
+    {
+      "day": "2022-08-03",
+      "added": [],
+      "cumulative_count": 788
+    },
+    {
+      "day": "2022-08-04",
+      "added": [
+        {
+          "cveId": "CVE-2022-27924",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 789
+    },
+    {
+      "day": "2022-08-05",
+      "added": [],
+      "cumulative_count": 789
+    },
+    {
+      "day": "2022-08-06",
+      "added": [],
+      "cumulative_count": 789
+    },
+    {
+      "day": "2022-08-07",
+      "added": [],
+      "cumulative_count": 789
+    },
+    {
+      "day": "2022-08-08",
+      "added": [],
+      "cumulative_count": 789
+    },
+    {
+      "day": "2022-08-09",
+      "added": [
+        {
+          "cveId": "CVE-2022-30333",
+          "vendorProject": "RARLAB",
+          "product": "UnRAR",
+          "vulnerabilityName": "RARLAB UnRAR Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-34713",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Support Diagnostic Tool (MSDT) Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 791
+    },
+    {
+      "day": "2022-08-10",
+      "added": [],
+      "cumulative_count": 791
+    },
+    {
+      "day": "2022-08-11",
+      "added": [
+        {
+          "cveId": "CVE-2022-27925",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-37042",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-12",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-13",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-14",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-15",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-16",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-17",
+      "added": [],
+      "cumulative_count": 793
+    },
+    {
+      "day": "2022-08-18",
+      "added": [
+        {
+          "cveId": "CVE-2017-15944",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-21971",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Runtime Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-22536",
+          "vendorProject": "SAP",
+          "product": "Multiple Products",
+          "vulnerabilityName": "SAP Multiple Products HTTP Request Smuggling Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-26923",
+          "vendorProject": "Microsoft",
+          "product": "Active Directory",
+          "vulnerabilityName": "Microsoft Active Directory Domain Services Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-2856",
+          "vendorProject": "Google",
+          "product": "Chromium Intents",
+          "vulnerabilityName": "Google Chromium Intents Insufficient Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-32893",
+          "vendorProject": "Apple",
+          "product": "iOS and macOS",
+          "vulnerabilityName": "Apple iOS and macOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-32894",
+          "vendorProject": "Apple",
+          "product": "iOS and macOS",
+          "vulnerabilityName": "Apple iOS and macOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 800
+    },
+    {
+      "day": "2022-08-19",
+      "added": [],
+      "cumulative_count": 800
+    },
+    {
+      "day": "2022-08-20",
+      "added": [],
+      "cumulative_count": 800
+    },
+    {
+      "day": "2022-08-21",
+      "added": [],
+      "cumulative_count": 800
+    },
+    {
+      "day": "2022-08-22",
+      "added": [
+        {
+          "cveId": "CVE-2022-0028",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Reflected Amplification Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 801
+    },
+    {
+      "day": "2022-08-23",
+      "added": [],
+      "cumulative_count": 801
+    },
+    {
+      "day": "2022-08-24",
+      "added": [],
+      "cumulative_count": 801
+    },
+    {
+      "day": "2022-08-25",
+      "added": [
+        {
+          "cveId": "CVE-2020-28949",
+          "vendorProject": "PEAR",
+          "product": "Archive_Tar",
+          "vulnerabilityName": "PEAR Archive_Tar Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-36193",
+          "vendorProject": "PEAR",
+          "product": "Archive_Tar",
+          "vulnerabilityName": "PEAR Archive_Tar Improper Link Resolution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-31010",
+          "vendorProject": "Apple",
+          "product": "iOS, macOS, watchOS",
+          "vulnerabilityName": "Apple iOS, macOS, watchOS Sandbox Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-38406",
+          "vendorProject": "Delta Electronics",
+          "product": "DOPSoft 2",
+          "vulnerabilityName": "Delta Electronics DOPSoft 2 Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-39226",
+          "vendorProject": "Grafana Labs",
+          "product": "Grafana",
+          "vulnerabilityName": "Grafana Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-2294",
+          "vendorProject": "WebRTC",
+          "product": "WebRTC",
+          "vulnerabilityName": "WebRTC Heap Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-22963",
+          "vendorProject": "VMware Tanzu",
+          "product": "Spring Cloud",
+          "vulnerabilityName": "VMware Tanzu Spring Cloud Function Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-24112",
+          "vendorProject": "Apache",
+          "product": "APISIX",
+          "vulnerabilityName": "Apache APISIX Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-24706",
+          "vendorProject": "Apache",
+          "product": "CouchDB",
+          "vulnerabilityName": "Apache CouchDB Insecure Default Initialization of Resource Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-26352",
+          "vendorProject": "dotCMS",
+          "product": "dotCMS",
+          "vulnerabilityName": "dotCMS Unrestricted Upload of File Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-26",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-27",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-28",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-29",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-30",
+      "added": [],
+      "cumulative_count": 811
+    },
+    {
+      "day": "2022-08-31",
+      "added": [],
+      "cumulative_count": 811
+    }
+  ]
+}

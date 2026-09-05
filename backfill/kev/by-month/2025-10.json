@@ -1,0 +1,389 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-10",
+  "days": [
+    {
+      "day": "2025-10-01",
+      "added": [],
+      "cumulative_count": 1422
+    },
+    {
+      "day": "2025-10-02",
+      "added": [
+        {
+          "cveId": "CVE-2014-6278",
+          "vendorProject": "GNU",
+          "product": "GNU Bash",
+          "vulnerabilityName": "GNU Bash OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-7755",
+          "vendorProject": "Juniper",
+          "product": "ScreenOS",
+          "vulnerabilityName": "Juniper ScreenOS Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-1000353",
+          "vendorProject": "Jenkins",
+          "product": "Jenkins",
+          "vulnerabilityName": "Jenkins Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21043",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-4008",
+          "vendorProject": "Smartbedded",
+          "product": "Meteobridge",
+          "vulnerabilityName": "Smartbedded Meteobridge Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1427
+    },
+    {
+      "day": "2025-10-03",
+      "added": [],
+      "cumulative_count": 1427
+    },
+    {
+      "day": "2025-10-04",
+      "added": [],
+      "cumulative_count": 1427
+    },
+    {
+      "day": "2025-10-05",
+      "added": [],
+      "cumulative_count": 1427
+    },
+    {
+      "day": "2025-10-06",
+      "added": [
+        {
+          "cveId": "CVE-2010-3765",
+          "vendorProject": "Mozilla",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Mozilla Multiple Products Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-3962",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Uninitialized Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2011-3402",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-3918",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-22555",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Heap Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-43226",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-61882",
+          "vendorProject": "Oracle",
+          "product": "E-Business Suite",
+          "vulnerabilityName": "Oracle E-Business Suite Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1434
+    },
+    {
+      "day": "2025-10-07",
+      "added": [
+        {
+          "cveId": "CVE-2025-27915",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1435
+    },
+    {
+      "day": "2025-10-08",
+      "added": [],
+      "cumulative_count": 1435
+    },
+    {
+      "day": "2025-10-09",
+      "added": [
+        {
+          "cveId": "CVE-2021-43798",
+          "vendorProject": "Grafana Labs",
+          "product": "Grafana",
+          "vulnerabilityName": "Grafana Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1436
+    },
+    {
+      "day": "2025-10-10",
+      "added": [],
+      "cumulative_count": 1436
+    },
+    {
+      "day": "2025-10-11",
+      "added": [],
+      "cumulative_count": 1436
+    },
+    {
+      "day": "2025-10-12",
+      "added": [],
+      "cumulative_count": 1436
+    },
+    {
+      "day": "2025-10-13",
+      "added": [],
+      "cumulative_count": 1436
+    },
+    {
+      "day": "2025-10-14",
+      "added": [
+        {
+          "cveId": "CVE-2016-7836",
+          "vendorProject": "SKYSEA",
+          "product": "Client View",
+          "vulnerabilityName": "SKYSEA Client View Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-24990",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Untrusted Pointer Dereference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-47827",
+          "vendorProject": "IGEL",
+          "product": "IGEL OS",
+          "vulnerabilityName": "IGEL OS Use of a Key Past its Expiration Date Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-59230",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1440
+    },
+    {
+      "day": "2025-10-15",
+      "added": [
+        {
+          "cveId": "CVE-2025-54253",
+          "vendorProject": "Adobe",
+          "product": "Experience Manager (AEM) Forms",
+          "vulnerabilityName": "Adobe Experience Manager Forms Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1441
+    },
+    {
+      "day": "2025-10-16",
+      "added": [],
+      "cumulative_count": 1441
+    },
+    {
+      "day": "2025-10-17",
+      "added": [],
+      "cumulative_count": 1441
+    },
+    {
+      "day": "2025-10-18",
+      "added": [],
+      "cumulative_count": 1441
+    },
+    {
+      "day": "2025-10-19",
+      "added": [],
+      "cumulative_count": 1441
+    },
+    {
+      "day": "2025-10-20",
+      "added": [
+        {
+          "cveId": "CVE-2022-48503",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-2746",
+          "vendorProject": "Kentico",
+          "product": "Xperience CMS",
+          "vulnerabilityName": "Kentico Xperience CMS Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-2747",
+          "vendorProject": "Kentico",
+          "product": "Xperience CMS",
+          "vulnerabilityName": "Kentico Xperience CMS Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-33073",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SMB Client Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-61884",
+          "vendorProject": "Oracle",
+          "product": "E-Business Suite",
+          "vulnerabilityName": "Oracle E-Business Suite Server-Side Request Forgery (SSRF) Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1446
+    },
+    {
+      "day": "2025-10-21",
+      "added": [],
+      "cumulative_count": 1446
+    },
+    {
+      "day": "2025-10-22",
+      "added": [
+        {
+          "cveId": "CVE-2025-61932",
+          "vendorProject": "Motex",
+          "product": "LANSCOPE Endpoint Manager",
+          "vulnerabilityName": "Motex LANSCOPE Endpoint Manager Improper Verification of Source of a Communication Channel Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1447
+    },
+    {
+      "day": "2025-10-23",
+      "added": [],
+      "cumulative_count": 1447
+    },
+    {
+      "day": "2025-10-24",
+      "added": [
+        {
+          "cveId": "CVE-2025-54236",
+          "vendorProject": "Adobe",
+          "product": "Commerce and Magento",
+          "vulnerabilityName": "Adobe Commerce and Magento Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-59287",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Server Update Service (WSUS) Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1449
+    },
+    {
+      "day": "2025-10-25",
+      "added": [],
+      "cumulative_count": 1449
+    },
+    {
+      "day": "2025-10-26",
+      "added": [],
+      "cumulative_count": 1449
+    },
+    {
+      "day": "2025-10-27",
+      "added": [],
+      "cumulative_count": 1449
+    },
+    {
+      "day": "2025-10-28",
+      "added": [
+        {
+          "cveId": "CVE-2025-6204",
+          "vendorProject": "Dassault Systèmes",
+          "product": "DELMIA Apriso",
+          "vulnerabilityName": "Dassault Systèmes DELMIA Apriso Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-6205",
+          "vendorProject": "Dassault Systèmes",
+          "product": "DELMIA Apriso",
+          "vulnerabilityName": "Dassault Systèmes DELMIA Apriso Missing Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1451
+    },
+    {
+      "day": "2025-10-29",
+      "added": [],
+      "cumulative_count": 1451
+    },
+    {
+      "day": "2025-10-30",
+      "added": [
+        {
+          "cveId": "CVE-2025-24893",
+          "vendorProject": "XWiki",
+          "product": "Platform",
+          "vulnerabilityName": "XWiki Platform Eval Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-41244",
+          "vendorProject": "Broadcom",
+          "product": "VMware Aria Operations and VMware Tools",
+          "vulnerabilityName": "Broadcom VMware Aria Operations and VMware Tools Privilege Defined with Unsafe Actions Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1453
+    },
+    {
+      "day": "2025-10-31",
+      "added": [],
+      "cumulative_count": 1453
+    }
+  ]
+}

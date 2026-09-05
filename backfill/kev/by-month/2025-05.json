@@ -1,0 +1,340 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-05",
+  "days": [
+    {
+      "day": "2025-05-01",
+      "added": [
+        {
+          "cveId": "CVE-2023-44221",
+          "vendorProject": "SonicWall",
+          "product": "SMA100 Appliances",
+          "vulnerabilityName": "SonicWall SMA100 Appliances OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38475",
+          "vendorProject": "Apache",
+          "product": "HTTP Server",
+          "vulnerabilityName": "Apache HTTP Server Improper Escaping of Output Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1329
+    },
+    {
+      "day": "2025-05-02",
+      "added": [
+        {
+          "cveId": "CVE-2024-58136",
+          "vendorProject": "Yiiframework",
+          "product": "Yii",
+          "vulnerabilityName": "Yiiframework Yii Improper Protection of Alternate Path Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-34028",
+          "vendorProject": "Commvault",
+          "product": "Command Center",
+          "vulnerabilityName": "Commvault Command Center Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1331
+    },
+    {
+      "day": "2025-05-03",
+      "added": [],
+      "cumulative_count": 1331
+    },
+    {
+      "day": "2025-05-04",
+      "added": [],
+      "cumulative_count": 1331
+    },
+    {
+      "day": "2025-05-05",
+      "added": [
+        {
+          "cveId": "CVE-2025-3248",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Missing Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1332
+    },
+    {
+      "day": "2025-05-06",
+      "added": [
+        {
+          "cveId": "CVE-2025-27363",
+          "vendorProject": "FreeType",
+          "product": "FreeType",
+          "vulnerabilityName": "FreeType Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1333
+    },
+    {
+      "day": "2025-05-07",
+      "added": [
+        {
+          "cveId": "CVE-2024-11120",
+          "vendorProject": "GeoVision",
+          "product": "Multiple Devices",
+          "vulnerabilityName": "GeoVision Devices OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-6047",
+          "vendorProject": "GeoVision",
+          "product": "Multiple Devices",
+          "vulnerabilityName": "GeoVision Devices OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1335
+    },
+    {
+      "day": "2025-05-08",
+      "added": [],
+      "cumulative_count": 1335
+    },
+    {
+      "day": "2025-05-09",
+      "added": [],
+      "cumulative_count": 1335
+    },
+    {
+      "day": "2025-05-10",
+      "added": [],
+      "cumulative_count": 1335
+    },
+    {
+      "day": "2025-05-11",
+      "added": [],
+      "cumulative_count": 1335
+    },
+    {
+      "day": "2025-05-12",
+      "added": [
+        {
+          "cveId": "CVE-2025-47729",
+          "vendorProject": "TeleMessage",
+          "product": "TM SGNL",
+          "vulnerabilityName": "TeleMessage TM SGNL Hidden Functionality Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1336
+    },
+    {
+      "day": "2025-05-13",
+      "added": [
+        {
+          "cveId": "CVE-2025-30397",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Scripting Engine Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-30400",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows DWM Core Library Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32701",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32706",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32709",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1341
+    },
+    {
+      "day": "2025-05-14",
+      "added": [
+        {
+          "cveId": "CVE-2025-32756",
+          "vendorProject": "Fortinet",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Fortinet Multiple Products Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1342
+    },
+    {
+      "day": "2025-05-15",
+      "added": [
+        {
+          "cveId": "CVE-2024-12987",
+          "vendorProject": "DrayTek",
+          "product": "Vigor Routers",
+          "vulnerabilityName": "DrayTek Vigor Routers OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-42999",
+          "vendorProject": "SAP",
+          "product": "NetWeaver",
+          "vulnerabilityName": "SAP NetWeaver Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1344
+    },
+    {
+      "day": "2025-05-16",
+      "added": [],
+      "cumulative_count": 1344
+    },
+    {
+      "day": "2025-05-17",
+      "added": [],
+      "cumulative_count": 1344
+    },
+    {
+      "day": "2025-05-18",
+      "added": [],
+      "cumulative_count": 1344
+    },
+    {
+      "day": "2025-05-19",
+      "added": [
+        {
+          "cveId": "CVE-2023-38950",
+          "vendorProject": "ZKTeco",
+          "product": "BioTime",
+          "vulnerabilityName": "ZKTeco BioTime Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-11182",
+          "vendorProject": "MDaemon",
+          "product": "Email Server",
+          "vulnerabilityName": "MDaemon Email Server Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-27443",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-27920",
+          "vendorProject": "Srimax",
+          "product": "Output Messenger",
+          "vulnerabilityName": "Srimax Output Messenger Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-4427",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-4428",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1350
+    },
+    {
+      "day": "2025-05-20",
+      "added": [],
+      "cumulative_count": 1350
+    },
+    {
+      "day": "2025-05-21",
+      "added": [],
+      "cumulative_count": 1350
+    },
+    {
+      "day": "2025-05-22",
+      "added": [
+        {
+          "cveId": "CVE-2025-4632",
+          "vendorProject": "Samsung",
+          "product": "MagicINFO 9 Server",
+          "vulnerabilityName": "Samsung MagicINFO 9 Server Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-23",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-24",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-25",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-26",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-27",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-28",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-29",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-30",
+      "added": [],
+      "cumulative_count": 1351
+    },
+    {
+      "day": "2025-05-31",
+      "added": [],
+      "cumulative_count": 1351
+    }
+  ]
+}

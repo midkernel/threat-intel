@@ -1,0 +1,286 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-09",
+  "days": [
+    {
+      "day": "2025-09-01",
+      "incidents": [
+        {
+          "name": "OlaXBT",
+          "date": "2025-09-01",
+          "amount": 2000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Signer Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-02",
+      "incidents": [
+        {
+          "name": "Bunni V2",
+          "date": "2025-09-02",
+          "amount": 8400000,
+          "chain": [
+            "Ethereum",
+            "Unichain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "5734",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-08",
+      "incidents": [
+        {
+          "name": "Nemo Yield Trading",
+          "date": "2025-09-08",
+          "amount": 2590000,
+          "chain": [
+            "Sui"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "6313",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-09",
+      "incidents": [
+        {
+          "name": "SwissBorg",
+          "date": "2025-09-09",
+          "amount": 41500000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "defillamaId": "2295",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-10",
+      "incidents": [
+        {
+          "name": "Evoq Finance",
+          "date": "2025-09-10",
+          "amount": 420000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "5959",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-12",
+      "incidents": [
+        {
+          "name": "Kame Aggregator",
+          "date": "2025-09-12",
+          "amount": 1300000,
+          "chain": [
+            "Sei"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-13",
+      "incidents": [
+        {
+          "name": "Shibarium",
+          "date": "2025-09-13",
+          "amount": 4100000,
+          "chain": [
+            "Shibarium"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-14",
+      "incidents": [
+        {
+          "name": "Yala",
+          "date": "2025-09-14",
+          "amount": 7640000,
+          "chain": [
+            "Solana",
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "defillamaId": "6147",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-18",
+      "incidents": [
+        {
+          "name": "New Gold Protocol",
+          "date": "2025-09-18",
+          "amount": 1900000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-22",
+      "incidents": [
+        {
+          "name": "UXLINK",
+          "date": "2025-09-22",
+          "amount": 11300000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Delegatecall Hijack",
+          "defillamaId": "6040",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-23",
+      "incidents": [
+        {
+          "name": "Corepound",
+          "date": "2025-09-23",
+          "amount": 400000,
+          "chain": [
+            "CORE"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "defillamaId": "5952",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Seedify",
+          "date": "2025-09-23",
+          "amount": 1200000,
+          "chain": [
+            "BSC",
+            "Avalanche"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "1511",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-24",
+      "incidents": [
+        {
+          "name": "GriffinAI",
+          "date": "2025-09-24",
+          "amount": 3000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Cross-Chain Message Spoofing",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "SBI Crypto",
+          "date": "2025-09-24",
+          "amount": 21000000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "Litecoin",
+            "Doge",
+            "BitcoinCash"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-26",
+      "incidents": [
+        {
+          "name": "HyperVault",
+          "date": "2025-09-26",
+          "amount": 3600000,
+          "chain": [
+            "Hyperliquid L1"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "defillamaId": "6597",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-27",
+      "incidents": [
+        {
+          "name": "Hyperdrive HL Lending",
+          "date": "2025-09-27",
+          "amount": 782000,
+          "chain": [
+            "Hyperliquid L1"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "6298",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-09-28",
+      "incidents": [
+        {
+          "name": "dTRINITY",
+          "date": "2025-09-28",
+          "amount": 56000,
+          "chain": [
+            "Sonic"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-02",
+  "days": [
+    {
+      "day": "2019-02-20",
+      "incidents": [
+        {
+          "name": "Coinbin",
+          "date": "2019-02-20",
+          "amount": 26000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

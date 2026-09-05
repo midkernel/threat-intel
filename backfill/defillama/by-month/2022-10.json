@@ -1,0 +1,339 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-10",
+  "days": [
+    {
+      "day": "2022-10-02",
+      "incidents": [
+        {
+          "name": "Transit Swap",
+          "date": "2022-10-02",
+          "amount": 28900000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-04",
+      "incidents": [
+        {
+          "name": "Sovryn",
+          "date": "2022-10-04",
+          "amount": 1100000,
+          "chain": [
+            "RSK"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-06",
+      "incidents": [
+        {
+          "name": "Binance Bridge",
+          "date": "2022-10-06",
+          "amount": 570000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Proof Verifier Bug",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "RES Token",
+          "date": "2022-10-06",
+          "amount": 290000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-09",
+      "incidents": [
+        {
+          "name": "Xave Finance",
+          "date": "2022-10-09",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "3731",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-11",
+      "incidents": [
+        {
+          "name": "Mango Markets V3",
+          "date": "2022-10-11",
+          "amount": 115000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "286",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "QANplatform",
+          "date": "2022-10-11",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TempleDAO",
+          "date": "2022-10-11",
+          "amount": 2300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "875",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-13",
+      "incidents": [
+        {
+          "name": "FTX",
+          "date": "2022-10-13",
+          "amount": 70000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-15",
+      "incidents": [
+        {
+          "name": "Earning.Farm",
+          "date": "2022-10-15",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-17",
+      "incidents": [
+        {
+          "name": "LiveArtX",
+          "date": "2022-10-17",
+          "amount": 39000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "MTDAO",
+          "date": "2022-10-17",
+          "amount": 702000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-18",
+      "incidents": [
+        {
+          "name": "Moola Market",
+          "date": "2022-10-18",
+          "amount": 8400000,
+          "chain": [
+            "Celo"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "489",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-20",
+      "incidents": [
+        {
+          "name": "Ethereum Alarm Clock",
+          "date": "2022-10-20",
+          "amount": 260000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-21",
+      "incidents": [
+        {
+          "name": "Bond Protocol",
+          "date": "2022-10-21",
+          "amount": 300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "2697",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-23",
+      "incidents": [
+        {
+          "name": "Layer2DAO",
+          "date": "2022-10-23",
+          "amount": 190000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-24",
+      "incidents": [
+        {
+          "name": "QuickSwap Market",
+          "date": "2022-10-24",
+          "amount": 220000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-25",
+      "incidents": [
+        {
+          "name": "ULME",
+          "date": "2022-10-25",
+          "amount": 250000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-26",
+      "incidents": [
+        {
+          "name": "N00dleSwap",
+          "date": "2022-10-26",
+          "amount": 29000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-27",
+      "incidents": [
+        {
+          "name": "Team Finance",
+          "date": "2022-10-27",
+          "amount": 15800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "1864",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "UvToken",
+          "date": "2022-10-27",
+          "amount": 1500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-10-28",
+      "incidents": [
+        {
+          "name": "FriesDAO",
+          "date": "2022-10-28",
+          "amount": 2300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

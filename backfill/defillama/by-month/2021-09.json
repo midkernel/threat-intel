@@ -1,0 +1,122 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-09",
+  "days": [
+    {
+      "day": "2021-09-03",
+      "incidents": [
+        {
+          "name": "Siren",
+          "date": "2021-09-03",
+          "amount": 3500000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "203",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-04",
+      "incidents": [
+        {
+          "name": "DAO Maker Vesting",
+          "date": "2021-09-04",
+          "amount": 4000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "921",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-12",
+      "incidents": [
+        {
+          "name": "Zabu Finance",
+          "date": "2021-09-12",
+          "amount": 3200000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-15",
+      "incidents": [
+        {
+          "name": "NowSwap",
+          "date": "2021-09-15",
+          "amount": 1069000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-17",
+      "incidents": [
+        {
+          "name": "JayPegs Automart",
+          "date": "2021-09-17",
+          "amount": 3100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-21",
+      "incidents": [
+        {
+          "name": "Vee Finance",
+          "date": "2021-09-21",
+          "amount": 34000000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "619",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-09-29",
+      "incidents": [
+        {
+          "name": "Compound V2",
+          "date": "2021-09-29",
+          "amount": 147000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "114",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-11",
+  "days": [
+    {
+      "day": "2023-11-01",
+      "incidents": [
+        {
+          "name": "Onyx Protocol",
+          "date": "2023-11-01",
+          "amount": 2100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "1631",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-06",
+      "incidents": [
+        {
+          "name": "TheStandard.io",
+          "date": "2023-11-06",
+          "amount": 290000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TrustPad",
+          "date": "2023-11-06",
+          "amount": 155000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-07",
+      "incidents": [
+        {
+          "name": "Curve Finance MEV Bot",
+          "date": "2023-11-07",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-09",
+      "incidents": [
+        {
+          "name": "CoinSpot",
+          "date": "2023-11-09",
+          "amount": 2400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-10",
+      "incidents": [
+        {
+          "name": "Poloniex",
+          "date": "2023-11-10",
+          "amount": 126000000,
+          "chain": [
+            "Tron",
+            "Ethereum",
+            "Bitcoin"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Raft",
+          "date": "2023-11-10",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "3068",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-11",
+      "incidents": [
+        {
+          "name": "Samudai",
+          "date": "2023-11-11",
+          "amount": 1250000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-18",
+      "incidents": [
+        {
+          "name": "Kronos Research",
+          "date": "2023-11-18",
+          "amount": 26000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "targetType": "Other"
+        },
+        {
+          "name": "SpookySwap",
+          "date": "2023-11-18",
+          "amount": 5000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "dYdX V3",
+          "date": "2023-11-18",
+          "amount": 9000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "defillamaId": "144",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-22",
+      "incidents": [
+        {
+          "name": "Heco Bridge",
+          "date": "2023-11-22",
+          "amount": 86600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Huobi",
+          "date": "2023-11-22",
+          "amount": 13600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "KyberSwap Elastic",
+          "date": "2023-11-22",
+          "amount": 48000000,
+          "chain": [
+            "Ethereum",
+            "Base",
+            "Polygon",
+            "Optimism",
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "2615",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-25",
+      "incidents": [
+        {
+          "name": "TheNFTV2",
+          "date": "2023-11-25",
+          "amount": 19000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-29",
+      "incidents": [
+        {
+          "name": "Velodrome",
+          "date": "2023-11-29",
+          "amount": 250000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-11-30",
+      "incidents": [
+        {
+          "name": "Florence Finance",
+          "date": "2023-11-30",
+          "amount": 1450000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Address Poisoning",
+          "defillamaId": "3197",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

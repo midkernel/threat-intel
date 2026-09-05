@@ -1,0 +1,70 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-10",
+  "days": [
+    {
+      "day": "2018-10-07",
+      "incidents": [
+        {
+          "name": "SpankChain",
+          "date": "2018-10-07",
+          "amount": 38000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-10-15",
+      "incidents": [
+        {
+          "name": "EOSBet",
+          "date": "2018-10-15",
+          "amount": 338000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-10-26",
+      "incidents": [
+        {
+          "name": "EosRoyale",
+          "date": "2018-10-26",
+          "amount": 60000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-10-31",
+      "incidents": [
+        {
+          "name": "EOSCast",
+          "date": "2018-10-31",
+          "amount": 72912,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

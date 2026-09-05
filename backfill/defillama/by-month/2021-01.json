@@ -1,0 +1,40 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-01",
+  "days": [
+    {
+      "day": "2021-01-25",
+      "incidents": [
+        {
+          "name": "Badger DAO",
+          "date": "2021-01-25",
+          "amount": 103842,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "173",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-01-27",
+      "incidents": [
+        {
+          "name": "SushiSwap",
+          "date": "2021-01-27",
+          "amount": 103842,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "119",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

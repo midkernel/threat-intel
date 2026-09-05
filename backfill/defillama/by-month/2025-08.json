@@ -1,0 +1,156 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-08",
+  "days": [
+    {
+      "day": "2025-08-04",
+      "incidents": [
+        {
+          "name": "CrediX",
+          "date": "2025-08-04",
+          "amount": 4500000,
+          "chain": [
+            "Sonic"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-10",
+      "incidents": [
+        {
+          "name": "numa.",
+          "date": "2025-08-10",
+          "amount": 313000,
+          "chain": [
+            "Sonic"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-12",
+      "incidents": [
+        {
+          "name": "Odin.Fun",
+          "date": "2025-08-12",
+          "amount": 7000000,
+          "chain": [
+            "ICP"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-13",
+      "incidents": [
+        {
+          "name": "Coinbase",
+          "date": "2025-08-13",
+          "amount": 300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Grizzifi",
+          "date": "2025-08-13",
+          "amount": 61000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-14",
+      "incidents": [
+        {
+          "name": "BtcTurk",
+          "date": "2025-08-14",
+          "amount": 48000000,
+          "chain": [
+            "Ethereum",
+            "Avalanche",
+            "Arbitrum",
+            "Base",
+            "Optimism",
+            "Mantle",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-25",
+      "incidents": [
+        {
+          "name": "Panoptic V1.1",
+          "date": "2025-08-25",
+          "amount": 0,
+          "chain": [
+            "Base",
+            "Unichain",
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Hash Collision",
+          "defillamaId": "6230",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-26",
+      "incidents": [
+        {
+          "name": "BetterBank",
+          "date": "2025-08-26",
+          "amount": 5000000,
+          "chain": [
+            "PulseChain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "6611",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-08-30",
+      "incidents": [
+        {
+          "name": "Cozy V2",
+          "date": "2025-08-30",
+          "amount": 427000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "2964",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

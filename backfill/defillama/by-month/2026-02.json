@@ -1,0 +1,162 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-02",
+  "days": [
+    {
+      "day": "2026-02-01",
+      "incidents": [
+        {
+          "name": "CrossCurve",
+          "date": "2026-02-01",
+          "amount": 3000000,
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Cross-Chain Message Spoofing",
+          "defillamaId": "5146",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-15",
+      "incidents": [
+        {
+          "name": "Moonwell Lending",
+          "date": "2026-02-15",
+          "amount": 1780000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "1853",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-19",
+      "incidents": [
+        {
+          "name": "Velar Perps",
+          "date": "2026-02-19",
+          "amount": 401000,
+          "chain": [
+            "Mezo"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Predictable Oracle Update",
+          "defillamaId": "6842",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-21",
+      "incidents": [
+        {
+          "name": "IoTeX",
+          "date": "2026-02-21",
+          "amount": 4400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "defillamaId": "5486",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Veil Cash",
+          "date": "2026-02-21",
+          "amount": 5000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Proof Verifier Bug",
+          "defillamaId": "6117",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-22",
+      "incidents": [
+        {
+          "name": "Blend Pools V2",
+          "date": "2026-02-22",
+          "amount": 10970000,
+          "chain": [
+            "Stellar"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "6122",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LAXO",
+          "date": "2026-02-22",
+          "amount": 190000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-23",
+      "incidents": [
+        {
+          "name": "DGLD",
+          "date": "2026-02-23",
+          "amount": 250000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-26",
+      "incidents": [
+        {
+          "name": "Ploutos Money",
+          "date": "2026-02-26",
+          "amount": 390000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "6792",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-02-28",
+      "incidents": [
+        {
+          "name": "Wise Lending V2",
+          "date": "2026-02-28",
+          "amount": 66000,
+          "chain": [
+            "Arbitrum",
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "4494",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

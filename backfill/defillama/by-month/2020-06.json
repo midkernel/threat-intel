@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-06",
+  "days": [
+    {
+      "day": "2020-06-18",
+      "incidents": [
+        {
+          "name": "Bancor V3",
+          "date": "2020-06-18",
+          "amount": 544885,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1995",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-06-28",
+      "incidents": [
+        {
+          "name": "Balancer",
+          "date": "2020-06-28",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

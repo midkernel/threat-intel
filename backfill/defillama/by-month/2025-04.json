@@ -1,0 +1,247 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-04",
+  "days": [
+    {
+      "day": "2025-04-01",
+      "incidents": [
+        {
+          "name": "UPCX",
+          "date": "2025-04-01",
+          "amount": 70000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Proxy Upgrade Hijack",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Zapper",
+          "date": "2025-04-01",
+          "chain": [
+            "Ethereum",
+            "Arbitrum",
+            "Optimism",
+            "Polygon",
+            "Base"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-04",
+      "incidents": [
+        {
+          "name": "AIRWA",
+          "date": "2025-04-04",
+          "amount": 33600,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-07",
+      "incidents": [
+        {
+          "name": "Tenderize V2",
+          "date": "2025-04-07",
+          "amount": 10850,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "4085",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-14",
+      "incidents": [
+        {
+          "name": "KiloEx",
+          "date": "2025-04-14",
+          "amount": 7500000,
+          "chain": [
+            "BSC",
+            "Base",
+            "Taiko"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "3329",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-15",
+      "incidents": [
+        {
+          "name": "ZKsync",
+          "date": "2025-04-15",
+          "amount": 5000000,
+          "chain": [
+            "zkSync Era"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-16",
+      "incidents": [
+        {
+          "name": "R0AR",
+          "date": "2025-04-16",
+          "amount": 780000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-18",
+      "incidents": [
+        {
+          "name": "Numa",
+          "date": "2025-04-18",
+          "amount": 506000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-20",
+      "incidents": [
+        {
+          "name": "Bitget",
+          "date": "2025-04-20",
+          "amount": 100000000,
+          "classification": "Market Manipulation",
+          "technique": "Market Maker Bot Exploited",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-22",
+      "incidents": [
+        {
+          "name": "Bitcoin Mission",
+          "date": "2025-04-22",
+          "amount": 1300000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-24",
+      "incidents": [
+        {
+          "name": "ACB",
+          "date": "2025-04-24",
+          "amount": 22804,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-26",
+      "incidents": [
+        {
+          "name": "Impermax V3",
+          "date": "2025-04-26",
+          "amount": 300000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Fee Accounting",
+          "defillamaId": "5981",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Loopscale",
+          "date": "2025-04-26",
+          "amount": 5800000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Term Finance",
+          "date": "2025-04-26",
+          "amount": 1650000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-04-27",
+      "incidents": [
+        {
+          "name": "Aventa",
+          "date": "2025-04-27",
+          "amount": 7000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "QuantMaster",
+          "date": "2025-04-27",
+          "amount": 100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

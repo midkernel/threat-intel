@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2015-08",
+  "days": [
+    {
+      "day": "2015-08-15",
+      "incidents": [
+        {
+          "name": "BTER",
+          "date": "2015-08-15",
+          "amount": 1650000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

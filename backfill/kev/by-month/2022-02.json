@@ -1,0 +1,376 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-02",
+  "days": [
+    {
+      "day": "2022-02-01",
+      "added": [],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-02-02",
+      "added": [],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-02-03",
+      "added": [],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-02-04",
+      "added": [
+        {
+          "cveId": "CVE-2022-21882",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-05",
+      "added": [],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-06",
+      "added": [],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-07",
+      "added": [],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-08",
+      "added": [],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-09",
+      "added": [],
+      "cumulative_count": 352
+    },
+    {
+      "day": "2022-02-10",
+      "added": [
+        {
+          "cveId": "CVE-2014-4404",
+          "vendorProject": "Apple",
+          "product": "OS X",
+          "vulnerabilityName": "Apple OS X Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-1130",
+          "vendorProject": "Apple",
+          "product": "OS X",
+          "vulnerabilityName": "Apple OS X Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-1635",
+          "vendorProject": "Microsoft",
+          "product": "HTTP.sys",
+          "vulnerabilityName": "Microsoft HTTP.sys Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-2051",
+          "vendorProject": "D-Link",
+          "product": "DIR-645 Router",
+          "vulnerabilityName": "D-Link DIR-645 Router Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2016-3088",
+          "vendorProject": "Apache",
+          "product": "ActiveMQ",
+          "vulnerabilityName": "Apache ActiveMQ Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0144",
+          "vendorProject": "Microsoft",
+          "product": "SMBv1",
+          "vulnerabilityName": "Microsoft SMBv1 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-0145",
+          "vendorProject": "Microsoft",
+          "product": "SMBv1",
+          "vulnerabilityName": "Microsoft SMBv1 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-0262",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0263",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-10271",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle Corporation WebLogic Server Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2017-8464",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Shell (.lnk) Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-9791",
+          "vendorProject": "Apache",
+          "product": "Struts 1",
+          "vulnerabilityName": "Apache Struts 1 Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-1000861",
+          "vendorProject": "Jenkins",
+          "product": "Jenkins Stapler Web Framework",
+          "vulnerabilityName": "Jenkins Stapler Web Framework Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-0796",
+          "vendorProject": "Microsoft",
+          "product": "SMBv3",
+          "vulnerabilityName": "Microsoft SMBv3 Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-36934",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows SAM Local Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 367
+    },
+    {
+      "day": "2022-02-11",
+      "added": [
+        {
+          "cveId": "CVE-2022-22620",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS Webkit Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 368
+    },
+    {
+      "day": "2022-02-12",
+      "added": [],
+      "cumulative_count": 368
+    },
+    {
+      "day": "2022-02-13",
+      "added": [],
+      "cumulative_count": 368
+    },
+    {
+      "day": "2022-02-14",
+      "added": [],
+      "cumulative_count": 368
+    },
+    {
+      "day": "2022-02-15",
+      "added": [
+        {
+          "cveId": "CVE-2013-3906",
+          "vendorProject": "Microsoft",
+          "product": "Graphics Component",
+          "vulnerabilityName": "Microsoft Graphics Component Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-1761",
+          "vendorProject": "Microsoft",
+          "product": "Word",
+          "vulnerabilityName": "Microsoft Word Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-9841",
+          "vendorProject": "PHPUnit",
+          "product": "PHPUnit",
+          "vulnerabilityName": "PHPUnit Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-15982",
+          "vendorProject": "Adobe",
+          "product": "Flash Player",
+          "vulnerabilityName": "Adobe Flash Player Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-20250",
+          "vendorProject": "RARLAB",
+          "product": "WinRAR",
+          "vulnerabilityName": "WinRAR Absolute Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-8174",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows VBScript Engine Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-0752",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-0609",
+          "vendorProject": "Google",
+          "product": "Chromium Animation",
+          "vulnerabilityName": "Google Chromium Animation Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-24086",
+          "vendorProject": "Adobe",
+          "product": "Commerce and Magento Open Source",
+          "vulnerabilityName": "Adobe Commerce and Magento Open Source Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-16",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-17",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-18",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-19",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-20",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-21",
+      "added": [],
+      "cumulative_count": 377
+    },
+    {
+      "day": "2022-02-22",
+      "added": [
+        {
+          "cveId": "CVE-2022-23131",
+          "vendorProject": "Zabbix",
+          "product": "Frontend",
+          "vulnerabilityName": "Zabbix Frontend Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-23134",
+          "vendorProject": "Zabbix",
+          "product": "Frontend",
+          "vulnerabilityName": "Zabbix Frontend Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 379
+    },
+    {
+      "day": "2022-02-23",
+      "added": [],
+      "cumulative_count": 379
+    },
+    {
+      "day": "2022-02-24",
+      "added": [],
+      "cumulative_count": 379
+    },
+    {
+      "day": "2022-02-25",
+      "added": [
+        {
+          "cveId": "CVE-2014-6352",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-0222",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-8570",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-24682",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaborate Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaborate Suite (ZCS) Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 383
+    },
+    {
+      "day": "2022-02-26",
+      "added": [],
+      "cumulative_count": 383
+    },
+    {
+      "day": "2022-02-27",
+      "added": [],
+      "cumulative_count": 383
+    },
+    {
+      "day": "2022-02-28",
+      "added": [],
+      "cumulative_count": 383
+    }
+  ]
+}

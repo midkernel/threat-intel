@@ -1,0 +1,89 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-02",
+  "days": [
+    {
+      "day": "2020-02-03",
+      "incidents": [
+        {
+          "name": "LuckLambo104",
+          "date": "2020-02-03",
+          "amount": 1500,
+          "chain": [
+            "Tron"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-02-05",
+      "incidents": [
+        {
+          "name": "Altsbit",
+          "date": "2020-02-05",
+          "amount": 70000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-02-12",
+      "incidents": [
+        {
+          "name": "Trinity Wallet",
+          "date": "2020-02-12",
+          "amount": 2000000,
+          "chain": [
+            "Iota"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "CDN Compromise",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2020-02-15",
+      "incidents": [
+        {
+          "name": "Ooki",
+          "date": "2020-02-15",
+          "amount": 350000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "197",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-02-18",
+      "incidents": [
+        {
+          "name": "Ooki",
+          "date": "2020-02-18",
+          "amount": 650000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "197",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

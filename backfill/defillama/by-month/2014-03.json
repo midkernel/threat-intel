@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2014-03",
+  "days": [
+    {
+      "day": "2014-03-02",
+      "incidents": [
+        {
+          "name": "Flexcoin",
+          "date": "2014-03-02",
+          "amount": 600000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2014-03-04",
+      "incidents": [
+        {
+          "name": "Poloniex",
+          "date": "2014-03-04",
+          "amount": 50000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "7481",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

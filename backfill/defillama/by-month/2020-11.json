@@ -1,0 +1,153 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-11",
+  "days": [
+    {
+      "day": "2020-11-02",
+      "incidents": [
+        {
+          "name": "Axion",
+          "date": "2020-11-02",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "1298",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-06",
+      "incidents": [
+        {
+          "name": "Ledger",
+          "date": "2020-11-06",
+          "amount": 271000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-08",
+      "incidents": [
+        {
+          "name": "Grin",
+          "date": "2020-11-08",
+          "chain": [
+            "Grin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-12",
+      "incidents": [
+        {
+          "name": "Akropolis",
+          "date": "2020-11-12",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-14",
+      "incidents": [
+        {
+          "name": "ValueDefi",
+          "date": "2020-11-14",
+          "amount": 7400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "164",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-16",
+      "incidents": [
+        {
+          "name": "CheeseBank",
+          "date": "2020-11-16",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-17",
+      "incidents": [
+        {
+          "name": "Origin Protocol",
+          "date": "2020-11-17",
+          "amount": 7700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-22",
+      "incidents": [
+        {
+          "name": "Pickle",
+          "date": "2020-11-22",
+          "amount": 19700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "134",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-11-30",
+      "incidents": [
+        {
+          "name": "SushiSwap",
+          "date": "2020-11-30",
+          "amount": 15000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "119",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

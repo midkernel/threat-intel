@@ -1,0 +1,200 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-01",
+  "days": [
+    {
+      "day": "2023-01-01",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-02",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-03",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-04",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-05",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-06",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-07",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-08",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-09",
+      "added": [],
+      "cumulative_count": 866
+    },
+    {
+      "day": "2023-01-10",
+      "added": [
+        {
+          "cveId": "CVE-2022-41080",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-21674",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Advanced Local Procedure Call (ALPC) Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-11",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-12",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-13",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-14",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-15",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-16",
+      "added": [],
+      "cumulative_count": 868
+    },
+    {
+      "day": "2023-01-17",
+      "added": [
+        {
+          "cveId": "CVE-2022-44877",
+          "vendorProject": "CWP",
+          "product": "Control Web Panel",
+          "vulnerabilityName": "CWP Control Web Panel OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-18",
+      "added": [],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-19",
+      "added": [],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-20",
+      "added": [],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-21",
+      "added": [],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-22",
+      "added": [],
+      "cumulative_count": 869
+    },
+    {
+      "day": "2023-01-23",
+      "added": [
+        {
+          "cveId": "CVE-2022-47966",
+          "vendorProject": "Zoho",
+          "product": "ManageEngine",
+          "vulnerabilityName": "Zoho ManageEngine Multiple Products Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 870
+    },
+    {
+      "day": "2023-01-24",
+      "added": [],
+      "cumulative_count": 870
+    },
+    {
+      "day": "2023-01-25",
+      "added": [],
+      "cumulative_count": 870
+    },
+    {
+      "day": "2023-01-26",
+      "added": [
+        {
+          "cveId": "CVE-2017-11357",
+          "vendorProject": "Telerik",
+          "product": "User Interface (UI) for ASP.NET AJAX",
+          "vulnerabilityName": "Telerik UI for ASP.NET AJAX Insecure Direct Object Reference Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-01-27",
+      "added": [],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-01-28",
+      "added": [],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-01-29",
+      "added": [],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-01-30",
+      "added": [],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-01-31",
+      "added": [],
+      "cumulative_count": 871
+    }
+  ]
+}

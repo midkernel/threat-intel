@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-02",
+  "days": [
+    {
+      "day": "2018-02-12",
+      "incidents": [
+        {
+          "name": "BitGrail",
+          "date": "2018-02-12",
+          "amount": 170000000,
+          "chain": [
+            "Nano"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-07",
+  "days": [
+    {
+      "day": "2022-07-01",
+      "incidents": [
+        {
+          "name": "Quixotic",
+          "date": "2022-07-01",
+          "amount": 100000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-02",
+      "incidents": [
+        {
+          "name": "Crema Finance",
+          "date": "2022-07-02",
+          "amount": 8800000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1412",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-10",
+      "incidents": [
+        {
+          "name": "Omni",
+          "date": "2022-07-10",
+          "amount": 1400000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-11",
+      "incidents": [
+        {
+          "name": "Uniswap (Phishing Attack)",
+          "date": "2022-07-11",
+          "amount": 8000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-12",
+      "incidents": [
+        {
+          "name": "Citizen Finance",
+          "date": "2022-07-12",
+          "amount": 94300,
+          "chain": [
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-13",
+      "incidents": [
+        {
+          "name": "SpaceGodzilla",
+          "date": "2022-07-13",
+          "amount": 25379,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-16",
+      "incidents": [
+        {
+          "name": "Impermax",
+          "date": "2022-07-16",
+          "amount": 9000000,
+          "chain": [
+            "Ethereum",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-17",
+      "incidents": [
+        {
+          "name": "Premint",
+          "date": "2022-07-17",
+          "amount": 375000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-25",
+      "incidents": [
+        {
+          "name": "Audius",
+          "date": "2022-07-25",
+          "amount": 6000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LPC",
+          "date": "2022-07-25",
+          "amount": 45000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-07-28",
+      "incidents": [
+        {
+          "name": "Nirvana V1",
+          "date": "2022-07-28",
+          "amount": 3500000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1825",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

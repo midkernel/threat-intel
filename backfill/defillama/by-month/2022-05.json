@@ -1,0 +1,286 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-05",
+  "days": [
+    {
+      "day": "2022-05-01",
+      "incidents": [
+        {
+          "name": "Rari Capital",
+          "date": "2022-05-01",
+          "amount": 80000000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "136",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-04",
+      "incidents": [
+        {
+          "name": "MM Finance Cronos",
+          "date": "2022-05-04",
+          "amount": 2000000,
+          "chain": [
+            "Cronos"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "1028",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-08",
+      "incidents": [
+        {
+          "name": "Fortress Loans",
+          "date": "2022-05-08",
+          "amount": 2976004,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "2177",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-10",
+      "incidents": [
+        {
+          "name": "OWNLY",
+          "date": "2022-05-10",
+          "amount": 37000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-11",
+      "incidents": [
+        {
+          "name": "Drift Trade",
+          "date": "2022-05-11",
+          "amount": 14500000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "defillamaId": "970",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "X2Y2",
+          "date": "2022-05-11",
+          "amount": 200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "1431",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-12",
+      "incidents": [
+        {
+          "name": "Venus Protocol",
+          "date": "2022-05-12",
+          "amount": 11200000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-13",
+      "incidents": [
+        {
+          "name": "Blizz Finance",
+          "date": "2022-05-13",
+          "amount": 8300000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "defillamaId": "807",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-14",
+      "incidents": [
+        {
+          "name": "Quickswap V3",
+          "date": "2022-05-14",
+          "amount": 107600,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "2239",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "SpiritSwap V3",
+          "date": "2022-05-14",
+          "amount": 18000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "4470",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-17",
+      "incidents": [
+        {
+          "name": "FEG Token",
+          "date": "2022-05-17",
+          "amount": 1900000,
+          "chain": [
+            "Binance Smart Chain",
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-18",
+      "incidents": [
+        {
+          "name": "Feminist Metaverse",
+          "date": "2022-05-18",
+          "amount": 540000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "QANX Bridge",
+          "date": "2022-05-18",
+          "amount": 707000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Seth Green NFTs",
+          "date": "2022-05-18",
+          "amount": 300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-20",
+      "incidents": [
+        {
+          "name": "Llamascape",
+          "date": "2022-05-20",
+          "amount": 70000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Signer Phishing",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-24",
+      "incidents": [
+        {
+          "name": "HackDao",
+          "date": "2022-05-24",
+          "amount": 65000,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-29",
+      "incidents": [
+        {
+          "name": "Anchor",
+          "date": "2022-05-29",
+          "amount": 800000,
+          "chain": [
+            "Terra"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "defillamaId": "294",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-05-30",
+      "incidents": [
+        {
+          "name": "Mirror",
+          "date": "2022-05-30",
+          "amount": 2000000,
+          "chain": [
+            "Terra"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "260",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+name: Backfill rebuild
+
+# Full live generate. Not on pull_request — EPSS daily CSVs are large.
+# CI smokes fixtures only (see ci.yml). This job does not invent daily-* Releases.
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Comma-separated sources (kev,epss,defillama)"
+        required: false
+        default: "kev,epss,defillama"
+      from_day:
+        description: "Inclusive start YYYY-MM-DD (default: source first day)"
+        required: false
+        default: ""
+      to_day:
+        description: "Inclusive end YYYY-MM-DD (default: 2026-09-04)"
+        required: false
+        default: ""
+      epss_method:
+        description: "EPSS live method"
+        required: false
+        default: "csv"
+        type: choice
+        options:
+          - csv
+          - api
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate derived backfill
+        env:
+          SOURCES: ${{ inputs.sources }}
+          FROM_DAY: ${{ inputs.from_day }}
+          TO_DAY: ${{ inputs.to_day }}
+          EPSS_METHOD: ${{ inputs.epss_method }}
+        run: |
+          set -euo pipefail
+          args=(--sources "$SOURCES" --epss-method "$EPSS_METHOD" --epss-workers 8)
+          if [[ -n "${FROM_DAY}" ]]; then
+            args+=(--from-day "$FROM_DAY")
+          fi
+          if [[ -n "${TO_DAY}" ]]; then
+            args+=(--to-day "$TO_DAY")
+          fi
+          python3 scripts/backfill/generate.py "${args[@]}"
+      - name: Validate shards
+        run: python3 scripts/backfill/validate.py
+      - name: Upload backfill tree
+        uses: actions/upload-artifact@v4
+        with:
+          name: threat-intel-backfill
+          path: backfill/
+          if-no-files-found: error
+          retention-days: 14

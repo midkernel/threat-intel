@@ -1,0 +1,23 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-09",
+  "days": [
+    {
+      "day": "2026-09-04",
+      "incidents": [
+        {
+          "name": "Notional V2",
+          "date": "2026-09-04",
+          "amount": 1727782,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "234",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

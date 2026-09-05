@@ -1,0 +1,320 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-05",
+  "days": [
+    {
+      "day": "2026-05-01",
+      "added": [
+        {
+          "cveId": "CVE-2026-31431",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1587
+    },
+    {
+      "day": "2026-05-02",
+      "added": [],
+      "cumulative_count": 1587
+    },
+    {
+      "day": "2026-05-03",
+      "added": [],
+      "cumulative_count": 1587
+    },
+    {
+      "day": "2026-05-04",
+      "added": [],
+      "cumulative_count": 1587
+    },
+    {
+      "day": "2026-05-05",
+      "added": [],
+      "cumulative_count": 1587
+    },
+    {
+      "day": "2026-05-06",
+      "added": [
+        {
+          "cveId": "CVE-2026-0300",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1588
+    },
+    {
+      "day": "2026-05-07",
+      "added": [
+        {
+          "cveId": "CVE-2026-6973",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1589
+    },
+    {
+      "day": "2026-05-08",
+      "added": [
+        {
+          "cveId": "CVE-2026-42208",
+          "vendorProject": "BerriAI",
+          "product": "LiteLLM",
+          "vulnerabilityName": "BerriAI LiteLLM SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-09",
+      "added": [],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-10",
+      "added": [],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-11",
+      "added": [],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-12",
+      "added": [],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-13",
+      "added": [],
+      "cumulative_count": 1590
+    },
+    {
+      "day": "2026-05-14",
+      "added": [
+        {
+          "cveId": "CVE-2026-20182",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1591
+    },
+    {
+      "day": "2026-05-15",
+      "added": [
+        {
+          "cveId": "CVE-2026-42897",
+          "vendorProject": "Microsoft",
+          "product": "Microsoft",
+          "vulnerabilityName": "Microsoft Exchange Server Cross-Site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1592
+    },
+    {
+      "day": "2026-05-16",
+      "added": [],
+      "cumulative_count": 1592
+    },
+    {
+      "day": "2026-05-17",
+      "added": [],
+      "cumulative_count": 1592
+    },
+    {
+      "day": "2026-05-18",
+      "added": [],
+      "cumulative_count": 1592
+    },
+    {
+      "day": "2026-05-19",
+      "added": [],
+      "cumulative_count": 1592
+    },
+    {
+      "day": "2026-05-20",
+      "added": [
+        {
+          "cveId": "CVE-2008-4250",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-1537",
+          "vendorProject": "Microsoft",
+          "product": "DirectX",
+          "vulnerabilityName": "Microsoft DirectX NULL Byte Overwrite Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2009-3459",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-0249",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2010-0806",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-41091",
+          "vendorProject": "Microsoft",
+          "product": "Defender",
+          "vulnerabilityName": "Microsoft Defender Link Following Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-45498",
+          "vendorProject": "Microsoft",
+          "product": "Defender",
+          "vulnerabilityName": "Microsoft Defender Denial of Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1599
+    },
+    {
+      "day": "2026-05-21",
+      "added": [
+        {
+          "cveId": "CVE-2025-34291",
+          "vendorProject": "Langflow",
+          "product": "Langflow",
+          "vulnerabilityName": "Langflow Origin Validation Error Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-34926",
+          "vendorProject": "Trend Micro",
+          "product": "Apex One",
+          "vulnerabilityName": "Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1601
+    },
+    {
+      "day": "2026-05-22",
+      "added": [
+        {
+          "cveId": "CVE-2026-9082",
+          "vendorProject": "Drupal",
+          "product": "Core",
+          "vulnerabilityName": "Drupal Core SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1602
+    },
+    {
+      "day": "2026-05-23",
+      "added": [],
+      "cumulative_count": 1602
+    },
+    {
+      "day": "2026-05-24",
+      "added": [],
+      "cumulative_count": 1602
+    },
+    {
+      "day": "2026-05-25",
+      "added": [],
+      "cumulative_count": 1602
+    },
+    {
+      "day": "2026-05-26",
+      "added": [
+        {
+          "cveId": "CVE-2026-48172",
+          "vendorProject": "LiteSpeed",
+          "product": "cPanel Plugin",
+          "vulnerabilityName": "LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1603
+    },
+    {
+      "day": "2026-05-27",
+      "added": [
+        {
+          "cveId": "CVE-2026-45321",
+          "vendorProject": "TanStack",
+          "product": "TanStack",
+          "vulnerabilityName": "TanStack Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-48027",
+          "vendorProject": "Nx",
+          "product": "Nx Console",
+          "vulnerabilityName": "Nx Console Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2026-8398",
+          "vendorProject": "Daemon",
+          "product": "Daemon Tools Lite",
+          "vulnerabilityName": "Daemon Tools Lite Embedded Malicious Code Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1606
+    },
+    {
+      "day": "2026-05-28",
+      "added": [],
+      "cumulative_count": 1606
+    },
+    {
+      "day": "2026-05-29",
+      "added": [
+        {
+          "cveId": "CVE-2026-0257",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1607
+    },
+    {
+      "day": "2026-05-30",
+      "added": [],
+      "cumulative_count": 1607
+    },
+    {
+      "day": "2026-05-31",
+      "added": [],
+      "cumulative_count": 1607
+    }
+  ]
+}

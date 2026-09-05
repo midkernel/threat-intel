@@ -1,0 +1,327 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-05",
+  "days": [
+    {
+      "day": "2024-05-05",
+      "incidents": [
+        {
+          "name": "GeniusAI",
+          "date": "2024-05-05",
+          "amount": 1270000,
+          "chain": [
+            "Fantom",
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Social Account Takeover",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-06",
+      "incidents": [
+        {
+          "name": "Perpy",
+          "date": "2024-05-06",
+          "amount": 132000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-07",
+      "incidents": [
+        {
+          "name": "SATURN",
+          "date": "2024-05-07",
+          "amount": 9000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-08",
+      "incidents": [
+        {
+          "name": "GPU",
+          "date": "2024-05-08",
+          "amount": 32400,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-09",
+      "incidents": [
+        {
+          "name": "Bloom",
+          "date": "2024-05-09",
+          "amount": 540000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "3466",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-10",
+      "incidents": [
+        {
+          "name": "Galaxy Fox",
+          "date": "2024-05-10",
+          "amount": 330000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        },
+        {
+          "name": "Tsuru",
+          "date": "2024-05-10",
+          "amount": 410000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-14",
+      "incidents": [
+        {
+          "name": "Predy Finance",
+          "date": "2024-05-14",
+          "amount": 464000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-15",
+      "incidents": [
+        {
+          "name": "Sonne Finance",
+          "date": "2024-05-15",
+          "amount": 20000000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "2142",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-16",
+      "incidents": [
+        {
+          "name": "ALEX",
+          "date": "2024-05-16",
+          "amount": 4300000,
+          "chain": [
+            "Stacks"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "1466",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "pump.fun",
+          "date": "2024-05-16",
+          "amount": 1900000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "4449",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-20",
+      "incidents": [
+        {
+          "name": "Gala",
+          "date": "2024-05-20",
+          "amount": 22300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-22",
+      "incidents": [
+        {
+          "name": "TonUP",
+          "date": "2024-05-22",
+          "amount": 107600,
+          "chain": [
+            "TON"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "YON",
+          "date": "2024-05-22",
+          "amount": 118000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-26",
+      "incidents": [
+        {
+          "name": "NORMIE",
+          "date": "2024-05-26",
+          "amount": 881686,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-28",
+      "incidents": [
+        {
+          "name": "EXcommunity",
+          "date": "2024-05-28",
+          "amount": 37000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Orion Protocol",
+          "date": "2024-05-28",
+          "amount": 645000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-29",
+      "incidents": [
+        {
+          "name": "MetaDragon",
+          "date": "2024-05-29",
+          "amount": 181000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "Scroll Token",
+          "date": "2024-05-29",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-05-31",
+      "incidents": [
+        {
+          "name": "DMM Bitcoin",
+          "date": "2024-05-31",
+          "amount": 305000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "CEX"
+        },
+        {
+          "name": "MixedSwapRouter",
+          "date": "2024-05-31",
+          "amount": 16000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TLN Protocol",
+          "date": "2024-05-31",
+          "amount": 280000,
+          "chain": [
+            "BNB"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

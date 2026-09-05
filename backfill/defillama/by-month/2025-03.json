@@ -1,0 +1,229 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-03",
+  "days": [
+    {
+      "day": "2025-03-01",
+      "incidents": [
+        {
+          "name": "Hegic(old contract)",
+          "date": "2025-03-01",
+          "amount": 80000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Zoth ZeUSD",
+          "date": "2025-03-01",
+          "amount": 285000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "5615",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-05",
+      "incidents": [
+        {
+          "name": "Pond.fun",
+          "date": "2025-03-05",
+          "amount": 145000,
+          "chain": [
+            "Linea"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-07",
+      "incidents": [
+        {
+          "name": "1inch Swap",
+          "date": "2025-03-07",
+          "amount": 5000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "189",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-14",
+      "incidents": [
+        {
+          "name": "Berally",
+          "date": "2025-03-14",
+          "amount": 90000,
+          "chain": [
+            "Berachain"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Deployer Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-16",
+      "incidents": [
+        {
+          "name": "WebKeyDAO",
+          "date": "2025-03-16",
+          "amount": 73000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-18",
+      "incidents": [
+        {
+          "name": "Voltage V3",
+          "date": "2025-03-18",
+          "amount": 322113,
+          "chain": [
+            "Fuse"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "4188",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "four.meme",
+          "date": "2025-03-18",
+          "amount": 80000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "5174",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-20",
+      "incidents": [
+        {
+          "name": "BBXToken",
+          "date": "2025-03-20",
+          "amount": 12000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-21",
+      "incidents": [
+        {
+          "name": "Zoth ZeUSD",
+          "date": "2025-03-21",
+          "amount": 8850000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "5615",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-25",
+      "incidents": [
+        {
+          "name": "Abracadabra Spell",
+          "date": "2025-03-25",
+          "amount": 13000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Liquidation Logic Flaw",
+          "defillamaId": "347",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-28",
+      "incidents": [
+        {
+          "name": "Alkimiya",
+          "date": "2025-03-28",
+          "amount": 95500,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "6344",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-29",
+      "incidents": [
+        {
+          "name": "Venus Core Pool",
+          "date": "2025-03-29",
+          "amount": 902000,
+          "chain": [
+            "zkSync Era"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "212",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-03-30",
+      "incidents": [
+        {
+          "name": "SIR",
+          "date": "2025-03-30",
+          "amount": 355000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Proxy Upgrade Hijack",
+          "defillamaId": "5842",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

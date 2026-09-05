@@ -1,0 +1,352 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2026-02",
+  "days": [
+    {
+      "day": "2026-02-01",
+      "added": [],
+      "cumulative_count": 1501
+    },
+    {
+      "day": "2026-02-02",
+      "added": [],
+      "cumulative_count": 1501
+    },
+    {
+      "day": "2026-02-03",
+      "added": [
+        {
+          "cveId": "CVE-2019-19006",
+          "vendorProject": "Sangoma",
+          "product": "FreePBX",
+          "vulnerabilityName": "Sangoma FreePBX Improper Authentication Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-39935",
+          "vendorProject": "GitLab",
+          "product": "Community and Enterprise Editions",
+          "vulnerabilityName": "GitLab Community and Enterprise Editions Server-Side Request Forgery (SSRF) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-40551",
+          "vendorProject": "SolarWinds",
+          "product": "Web Help Desk",
+          "vulnerabilityName": "SolarWinds Web Help Desk Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-64328",
+          "vendorProject": "Sangoma",
+          "product": "FreePBX",
+          "vulnerabilityName": "Sangoma FreePBX OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1505
+    },
+    {
+      "day": "2026-02-04",
+      "added": [],
+      "cumulative_count": 1505
+    },
+    {
+      "day": "2026-02-05",
+      "added": [
+        {
+          "cveId": "CVE-2025-11953",
+          "vendorProject": "React Native Community",
+          "product": "CLI",
+          "vulnerabilityName": "React Native Community CLI OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-24423",
+          "vendorProject": "SmarterTools",
+          "product": "SmarterMail",
+          "vulnerabilityName": "SmarterTools SmarterMail Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1507
+    },
+    {
+      "day": "2026-02-06",
+      "added": [],
+      "cumulative_count": 1507
+    },
+    {
+      "day": "2026-02-07",
+      "added": [],
+      "cumulative_count": 1507
+    },
+    {
+      "day": "2026-02-08",
+      "added": [],
+      "cumulative_count": 1507
+    },
+    {
+      "day": "2026-02-09",
+      "added": [],
+      "cumulative_count": 1507
+    },
+    {
+      "day": "2026-02-10",
+      "added": [
+        {
+          "cveId": "CVE-2026-21510",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Shell Protection Mechanism Failure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-21513",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft MSHTML Framework Protection Mechanism Failure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-21514",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Word Reliance on Untrusted Inputs in a Security Decision Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-21519",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-21525",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows NULL Pointer Dereference Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-21533",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1513
+    },
+    {
+      "day": "2026-02-11",
+      "added": [],
+      "cumulative_count": 1513
+    },
+    {
+      "day": "2026-02-12",
+      "added": [
+        {
+          "cveId": "CVE-2024-43468",
+          "vendorProject": "Microsoft",
+          "product": "Configuration Manager",
+          "vulnerabilityName": "Microsoft Configuration Manager SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-15556",
+          "vendorProject": "Notepad++",
+          "product": "Notepad++",
+          "vulnerabilityName": "Notepad++ Download of Code Without Integrity Check Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-40536",
+          "vendorProject": "SolarWinds",
+          "product": "Web Help Desk",
+          "vulnerabilityName": "SolarWinds Web Help Desk Security Control Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20700",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1517
+    },
+    {
+      "day": "2026-02-13",
+      "added": [
+        {
+          "cveId": "CVE-2026-1731",
+          "vendorProject": "BeyondTrust",
+          "product": "Remote Support (RS) and Privileged Remote Access (PRA)",
+          "vulnerabilityName": "BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1518
+    },
+    {
+      "day": "2026-02-14",
+      "added": [],
+      "cumulative_count": 1518
+    },
+    {
+      "day": "2026-02-15",
+      "added": [],
+      "cumulative_count": 1518
+    },
+    {
+      "day": "2026-02-16",
+      "added": [],
+      "cumulative_count": 1518
+    },
+    {
+      "day": "2026-02-17",
+      "added": [
+        {
+          "cveId": "CVE-2008-0015",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Video ActiveX Control Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-7796",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Server-Side Request Forgery Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-7694",
+          "vendorProject": "TeamT5",
+          "product": "ThreatSonar Anti-Ransomware",
+          "vulnerabilityName": "TeamT5 ThreatSonar Anti-Ransomware Unrestricted Upload of File with Dangerous Type Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-2441",
+          "vendorProject": "Google",
+          "product": "Chromium",
+          "vulnerabilityName": "Google Chromium CSS Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1522
+    },
+    {
+      "day": "2026-02-18",
+      "added": [
+        {
+          "cveId": "CVE-2021-22175",
+          "vendorProject": "GitLab",
+          "product": "GitLab",
+          "vulnerabilityName": "GitLab Server-Side Request Forgery (SSRF) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-22769",
+          "vendorProject": "Dell",
+          "product": "RecoverPoint for Virtual Machines (RP4VMs)",
+          "vulnerabilityName": "Dell RecoverPoint for Virtual Machines (RP4VMs) Use of Hard-coded Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1524
+    },
+    {
+      "day": "2026-02-19",
+      "added": [],
+      "cumulative_count": 1524
+    },
+    {
+      "day": "2026-02-20",
+      "added": [
+        {
+          "cveId": "CVE-2025-49113",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "RoundCube Webmail Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-68461",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "RoundCube Webmail Cross-site Scripting Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1526
+    },
+    {
+      "day": "2026-02-21",
+      "added": [],
+      "cumulative_count": 1526
+    },
+    {
+      "day": "2026-02-22",
+      "added": [],
+      "cumulative_count": 1526
+    },
+    {
+      "day": "2026-02-23",
+      "added": [],
+      "cumulative_count": 1526
+    },
+    {
+      "day": "2026-02-24",
+      "added": [
+        {
+          "cveId": "CVE-2026-25108",
+          "vendorProject": "Soliton Systems K.K",
+          "product": "FileZen",
+          "vulnerabilityName": "Soliton Systems K.K FileZen OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1527
+    },
+    {
+      "day": "2026-02-25",
+      "added": [
+        {
+          "cveId": "CVE-2022-20775",
+          "vendorProject": "Cisco",
+          "product": "SD-WAN",
+          "vulnerabilityName": "Cisco SD-WAN Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2026-20127",
+          "vendorProject": "Cisco",
+          "product": "Catalyst SD-WAN Controller and Manager",
+          "vulnerabilityName": "Cisco Catalyst SD-WAN Controller and Manager Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1529
+    },
+    {
+      "day": "2026-02-26",
+      "added": [],
+      "cumulative_count": 1529
+    },
+    {
+      "day": "2026-02-27",
+      "added": [],
+      "cumulative_count": 1529
+    },
+    {
+      "day": "2026-02-28",
+      "added": [],
+      "cumulative_count": 1529
+    }
+  ]
+}

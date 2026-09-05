@@ -1,0 +1,185 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-07",
+  "days": [
+    {
+      "day": "2022-07-01",
+      "added": [
+        {
+          "cveId": "CVE-2022-26925",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows LSA Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-02",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-03",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-04",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-05",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-06",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-07",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-08",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-09",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-10",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-11",
+      "added": [],
+      "cumulative_count": 786
+    },
+    {
+      "day": "2022-07-12",
+      "added": [
+        {
+          "cveId": "CVE-2022-22047",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Client Server Runtime Subsystem (CSRSS) Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-13",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-14",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-15",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-16",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-17",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-18",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-19",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-20",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-21",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-22",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-23",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-24",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-25",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-26",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-27",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-28",
+      "added": [],
+      "cumulative_count": 787
+    },
+    {
+      "day": "2022-07-29",
+      "added": [
+        {
+          "cveId": "CVE-2022-26138",
+          "vendorProject": "Atlassian",
+          "product": "Confluence",
+          "vulnerabilityName": "Atlassian Questions For Confluence App Hard-coded Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 788
+    },
+    {
+      "day": "2022-07-30",
+      "added": [],
+      "cumulative_count": 788
+    },
+    {
+      "day": "2022-07-31",
+      "added": [],
+      "cumulative_count": 788
+    }
+  ]
+}

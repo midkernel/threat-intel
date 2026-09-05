@@ -1,0 +1,255 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-02",
+  "days": [
+    {
+      "day": "2023-02-01",
+      "incidents": [
+        {
+          "name": "BonqDAO",
+          "date": "2023-02-01",
+          "amount": 1800000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "2477",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-02",
+      "incidents": [
+        {
+          "name": "Orion Pools",
+          "date": "2023-02-02",
+          "amount": 3000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "496",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-04",
+      "incidents": [
+        {
+          "name": "Sperax USD",
+          "date": "2023-02-04",
+          "amount": 250000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Unbacked Mint",
+          "defillamaId": "1194",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-07",
+      "incidents": [
+        {
+          "name": "CoWSwap",
+          "date": "2023-02-07",
+          "amount": 180000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "2643",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LianGoPay",
+          "date": "2023-02-07",
+          "amount": 1600000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-10",
+      "incidents": [
+        {
+          "name": "Sheep",
+          "date": "2023-02-10",
+          "amount": 3000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        },
+        {
+          "name": "dForce Lending",
+          "date": "2023-02-10",
+          "amount": 3650000,
+          "chain": [
+            "Arbitrum",
+            "Optimism"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Read-Only Reentrancy",
+          "defillamaId": "123",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-11",
+      "incidents": [
+        {
+          "name": "fcdep",
+          "date": "2023-02-11",
+          "amount": 350000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-15",
+      "incidents": [
+        {
+          "name": "Multichain",
+          "date": "2023-02-15",
+          "amount": 130000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "591",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-16",
+      "incidents": [
+        {
+          "name": "Platypus Finance",
+          "date": "2023-02-16",
+          "amount": 8500000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "944",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-20",
+      "incidents": [
+        {
+          "name": "Dexible V2",
+          "date": "2023-02-20",
+          "amount": 2047635,
+          "chain": [
+            "Ethereum",
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "2249",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Hope Finance",
+          "date": "2023-02-20",
+          "amount": 2000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Revert Finance",
+          "date": "2023-02-20",
+          "amount": 29000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-02-27",
+      "incidents": [
+        {
+          "name": "DungeonSwap",
+          "date": "2023-02-27",
+          "amount": 728000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "877",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LaunchZone",
+          "date": "2023-02-27",
+          "amount": 700000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "MyAlgo",
+          "date": "2023-02-27",
+          "amount": 9200000,
+          "chain": [
+            "Algorand"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "CDN Compromise",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "SwapX V2",
+          "date": "2023-02-27",
+          "amount": 1000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "5578",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

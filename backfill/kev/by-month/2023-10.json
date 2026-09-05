@@ -1,0 +1,297 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-10",
+  "days": [
+    {
+      "day": "2023-10-01",
+      "added": [],
+      "cumulative_count": 1006
+    },
+    {
+      "day": "2023-10-02",
+      "added": [
+        {
+          "cveId": "CVE-2023-5217",
+          "vendorProject": "Google",
+          "product": "Chromium libvpx",
+          "vulnerabilityName": "Google Chromium libvpx Heap Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1007
+    },
+    {
+      "day": "2023-10-03",
+      "added": [
+        {
+          "cveId": "CVE-2023-4211",
+          "vendorProject": "Arm",
+          "product": "Mali GPU Kernel Driver",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1008
+    },
+    {
+      "day": "2023-10-04",
+      "added": [
+        {
+          "cveId": "CVE-2023-28229",
+          "vendorProject": "Microsoft",
+          "product": "Windows CNG Key Isolation Service",
+          "vulnerabilityName": "Microsoft Windows CNG Key Isolation Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-42793",
+          "vendorProject": "JetBrains",
+          "product": "TeamCity",
+          "vulnerabilityName": "JetBrains TeamCity Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1010
+    },
+    {
+      "day": "2023-10-05",
+      "added": [
+        {
+          "cveId": "CVE-2023-22515",
+          "vendorProject": "Atlassian",
+          "product": "Confluence Data Center and Server",
+          "vulnerabilityName": "Atlassian Confluence Data Center and Server Broken Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-40044",
+          "vendorProject": "Progress",
+          "product": "WS_FTP Server",
+          "vulnerabilityName": "Progress WS_FTP Server Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-42824",
+          "vendorProject": "Apple",
+          "product": "iOS and iPadOS",
+          "vulnerabilityName": "Apple iOS and iPadOS Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1013
+    },
+    {
+      "day": "2023-10-06",
+      "added": [],
+      "cumulative_count": 1013
+    },
+    {
+      "day": "2023-10-07",
+      "added": [],
+      "cumulative_count": 1013
+    },
+    {
+      "day": "2023-10-08",
+      "added": [],
+      "cumulative_count": 1013
+    },
+    {
+      "day": "2023-10-09",
+      "added": [],
+      "cumulative_count": 1013
+    },
+    {
+      "day": "2023-10-10",
+      "added": [
+        {
+          "cveId": "CVE-2023-20109",
+          "vendorProject": "Cisco",
+          "product": "IOS and IOS XE",
+          "vulnerabilityName": "Cisco IOS and IOS XE Group Encrypted Transport VPN Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-21608",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36563",
+          "vendorProject": "Microsoft",
+          "product": "WordPad",
+          "vulnerabilityName": "Microsoft WordPad Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-41763",
+          "vendorProject": "Microsoft",
+          "product": "Skype for Business",
+          "vulnerabilityName": "Microsoft Skype for Business Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-44487",
+          "vendorProject": "IETF",
+          "product": "HTTP/2",
+          "vulnerabilityName": "HTTP/2 Rapid Reset Attack Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-11",
+      "added": [],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-12",
+      "added": [],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-13",
+      "added": [],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-14",
+      "added": [],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-15",
+      "added": [],
+      "cumulative_count": 1018
+    },
+    {
+      "day": "2023-10-16",
+      "added": [
+        {
+          "cveId": "CVE-2023-20198",
+          "vendorProject": "Cisco",
+          "product": "IOS XE Web UI",
+          "vulnerabilityName": "Cisco IOS XE Web UI Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1019
+    },
+    {
+      "day": "2023-10-17",
+      "added": [],
+      "cumulative_count": 1019
+    },
+    {
+      "day": "2023-10-18",
+      "added": [
+        {
+          "cveId": "CVE-2023-4966",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and NetScaler Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1020
+    },
+    {
+      "day": "2023-10-19",
+      "added": [],
+      "cumulative_count": 1020
+    },
+    {
+      "day": "2023-10-20",
+      "added": [],
+      "cumulative_count": 1020
+    },
+    {
+      "day": "2023-10-21",
+      "added": [],
+      "cumulative_count": 1020
+    },
+    {
+      "day": "2023-10-22",
+      "added": [],
+      "cumulative_count": 1020
+    },
+    {
+      "day": "2023-10-23",
+      "added": [
+        {
+          "cveId": "CVE-2023-20273",
+          "vendorProject": "Cisco",
+          "product": "Cisco IOS XE Web UI",
+          "vulnerabilityName": "Cisco IOS XE Web UI Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1021
+    },
+    {
+      "day": "2023-10-24",
+      "added": [],
+      "cumulative_count": 1021
+    },
+    {
+      "day": "2023-10-25",
+      "added": [],
+      "cumulative_count": 1021
+    },
+    {
+      "day": "2023-10-26",
+      "added": [
+        {
+          "cveId": "CVE-2023-5631",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "Roundcube Webmail Persistent Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1022
+    },
+    {
+      "day": "2023-10-27",
+      "added": [],
+      "cumulative_count": 1022
+    },
+    {
+      "day": "2023-10-28",
+      "added": [],
+      "cumulative_count": 1022
+    },
+    {
+      "day": "2023-10-29",
+      "added": [],
+      "cumulative_count": 1022
+    },
+    {
+      "day": "2023-10-30",
+      "added": [],
+      "cumulative_count": 1022
+    },
+    {
+      "day": "2023-10-31",
+      "added": [
+        {
+          "cveId": "CVE-2023-46747",
+          "vendorProject": "F5",
+          "product": "BIG-IP Configuration Utility",
+          "vulnerabilityName": "F5 BIG-IP Configuration Utility Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-46748",
+          "vendorProject": "F5",
+          "product": "BIG-IP Configuration Utility",
+          "vulnerabilityName": "F5 BIG-IP Configuration Utility SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1024
+    }
+  ]
+}

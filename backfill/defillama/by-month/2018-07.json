@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-07",
+  "days": [
+    {
+      "day": "2018-07-09",
+      "incidents": [
+        {
+          "name": "Bancor V3",
+          "date": "2018-07-09",
+          "amount": 23500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "1995",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-07-26",
+      "incidents": [
+        {
+          "name": "KICKICO",
+          "date": "2018-07-26",
+          "amount": 7700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

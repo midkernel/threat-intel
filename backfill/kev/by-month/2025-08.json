@@ -1,0 +1,274 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-08",
+  "days": [
+    {
+      "day": "2025-08-01",
+      "added": [],
+      "cumulative_count": 1391
+    },
+    {
+      "day": "2025-08-02",
+      "added": [],
+      "cumulative_count": 1391
+    },
+    {
+      "day": "2025-08-03",
+      "added": [],
+      "cumulative_count": 1391
+    },
+    {
+      "day": "2025-08-04",
+      "added": [],
+      "cumulative_count": 1391
+    },
+    {
+      "day": "2025-08-05",
+      "added": [
+        {
+          "cveId": "CVE-2020-25078",
+          "vendorProject": "D-Link",
+          "product": "DCS-2530L and DCS-2670L Devices",
+          "vulnerabilityName": "D-Link DCS-2530L and DCS-2670L Devices Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-25079",
+          "vendorProject": "D-Link",
+          "product": "DCS-2530L and DCS-2670L Devices",
+          "vulnerabilityName": "D-Link DCS-2530L and DCS-2670L Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-40799",
+          "vendorProject": "D-Link",
+          "product": "DNR-322L",
+          "vulnerabilityName": "D-Link DNR-322L Download of Code Without Integrity Check Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-06",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-07",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-08",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-09",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-10",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-11",
+      "added": [],
+      "cumulative_count": 1394
+    },
+    {
+      "day": "2025-08-12",
+      "added": [
+        {
+          "cveId": "CVE-2007-0671",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Excel Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2013-3893",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Resource Management Errors Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-8088",
+          "vendorProject": "RARLAB",
+          "product": "WinRAR",
+          "vulnerabilityName": "RARLAB WinRAR Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1397
+    },
+    {
+      "day": "2025-08-13",
+      "added": [
+        {
+          "cveId": "CVE-2025-8875",
+          "vendorProject": "N-able",
+          "product": "N-Central",
+          "vulnerabilityName": "N-able N-Central Insecure Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-8876",
+          "vendorProject": "N-able",
+          "product": "N-Central",
+          "vulnerabilityName": "N-able N-Central Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1399
+    },
+    {
+      "day": "2025-08-14",
+      "added": [],
+      "cumulative_count": 1399
+    },
+    {
+      "day": "2025-08-15",
+      "added": [],
+      "cumulative_count": 1399
+    },
+    {
+      "day": "2025-08-16",
+      "added": [],
+      "cumulative_count": 1399
+    },
+    {
+      "day": "2025-08-17",
+      "added": [],
+      "cumulative_count": 1399
+    },
+    {
+      "day": "2025-08-18",
+      "added": [
+        {
+          "cveId": "CVE-2025-54948",
+          "vendorProject": "Trend Micro",
+          "product": "Apex One",
+          "vulnerabilityName": "Trend Micro Apex One OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1400
+    },
+    {
+      "day": "2025-08-19",
+      "added": [],
+      "cumulative_count": 1400
+    },
+    {
+      "day": "2025-08-20",
+      "added": [],
+      "cumulative_count": 1400
+    },
+    {
+      "day": "2025-08-21",
+      "added": [
+        {
+          "cveId": "CVE-2025-43300",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1401
+    },
+    {
+      "day": "2025-08-22",
+      "added": [],
+      "cumulative_count": 1401
+    },
+    {
+      "day": "2025-08-23",
+      "added": [],
+      "cumulative_count": 1401
+    },
+    {
+      "day": "2025-08-24",
+      "added": [],
+      "cumulative_count": 1401
+    },
+    {
+      "day": "2025-08-25",
+      "added": [
+        {
+          "cveId": "CVE-2024-8068",
+          "vendorProject": "Citrix",
+          "product": "Session Recording",
+          "vulnerabilityName": "Citrix Session Recording Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-8069",
+          "vendorProject": "Citrix",
+          "product": "Session Recording",
+          "vulnerabilityName": "Citrix Session Recording Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48384",
+          "vendorProject": "Git",
+          "product": "Git",
+          "vulnerabilityName": "Git Link Following Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1404
+    },
+    {
+      "day": "2025-08-26",
+      "added": [
+        {
+          "cveId": "CVE-2025-7775",
+          "vendorProject": "Citrix",
+          "product": "NetScaler",
+          "vulnerabilityName": "Citrix NetScaler Memory Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1405
+    },
+    {
+      "day": "2025-08-27",
+      "added": [],
+      "cumulative_count": 1405
+    },
+    {
+      "day": "2025-08-28",
+      "added": [],
+      "cumulative_count": 1405
+    },
+    {
+      "day": "2025-08-29",
+      "added": [
+        {
+          "cveId": "CVE-2025-57819",
+          "vendorProject": "Sangoma",
+          "product": "FreePBX",
+          "vulnerabilityName": "Sangoma FreePBX Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1406
+    },
+    {
+      "day": "2025-08-30",
+      "added": [],
+      "cumulative_count": 1406
+    },
+    {
+      "day": "2025-08-31",
+      "added": [],
+      "cumulative_count": 1406
+    }
+  ]
+}

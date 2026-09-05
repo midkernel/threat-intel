@@ -1,0 +1,250 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-10",
+  "days": [
+    {
+      "day": "2022-10-01",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-02",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-03",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-04",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-05",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-06",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-07",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-08",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-09",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-10",
+      "added": [],
+      "cumulative_count": 835
+    },
+    {
+      "day": "2022-10-11",
+      "added": [
+        {
+          "cveId": "CVE-2022-40684",
+          "vendorProject": "Fortinet",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Fortinet Multiple Products Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-41033",
+          "vendorProject": "Microsoft",
+          "product": "Windows COM+ Event System Service",
+          "vulnerabilityName": "Microsoft Windows COM+ Event System Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-12",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-13",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-14",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-15",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-16",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-17",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-18",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-19",
+      "added": [],
+      "cumulative_count": 837
+    },
+    {
+      "day": "2022-10-20",
+      "added": [
+        {
+          "cveId": "CVE-2021-3493",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-41352",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Arbitrary File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 839
+    },
+    {
+      "day": "2022-10-21",
+      "added": [],
+      "cumulative_count": 839
+    },
+    {
+      "day": "2022-10-22",
+      "added": [],
+      "cumulative_count": 839
+    },
+    {
+      "day": "2022-10-23",
+      "added": [],
+      "cumulative_count": 839
+    },
+    {
+      "day": "2022-10-24",
+      "added": [
+        {
+          "cveId": "CVE-2018-19320",
+          "vendorProject": "GIGABYTE",
+          "product": "Multiple Products",
+          "vulnerabilityName": "GIGABYTE Multiple Products Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-19321",
+          "vendorProject": "GIGABYTE",
+          "product": "Multiple Products",
+          "vulnerabilityName": "GIGABYTE Multiple Products Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-19322",
+          "vendorProject": "GIGABYTE",
+          "product": "Multiple Products",
+          "vulnerabilityName": "GIGABYTE Multiple Products Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-19323",
+          "vendorProject": "GIGABYTE",
+          "product": "Multiple Products",
+          "vulnerabilityName": "GIGABYTE Multiple Products Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2020-3153",
+          "vendorProject": "Cisco",
+          "product": "AnyConnect Secure",
+          "vulnerabilityName": "Cisco AnyConnect Secure Mobility Client for Windows Uncontrolled Search Path Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2020-3433",
+          "vendorProject": "Cisco",
+          "product": "AnyConnect Secure",
+          "vulnerabilityName": "Cisco AnyConnect Secure Mobility Client for Windows DLL Hijacking Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 845
+    },
+    {
+      "day": "2022-10-25",
+      "added": [
+        {
+          "cveId": "CVE-2022-42827",
+          "vendorProject": "Apple",
+          "product": "iOS and iPadOS",
+          "vulnerabilityName": "Apple iOS and iPadOS Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 846
+    },
+    {
+      "day": "2022-10-26",
+      "added": [],
+      "cumulative_count": 846
+    },
+    {
+      "day": "2022-10-27",
+      "added": [],
+      "cumulative_count": 846
+    },
+    {
+      "day": "2022-10-28",
+      "added": [
+        {
+          "cveId": "CVE-2022-3723",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-10-29",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-10-30",
+      "added": [],
+      "cumulative_count": 847
+    },
+    {
+      "day": "2022-10-31",
+      "added": [],
+      "cumulative_count": 847
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-04",
+  "days": [
+    {
+      "day": "2023-04-02",
+      "incidents": [
+        {
+          "name": "Allbridge Core",
+          "date": "2023-04-02",
+          "amount": 573000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "3944",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-03",
+      "incidents": [
+        {
+          "name": "MEV-Boost Relay",
+          "date": "2023-04-03",
+          "amount": 20000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-04",
+      "incidents": [
+        {
+          "name": "Sentiment",
+          "date": "2023-04-04",
+          "amount": 1000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "2285",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-08",
+      "incidents": [
+        {
+          "name": "GDAC",
+          "date": "2023-04-08",
+          "amount": 13900000,
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-10",
+      "incidents": [
+        {
+          "name": "SushiSwap",
+          "date": "2023-04-10",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum",
+            "Optimism",
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Terraport",
+          "date": "2023-04-10",
+          "amount": 4000000,
+          "chain": [
+            "Terra Classic"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "7517",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-11",
+      "incidents": [
+        {
+          "name": "Paribus",
+          "date": "2023-04-11",
+          "amount": 67800,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "3054",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-12",
+      "incidents": [
+        {
+          "name": "MetaPoint",
+          "date": "2023-04-12",
+          "amount": 820000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-13",
+      "incidents": [
+        {
+          "name": "Yearn Finance",
+          "date": "2023-04-13",
+          "amount": 11539000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "113",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-14",
+      "incidents": [
+        {
+          "name": "Bitrue",
+          "date": "2023-04-14",
+          "amount": 23000000,
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-15",
+      "incidents": [
+        {
+          "name": "Hundred Finance",
+          "date": "2023-04-15",
+          "amount": 7400000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "607",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-16",
+      "incidents": [
+        {
+          "name": "Swapos V2",
+          "date": "2023-04-16",
+          "amount": 468000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-20",
+      "incidents": [
+        {
+          "name": "Tales of Elleria",
+          "date": "2023-04-20",
+          "amount": 280000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-23",
+      "incidents": [
+        {
+          "name": "FilDA",
+          "date": "2023-04-23",
+          "amount": 700000,
+          "chain": [
+            "Elastos",
+            "REI Network"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "defillamaId": "348",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-24",
+      "incidents": [
+        {
+          "name": "KuCoin",
+          "date": "2023-04-24",
+          "amount": 22628,
+          "classification": "Social Engineering",
+          "technique": "Social Account Takeover",
+          "defillamaId": "2274",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-25",
+      "incidents": [
+        {
+          "name": "MERLIN DEX",
+          "date": "2023-04-25",
+          "amount": 1820000,
+          "chain": [
+            "zkSync Era"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "defillamaId": "2849",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-04-28",
+      "incidents": [
+        {
+          "name": "0vix",
+          "date": "2023-04-28",
+          "amount": 2000000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1614",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

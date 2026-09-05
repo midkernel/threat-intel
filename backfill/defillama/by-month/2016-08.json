@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2016-08",
+  "days": [
+    {
+      "day": "2016-08-02",
+      "incidents": [
+        {
+          "name": "Bitfinex",
+          "date": "2016-08-02",
+          "amount": 72000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

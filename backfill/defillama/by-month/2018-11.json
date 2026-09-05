@@ -1,0 +1,113 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-11",
+  "days": [
+    {
+      "day": "2018-11-07",
+      "incidents": [
+        {
+          "name": "Gate",
+          "date": "2018-11-07",
+          "chain": [
+            "Bitcoin",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Supply Chain Attack",
+          "defillamaId": "2314",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2018-11-08",
+      "incidents": [
+        {
+          "name": "FFGame",
+          "date": "2018-11-08",
+          "amount": 7200,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-11-10",
+      "incidents": [
+        {
+          "name": "EOSDice",
+          "date": "2018-11-10",
+          "amount": 25100,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-11-11",
+      "incidents": [
+        {
+          "name": "EOS.WIN",
+          "date": "2018-11-11",
+          "amount": 9180,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-11-12",
+      "incidents": [
+        {
+          "name": "AurumCoin",
+          "date": "2018-11-12",
+          "amount": 500000,
+          "chain": [
+            "AurumCoin"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "targetType": "Layer 1"
+        },
+        {
+          "name": "HireVibes AirDropsDAC",
+          "date": "2018-11-12",
+          "amount": 13600,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-11-19",
+      "incidents": [
+        {
+          "name": "EOS Lelego",
+          "date": "2018-11-19",
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

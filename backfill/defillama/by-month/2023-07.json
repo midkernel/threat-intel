@@ -1,0 +1,398 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-07",
+  "days": [
+    {
+      "day": "2023-07-02",
+      "incidents": [
+        {
+          "name": "Poly Network",
+          "date": "2023-07-02",
+          "amount": 5000000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "defillamaId": "1796",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-03",
+      "incidents": [
+        {
+          "name": "AzukiDAO",
+          "date": "2023-07-03",
+          "amount": 68000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Replay",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-04",
+      "incidents": [
+        {
+          "name": "Rodeo",
+          "date": "2023-07-04",
+          "amount": 90000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "2841",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-07",
+      "incidents": [
+        {
+          "name": "Multichain",
+          "date": "2023-07-07",
+          "amount": 126000000,
+          "chain": [
+            "Moonriver",
+            "BSC",
+            "Fantom"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "defillamaId": "591",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-08",
+      "incidents": [
+        {
+          "name": "CIVNFT",
+          "date": "2023-07-08",
+          "amount": 180000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-09",
+      "incidents": [
+        {
+          "name": "CivFund",
+          "date": "2023-07-09",
+          "amount": 180000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "1949",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-10",
+      "incidents": [
+        {
+          "name": "Arcadia V1",
+          "date": "2023-07-10",
+          "amount": 455000,
+          "chain": [
+            "Ethereum",
+            "Optimism"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "3210",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-11",
+      "incidents": [
+        {
+          "name": "Libertify",
+          "date": "2023-07-11",
+          "amount": 230,
+          "chain": [
+            "Ethereum",
+            "Polygon"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-12",
+      "incidents": [
+        {
+          "name": "Platypus Finance",
+          "date": "2023-07-12",
+          "amount": 50000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "944",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-13",
+      "incidents": [
+        {
+          "name": "Ethscriptions",
+          "date": "2023-07-13",
+          "amount": 2828,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-18",
+      "incidents": [
+        {
+          "name": "BNO",
+          "date": "2023-07-18",
+          "amount": 500000,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-20",
+      "incidents": [
+        {
+          "name": "FFIST",
+          "date": "2023-07-20",
+          "amount": 110000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "Utopia",
+          "date": "2023-07-20",
+          "amount": 119300,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "6970",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-21",
+      "incidents": [
+        {
+          "name": "Conic Finance",
+          "date": "2023-07-21",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Read-Only Reentrancy",
+          "defillamaId": "2616",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-22",
+      "incidents": [
+        {
+          "name": "CoinsPaid",
+          "date": "2023-07-22",
+          "amount": 37300000,
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "targetType": "Other"
+        },
+        {
+          "name": "Conic Finance",
+          "date": "2023-07-22",
+          "amount": 300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2616",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-24",
+      "incidents": [
+        {
+          "name": "Palmswap",
+          "date": "2023-07-24",
+          "amount": 900000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "3279",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-25",
+      "incidents": [
+        {
+          "name": "EraLend",
+          "date": "2023-07-25",
+          "amount": 3400000,
+          "chain": [
+            "zkSync Era"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Read-Only Reentrancy",
+          "defillamaId": "2746",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "MetaLabz",
+          "date": "2023-07-25",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-26",
+      "incidents": [
+        {
+          "name": "AlphaPo",
+          "date": "2023-07-26",
+          "amount": 60000000,
+          "chain": [
+            "Ethereum",
+            "Tron"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Carson DeFi",
+          "date": "2023-07-26",
+          "amount": 150000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-28",
+      "incidents": [
+        {
+          "name": "Pond0x",
+          "date": "2023-07-28",
+          "amount": 2200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "4200",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-30",
+      "incidents": [
+        {
+          "name": "Curve DEX",
+          "date": "2023-07-30",
+          "amount": 61700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Vyper Compiler Bug",
+          "defillamaId": "3",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Kannagi",
+          "date": "2023-07-30",
+          "amount": 2130000,
+          "chain": [
+            "zkSync Era",
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-07-31",
+      "incidents": [
+        {
+          "name": "GYM Network",
+          "date": "2023-07-31",
+          "amount": 1193,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

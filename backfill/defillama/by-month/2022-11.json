@@ -1,0 +1,297 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2022-11",
+  "days": [
+    {
+      "day": "2022-11-01",
+      "incidents": [
+        {
+          "name": "Deribit",
+          "date": "2022-11-01",
+          "amount": 28000000,
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "2273",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Save",
+          "date": "2022-11-01",
+          "amount": 1026000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "defillamaId": "458",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-02",
+      "incidents": [
+        {
+          "name": "Rubic",
+          "date": "2022-11-02",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "1282",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Save",
+          "date": "2022-11-02",
+          "amount": 1260000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "458",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Skyward Finance",
+          "date": "2022-11-02",
+          "amount": 3000000,
+          "chain": [
+            "Near"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-03",
+      "incidents": [
+        {
+          "name": "pNetwork",
+          "date": "2022-11-03",
+          "amount": 4300000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "547",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-06",
+      "incidents": [
+        {
+          "name": "Pando Rings",
+          "date": "2022-11-06",
+          "amount": 22000000,
+          "chain": [
+            "Mixin"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2204",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-07",
+      "incidents": [
+        {
+          "name": "MooCAKECTX",
+          "date": "2022-11-07",
+          "amount": 140000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-09",
+      "incidents": [
+        {
+          "name": "Brahma Finance",
+          "date": "2022-11-09",
+          "amount": 89343,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-10",
+      "incidents": [
+        {
+          "name": "DFX V2",
+          "date": "2022-11-10",
+          "amount": 4000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "366",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-12",
+      "incidents": [
+        {
+          "name": "FTX",
+          "date": "2022-11-12",
+          "amount": 450000000,
+          "chain": [
+            "Ethereum",
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-16",
+      "incidents": [
+        {
+          "name": "SheepFarm",
+          "date": "2022-11-16",
+          "amount": 72000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-17",
+      "incidents": [
+        {
+          "name": "UEarnPool",
+          "date": "2022-11-17",
+          "amount": 16038,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-18",
+      "incidents": [
+        {
+          "name": "Polynomial",
+          "date": "2022-11-18",
+          "amount": 7000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-21",
+      "incidents": [
+        {
+          "name": "sDAO",
+          "date": "2022-11-21",
+          "amount": 13000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-22",
+      "incidents": [
+        {
+          "name": "AUR Protocol",
+          "date": "2022-11-22",
+          "amount": 13000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "7173",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-23",
+      "incidents": [
+        {
+          "name": "Numbers Protocol",
+          "date": "2022-11-23",
+          "amount": 13836,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "defillamaId": "1041",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2022-11-29",
+      "incidents": [
+        {
+          "name": "MBC & ZZSH",
+          "date": "2022-11-29",
+          "amount": 5900,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Token"
+        },
+        {
+          "name": "SEAMAN",
+          "date": "2022-11-29",
+          "amount": 7000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "Token"
+        }
+      ]
+    }
+  ]
+}

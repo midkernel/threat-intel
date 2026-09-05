@@ -1,0 +1,131 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-08",
+  "days": [
+    {
+      "day": "2024-08-01",
+      "incidents": [
+        {
+          "name": "Convergence",
+          "date": "2024-08-01",
+          "amount": 210000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-06",
+      "incidents": [
+        {
+          "name": "Ronin Bridge",
+          "date": "2024-08-06",
+          "amount": 12000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "defillamaId": "4440",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-07",
+      "incidents": [
+        {
+          "name": "Nexera",
+          "date": "2024-08-07",
+          "amount": 449000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-12",
+      "incidents": [
+        {
+          "name": "PolyNetwork",
+          "date": "2024-08-12",
+          "amount": 5000000,
+          "chain": [
+            "PolyNetwork"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "iVest",
+          "date": "2024-08-12",
+          "amount": 190000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-13",
+      "incidents": [
+        {
+          "name": "Vowcurrency",
+          "date": "2024-08-13",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-16",
+      "incidents": [
+        {
+          "name": "Zenterest",
+          "date": "2024-08-16",
+          "amount": 21000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-08-28",
+      "incidents": [
+        {
+          "name": "Aave",
+          "date": "2024-08-28",
+          "amount": 56000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "1",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

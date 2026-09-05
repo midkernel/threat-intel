@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-01",
+  "days": [
+    {
+      "day": "2020-01-23",
+      "incidents": [
+        {
+          "name": "Bitcoin Gold",
+          "date": "2020-01-23",
+          "amount": 70000,
+          "chain": [
+            "Bitcoin Gold"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Validator Key Compromised",
+          "targetType": "Layer 1"
+        }
+      ]
+    }
+  ]
+}

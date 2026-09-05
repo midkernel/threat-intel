@@ -1,0 +1,250 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-02",
+  "days": [
+    {
+      "day": "2023-02-01",
+      "added": [],
+      "cumulative_count": 871
+    },
+    {
+      "day": "2023-02-02",
+      "added": [
+        {
+          "cveId": "CVE-2022-21587",
+          "vendorProject": "Oracle",
+          "product": "E-Business Suite",
+          "vulnerabilityName": "Oracle E-Business Suite Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-22952",
+          "vendorProject": "SugarCRM",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Multiple SugarCRM Products Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-03",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-04",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-05",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-06",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-07",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-08",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-09",
+      "added": [],
+      "cumulative_count": 873
+    },
+    {
+      "day": "2023-02-10",
+      "added": [
+        {
+          "cveId": "CVE-2015-2291",
+          "vendorProject": "Intel",
+          "product": "Ethernet Diagnostics Driver for Windows",
+          "vulnerabilityName": "Intel Ethernet Diagnostics Driver for Windows Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-24990",
+          "vendorProject": "TerraMaster",
+          "product": "TerraMaster OS",
+          "vulnerabilityName": "TerraMaster OS Remote Command Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-0669",
+          "vendorProject": "Fortra",
+          "product": "GoAnywhere MFT",
+          "vulnerabilityName": "Fortra GoAnywhere MFT Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 876
+    },
+    {
+      "day": "2023-02-11",
+      "added": [],
+      "cumulative_count": 876
+    },
+    {
+      "day": "2023-02-12",
+      "added": [],
+      "cumulative_count": 876
+    },
+    {
+      "day": "2023-02-13",
+      "added": [],
+      "cumulative_count": 876
+    },
+    {
+      "day": "2023-02-14",
+      "added": [
+        {
+          "cveId": "CVE-2023-21715",
+          "vendorProject": "Microsoft",
+          "product": "Office",
+          "vulnerabilityName": "Microsoft Office Publisher Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-21823",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Graphic Component Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-23376",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Common Log File System (CLFS) Driver Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-23529",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 880
+    },
+    {
+      "day": "2023-02-15",
+      "added": [],
+      "cumulative_count": 880
+    },
+    {
+      "day": "2023-02-16",
+      "added": [
+        {
+          "cveId": "CVE-2022-46169",
+          "vendorProject": "Cacti",
+          "product": "Cacti",
+          "vulnerabilityName": "Cacti Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 881
+    },
+    {
+      "day": "2023-02-17",
+      "added": [],
+      "cumulative_count": 881
+    },
+    {
+      "day": "2023-02-18",
+      "added": [],
+      "cumulative_count": 881
+    },
+    {
+      "day": "2023-02-19",
+      "added": [],
+      "cumulative_count": 881
+    },
+    {
+      "day": "2023-02-20",
+      "added": [],
+      "cumulative_count": 881
+    },
+    {
+      "day": "2023-02-21",
+      "added": [
+        {
+          "cveId": "CVE-2022-40765",
+          "vendorProject": "Mitel",
+          "product": "MiVoice Connect",
+          "vulnerabilityName": "Mitel MiVoice Connect Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-41223",
+          "vendorProject": "Mitel",
+          "product": "MiVoice Connect",
+          "vulnerabilityName": "Mitel MiVoice Connect Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-47986",
+          "vendorProject": "IBM",
+          "product": "Aspera Faspex",
+          "vulnerabilityName": "IBM Aspera Faspex Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-22",
+      "added": [],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-23",
+      "added": [],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-24",
+      "added": [],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-25",
+      "added": [],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-26",
+      "added": [],
+      "cumulative_count": 884
+    },
+    {
+      "day": "2023-02-27",
+      "added": [
+        {
+          "cveId": "CVE-2022-36537",
+          "vendorProject": "ZK Framework",
+          "product": "AuUploader",
+          "vulnerabilityName": "ZK Framework AuUploader Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 885
+    },
+    {
+      "day": "2023-02-28",
+      "added": [],
+      "cumulative_count": 885
+    }
+  ]
+}

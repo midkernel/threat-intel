@@ -1,0 +1,223 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-06",
+  "days": [
+    {
+      "day": "2024-06-01",
+      "added": [],
+      "cumulative_count": 1117
+    },
+    {
+      "day": "2024-06-02",
+      "added": [],
+      "cumulative_count": 1117
+    },
+    {
+      "day": "2024-06-03",
+      "added": [
+        {
+          "cveId": "CVE-2017-3506",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-04",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-05",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-06",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-07",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-08",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-09",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-10",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-11",
+      "added": [],
+      "cumulative_count": 1118
+    },
+    {
+      "day": "2024-06-12",
+      "added": [
+        {
+          "cveId": "CVE-2024-4577",
+          "vendorProject": "PHP Group",
+          "product": "PHP",
+          "vulnerabilityName": "PHP-CGI OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-4610",
+          "vendorProject": "Arm",
+          "product": "Mali GPU Kernel Driver",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1120
+    },
+    {
+      "day": "2024-06-13",
+      "added": [
+        {
+          "cveId": "CVE-2024-26169",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Error Reporting Service Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-32896",
+          "vendorProject": "Android",
+          "product": "Pixel",
+          "vulnerabilityName": "Android Pixel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-4358",
+          "vendorProject": "Progress",
+          "product": "Telerik Report Server",
+          "vulnerabilityName": "Progress Telerik Report Server Authentication Bypass by Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-14",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-15",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-16",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-17",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-18",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-19",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-20",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-21",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-22",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-23",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-24",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-25",
+      "added": [],
+      "cumulative_count": 1123
+    },
+    {
+      "day": "2024-06-26",
+      "added": [
+        {
+          "cveId": "CVE-2020-13965",
+          "vendorProject": "Roundcube",
+          "product": "Webmail",
+          "vulnerabilityName": "Roundcube Webmail Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-24816",
+          "vendorProject": "OSGeo",
+          "product": "JAI-EXT",
+          "vulnerabilityName": "OSGeo GeoServer JAI-EXT Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2022-2586",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1126
+    },
+    {
+      "day": "2024-06-27",
+      "added": [],
+      "cumulative_count": 1126
+    },
+    {
+      "day": "2024-06-28",
+      "added": [],
+      "cumulative_count": 1126
+    },
+    {
+      "day": "2024-06-29",
+      "added": [],
+      "cumulative_count": 1126
+    },
+    {
+      "day": "2024-06-30",
+      "added": [],
+      "cumulative_count": 1126
+    }
+  ]
+}

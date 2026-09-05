@@ -1,0 +1,47 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-12",
+  "days": [
+    {
+      "day": "2018-12-12",
+      "incidents": [
+        {
+          "name": "Vertcoin",
+          "date": "2018-12-12",
+          "amount": 100000,
+          "chain": [
+            "Vertcoin"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "targetType": "Layer 1"
+        }
+      ]
+    },
+    {
+      "day": "2018-12-19",
+      "incidents": [
+        {
+          "name": "EOS Max",
+          "date": "2018-12-19",
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ToBet",
+          "date": "2018-12-19",
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

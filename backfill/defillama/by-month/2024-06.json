@@ -1,0 +1,222 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-06",
+  "days": [
+    {
+      "day": "2024-06-02",
+      "incidents": [
+        {
+          "name": "Velocore V2",
+          "date": "2024-06-02",
+          "amount": 6800000,
+          "chain": [
+            "Linea",
+            "zkSync Era"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Fee Accounting",
+          "defillamaId": "3330",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-04",
+      "incidents": [
+        {
+          "name": "Lykke",
+          "date": "2024-06-04",
+          "amount": 22400000,
+          "chain": [
+            "Ethereum",
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-07",
+      "incidents": [
+        {
+          "name": "SteamSwap",
+          "date": "2024-06-07",
+          "amount": 105000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-09",
+      "incidents": [
+        {
+          "name": "Loopring",
+          "date": "2024-06-09",
+          "amount": 5000000,
+          "chain": [
+            "Loopring"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "API Key Compromised",
+          "defillamaId": "126",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-10",
+      "incidents": [
+        {
+          "name": "JokInTheBox",
+          "date": "2024-06-10",
+          "amount": 34000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "UwU Lend",
+          "date": "2024-06-10",
+          "amount": 20000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2111",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-11",
+      "incidents": [
+        {
+          "name": "YOLO Games",
+          "date": "2024-06-11",
+          "amount": 1500000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Access Control",
+          "technique": "Caller Impersonation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-13",
+      "incidents": [
+        {
+          "name": "Holograph",
+          "date": "2024-06-13",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "UwU Lend",
+          "date": "2024-06-13",
+          "amount": 3700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2111",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-14",
+      "incidents": [
+        {
+          "name": "AutoChain Global",
+          "date": "2024-06-14",
+          "amount": 113000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-16",
+      "incidents": [
+        {
+          "name": "WIFCOIN",
+          "date": "2024-06-16",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-20",
+      "incidents": [
+        {
+          "name": "OKX NFT Aggregator",
+          "date": "2024-06-20",
+          "amount": 14000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-22",
+      "incidents": [
+        {
+          "name": "BtcTurk",
+          "date": "2024-06-22",
+          "amount": 54000000,
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-06-27",
+      "incidents": [
+        {
+          "name": "APEMAGA",
+          "date": "2024-06-27",
+          "amount": 32000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

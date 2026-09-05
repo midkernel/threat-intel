@@ -1,0 +1,372 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-03",
+  "days": [
+    {
+      "day": "2026-03-02",
+      "incidents": [
+        {
+          "name": "Curve LlamaLend",
+          "date": "2026-03-02",
+          "amount": 240000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "4321",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "FOOM Cash",
+          "date": "2026-03-02",
+          "amount": 2260000,
+          "chain": [
+            "Ethereum",
+            "Base"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "defillamaId": "6908",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-06",
+      "incidents": [
+        {
+          "name": "SolvBTC",
+          "date": "2026-03-06",
+          "amount": 2700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "4620",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-07",
+      "incidents": [
+        {
+          "name": "Molt EVM",
+          "date": "2026-03-07",
+          "amount": 127000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-09",
+      "incidents": [
+        {
+          "name": "Gondi V3",
+          "date": "2026-03-09",
+          "amount": 230000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "5561",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-10",
+      "incidents": [
+        {
+          "name": "Movie Token",
+          "date": "2026-03-10",
+          "amount": 242000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-11",
+      "incidents": [
+        {
+          "name": "BONK Fun",
+          "date": "2026-03-11",
+          "amount": 30000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "ICO"
+        },
+        {
+          "name": "DBXen",
+          "date": "2026-03-11",
+          "amount": 150000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-12",
+      "incidents": [
+        {
+          "name": "AM",
+          "date": "2026-03-12",
+          "amount": 131572,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Aave V3",
+          "date": "2026-03-12",
+          "amount": 862000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "1599",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Stake DAO Yield",
+          "date": "2026-03-12",
+          "amount": 176000,
+          "chain": [
+            "Arbitrum",
+            "Base"
+          ],
+          "classification": "Access Control",
+          "technique": "Caller Impersonation",
+          "defillamaId": "249",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-14",
+      "incidents": [
+        {
+          "name": "Goose Finance",
+          "date": "2026-03-14",
+          "amount": 8435,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "205",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-15",
+      "incidents": [
+        {
+          "name": "Venus Core Pool",
+          "date": "2026-03-15",
+          "amount": 3700000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "212",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-16",
+      "incidents": [
+        {
+          "name": "CheckoutPool",
+          "date": "2026-03-16",
+          "amount": 85700,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-17",
+      "incidents": [
+        {
+          "name": "dTRINITY dLEND",
+          "date": "2026-03-17",
+          "amount": 257000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "First Depositor Attack",
+          "defillamaId": "5590",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-18",
+      "incidents": [
+        {
+          "name": "Neutrl",
+          "date": "2026-03-18",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "defillamaId": "6163",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-21",
+      "incidents": [
+        {
+          "name": "Resolv USR",
+          "date": "2026-03-21",
+          "amount": 24500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "defillamaId": "5655",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-22",
+      "incidents": [
+        {
+          "name": "Cyrus Finance",
+          "date": "2026-03-22",
+          "amount": 5000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-23",
+      "incidents": [
+        {
+          "name": "BCE",
+          "date": "2026-03-23",
+          "amount": 679000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-26",
+      "incidents": [
+        {
+          "name": "TUR Staking",
+          "date": "2026-03-26",
+          "amount": 133000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-28",
+      "incidents": [
+        {
+          "name": "GoonFi",
+          "date": "2026-03-28",
+          "amount": 254000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "6556",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "VTSwapHook",
+          "date": "2026-03-28",
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-03-31",
+      "incidents": [
+        {
+          "name": "LML/USDT staking protocol",
+          "date": "2026-03-31",
+          "amount": 950000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WhaleBit",
+          "date": "2026-03-31",
+          "amount": 10500,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

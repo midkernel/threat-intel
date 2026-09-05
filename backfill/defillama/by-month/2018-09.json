@@ -1,0 +1,50 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-09",
+  "days": [
+    {
+      "day": "2018-09-12",
+      "incidents": [
+        {
+          "name": "EOSBet",
+          "date": "2018-09-12",
+          "amount": 200000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2018-09-14",
+      "incidents": [
+        {
+          "name": "NewDex",
+          "date": "2018-09-14",
+          "amount": 58000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "542",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Zaif",
+          "date": "2018-09-14",
+          "amount": 60000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

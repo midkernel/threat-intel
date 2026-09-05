@@ -1,0 +1,176 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-05",
+  "days": [
+    {
+      "day": "2025-05-08",
+      "incidents": [
+        {
+          "name": "BitoPro",
+          "date": "2025-05-08",
+          "amount": 11500000,
+          "chain": [
+            "Ethereum",
+            "Tron",
+            "Solana",
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-09",
+      "incidents": [
+        {
+          "name": "LND",
+          "date": "2025-05-09",
+          "amount": 1180000,
+          "chain": [
+            "Sonic",
+            "Hyperliquid L1"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "6071",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-11",
+      "incidents": [
+        {
+          "name": "Mobius Token",
+          "date": "2025-05-11",
+          "amount": 2150000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Decimal Miscalculation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-15",
+      "incidents": [
+        {
+          "name": "Zunami Protocol",
+          "date": "2025-05-15",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "1201",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-16",
+      "incidents": [
+        {
+          "name": "Demex",
+          "date": "2025-05-16",
+          "amount": 950559,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-20",
+      "incidents": [
+        {
+          "name": "IRYS AI",
+          "date": "2025-05-20",
+          "amount": 69600,
+          "chain": [
+            "Binance Smart Chain"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-22",
+      "incidents": [
+        {
+          "name": "Cetus CLMM",
+          "date": "2025-05-22",
+          "amount": 223000000,
+          "chain": [
+            "Sui"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "2289",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-26",
+      "incidents": [
+        {
+          "name": "Dexodus Finance",
+          "date": "2025-05-26",
+          "amount": 300000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "defillamaId": "5428",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-27",
+      "incidents": [
+        {
+          "name": "Usual USD0",
+          "date": "2025-05-27",
+          "amount": 43000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "4882",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-05-28",
+      "incidents": [
+        {
+          "name": "Cork V1",
+          "date": "2025-05-28",
+          "amount": 12000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "6262",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

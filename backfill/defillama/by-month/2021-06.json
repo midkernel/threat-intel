@@ -1,0 +1,260 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-06",
+  "days": [
+    {
+      "day": "2021-06-03",
+      "incidents": [
+        {
+          "name": "Hunny Finance",
+          "date": "2021-06-03",
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "402",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-06",
+      "incidents": [
+        {
+          "name": "Fetch.ai",
+          "date": "2021-06-06",
+          "amount": 2600000,
+          "chain": [
+            "Multiple"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-07",
+      "incidents": [
+        {
+          "name": "88mph",
+          "date": "2021-06-07",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "157",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-10",
+      "incidents": [
+        {
+          "name": "EvoDefi",
+          "date": "2021-06-10",
+          "amount": 1000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-16",
+      "incidents": [
+        {
+          "name": "Alchemix V2",
+          "date": "2021-06-16",
+          "amount": 6500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Borrow Logic Flaw",
+          "defillamaId": "204",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-19",
+      "incidents": [
+        {
+          "name": "Visor Finance",
+          "date": "2021-06-19",
+          "amount": 504845,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-20",
+      "incidents": [
+        {
+          "name": "Polydex",
+          "date": "2021-06-20",
+          "amount": 500000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "396",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-21",
+      "incidents": [
+        {
+          "name": "Impossible Finance",
+          "date": "2021-06-21",
+          "amount": 500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "StakeHound / Fireblocks",
+          "date": "2021-06-21",
+          "amount": 72000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Key Brute Forced",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-22",
+      "incidents": [
+        {
+          "name": "Eleven Finance",
+          "date": "2021-06-22",
+          "amount": 4500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "583",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-23",
+      "incidents": [
+        {
+          "name": "StableMagnet",
+          "date": "2021-06-23",
+          "amount": 27000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-24",
+      "incidents": [
+        {
+          "name": "SharedStake",
+          "date": "2021-06-24",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "275",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-25",
+      "incidents": [
+        {
+          "name": "xWin Finance",
+          "date": "2021-06-25",
+          "amount": 270000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "3231",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-28",
+      "incidents": [
+        {
+          "name": "Safe Dollar",
+          "date": "2021-06-28",
+          "amount": 248000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "424",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-06-29",
+      "incidents": [
+        {
+          "name": "Merlin",
+          "date": "2021-06-29",
+          "amount": 330000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "370",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "THORChain DEX",
+          "date": "2021-06-29",
+          "amount": 350000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "defillamaId": "412",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

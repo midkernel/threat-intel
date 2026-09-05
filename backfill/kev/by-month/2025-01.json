@@ -1,0 +1,267 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-01",
+  "days": [
+    {
+      "day": "2025-01-01",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-02",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-03",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-04",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-05",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-06",
+      "added": [],
+      "cumulative_count": 1239
+    },
+    {
+      "day": "2025-01-07",
+      "added": [
+        {
+          "cveId": "CVE-2020-2883",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-41713",
+          "vendorProject": "Mitel",
+          "product": "MiCollab",
+          "vulnerabilityName": "Mitel MiCollab Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-55550",
+          "vendorProject": "Mitel",
+          "product": "MiCollab",
+          "vulnerabilityName": "Mitel MiCollab Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1242
+    },
+    {
+      "day": "2025-01-08",
+      "added": [
+        {
+          "cveId": "CVE-2025-0282",
+          "vendorProject": "Ivanti",
+          "product": "Connect Secure, Policy Secure, and ZTA Gateways",
+          "vulnerabilityName": "Ivanti Connect Secure, Policy Secure, and ZTA Gateways Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1243
+    },
+    {
+      "day": "2025-01-09",
+      "added": [],
+      "cumulative_count": 1243
+    },
+    {
+      "day": "2025-01-10",
+      "added": [],
+      "cumulative_count": 1243
+    },
+    {
+      "day": "2025-01-11",
+      "added": [],
+      "cumulative_count": 1243
+    },
+    {
+      "day": "2025-01-12",
+      "added": [],
+      "cumulative_count": 1243
+    },
+    {
+      "day": "2025-01-13",
+      "added": [
+        {
+          "cveId": "CVE-2023-48365",
+          "vendorProject": "Qlik",
+          "product": "Sense",
+          "vulnerabilityName": "Qlik Sense HTTP Tunneling Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-12686",
+          "vendorProject": "BeyondTrust",
+          "product": "Privileged Remote Access (PRA) and Remote Support (RS)",
+          "vulnerabilityName": "BeyondTrust Privileged Remote Access (PRA) and Remote Support (RS) OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1245
+    },
+    {
+      "day": "2025-01-14",
+      "added": [
+        {
+          "cveId": "CVE-2024-55591",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiProxy",
+          "vulnerabilityName": "Fortinet FortiOS and FortiProxy Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-21333",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Hyper-V NT Kernel Integration VSP Heap-based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21334",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Hyper-V NT Kernel Integration VSP Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-21335",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Hyper-V NT Kernel Integration VSP Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1249
+    },
+    {
+      "day": "2025-01-15",
+      "added": [],
+      "cumulative_count": 1249
+    },
+    {
+      "day": "2025-01-16",
+      "added": [
+        {
+          "cveId": "CVE-2024-50603",
+          "vendorProject": "Aviatrix",
+          "product": "Controllers",
+          "vulnerabilityName": "Aviatrix Controllers OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-17",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-18",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-19",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-20",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-21",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-22",
+      "added": [],
+      "cumulative_count": 1250
+    },
+    {
+      "day": "2025-01-23",
+      "added": [
+        {
+          "cveId": "CVE-2020-11023",
+          "vendorProject": "JQuery",
+          "product": "JQuery",
+          "vulnerabilityName": "JQuery Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1251
+    },
+    {
+      "day": "2025-01-24",
+      "added": [
+        {
+          "cveId": "CVE-2025-23006",
+          "vendorProject": "SonicWall",
+          "product": "SMA1000 Appliances",
+          "vulnerabilityName": "SonicWall SMA1000 Appliances Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1252
+    },
+    {
+      "day": "2025-01-25",
+      "added": [],
+      "cumulative_count": 1252
+    },
+    {
+      "day": "2025-01-26",
+      "added": [],
+      "cumulative_count": 1252
+    },
+    {
+      "day": "2025-01-27",
+      "added": [],
+      "cumulative_count": 1252
+    },
+    {
+      "day": "2025-01-28",
+      "added": [],
+      "cumulative_count": 1252
+    },
+    {
+      "day": "2025-01-29",
+      "added": [
+        {
+          "cveId": "CVE-2025-24085",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1253
+    },
+    {
+      "day": "2025-01-30",
+      "added": [],
+      "cumulative_count": 1253
+    },
+    {
+      "day": "2025-01-31",
+      "added": [],
+      "cumulative_count": 1253
+    }
+  ]
+}

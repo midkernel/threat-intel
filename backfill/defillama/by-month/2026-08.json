@@ -1,0 +1,622 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2026-08",
+  "days": [
+    {
+      "day": "2026-08-02",
+      "incidents": [
+        {
+          "name": "LOOPSDAO",
+          "date": "2026-08-02",
+          "amount": 693500,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Liquidity Pool"
+        },
+        {
+          "name": "MOKE",
+          "date": "2026-08-02",
+          "amount": 907000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Liquidity Pool"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-03",
+      "incidents": [
+        {
+          "name": "RISEx",
+          "date": "2026-08-03",
+          "amount": 673012,
+          "chain": [
+            "RISE"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "7806",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-05",
+      "incidents": [
+        {
+          "name": "KITE Foundation",
+          "date": "2026-08-05",
+          "amount": 13340000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "chain#kiteai",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Unistreets",
+          "date": "2026-08-05",
+          "amount": 17750,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-06",
+      "incidents": [
+        {
+          "name": "Hyperliquid Malaysia",
+          "date": "2026-08-06",
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Panther Protocol",
+          "date": "2026-08-06",
+          "amount": 7578,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "3988",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "RRWallet",
+          "date": "2026-08-06",
+          "amount": 2000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Weak Key Generation",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-07",
+      "incidents": [
+        {
+          "name": "Ravencoin",
+          "date": "2026-08-07",
+          "chain": [
+            "Ravencoin"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-08",
+      "incidents": [
+        {
+          "name": "Atomic Green",
+          "date": "2026-08-08",
+          "amount": 29984,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Replay",
+          "defillamaId": "3081",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Oraichain",
+          "date": "2026-08-08",
+          "amount": 1000000,
+          "chain": [
+            "Oraichain"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Unbacked Cross-Chain Mint",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-09",
+      "incidents": [
+        {
+          "name": "Coinsbuy",
+          "date": "2026-08-09",
+          "amount": 7900000,
+          "chain": [
+            "Ethereum",
+            "Tron"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Coreum Bridge",
+          "date": "2026-08-09",
+          "amount": 200000,
+          "chain": [
+            "XRPL",
+            "Coreum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "USM",
+          "date": "2026-08-09",
+          "amount": 136000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-11",
+      "incidents": [
+        {
+          "name": "Harmony Bridge",
+          "date": "2026-08-11",
+          "amount": 3200000,
+          "chain": [
+            "Harmony"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-14",
+      "incidents": [
+        {
+          "name": "Bodega Market",
+          "date": "2026-08-14",
+          "amount": 3600,
+          "chain": [
+            "Cardano"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Unknown",
+          "defillamaId": "6012",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-15",
+      "incidents": [
+        {
+          "name": "Fox Market",
+          "date": "2026-08-15",
+          "amount": 120000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-18",
+      "incidents": [
+        {
+          "name": "Maya Protocol",
+          "date": "2026-08-18",
+          "amount": 1700000,
+          "chain": [
+            "Mayachain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "3791",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-19",
+      "incidents": [
+        {
+          "name": "Allbridge",
+          "date": "2026-08-19",
+          "amount": 191000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "defillamaId": "parent#allbridge",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "BounceBit",
+          "date": "2026-08-19",
+          "amount": 3000000,
+          "chain": [
+            "BounceBit"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "chain#bouncebit",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-21",
+      "incidents": [
+        {
+          "name": "MANTRA Chain",
+          "date": "2026-08-21",
+          "amount": 0,
+          "chain": [
+            "MANTRA"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "chain#mantra",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-22",
+      "incidents": [
+        {
+          "name": "KiiChain",
+          "date": "2026-08-22",
+          "amount": 9700000,
+          "chain": [
+            "KiiChain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "Chain"
+        },
+        {
+          "name": "TAC",
+          "date": "2026-08-22",
+          "amount": 7500000,
+          "chain": [
+            "TAC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "chain#tac",
+          "targetType": "Chain"
+        },
+        {
+          "name": "The Sandbox",
+          "date": "2026-08-22",
+          "amount": 675000,
+          "chain": [
+            "Base",
+            "BSC",
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "1065",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-23",
+      "incidents": [
+        {
+          "name": "Arrakis V1",
+          "date": "2026-08-23",
+          "amount": 7100,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "641",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TermFinance Vaults",
+          "date": "2026-08-23",
+          "amount": 8500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "5946",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "warp.green",
+          "date": "2026-08-23",
+          "amount": 93000,
+          "chain": [
+            "Chia",
+            "Ethereum"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Bridge Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-25",
+      "incidents": [
+        {
+          "name": "CometDEX",
+          "date": "2026-08-25",
+          "amount": 717000,
+          "chain": [
+            "Stellar"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Enjin",
+          "date": "2026-08-25",
+          "amount": 162000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Ownership Takeover",
+          "targetType": "NFTfi"
+        },
+        {
+          "name": "FH Token",
+          "date": "2026-08-25",
+          "amount": 20000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "Steakhouse Financial",
+          "date": "2026-08-25",
+          "amount": 920000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Market Manipulation",
+          "technique": "Risk Parameter Abuse",
+          "defillamaId": "6212",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-27",
+      "incidents": [
+        {
+          "name": "CCC",
+          "date": "2026-08-27",
+          "amount": 117000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "Moonwell Lending",
+          "date": "2026-08-27",
+          "amount": 8700000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1853",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-28",
+      "incidents": [
+        {
+          "name": "Ajna V2",
+          "date": "2026-08-28",
+          "amount": 775400,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Liquidation Logic Flaw",
+          "defillamaId": "4019",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Avici",
+          "date": "2026-08-28",
+          "amount": 500859,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "8034",
+          "targetType": "Crypto Card"
+        },
+        {
+          "name": "Fogo Foundation",
+          "date": "2026-08-28",
+          "amount": 3000000,
+          "chain": [
+            "Fogo"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "chain#fogo",
+          "targetType": "Foundation"
+        },
+        {
+          "name": "Virtue",
+          "date": "2026-08-28",
+          "amount": 894500,
+          "chain": [
+            "Iota"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "6455",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-29",
+      "incidents": [
+        {
+          "name": "Full Sail",
+          "date": "2026-08-29",
+          "chain": [
+            "Sui"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "defillamaId": "6413",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Permapod",
+          "date": "2026-08-29",
+          "chain": [
+            "ZIGChain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "7205",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-30",
+      "incidents": [
+        {
+          "name": "Balancer V1",
+          "date": "2026-08-30",
+          "amount": 234000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "116",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Tectonic",
+          "date": "2026-08-30",
+          "amount": 75000000,
+          "chain": [
+            "Cronos"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1115",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2026-08-31",
+      "incidents": [
+        {
+          "name": "Ankr",
+          "date": "2026-08-31",
+          "amount": 410000,
+          "chain": [
+            "Flow"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Unbacked Mint",
+          "defillamaId": "278",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Aquifer",
+          "date": "2026-08-31",
+          "amount": 2469729,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "6884",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Float Protocol",
+          "date": "2026-08-31",
+          "amount": 28000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "497",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

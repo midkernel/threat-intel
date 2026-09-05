@@ -1,0 +1,262 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-03",
+  "days": [
+    {
+      "day": "2023-03-02",
+      "incidents": [
+        {
+          "name": "ArbiSwap",
+          "date": "2023-03-02",
+          "amount": 100000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "defillamaId": "2587",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-07",
+      "incidents": [
+        {
+          "name": "Tender Finance",
+          "date": "2023-03-07",
+          "amount": 1590000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "defillamaId": "2382",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-08",
+      "incidents": [
+        {
+          "name": "DKP",
+          "date": "2023-03-08",
+          "amount": 80000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "PeopleDAO",
+          "date": "2023-03-08",
+          "amount": 120000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Signer Phishing",
+          "targetType": "DAO"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-10",
+      "incidents": [
+        {
+          "name": "Hedera",
+          "date": "2023-03-10",
+          "amount": 600000,
+          "chain": [
+            "Hedera"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-13",
+      "incidents": [
+        {
+          "name": "Euler V1",
+          "date": "2023-03-13",
+          "amount": 197000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "1183",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-15",
+      "incidents": [
+        {
+          "name": "Poolz Network",
+          "date": "2023-03-15",
+          "amount": 390000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "4385",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-17",
+      "incidents": [
+        {
+          "name": "General Bytes",
+          "date": "2023-03-17",
+          "amount": 1500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "Other"
+        },
+        {
+          "name": "ParaSpace Lending V1",
+          "date": "2023-03-17",
+          "amount": 5000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2517",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-18",
+      "incidents": [
+        {
+          "name": "Zircon Gamma",
+          "date": "2023-03-18",
+          "amount": 350000,
+          "chain": [
+            "BSC",
+            "Moonriver"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "2143",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-19",
+      "incidents": [
+        {
+          "name": "Harvest Keeper",
+          "date": "2023-03-19",
+          "amount": 933000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-21",
+      "incidents": [
+        {
+          "name": "Indexed Finance",
+          "date": "2023-03-21",
+          "amount": 9925,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "188",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-25",
+      "incidents": [
+        {
+          "name": "Swerve",
+          "date": "2023-03-25",
+          "amount": 1300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "142",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-27",
+      "incidents": [
+        {
+          "name": "Kokomo Finance",
+          "date": "2023-03-27",
+          "amount": 4000000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-28",
+      "incidents": [
+        {
+          "name": "Safemoon",
+          "date": "2023-03-28",
+          "amount": 8900000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-03-30",
+      "incidents": [
+        {
+          "name": "Rocket Pool",
+          "date": "2023-03-30",
+          "amount": 3800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "900",
+          "targetType": "Token"
+        }
+      ]
+    }
+  ]
+}

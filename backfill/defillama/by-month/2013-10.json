@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2013-10",
+  "days": [
+    {
+      "day": "2013-10-23",
+      "incidents": [
+        {
+          "name": "Inputs.io",
+          "date": "2013-10-23",
+          "amount": 1200000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

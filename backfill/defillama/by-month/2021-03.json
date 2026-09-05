@@ -1,0 +1,158 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-03",
+  "days": [
+    {
+      "day": "2021-03-01",
+      "incidents": [
+        {
+          "name": "Seascape",
+          "date": "2021-03-01",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-04",
+      "incidents": [
+        {
+          "name": "Meerkat Finance",
+          "date": "2021-03-04",
+          "amount": 31000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-05",
+      "incidents": [
+        {
+          "name": "Paid Network",
+          "date": "2021-03-05",
+          "amount": 27000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-09",
+      "incidents": [
+        {
+          "name": "DODO AMM",
+          "date": "2021-03-09",
+          "amount": 3800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "146",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-14",
+      "incidents": [
+        {
+          "name": "Roll",
+          "date": "2021-03-14",
+          "amount": 5700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-15",
+      "incidents": [
+        {
+          "name": "DEUS Finance",
+          "date": "2021-03-15",
+          "amount": 3000000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1387",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "PancakeSwap / Cream Finance",
+          "date": "2021-03-15",
+          "chain": [
+            "BSC",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TSD (True Seigniorage Dollar)",
+          "date": "2021-03-15",
+          "amount": 7095000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-16",
+      "incidents": [
+        {
+          "name": "Iron Finance",
+          "date": "2021-03-16",
+          "amount": 170000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-03-20",
+      "incidents": [
+        {
+          "name": "Turtle Dex",
+          "date": "2021-03-20",
+          "amount": 2500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -14,6 +14,8 @@ The public git product is this catalog plus a GitHub Action that fetches the lis
 
 Daily dumps are **not** committed to git. They can be large. Download `daily-YYYY-MM-DD` from [Releases](https://github.com/midkernel/threat-intel/releases). Actions artifacts remain a 14-day debug cache.
 
+Derived **historical backfill** for CISA KEV, FIRST EPSS (counts only), and DeFiLlama hacks **is** committed under [`backfill/`](backfill/README.md) so midkernel/app can build trends before the first daily Release (`daily-2026-09-05`). That tree still only packages and cites. It does not rank. Raw EPSS CSVs are never committed.
+
 ## What this repo is not
 
 Out of scope here (on purpose):
@@ -202,9 +204,27 @@ JSON catalogs map as follows (scores are omitted):
 
 Markdown `summary.md` remains the human-readable index. The tarball and `summary-YYYY-MM-DD.md` stay in the Release for backward compatibility.
 
+## Historical backfill
+
+[`backfill/`](backfill/README.md) holds monthly shards (`*/by-month/YYYY-MM.json`) derived from the official KEV JSON, empiricalsec EPSS daily CSVs (high-EPSS counts only; threshold `epss >= 0.5`), and the DeFiLlama hacks JSON.
+
+- Max backfill day: **2021-04-14** (EPSS archive start). Last backfill day: **2026-09-04** (the UTC day before the first daily Release).
+- KEV `dateAdded` starts **2021-11-03** (seed day). **2022 is a KEV backlog year, not a real exploit spike.**
+- DeFiLlama incident dates span years; days without incidents are omitted.
+- RSS/Atom sources are **not** backfilled. Do not invent old `daily-*` Releases.
+
+Schemas are additive only: `midkernel.threat-intel.backfill.{kev,epss,defillama,manifest}/v1`. See [`backfill/README.md`](backfill/README.md).
+
+```bash
+python3 scripts/backfill/generate.py --smoke --out /tmp/backfill-smoke
+python3 scripts/backfill/validate.py
+```
+
+A full live rebuild is `.github/workflows/backfill.yml` (`workflow_dispatch` only). CI does not download the EPSS daily archive on every pull request.
+
 ## CI
 
-Pull requests run a cheap check: `sources.yaml` parses, required fields are present, and every `url` looks like `https://…`. Offline unit checks cover the index helpers and the JSON emitter (fixture feeds, no live URLs). Live fetches stay on the daily / `workflow_dispatch` workflow.
+Pull requests run a cheap check: `sources.yaml` parses, required fields are present, and every `url` looks like `https://…`. Offline unit checks cover the index helpers, the JSON emitter, and backfill derive/schema checks (fixture catalogs, no live URLs). Live fetches stay on the daily / `workflow_dispatch` workflows.
 
 ## Voice
 

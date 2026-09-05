@@ -1,0 +1,54 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-08",
+  "days": [
+    {
+      "day": "2020-08-04",
+      "incidents": [
+        {
+          "name": "Opyn",
+          "date": "2020-08-04",
+          "amount": 371000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-08-06",
+      "incidents": [
+        {
+          "name": "Ethereum Classic",
+          "date": "2020-08-06",
+          "amount": 1680000,
+          "chain": [
+            "Ethereum Classic"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Layer 1"
+        }
+      ]
+    },
+    {
+      "day": "2020-08-18",
+      "incidents": [
+        {
+          "name": "OKEx",
+          "date": "2020-08-18",
+          "amount": 5600000,
+          "chain": [
+            "Ethereum Classic"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

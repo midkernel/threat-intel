@@ -1,0 +1,231 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-12",
+  "days": [
+    {
+      "day": "2021-12-02",
+      "incidents": [
+        {
+          "name": "Badger DAO",
+          "date": "2021-12-02",
+          "amount": 120000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "CDN Compromise",
+          "defillamaId": "173",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-03",
+      "incidents": [
+        {
+          "name": "Polygon",
+          "date": "2021-12-03",
+          "amount": 2040000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-04",
+      "incidents": [
+        {
+          "name": "Bitmart",
+          "date": "2021-12-04",
+          "amount": 196000000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-05",
+      "incidents": [
+        {
+          "name": "Pizza DeFi",
+          "date": "2021-12-05",
+          "amount": 5000000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-08",
+      "incidents": [
+        {
+          "name": "8ightDAO",
+          "date": "2021-12-08",
+          "amount": 1750000,
+          "chain": [
+            "Harmony"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "889",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-11",
+      "incidents": [
+        {
+          "name": "AscenDEX",
+          "date": "2021-12-11",
+          "amount": 77000000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-13",
+      "incidents": [
+        {
+          "name": "Vulcan Forged",
+          "date": "2021-12-13",
+          "amount": 140000000,
+          "chain": [
+            "Ethereum",
+            "Polygon"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-14",
+      "incidents": [
+        {
+          "name": "NerveBridge",
+          "date": "2021-12-14",
+          "amount": 537000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "2561",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-18",
+      "incidents": [
+        {
+          "name": "Grim Finance",
+          "date": "2021-12-18",
+          "amount": 30000000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "493",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-21",
+      "incidents": [
+        {
+          "name": "Bent Finance",
+          "date": "2021-12-21",
+          "amount": 1750000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Gamma",
+          "date": "2021-12-21",
+          "amount": 4500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "355",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Gamma",
+          "date": "2021-12-21",
+          "amount": 8200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "355",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-23",
+      "incidents": [
+        {
+          "name": "Monkey Kingdom",
+          "date": "2021-12-23",
+          "amount": 1300000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2021-12-30",
+      "incidents": [
+        {
+          "name": "SashimiSwap",
+          "date": "2021-12-30",
+          "amount": 210000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "580",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

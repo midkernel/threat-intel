@@ -1,5 +1,8 @@
 /output/
 /out/
+/backfill/.smoke/
+/backfill/.cache/
+scripts/backfill/__pycache__/
 __pycache__/
 *.pyc
 .venv/

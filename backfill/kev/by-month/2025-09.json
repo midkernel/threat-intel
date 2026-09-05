@@ -1,0 +1,275 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2025-09",
+  "days": [
+    {
+      "day": "2025-09-01",
+      "added": [],
+      "cumulative_count": 1406
+    },
+    {
+      "day": "2025-09-02",
+      "added": [
+        {
+          "cveId": "CVE-2020-24363",
+          "vendorProject": "TP-Link",
+          "product": "TL-WA855RE",
+          "vulnerabilityName": "TP-link TL-WA855RE Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-55177",
+          "vendorProject": "Meta Platforms",
+          "product": "WhatsApp",
+          "vulnerabilityName": "Meta Platforms WhatsApp Incorrect Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1408
+    },
+    {
+      "day": "2025-09-03",
+      "added": [
+        {
+          "cveId": "CVE-2023-50224",
+          "vendorProject": "TP-Link",
+          "product": "TL-WR841N",
+          "vulnerabilityName": "TP-Link TL-WR841N Authentication Bypass by Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-9377",
+          "vendorProject": "TP-Link",
+          "product": "Multiple Routers",
+          "vulnerabilityName": "TP-Link Archer C7(EU) and TL-WR841N/ND(MS) OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1410
+    },
+    {
+      "day": "2025-09-04",
+      "added": [
+        {
+          "cveId": "CVE-2025-38352",
+          "vendorProject": "Linux",
+          "product": "Kernel",
+          "vulnerabilityName": "Linux Kernel Time-of-Check Time-of-Use (TOCTOU) Race Condition Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-48543",
+          "vendorProject": "Android",
+          "product": "Runtime",
+          "vulnerabilityName": "Android Runtime Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-53690",
+          "vendorProject": "Sitecore",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Sitecore Multiple Products Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-05",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-06",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-07",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-08",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-09",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-10",
+      "added": [],
+      "cumulative_count": 1413
+    },
+    {
+      "day": "2025-09-11",
+      "added": [
+        {
+          "cveId": "CVE-2025-5086",
+          "vendorProject": "Dassault Systèmes",
+          "product": "DELMIA Apriso",
+          "vulnerabilityName": "Dassault Systèmes DELMIA Apriso Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-12",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-13",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-14",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-15",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-16",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-17",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-18",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-19",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-20",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-21",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-22",
+      "added": [],
+      "cumulative_count": 1414
+    },
+    {
+      "day": "2025-09-23",
+      "added": [
+        {
+          "cveId": "CVE-2025-10585",
+          "vendorProject": "Google",
+          "product": "Chromium V8",
+          "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1415
+    },
+    {
+      "day": "2025-09-24",
+      "added": [],
+      "cumulative_count": 1415
+    },
+    {
+      "day": "2025-09-25",
+      "added": [
+        {
+          "cveId": "CVE-2025-20333",
+          "vendorProject": "Cisco",
+          "product": "Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense",
+          "vulnerabilityName": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-20362",
+          "vendorProject": "Cisco",
+          "product": "Secure Firewall Adaptive Security Appliance and Secure Firewall Threat Defense",
+          "vulnerabilityName": "Cisco Secure Firewall Adaptive Security (ASA) Appliance and Secure Firewall Threat Defense (FTD) Missing Authorization Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1417
+    },
+    {
+      "day": "2025-09-26",
+      "added": [],
+      "cumulative_count": 1417
+    },
+    {
+      "day": "2025-09-27",
+      "added": [],
+      "cumulative_count": 1417
+    },
+    {
+      "day": "2025-09-28",
+      "added": [],
+      "cumulative_count": 1417
+    },
+    {
+      "day": "2025-09-29",
+      "added": [
+        {
+          "cveId": "CVE-2021-21311",
+          "vendorProject": "Adminer",
+          "product": "Adminer",
+          "vulnerabilityName": "Adminer Server-Side Request Forgery Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-10035",
+          "vendorProject": "Fortra",
+          "product": "GoAnywhere MFT",
+          "vulnerabilityName": "Fortra GoAnywhere MFT Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2025-20352",
+          "vendorProject": "Cisco",
+          "product": "IOS and IOS XE",
+          "vulnerabilityName": "Cisco IOS and IOS XE Software SNMP Denial of Service and Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-32463",
+          "vendorProject": "Sudo",
+          "product": "Sudo",
+          "vulnerabilityName": "Sudo Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2025-59689",
+          "vendorProject": "Libraesva",
+          "product": "Email Security Gateway",
+          "vulnerabilityName": "Libraesva Email Security Gateway Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1422
+    },
+    {
+      "day": "2025-09-30",
+      "added": [],
+      "cumulative_count": 1422
+    }
+  ]
+}

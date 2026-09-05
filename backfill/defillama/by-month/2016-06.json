@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2016-06",
+  "days": [
+    {
+      "day": "2016-06-17",
+      "incidents": [
+        {
+          "name": "The DAO",
+          "date": "2016-06-17",
+          "amount": 60000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

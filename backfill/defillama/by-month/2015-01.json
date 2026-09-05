@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2015-01",
+  "days": [
+    {
+      "day": "2015-01-05",
+      "incidents": [
+        {
+          "name": "Bitstamp",
+          "date": "2015-01-05",
+          "amount": 5200000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "defillamaId": "3543",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2015-01-27",
+      "incidents": [
+        {
+          "name": "796",
+          "date": "2015-01-27",
+          "amount": 270000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

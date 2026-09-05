@@ -1,0 +1,445 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2022-01",
+  "days": [
+    {
+      "day": "2022-01-01",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-02",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-03",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-04",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-05",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-06",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-07",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-08",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-09",
+      "added": [],
+      "cumulative_count": 311
+    },
+    {
+      "day": "2022-01-10",
+      "added": [
+        {
+          "cveId": "CVE-2013-3900",
+          "vendorProject": "Microsoft",
+          "product": "WinVerifyTrust function",
+          "vulnerabilityName": "Microsoft WinVerifyTrust function Remote Code Execution",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2015-7450",
+          "vendorProject": "IBM",
+          "product": "WebSphere Application Server and Server Hypervisor Edition",
+          "vulnerabilityName": "IBM WebSphere Application Server and Server Hypervisor Edition Code Injection.",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-1000486",
+          "vendorProject": "Primetek",
+          "product": "Primefaces Application",
+          "vulnerabilityName": "Primetek Primefaces Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-13382",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiProxy",
+          "vulnerabilityName": "Fortinet FortiOS and FortiProxy Improper Authorization",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2018-13383",
+          "vendorProject": "Fortinet",
+          "product": "FortiOS and FortiProxy",
+          "vulnerabilityName": "Fortinet FortiOS and FortiProxy Out-of-bounds Write",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-10149",
+          "vendorProject": "Exim",
+          "product": "Mail Transfer Agent (MTA)",
+          "vulnerabilityName": "Exim Mail Transfer Agent (MTA) Improper Input Validation",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-1458",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-1579",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-2725",
+          "vendorProject": "Oracle",
+          "product": "WebLogic Server",
+          "vulnerabilityName": "Oracle WebLogic Server, Injection",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2019-7609",
+          "vendorProject": "Elastic",
+          "product": "Kibana",
+          "vulnerabilityName": "Kibana Arbitrary Code Execution",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2019-9670",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Improper Restriction of XML External Entity Reference",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-6572",
+          "vendorProject": "Google",
+          "product": "Chrome Media",
+          "vulnerabilityName": "Google Chrome Media Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-22017",
+          "vendorProject": "VMware",
+          "product": "vCenter Server",
+          "vulnerabilityName": "VMware vCenter Server Improper Access Control",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-27860",
+          "vendorProject": "FatPipe",
+          "product": "WARP, IPVPN, and MPVPN software",
+          "vulnerabilityName": "FatPipe WARP, IPVPN, and MPVPN Configuration Upload exploit",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-36260",
+          "vendorProject": "Hikvision",
+          "product": "Security cameras web server",
+          "vulnerabilityName": "Hikvision Improper Input Validation",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-11",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-12",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-13",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-14",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-15",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-16",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-17",
+      "added": [],
+      "cumulative_count": 326
+    },
+    {
+      "day": "2022-01-18",
+      "added": [
+        {
+          "cveId": "CVE-2020-11978",
+          "vendorProject": "Apache",
+          "product": "Airflow",
+          "vulnerabilityName": "Apache Airflow Command Injection",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-13671",
+          "vendorProject": "Drupal",
+          "product": "Drupal core",
+          "vulnerabilityName": "Drupal core Un-restricted Upload of File",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-13927",
+          "vendorProject": "Apache",
+          "product": "Airflow's Experimental API",
+          "vulnerabilityName": "Apache Airflow's Experimental API Authentication Bypass",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-14864",
+          "vendorProject": "Oracle",
+          "product": "Intelligence Enterprise Edition",
+          "vulnerabilityName": "Oracle Business Intelligence Enterprise Edition Path Transversal",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-21315",
+          "vendorProject": "Npm package",
+          "product": "System Information Library for Node.JS",
+          "vulnerabilityName": "System Information Library for Node.JS Command Injection",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-21975",
+          "vendorProject": "VMware",
+          "product": "vRealize Operations Manager API",
+          "vulnerabilityName": "VMware Server Side Request Forgery in vRealize Operations Manager API",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-22991",
+          "vendorProject": "F5",
+          "product": "BIG-IP Traffic Management Microkernel",
+          "vulnerabilityName": "F5 BIG-IP Traffic Management Microkernel Buffer Overflow",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25296",
+          "vendorProject": "Nagios",
+          "product": "Nagios XI",
+          "vulnerabilityName": "Nagios XI OS Command Injection",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25297",
+          "vendorProject": "Nagios",
+          "product": "Nagios XI",
+          "vulnerabilityName": "Nagios XI OS Command Injection",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-25298",
+          "vendorProject": "Nagios",
+          "product": "Nagios XI",
+          "vulnerabilityName": "Nagios XI OS Command Injection",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-32648",
+          "vendorProject": "October CMS",
+          "product": "October CMS",
+          "vulnerabilityName": "October CMS Improper Authentication",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-33766",
+          "vendorProject": "Microsoft",
+          "product": "Exchange Server",
+          "vulnerabilityName": "Microsoft Exchange Server Information Disclosure",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-40870",
+          "vendorProject": "Aviatrix",
+          "product": "Aviatrix Controller",
+          "vulnerabilityName": "Aviatrix Controller Unrestricted Upload of File",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 339
+    },
+    {
+      "day": "2022-01-19",
+      "added": [],
+      "cumulative_count": 339
+    },
+    {
+      "day": "2022-01-20",
+      "added": [],
+      "cumulative_count": 339
+    },
+    {
+      "day": "2022-01-21",
+      "added": [
+        {
+          "cveId": "CVE-2006-1547",
+          "vendorProject": "Apache",
+          "product": "Struts 1",
+          "vulnerabilityName": "Apache Struts 1 ActionForm Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2012-0391",
+          "vendorProject": "Apache",
+          "product": "Struts 2",
+          "vulnerabilityName": "Apache Struts 2 Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2018-8453",
+          "vendorProject": "Microsoft",
+          "product": "Win32k",
+          "vulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-35247",
+          "vendorProject": "SolarWinds",
+          "product": "Serv-U",
+          "vulnerabilityName": "SolarWinds Serv-U Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-22",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-23",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-24",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-25",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-26",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-27",
+      "added": [],
+      "cumulative_count": 343
+    },
+    {
+      "day": "2022-01-28",
+      "added": [
+        {
+          "cveId": "CVE-2014-1776",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-6271",
+          "vendorProject": "GNU",
+          "product": "Bourne-Again Shell (Bash)",
+          "vulnerabilityName": "GNU Bourne-Again Shell (Bash) Arbitrary Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2014-7169",
+          "vendorProject": "GNU",
+          "product": "Bourne-Again Shell (Bash)",
+          "vulnerabilityName": "GNU Bourne-Again Shell (Bash) Arbitrary Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-5689",
+          "vendorProject": "Intel",
+          "product": "Active Management Technology (AMT), Small Business Technology (SBT), and Standard Manageability",
+          "vulnerabilityName": "Intel Active Management Technology (AMT), Small Business Technology (SBT), and Standard Manageability Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2020-0787",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Background Intelligent Transfer Service (BITS) Improper Privilege Management Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2020-5722",
+          "vendorProject": "Grandstream",
+          "product": "UCM6200",
+          "vulnerabilityName": "Grandstream Networks UCM6200 Series SQL Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2021-20038",
+          "vendorProject": "SonicWall",
+          "product": "SMA 100 Appliances",
+          "vulnerabilityName": "SonicWall SMA 100 Appliances Stack-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-22587",
+          "vendorProject": "Apple",
+          "product": "iOS and macOS",
+          "vulnerabilityName": "Apple Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-01-29",
+      "added": [],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-01-30",
+      "added": [],
+      "cumulative_count": 351
+    },
+    {
+      "day": "2022-01-31",
+      "added": [],
+      "cumulative_count": 351
+    }
+  ]
+}

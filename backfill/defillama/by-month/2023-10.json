@@ -1,0 +1,188 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-10",
+  "days": [
+    {
+      "day": "2023-10-06",
+      "incidents": [
+        {
+          "name": "Galxe",
+          "date": "2023-10-06",
+          "amount": 270000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-07",
+      "incidents": [
+        {
+          "name": "Arena SocialFi",
+          "date": "2023-10-07",
+          "amount": 2974530,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "3564",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-12",
+      "incidents": [
+        {
+          "name": "BlackHole Token",
+          "date": "2023-10-12",
+          "amount": 1275000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-13",
+      "incidents": [
+        {
+          "name": "Beluga",
+          "date": "2023-10-13",
+          "amount": 175000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1330",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Platypus Finance",
+          "date": "2023-10-13",
+          "amount": 2200000,
+          "chain": [
+            "Avalanche"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WiseLending",
+          "date": "2023-10-13",
+          "amount": 260000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-18",
+      "incidents": [
+        {
+          "name": "HOPE Lend",
+          "date": "2023-10-18",
+          "amount": 825000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "3637",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "MicDao",
+          "date": "2023-10-18",
+          "amount": 13000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-19",
+      "incidents": [
+        {
+          "name": "Synthetify",
+          "date": "2023-10-19",
+          "amount": 230000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Governance",
+          "technique": "Malicious Proposal",
+          "defillamaId": "731",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-23",
+      "incidents": [
+        {
+          "name": "Maestro",
+          "date": "2023-10-23",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-29",
+      "incidents": [
+        {
+          "name": "Astrid Finance",
+          "date": "2023-10-29",
+          "amount": 228000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-10-31",
+      "incidents": [
+        {
+          "name": "Unibot",
+          "date": "2023-10-31",
+          "amount": 640000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "defillamaId": "3106",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

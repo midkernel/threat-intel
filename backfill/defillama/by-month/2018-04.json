@@ -1,0 +1,66 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-04",
+  "days": [
+    {
+      "day": "2018-04-12",
+      "incidents": [
+        {
+          "name": "Coinsecure",
+          "date": "2018-04-12",
+          "amount": 3300000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2018-04-21",
+      "incidents": [
+        {
+          "name": "Gate",
+          "date": "2018-04-21",
+          "amount": 235000000,
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "2314",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2018-04-22",
+      "incidents": [
+        {
+          "name": "BeautyChain",
+          "date": "2018-04-22",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2018-04-24",
+      "incidents": [
+        {
+          "name": "SmartMesh",
+          "date": "2018-04-24",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "Token"
+        }
+      ]
+    }
+  ]
+}

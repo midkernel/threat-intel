@@ -1,0 +1,46 @@
+[
+  {
+    "date": 1561507200,
+    "name": "OldBridge",
+    "classification": "Exploit",
+    "technique": "Key compromise",
+    "amount": 100000,
+    "chain": ["Ethereum"],
+    "source": "https://example.invalid/oldbridge",
+    "defillamaId": "1",
+    "targetType": "Bridge"
+  },
+  {
+    "date": 1618358400,
+    "name": "WindowStartHack",
+    "classification": "Exploit",
+    "technique": "Reentrancy",
+    "amount": 250000,
+    "chain": ["Ethereum"],
+    "source": "",
+    "defillamaId": "2",
+    "targetType": "Protocol"
+  },
+  {
+    "date": 1635984000,
+    "name": "KevEraHack",
+    "classification": "Rugpull",
+    "technique": "Admin key",
+    "amount": 10,
+    "chain": ["BSC"],
+    "source": "",
+    "defillamaId": "3",
+    "targetType": "Token"
+  },
+  {
+    "date": 1788883200,
+    "name": "AfterLastDay",
+    "classification": "Exploit",
+    "technique": "Oracle",
+    "amount": 1,
+    "chain": ["Ethereum"],
+    "source": "",
+    "defillamaId": "4",
+    "targetType": "Protocol"
+  }
+]

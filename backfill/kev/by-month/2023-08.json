@@ -1,0 +1,223 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-08",
+  "days": [
+    {
+      "day": "2023-08-01",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-02",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-03",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-04",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-05",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-06",
+      "added": [],
+      "cumulative_count": 979
+    },
+    {
+      "day": "2023-08-07",
+      "added": [
+        {
+          "cveId": "CVE-2017-18368",
+          "vendorProject": "Zyxel",
+          "product": "P660HN-T1A Routers",
+          "vulnerabilityName": "Zyxel P660HN-T1A Routers Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 980
+    },
+    {
+      "day": "2023-08-08",
+      "added": [],
+      "cumulative_count": 980
+    },
+    {
+      "day": "2023-08-09",
+      "added": [
+        {
+          "cveId": "CVE-2023-38180",
+          "vendorProject": "Microsoft",
+          "product": ".NET Core and Visual Studio",
+          "vulnerabilityName": "Microsoft .NET Core and Visual Studio Denial-of-Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-10",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-11",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-12",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-13",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-14",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-15",
+      "added": [],
+      "cumulative_count": 981
+    },
+    {
+      "day": "2023-08-16",
+      "added": [
+        {
+          "cveId": "CVE-2023-24489",
+          "vendorProject": "Citrix",
+          "product": "Content Collaboration",
+          "vulnerabilityName": "Citrix Content Collaboration ShareFile Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 982
+    },
+    {
+      "day": "2023-08-17",
+      "added": [],
+      "cumulative_count": 982
+    },
+    {
+      "day": "2023-08-18",
+      "added": [],
+      "cumulative_count": 982
+    },
+    {
+      "day": "2023-08-19",
+      "added": [],
+      "cumulative_count": 982
+    },
+    {
+      "day": "2023-08-20",
+      "added": [],
+      "cumulative_count": 982
+    },
+    {
+      "day": "2023-08-21",
+      "added": [
+        {
+          "cveId": "CVE-2023-26359",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Deserialization of Untrusted Data Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 983
+    },
+    {
+      "day": "2023-08-22",
+      "added": [
+        {
+          "cveId": "CVE-2023-27532",
+          "vendorProject": "Veeam",
+          "product": "Backup & Replication",
+          "vulnerabilityName": "Veeam Backup & Replication Cloud Connect Missing Authentication for Critical Function Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-38035",
+          "vendorProject": "Ivanti",
+          "product": "Sentry",
+          "vulnerabilityName": "Ivanti Sentry Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 985
+    },
+    {
+      "day": "2023-08-23",
+      "added": [],
+      "cumulative_count": 985
+    },
+    {
+      "day": "2023-08-24",
+      "added": [
+        {
+          "cveId": "CVE-2023-32315",
+          "vendorProject": "Ignite Realtime",
+          "product": "Openfire",
+          "vulnerabilityName": "Ignite Realtime Openfire Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-38831",
+          "vendorProject": "RARLAB",
+          "product": "WinRAR",
+          "vulnerabilityName": "RARLAB WinRAR Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-25",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-26",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-27",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-28",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-29",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-30",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-08-31",
+      "added": [],
+      "cumulative_count": 987
+    }
+  ]
+}

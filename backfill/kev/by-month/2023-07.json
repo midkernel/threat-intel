@@ -1,0 +1,283 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-07",
+  "days": [
+    {
+      "day": "2023-07-01",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-02",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-03",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-04",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-05",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-06",
+      "added": [],
+      "cumulative_count": 963
+    },
+    {
+      "day": "2023-07-07",
+      "added": [
+        {
+          "cveId": "CVE-2021-29256",
+          "vendorProject": "Arm",
+          "product": "Mali Graphics Processing Unit (GPU)",
+          "vulnerabilityName": "Arm Mali GPU Kernel Driver Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 964
+    },
+    {
+      "day": "2023-07-08",
+      "added": [],
+      "cumulative_count": 964
+    },
+    {
+      "day": "2023-07-09",
+      "added": [],
+      "cumulative_count": 964
+    },
+    {
+      "day": "2023-07-10",
+      "added": [],
+      "cumulative_count": 964
+    },
+    {
+      "day": "2023-07-11",
+      "added": [
+        {
+          "cveId": "CVE-2022-31199",
+          "vendorProject": "Netwrix",
+          "product": "Auditor",
+          "vulnerabilityName": "Netwrix Auditor Insecure Object Deserialization Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-32046",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows MSHTML Platform Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-32049",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Defender SmartScreen Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-35311",
+          "vendorProject": "Microsoft",
+          "product": "Outlook",
+          "vulnerabilityName": "Microsoft Outlook Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36874",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Error Reporting Service Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 969
+    },
+    {
+      "day": "2023-07-12",
+      "added": [],
+      "cumulative_count": 969
+    },
+    {
+      "day": "2023-07-13",
+      "added": [
+        {
+          "cveId": "CVE-2022-29303",
+          "vendorProject": "SolarView",
+          "product": "Compact",
+          "vulnerabilityName": "SolarView Compact Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-37450",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 971
+    },
+    {
+      "day": "2023-07-14",
+      "added": [],
+      "cumulative_count": 971
+    },
+    {
+      "day": "2023-07-15",
+      "added": [],
+      "cumulative_count": 971
+    },
+    {
+      "day": "2023-07-16",
+      "added": [],
+      "cumulative_count": 971
+    },
+    {
+      "day": "2023-07-17",
+      "added": [
+        {
+          "cveId": "CVE-2023-36884",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Search Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 972
+    },
+    {
+      "day": "2023-07-18",
+      "added": [],
+      "cumulative_count": 972
+    },
+    {
+      "day": "2023-07-19",
+      "added": [
+        {
+          "cveId": "CVE-2023-3519",
+          "vendorProject": "Citrix",
+          "product": "NetScaler ADC and NetScaler Gateway",
+          "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Code Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 973
+    },
+    {
+      "day": "2023-07-20",
+      "added": [
+        {
+          "cveId": "CVE-2023-29298",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-38205",
+          "vendorProject": "Adobe",
+          "product": "ColdFusion",
+          "vulnerabilityName": "Adobe ColdFusion Improper Access Control Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 975
+    },
+    {
+      "day": "2023-07-21",
+      "added": [],
+      "cumulative_count": 975
+    },
+    {
+      "day": "2023-07-22",
+      "added": [],
+      "cumulative_count": 975
+    },
+    {
+      "day": "2023-07-23",
+      "added": [],
+      "cumulative_count": 975
+    },
+    {
+      "day": "2023-07-24",
+      "added": [],
+      "cumulative_count": 975
+    },
+    {
+      "day": "2023-07-25",
+      "added": [
+        {
+          "cveId": "CVE-2023-35078",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 976
+    },
+    {
+      "day": "2023-07-26",
+      "added": [
+        {
+          "cveId": "CVE-2023-38606",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Kernel Unspecified Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 977
+    },
+    {
+      "day": "2023-07-27",
+      "added": [
+        {
+          "cveId": "CVE-2023-37580",
+          "vendorProject": "Synacor",
+          "product": "Zimbra Collaboration Suite (ZCS)",
+          "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 978
+    },
+    {
+      "day": "2023-07-28",
+      "added": [],
+      "cumulative_count": 978
+    },
+    {
+      "day": "2023-07-29",
+      "added": [],
+      "cumulative_count": 978
+    },
+    {
+      "day": "2023-07-30",
+      "added": [],
+      "cumulative_count": 978
+    },
+    {
+      "day": "2023-07-31",
+      "added": [
+        {
+          "cveId": "CVE-2023-35081",
+          "vendorProject": "Ivanti",
+          "product": "Endpoint Manager Mobile (EPMM)",
+          "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 979
+    }
+  ]
+}

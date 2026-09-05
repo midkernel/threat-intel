@@ -1,0 +1,279 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-09",
+  "days": [
+    {
+      "day": "2024-09-02",
+      "incidents": [
+        {
+          "name": "Pythia",
+          "date": "2024-09-02",
+          "amount": 53000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-03",
+      "incidents": [
+        {
+          "name": "Penpie",
+          "date": "2024-09-03",
+          "amount": 27000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "3083",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-10",
+      "incidents": [
+        {
+          "name": "Caterpillar Coin",
+          "date": "2024-09-10",
+          "amount": 1400000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "Indodax",
+          "date": "2024-09-10",
+          "amount": 25200000,
+          "chain": [
+            "Ethereum",
+            "Polygon",
+            "Optimism"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-11",
+      "incidents": [
+        {
+          "name": "Omnipus",
+          "date": "2024-09-11",
+          "amount": 30000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-13",
+      "incidents": [
+        {
+          "name": "OTSea",
+          "date": "2024-09-13",
+          "amount": 26000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "4783",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-16",
+      "incidents": [
+        {
+          "name": "DeltaPrime",
+          "date": "2024-09-16",
+          "amount": 5980000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "2479",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Rivus DAO",
+          "date": "2024-09-16",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Backdoor Contract",
+          "defillamaId": "4574",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "WXETA",
+          "date": "2024-09-16",
+          "amount": 110000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-19",
+      "incidents": [
+        {
+          "name": "Banana Gun",
+          "date": "2024-09-19",
+          "amount": 3000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Frontend Compromise",
+          "defillamaId": "3336",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-20",
+      "incidents": [
+        {
+          "name": "BingX",
+          "date": "2024-09-20",
+          "amount": 43300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "4859",
+          "targetType": "CEX"
+        },
+        {
+          "name": "DOGGO",
+          "date": "2024-09-20",
+          "amount": 7000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "Token"
+        },
+        {
+          "name": "OcelotDex",
+          "date": "2024-09-20",
+          "amount": 980000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "4095",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "OcelotDex",
+          "date": "2024-09-20",
+          "amount": 4900000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "4095",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-23",
+      "incidents": [
+        {
+          "name": "Bankroll Network",
+          "date": "2024-09-23",
+          "amount": 234800,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-25",
+      "incidents": [
+        {
+          "name": "Truflation",
+          "date": "2024-09-25",
+          "amount": 5200000,
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "Other"
+        }
+      ]
+    },
+    {
+      "day": "2024-09-26",
+      "incidents": [
+        {
+          "name": "Onyx V2",
+          "date": "2024-09-26",
+          "amount": 3800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Liquidation Logic Flaw",
+          "defillamaId": "5180",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ReHold",
+          "date": "2024-09-26",
+          "amount": 700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "uniBTC",
+          "date": "2024-09-26",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "defillamaId": "4966",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

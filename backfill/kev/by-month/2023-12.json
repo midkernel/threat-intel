@@ -1,0 +1,243 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-12",
+  "days": [
+    {
+      "day": "2023-12-01",
+      "added": [],
+      "cumulative_count": 1042
+    },
+    {
+      "day": "2023-12-02",
+      "added": [],
+      "cumulative_count": 1042
+    },
+    {
+      "day": "2023-12-03",
+      "added": [],
+      "cumulative_count": 1042
+    },
+    {
+      "day": "2023-12-04",
+      "added": [
+        {
+          "cveId": "CVE-2023-42916",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Out-of-Bounds Read Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-42917",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Memory Corruption Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1044
+    },
+    {
+      "day": "2023-12-05",
+      "added": [
+        {
+          "cveId": "CVE-2022-22071",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-33063",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-33106",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Use of Out-of-Range Pointer Offset Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-33107",
+          "vendorProject": "Qualcomm",
+          "product": "Multiple Chipsets",
+          "vulnerabilityName": "Qualcomm Multiple Chipsets Integer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1048
+    },
+    {
+      "day": "2023-12-06",
+      "added": [],
+      "cumulative_count": 1048
+    },
+    {
+      "day": "2023-12-07",
+      "added": [
+        {
+          "cveId": "CVE-2023-41265",
+          "vendorProject": "Qlik",
+          "product": "Sense",
+          "vulnerabilityName": "Qlik Sense HTTP Tunneling Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-41266",
+          "vendorProject": "Qlik",
+          "product": "Sense",
+          "vulnerabilityName": "Qlik Sense Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1050
+    },
+    {
+      "day": "2023-12-08",
+      "added": [],
+      "cumulative_count": 1050
+    },
+    {
+      "day": "2023-12-09",
+      "added": [],
+      "cumulative_count": 1050
+    },
+    {
+      "day": "2023-12-10",
+      "added": [],
+      "cumulative_count": 1050
+    },
+    {
+      "day": "2023-12-11",
+      "added": [
+        {
+          "cveId": "CVE-2023-6448",
+          "vendorProject": "Unitronics",
+          "product": "Vision PLC and HMI",
+          "vulnerabilityName": "Unitronics Vision PLC and HMI Insecure Default Password Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-12",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-13",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-14",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-15",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-16",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-17",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-18",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-19",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-20",
+      "added": [],
+      "cumulative_count": 1051
+    },
+    {
+      "day": "2023-12-21",
+      "added": [
+        {
+          "cveId": "CVE-2023-47565",
+          "vendorProject": "QNAP",
+          "product": "VioStor NVR",
+          "vulnerabilityName": "QNAP VioStor NVR OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-49897",
+          "vendorProject": "FXC",
+          "product": "AE1021, AE1021PE",
+          "vulnerabilityName": "FXC AE1021, AE1021PE OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-22",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-23",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-24",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-25",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-26",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-27",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-28",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-29",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-30",
+      "added": [],
+      "cumulative_count": 1053
+    },
+    {
+      "day": "2023-12-31",
+      "added": [],
+      "cumulative_count": 1053
+    }
+  ]
+}

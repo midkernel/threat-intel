@@ -1,0 +1,307 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2023-12",
+  "days": [
+    {
+      "day": "2023-12-04",
+      "incidents": [
+        {
+          "name": "Stargate Finance",
+          "date": "2023-12-04",
+          "amount": 43000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-06",
+      "incidents": [
+        {
+          "name": "ElephantStatus",
+          "date": "2023-12-06",
+          "amount": 165000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TIME",
+          "date": "2023-12-06",
+          "amount": 190000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-07",
+      "incidents": [
+        {
+          "name": "Xai",
+          "date": "2023-12-07",
+          "amount": 845800,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Impersonation Scam",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-11",
+      "incidents": [
+        {
+          "name": "Venus Protocol",
+          "date": "2023-12-11",
+          "amount": 274000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Oracle Misconfiguration",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-13",
+      "incidents": [
+        {
+          "name": "OKX DEX",
+          "date": "2023-12-13",
+          "amount": 2700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Peapods Finance",
+          "date": "2023-12-13",
+          "amount": 231192,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "4063",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-14",
+      "incidents": [
+        {
+          "name": "Ledger Connect Kit",
+          "date": "2023-12-14",
+          "amount": 484000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Supply Chain Attack",
+          "targetType": "Wallet"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-16",
+      "incidents": [
+        {
+          "name": "GoodDollar",
+          "date": "2023-12-16",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "1429",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "NFT Trader",
+          "date": "2023-12-16",
+          "amount": 3000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-17",
+      "incidents": [
+        {
+          "name": "Flooring Protocol",
+          "date": "2023-12-17",
+          "amount": 1600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "3644",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-20",
+      "incidents": [
+        {
+          "name": "INX Digital Company",
+          "date": "2023-12-20",
+          "amount": 1600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Transit Finance",
+          "date": "2023-12-20",
+          "amount": 110000,
+          "chain": [
+            "BSC",
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-22",
+      "incidents": [
+        {
+          "name": "Pine Protocol",
+          "date": "2023-12-22",
+          "amount": 95000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "defillamaId": "2558",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-25",
+      "incidents": [
+        {
+          "name": "Telcoin",
+          "date": "2023-12-25",
+          "amount": 1250000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "targetType": "Payments"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-27",
+      "incidents": [
+        {
+          "name": "Levana Perps",
+          "date": "2023-12-27",
+          "amount": 1100000,
+          "chain": [
+            "Osmosis"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "defillamaId": "3474",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Thunder Terminal",
+          "date": "2023-12-27",
+          "amount": 240000,
+          "chain": [
+            "Ethereum",
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-30",
+      "incidents": [
+        {
+          "name": "Channels Finance",
+          "date": "2023-12-30",
+          "amount": 320000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "defillamaId": "368",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Locus Finance",
+          "date": "2023-12-30",
+          "amount": 321000,
+          "chain": [
+            "Ethereum",
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "3371",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2023-12-31",
+      "incidents": [
+        {
+          "name": "Orbit Bridge",
+          "date": "2023-12-31",
+          "amount": 81700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Signature Verification Flaw",
+          "defillamaId": "1981",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

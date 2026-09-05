@@ -1,0 +1,267 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2021-05",
+  "days": [
+    {
+      "day": "2021-05-02",
+      "incidents": [
+        {
+          "name": "Spartan",
+          "date": "2021-05-02",
+          "amount": 30500000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "1246",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-05",
+      "incidents": [
+        {
+          "name": "ValueDefi",
+          "date": "2021-05-05",
+          "amount": 10000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "defillamaId": "164",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-07",
+      "incidents": [
+        {
+          "name": "ValueDefi",
+          "date": "2021-05-07",
+          "amount": 11000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "164",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-08",
+      "incidents": [
+        {
+          "name": "Rari Capital",
+          "date": "2021-05-08",
+          "amount": 10000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "136",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-12",
+      "incidents": [
+        {
+          "name": "xToken",
+          "date": "2021-05-12",
+          "amount": 24000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "206",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-14",
+      "incidents": [
+        {
+          "name": "flash.sx / vaults.sx",
+          "date": "2021-05-14",
+          "amount": 13000000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-17",
+      "incidents": [
+        {
+          "name": "BearnFi",
+          "date": "2021-05-17",
+          "amount": 18000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "387",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "FinNexus",
+          "date": "2021-05-17",
+          "amount": 7000000,
+          "chain": [
+            "Ethereum",
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "170",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-18",
+      "incidents": [
+        {
+          "name": "Venus Protocol",
+          "date": "2021-05-18",
+          "amount": 100000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-19",
+      "incidents": [
+        {
+          "name": "Bunny",
+          "date": "2021-05-19",
+          "amount": 45000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "254",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-23",
+      "incidents": [
+        {
+          "name": "Bogged Finance",
+          "date": "2021-05-23",
+          "amount": 3000000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "defillamaId": "617",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-24",
+      "incidents": [
+        {
+          "name": "AutoShark",
+          "date": "2021-05-24",
+          "amount": 822800,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "1074",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-26",
+      "incidents": [
+        {
+          "name": "Merlin",
+          "date": "2021-05-26",
+          "amount": 680000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "370",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Merlin",
+          "date": "2021-05-26",
+          "amount": 550000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "370",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-28",
+      "incidents": [
+        {
+          "name": "BurgerSwap",
+          "date": "2021-05-28",
+          "amount": 7200000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "1295",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2021-05-29",
+      "incidents": [
+        {
+          "name": "Belt Finance",
+          "date": "2021-05-29",
+          "amount": 6300000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "defillamaId": "310",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

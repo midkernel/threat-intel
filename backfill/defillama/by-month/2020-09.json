@@ -1,0 +1,104 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-09",
+  "days": [
+    {
+      "day": "2020-09-08",
+      "incidents": [
+        {
+          "name": "Eterbase",
+          "date": "2020-09-08",
+          "amount": 5400000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "XRP",
+            "Tezos",
+            "Algorand",
+            "TRON"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2020-09-10",
+      "incidents": [
+        {
+          "name": "Coral",
+          "date": "2020-09-10",
+          "amount": 420000,
+          "chain": [
+            "EOS"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "SYFI",
+          "date": "2020-09-10",
+          "amount": 250000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-09-20",
+      "incidents": [
+        {
+          "name": "Soda Protocol",
+          "date": "2020-09-20",
+          "amount": 160000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "defillamaId": "940",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-09-28",
+      "incidents": [
+        {
+          "name": "Eminence",
+          "date": "2020-09-28",
+          "amount": 15000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-09-29",
+      "incidents": [
+        {
+          "name": "KuCoin",
+          "date": "2020-09-29",
+          "amount": 281000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "2274",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2025-01",
+  "days": [
+    {
+      "day": "2025-01-01",
+      "incidents": [
+        {
+          "name": "NoOnes",
+          "date": "2025-01-01",
+          "amount": 7900000,
+          "chain": [
+            "Ethereum",
+            "Binance",
+            "Solana",
+            "Tron"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Cross-Chain Message Spoofing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-02",
+      "incidents": [
+        {
+          "name": "MoonHacker",
+          "date": "2025-01-02",
+          "amount": 300000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-04",
+      "incidents": [
+        {
+          "name": "Sorra Finance",
+          "date": "2025-01-04",
+          "amount": 41000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-06",
+      "incidents": [
+        {
+          "name": "Mosca",
+          "date": "2025-01-06",
+          "amount": 37600,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-07",
+      "incidents": [
+        {
+          "name": "IPC AI",
+          "date": "2025-01-07",
+          "amount": 590000,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-08",
+      "incidents": [
+        {
+          "name": "Moby",
+          "date": "2025-01-08",
+          "amount": 1470000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "4452",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Orange Finance",
+          "date": "2025-01-08",
+          "amount": 840000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "3422",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-12",
+      "incidents": [
+        {
+          "name": "Unilend V2",
+          "date": "2025-01-12",
+          "amount": 197600,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Redeem Logic Flaw",
+          "defillamaId": "4288",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-13",
+      "incidents": [
+        {
+          "name": "Mosca2",
+          "date": "2025-01-13",
+          "amount": 37600,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-14",
+      "incidents": [
+        {
+          "name": "The Idols",
+          "date": "2025-01-14",
+          "amount": 324000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "1596",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-23",
+      "incidents": [
+        {
+          "name": "Phemex",
+          "date": "2025-01-23",
+          "amount": 85000000,
+          "chain": [
+            "Ethereum",
+            "Solana",
+            "XRP",
+            "Bitcoin",
+            "BSC",
+            "Sui",
+            "Base",
+            "Tron",
+            "Arbitrum",
+            "Avalanche",
+            "Polygon",
+            "Optimism",
+            "zkSync Era"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "defillamaId": "2369",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2025-01-28",
+      "incidents": [
+        {
+          "name": "DogWifTools",
+          "date": "2025-01-28",
+          "amount": 10000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Stored Publicly",
+          "targetType": "Other"
+        }
+      ]
+    }
+  ]
+}

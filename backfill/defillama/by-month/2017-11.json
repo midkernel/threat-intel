@@ -1,0 +1,39 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2017-11",
+  "days": [
+    {
+      "day": "2017-11-09",
+      "incidents": [
+        {
+          "name": "Parity Multisig",
+          "date": "2017-11-09",
+          "amount": 150000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Uninitialized Proxy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2017-11-19",
+      "incidents": [
+        {
+          "name": "Tether",
+          "date": "2017-11-19",
+          "amount": 30950010,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "5009",
+          "targetType": "Token"
+        }
+      ]
+    }
+  ]
+}

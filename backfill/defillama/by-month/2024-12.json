@@ -1,0 +1,239 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-12",
+  "days": [
+    {
+      "day": "2024-12-01",
+      "incidents": [
+        {
+          "name": "Clipper",
+          "date": "2024-12-01",
+          "amount": 450000,
+          "chain": [
+            "Optimism",
+            "Base"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Deposit Logic Flaw",
+          "defillamaId": "622",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Spectral Labs",
+          "date": "2024-12-01",
+          "amount": 250000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-03",
+      "incidents": [
+        {
+          "name": "BYC Token",
+          "date": "2024-12-03",
+          "amount": 100000,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Fee Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-04",
+      "incidents": [
+        {
+          "name": "Vestra DAO",
+          "date": "2024-12-04",
+          "amount": 500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Staking Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-07",
+      "incidents": [
+        {
+          "name": "MAAT Protocol",
+          "date": "2024-12-07",
+          "amount": 168173,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-10",
+      "incidents": [
+        {
+          "name": "Clober Liquidity Vault",
+          "date": "2024-12-10",
+          "amount": 500000,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "defillamaId": "5315",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LABUBU Token",
+          "date": "2024-12-10",
+          "amount": 12000,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-12",
+      "incidents": [
+        {
+          "name": "BNBS",
+          "date": "2024-12-12",
+          "amount": 20300,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-14",
+      "incidents": [
+        {
+          "name": "JHY Token",
+          "date": "2024-12-14",
+          "amount": 12000,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Incorrect Share Accounting",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-16",
+      "incidents": [
+        {
+          "name": "BTC24H",
+          "date": "2024-12-16",
+          "amount": 85700,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-17",
+      "incidents": [
+        {
+          "name": "GemPad",
+          "date": "2024-12-17",
+          "amount": 1900000,
+          "chain": [
+            "Ethereum",
+            "Base",
+            "BSC"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-18",
+      "incidents": [
+        {
+          "name": "HarryPotterObamaSonic10Inu",
+          "date": "2024-12-18",
+          "amount": 243000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "Token"
+        },
+        {
+          "name": "SlurpyCoin",
+          "date": "2024-12-18",
+          "amount": 3000,
+          "chain": [
+            "Binance"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Swap Logic Flaw",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-27",
+      "incidents": [
+        {
+          "name": "Bizness",
+          "date": "2024-12-27",
+          "amount": 15700,
+          "chain": [
+            "Base"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-12-29",
+      "incidents": [
+        {
+          "name": "Fegex",
+          "date": "2024-12-29",
+          "amount": 1070000,
+          "chain": [
+            "Ethereum",
+            "BSC",
+            "Base"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Cross-Chain Message Spoofing",
+          "defillamaId": "672",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

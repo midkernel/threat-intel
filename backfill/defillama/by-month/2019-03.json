@@ -1,0 +1,82 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-03",
+  "days": [
+    {
+      "day": "2019-03-24",
+      "incidents": [
+        {
+          "name": "DragonEx",
+          "date": "2019-03-24",
+          "amount": 7000000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "EOS",
+            "Ripple",
+            "NEM",
+            "ETC"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        },
+        {
+          "name": "Etbox",
+          "date": "2019-03-24",
+          "amount": 132000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-03-25",
+      "incidents": [
+        {
+          "name": "Coinbene",
+          "date": "2019-03-25",
+          "amount": 40000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2019-03-29",
+      "incidents": [
+        {
+          "name": "Bithumb",
+          "date": "2019-03-29",
+          "amount": 19000000,
+          "chain": [
+            "Ethereum",
+            "Ripple"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        },
+        {
+          "name": "TronCrush",
+          "date": "2019-03-29",
+          "chain": [
+            "Tron"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

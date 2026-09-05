@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-03",
+  "days": [
+    {
+      "day": "2020-03-12",
+      "incidents": [
+        {
+          "name": "MakerDAO",
+          "date": "2020-03-12",
+          "amount": 8320000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Stale Oracle Price",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

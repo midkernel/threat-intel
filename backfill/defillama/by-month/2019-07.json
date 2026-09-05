@@ -1,0 +1,25 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-07",
+  "days": [
+    {
+      "day": "2019-07-12",
+      "incidents": [
+        {
+          "name": "BitPoint",
+          "date": "2019-07-12",
+          "amount": 27600000,
+          "chain": [
+            "Bitcoin",
+            "Ethereum",
+            "Litecoin",
+            "XRP"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

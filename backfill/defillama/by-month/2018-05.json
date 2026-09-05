@@ -1,0 +1,54 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2018-05",
+  "days": [
+    {
+      "day": "2018-05-13",
+      "incidents": [
+        {
+          "name": "MonaCoin",
+          "date": "2018-05-13",
+          "amount": 90000,
+          "chain": [
+            "MonaCoin"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2018-05-16",
+      "incidents": [
+        {
+          "name": "Bitcoin Gold",
+          "date": "2018-05-16",
+          "amount": 18000000,
+          "chain": [
+            "Bitcoin Gold"
+          ],
+          "classification": "Bridge & Cross-Chain",
+          "technique": "Forged Proof",
+          "targetType": "Chain"
+        }
+      ]
+    },
+    {
+      "day": "2018-05-22",
+      "incidents": [
+        {
+          "name": "Verge",
+          "date": "2018-05-22",
+          "amount": 1750000,
+          "chain": [
+            "Verge"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Withdrawal Logic Flaw",
+          "targetType": "Chain"
+        }
+      ]
+    }
+  ]
+}

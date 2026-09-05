@@ -1,0 +1,38 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2014-02",
+  "days": [
+    {
+      "day": "2014-02-07",
+      "incidents": [
+        {
+          "name": "Mt. Gox",
+          "date": "2014-02-07",
+          "amount": 470000000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2014-02-17",
+      "incidents": [
+        {
+          "name": "Picostocks",
+          "date": "2014-02-17",
+          "amount": 4430000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2012-05",
+  "days": [
+    {
+      "day": "2012-05-11",
+      "incidents": [
+        {
+          "name": "Bitcoinica",
+          "date": "2012-05-11",
+          "amount": 90000,
+          "chain": [
+            "Bitcoin"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

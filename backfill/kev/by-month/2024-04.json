@@ -1,0 +1,232 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-04",
+  "days": [
+    {
+      "day": "2024-04-01",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-04-02",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-04-03",
+      "added": [],
+      "cumulative_count": 1093
+    },
+    {
+      "day": "2024-04-04",
+      "added": [
+        {
+          "cveId": "CVE-2024-29745",
+          "vendorProject": "Android",
+          "product": "Pixel",
+          "vulnerabilityName": "Android Pixel Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-29748",
+          "vendorProject": "Android",
+          "product": "Pixel",
+          "vulnerabilityName": "Android Pixel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-05",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-06",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-07",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-08",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-09",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-10",
+      "added": [],
+      "cumulative_count": 1095
+    },
+    {
+      "day": "2024-04-11",
+      "added": [
+        {
+          "cveId": "CVE-2024-3272",
+          "vendorProject": "D-Link",
+          "product": "Multiple NAS Devices",
+          "vulnerabilityName": "D-Link Multiple NAS Devices Use of Hard-Coded Credentials Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-3273",
+          "vendorProject": "D-Link",
+          "product": "Multiple NAS Devices",
+          "vulnerabilityName": "D-Link Multiple NAS Devices Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1097
+    },
+    {
+      "day": "2024-04-12",
+      "added": [
+        {
+          "cveId": "CVE-2024-3400",
+          "vendorProject": "Palo Alto Networks",
+          "product": "PAN-OS",
+          "vulnerabilityName": "Palo Alto Networks PAN-OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-13",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-14",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-15",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-16",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-17",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-18",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-19",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-20",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-21",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-22",
+      "added": [],
+      "cumulative_count": 1098
+    },
+    {
+      "day": "2024-04-23",
+      "added": [
+        {
+          "cveId": "CVE-2022-38028",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Print Spooler Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1099
+    },
+    {
+      "day": "2024-04-24",
+      "added": [
+        {
+          "cveId": "CVE-2024-20353",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+          "vulnerabilityName": "Cisco ASA and FTD Denial of Service Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-20359",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD)",
+          "vulnerabilityName": "Cisco ASA and FTD Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-4040",
+          "vendorProject": "CrushFTP",
+          "product": "CrushFTP",
+          "vulnerabilityName": "CrushFTP VFS Sandbox Escape Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-25",
+      "added": [],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-26",
+      "added": [],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-27",
+      "added": [],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-28",
+      "added": [],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-29",
+      "added": [],
+      "cumulative_count": 1102
+    },
+    {
+      "day": "2024-04-30",
+      "added": [
+        {
+          "cveId": "CVE-2024-29988",
+          "vendorProject": "Microsoft",
+          "product": "SmartScreen Prompt",
+          "vulnerabilityName": "Microsoft SmartScreen Prompt Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1103
+    }
+  ]
+}

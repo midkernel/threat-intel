@@ -1,0 +1,299 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2023-09",
+  "days": [
+    {
+      "day": "2023-09-01",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-09-02",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-09-03",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-09-04",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-09-05",
+      "added": [],
+      "cumulative_count": 987
+    },
+    {
+      "day": "2023-09-06",
+      "added": [
+        {
+          "cveId": "CVE-2023-33246",
+          "vendorProject": "Apache",
+          "product": "RocketMQ",
+          "vulnerabilityName": "Apache RocketMQ Command Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 988
+    },
+    {
+      "day": "2023-09-07",
+      "added": [],
+      "cumulative_count": 988
+    },
+    {
+      "day": "2023-09-08",
+      "added": [],
+      "cumulative_count": 988
+    },
+    {
+      "day": "2023-09-09",
+      "added": [],
+      "cumulative_count": 988
+    },
+    {
+      "day": "2023-09-10",
+      "added": [],
+      "cumulative_count": 988
+    },
+    {
+      "day": "2023-09-11",
+      "added": [
+        {
+          "cveId": "CVE-2023-41061",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and watchOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and watchOS Wallet Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-41064",
+          "vendorProject": "Apple",
+          "product": "iOS, iPadOS, and macOS",
+          "vulnerabilityName": "Apple iOS, iPadOS, and macOS ImageIO Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 990
+    },
+    {
+      "day": "2023-09-12",
+      "added": [
+        {
+          "cveId": "CVE-2023-36761",
+          "vendorProject": "Microsoft",
+          "product": "Word",
+          "vulnerabilityName": "Microsoft Word Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-36802",
+          "vendorProject": "Microsoft",
+          "product": "Streaming Service Proxy",
+          "vulnerabilityName": "Microsoft Streaming Service Proxy Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 992
+    },
+    {
+      "day": "2023-09-13",
+      "added": [
+        {
+          "cveId": "CVE-2023-20269",
+          "vendorProject": "Cisco",
+          "product": "Adaptive Security Appliance and Firepower Threat Defense",
+          "vulnerabilityName": "Cisco Adaptive Security Appliance and Firepower Threat Defense Unauthorized Access Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2023-35674",
+          "vendorProject": "Android",
+          "product": "Framework",
+          "vulnerabilityName": "Android Framework Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-4863",
+          "vendorProject": "Google",
+          "product": "Chromium WebP",
+          "vulnerabilityName": "Google Chromium WebP Heap-Based Buffer Overflow Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 995
+    },
+    {
+      "day": "2023-09-14",
+      "added": [
+        {
+          "cveId": "CVE-2023-26369",
+          "vendorProject": "Adobe",
+          "product": "Acrobat and Reader",
+          "vulnerabilityName": "Adobe Acrobat and Reader Out-of-Bounds Write Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 996
+    },
+    {
+      "day": "2023-09-15",
+      "added": [],
+      "cumulative_count": 996
+    },
+    {
+      "day": "2023-09-16",
+      "added": [],
+      "cumulative_count": 996
+    },
+    {
+      "day": "2023-09-17",
+      "added": [],
+      "cumulative_count": 996
+    },
+    {
+      "day": "2023-09-18",
+      "added": [
+        {
+          "cveId": "CVE-2014-8361",
+          "vendorProject": "Realtek",
+          "product": "SDK",
+          "vulnerabilityName": "Realtek SDK Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2017-6884",
+          "vendorProject": "Zyxel",
+          "product": "EMG2926 Routers",
+          "vulnerabilityName": "Zyxel EMG2926 Routers Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2021-3129",
+          "vendorProject": "Laravel",
+          "product": "Ignition",
+          "vulnerabilityName": "Laravel Ignition File Upload Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2022-22265",
+          "vendorProject": "Samsung",
+          "product": "Mobile Devices",
+          "vulnerabilityName": "Samsung Mobile Devices Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1000
+    },
+    {
+      "day": "2023-09-19",
+      "added": [
+        {
+          "cveId": "CVE-2023-28434",
+          "vendorProject": "MinIO",
+          "product": "MinIO",
+          "vulnerabilityName": "MinIO Security Feature Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1001
+    },
+    {
+      "day": "2023-09-20",
+      "added": [],
+      "cumulative_count": 1001
+    },
+    {
+      "day": "2023-09-21",
+      "added": [
+        {
+          "cveId": "CVE-2023-41179",
+          "vendorProject": "Trend Micro",
+          "product": "Apex One and Worry-Free Business Security",
+          "vulnerabilityName": "Trend Micro Apex One and Worry-Free Business Security Remote Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1002
+    },
+    {
+      "day": "2023-09-22",
+      "added": [],
+      "cumulative_count": 1002
+    },
+    {
+      "day": "2023-09-23",
+      "added": [],
+      "cumulative_count": 1002
+    },
+    {
+      "day": "2023-09-24",
+      "added": [],
+      "cumulative_count": 1002
+    },
+    {
+      "day": "2023-09-25",
+      "added": [
+        {
+          "cveId": "CVE-2023-41991",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Improper Certificate Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-41992",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products Kernel Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2023-41993",
+          "vendorProject": "Apple",
+          "product": "Multiple Products",
+          "vulnerabilityName": "Apple Multiple Products WebKit Code Execution Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1005
+    },
+    {
+      "day": "2023-09-26",
+      "added": [],
+      "cumulative_count": 1005
+    },
+    {
+      "day": "2023-09-27",
+      "added": [],
+      "cumulative_count": 1005
+    },
+    {
+      "day": "2023-09-28",
+      "added": [
+        {
+          "cveId": "CVE-2018-14667",
+          "vendorProject": "Red Hat",
+          "product": "JBoss RichFaces Framework",
+          "vulnerabilityName": "Red Hat JBoss RichFaces Framework Expression Language Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1006
+    },
+    {
+      "day": "2023-09-29",
+      "added": [],
+      "cumulative_count": 1006
+    },
+    {
+      "day": "2023-09-30",
+      "added": [],
+      "cumulative_count": 1006
+    }
+  ]
+}

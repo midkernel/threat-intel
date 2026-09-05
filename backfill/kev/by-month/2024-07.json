@@ -1,0 +1,266 @@
+{
+  "schema": "midkernel.threat-intel.backfill.kev/v1",
+  "month": "2024-07",
+  "days": [
+    {
+      "day": "2024-07-01",
+      "added": [],
+      "cumulative_count": 1126
+    },
+    {
+      "day": "2024-07-02",
+      "added": [
+        {
+          "cveId": "CVE-2024-20399",
+          "vendorProject": "Cisco",
+          "product": "NX-OS",
+          "vulnerabilityName": "Cisco NX-OS Command Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-03",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-04",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-05",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-06",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-07",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-08",
+      "added": [],
+      "cumulative_count": 1127
+    },
+    {
+      "day": "2024-07-09",
+      "added": [
+        {
+          "cveId": "CVE-2024-23692",
+          "vendorProject": "Rejetto",
+          "product": "HTTP File Server",
+          "vulnerabilityName": "Rejetto HTTP File Server Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        },
+        {
+          "cveId": "CVE-2024-38080",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows Hyper-V Privilege Escalation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-38112",
+          "vendorProject": "Microsoft",
+          "product": "Windows",
+          "vulnerabilityName": "Microsoft Windows MSHTML Platform Spoofing Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-10",
+      "added": [],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-11",
+      "added": [],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-12",
+      "added": [],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-13",
+      "added": [],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-14",
+      "added": [],
+      "cumulative_count": 1130
+    },
+    {
+      "day": "2024-07-15",
+      "added": [
+        {
+          "cveId": "CVE-2024-36401",
+          "vendorProject": "OSGeo",
+          "product": "GeoServer",
+          "vulnerabilityName": "OSGeo GeoServer GeoTools Eval Injection Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1131
+    },
+    {
+      "day": "2024-07-16",
+      "added": [],
+      "cumulative_count": 1131
+    },
+    {
+      "day": "2024-07-17",
+      "added": [
+        {
+          "cveId": "CVE-2022-22948",
+          "vendorProject": "VMware",
+          "product": "vCenter Server",
+          "vulnerabilityName": "VMware vCenter Server Incorrect Default File Permissions Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-28995",
+          "vendorProject": "SolarWinds",
+          "product": "Serv-U",
+          "vulnerabilityName": "SolarWinds Serv-U Path Traversal Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-34102",
+          "vendorProject": "Adobe",
+          "product": "Commerce and Magento Open Source",
+          "vulnerabilityName": "Adobe Commerce and Magento Open Source Improper Restriction of XML External Entity Reference (XXE) Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-18",
+      "added": [],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-19",
+      "added": [],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-20",
+      "added": [],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-21",
+      "added": [],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-22",
+      "added": [],
+      "cumulative_count": 1134
+    },
+    {
+      "day": "2024-07-23",
+      "added": [
+        {
+          "cveId": "CVE-2012-4792",
+          "vendorProject": "Microsoft",
+          "product": "Internet Explorer",
+          "vulnerabilityName": "Microsoft Internet Explorer Use-After-Free Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-39891",
+          "vendorProject": "Twilio",
+          "product": "Authy",
+          "vulnerabilityName": "Twilio Authy Information Disclosure Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-24",
+      "added": [],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-25",
+      "added": [],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-26",
+      "added": [],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-27",
+      "added": [],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-28",
+      "added": [],
+      "cumulative_count": 1136
+    },
+    {
+      "day": "2024-07-29",
+      "added": [
+        {
+          "cveId": "CVE-2023-45249",
+          "vendorProject": "Acronis",
+          "product": "Cyber Infrastructure (ACI)",
+          "vulnerabilityName": "Acronis Cyber Infrastructure (ACI) Insecure Default Password Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-4879",
+          "vendorProject": "ServiceNow",
+          "product": "Utah, Vancouver, and Washington DC Now Platform",
+          "vulnerabilityName": "ServiceNow Improper Input Validation Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        },
+        {
+          "cveId": "CVE-2024-5217",
+          "vendorProject": "ServiceNow",
+          "product": "Utah, Vancouver, and Washington DC Now Platform",
+          "vulnerabilityName": "ServiceNow Incomplete List of Disallowed Inputs Vulnerability",
+          "knownRansomwareCampaignUse": "Unknown"
+        }
+      ],
+      "cumulative_count": 1139
+    },
+    {
+      "day": "2024-07-30",
+      "added": [
+        {
+          "cveId": "CVE-2024-37085",
+          "vendorProject": "VMware",
+          "product": "ESXi",
+          "vulnerabilityName": "VMware ESXi Authentication Bypass Vulnerability",
+          "knownRansomwareCampaignUse": "Known"
+        }
+      ],
+      "cumulative_count": 1140
+    },
+    {
+      "day": "2024-07-31",
+      "added": [],
+      "cumulative_count": 1140
+    }
+  ]
+}

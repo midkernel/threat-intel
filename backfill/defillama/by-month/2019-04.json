@@ -1,0 +1,31 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2019-04",
+  "days": [
+    {
+      "day": "2019-04-11",
+      "incidents": [
+        {
+          "name": "TronBank",
+          "date": "2019-04-11",
+          "chain": [
+            "Tron"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "TronWow",
+          "date": "2019-04-11",
+          "chain": [
+            "Tron"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-11",
+  "days": [
+    {
+      "day": "2024-11-04",
+      "incidents": [
+        {
+          "name": "MetaWin",
+          "date": "2024-11-04",
+          "amount": 4400000,
+          "chain": [
+            "Ethereum",
+            "Solana"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-05",
+      "incidents": [
+        {
+          "name": "RPP",
+          "date": "2024-11-05",
+          "amount": 14100,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-07",
+      "incidents": [
+        {
+          "name": "ChiSale",
+          "date": "2024-11-07",
+          "amount": 16300,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "CoW",
+          "date": "2024-11-07",
+          "amount": 59000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "VRug",
+          "date": "2024-11-07",
+          "amount": 8400,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Rugpull",
+          "technique": "Liquidity Rug",
+          "targetType": "Token"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-08",
+      "incidents": [
+        {
+          "name": "CoinPoker",
+          "date": "2024-11-08",
+          "amount": 2000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-09",
+      "incidents": [
+        {
+          "name": "X319",
+          "date": "2024-11-09",
+          "amount": 12900,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-10",
+      "incidents": [
+        {
+          "name": "BGM",
+          "date": "2024-11-10",
+          "amount": 450000,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-11",
+      "incidents": [
+        {
+          "name": "DeltaPrime",
+          "date": "2024-11-11",
+          "amount": 4800000,
+          "chain": [
+            "Arbitrum",
+            "Avalanche"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "2479",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "zkFinance",
+          "date": "2024-11-11",
+          "amount": 200000,
+          "chain": [
+            "zkSync Era"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "4798",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-14",
+      "incidents": [
+        {
+          "name": "vETH",
+          "date": "2024-11-14",
+          "amount": 447000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-15",
+      "incidents": [
+        {
+          "name": "ThalaSwap",
+          "date": "2024-11-15",
+          "amount": 25500000,
+          "chain": [
+            "Aptos"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "2795",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-16",
+      "incidents": [
+        {
+          "name": "DEXX",
+          "date": "2024-11-16",
+          "amount": 21000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "Wallet"
+        },
+        {
+          "name": "Polter Finance",
+          "date": "2024-11-16",
+          "amount": 8700000,
+          "chain": [
+            "Fantom"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "4152",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-17",
+      "incidents": [
+        {
+          "name": "MFT",
+          "date": "2024-11-17",
+          "amount": 33700,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-18",
+      "incidents": [
+        {
+          "name": "Tectonic",
+          "date": "2024-11-18",
+          "chain": [
+            "Cronos"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "1115",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-20",
+      "incidents": [
+        {
+          "name": "MainnetSettler",
+          "date": "2024-11-20",
+          "amount": 66000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Token Approval Abuse",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-21",
+      "incidents": [
+        {
+          "name": "Matez",
+          "date": "2024-11-21",
+          "amount": 80000,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Arithmetic Error",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-23",
+      "incidents": [
+        {
+          "name": "AK1111",
+          "date": "2024-11-23",
+          "amount": 31500,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-24",
+      "incidents": [
+        {
+          "name": "Proxy_b7e1",
+          "date": "2024-11-24",
+          "amount": 8500,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-26",
+      "incidents": [
+        {
+          "name": "NFTG",
+          "date": "2024-11-26",
+          "amount": 10000,
+          "chain": [
+            "BNB Chain"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-11-28",
+      "incidents": [
+        {
+          "name": "XT Exchange",
+          "date": "2024-11-28",
+          "amount": 1700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-03",
+  "days": [
+    {
+      "day": "2024-03-05",
+      "incidents": [
+        {
+          "name": "WOOFi Swap",
+          "date": "2024-03-05",
+          "amount": 8750000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "1461",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-06",
+      "incidents": [
+        {
+          "name": "ALP",
+          "date": "2024-03-06",
+          "amount": 10000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-07",
+      "incidents": [
+        {
+          "name": "GHT",
+          "date": "2024-03-07",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-08",
+      "incidents": [
+        {
+          "name": "Unizen",
+          "date": "2024-03-08",
+          "amount": 2100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "1336",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-09",
+      "incidents": [
+        {
+          "name": "Juice Finance",
+          "date": "2024-03-09",
+          "amount": 54000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Reward Logic Flaw",
+          "defillamaId": "4208",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-11",
+      "incidents": [
+        {
+          "name": "Blastoff",
+          "date": "2024-03-11",
+          "amount": 600000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "defillamaId": "4246",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-12",
+      "incidents": [
+        {
+          "name": "BBT",
+          "date": "2024-03-12",
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Unknown",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Polyhedra Network",
+          "date": "2024-03-12",
+          "amount": 760000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "5769",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-15",
+      "incidents": [
+        {
+          "name": "MOBOX",
+          "date": "2024-03-15",
+          "amount": 750000,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Borrow Logic Flaw",
+          "defillamaId": "1058",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Mozaic",
+          "date": "2024-03-15",
+          "amount": 2000000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "3531",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "NFPrompt",
+          "date": "2024-03-15",
+          "amount": 3000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "7613",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-17",
+      "incidents": [
+        {
+          "name": "Remilia",
+          "date": "2024-03-17",
+          "amount": 6000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "targetType": "NFTfi"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-20",
+      "incidents": [
+        {
+          "name": "Dolomite",
+          "date": "2024-03-20",
+          "amount": 1800000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "LayerSwap",
+          "date": "2024-03-20",
+          "amount": 100000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "DNS Hijack",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ParaSwap",
+          "date": "2024-03-20",
+          "amount": 300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-21",
+      "incidents": [
+        {
+          "name": "AirDAO",
+          "date": "2024-03-21",
+          "amount": 1050000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Malware",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-22",
+      "incidents": [
+        {
+          "name": "Super Sushi Samurai",
+          "date": "2024-03-22",
+          "amount": 4800000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-25",
+      "incidents": [
+        {
+          "name": "Curio",
+          "date": "2024-03-25",
+          "amount": 16000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Delegatecall Hijack",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "ZongZiFa",
+          "date": "2024-03-25",
+          "amount": 229000,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-26",
+      "incidents": [
+        {
+          "name": "Munchables",
+          "date": "2024-03-26",
+          "amount": 62500000,
+          "chain": [
+            "Blast"
+          ],
+          "classification": "Access Control",
+          "technique": "Proxy Upgrade Hijack",
+          "defillamaId": "4369",
+          "targetType": "Gaming"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-28",
+      "incidents": [
+        {
+          "name": "PrismaLST",
+          "date": "2024-03-28",
+          "amount": 11600000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "defillamaId": "3473",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-29",
+      "incidents": [
+        {
+          "name": "ETHFIN",
+          "date": "2024-03-29",
+          "amount": 1200,
+          "chain": [
+            "BSC"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Lava",
+          "date": "2024-03-29",
+          "amount": 340000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Protocol Logic",
+          "technique": "Liquidation Logic Flaw",
+          "defillamaId": "4241",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Solareum",
+          "date": "2024-03-29",
+          "amount": 1400000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Social Account Takeover",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-03-31",
+      "incidents": [
+        {
+          "name": "FixedFloat",
+          "date": "2024-03-31",
+          "amount": 3000000,
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "CEX"
+        }
+      ]
+    }
+  ]
+}

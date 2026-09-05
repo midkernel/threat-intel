@@ -1,0 +1,55 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2020-10",
+  "days": [
+    {
+      "day": "2020-10-11",
+      "incidents": [
+        {
+          "name": "WLEO",
+          "date": "2020-10-11",
+          "amount": 42000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-10-26",
+      "incidents": [
+        {
+          "name": "Harvest Finance",
+          "date": "2020-10-26",
+          "amount": 24000000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "112",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2020-10-30",
+      "incidents": [
+        {
+          "name": "EtherCrash",
+          "date": "2020-10-30",
+          "amount": 2500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "schema": "midkernel.threat-intel.backfill.defillama/v1",
+  "month": "2024-01",
+  "days": [
+    {
+      "day": "2024-01-02",
+      "incidents": [
+        {
+          "name": "Radiant V2",
+          "date": "2024-01-02",
+          "amount": 4500000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "2706",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-04",
+      "incidents": [
+        {
+          "name": "Gamma",
+          "date": "2024-01-04",
+          "amount": 4500000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "355",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-06",
+      "incidents": [
+        {
+          "name": "CoinsPaid",
+          "date": "2024-01-06",
+          "amount": 7500000,
+          "chain": [
+            "Ethereum",
+            "Binance Smart Chain"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Hot Wallet Key Compromised",
+          "targetType": "CEX"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-07",
+      "incidents": [
+        {
+          "name": "MangoFarmSol",
+          "date": "2024-01-07",
+          "amount": 2000000,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Rugpull",
+          "technique": "Admin Drain",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-12",
+      "incidents": [
+        {
+          "name": "Wise Lending V1",
+          "date": "2024-01-12",
+          "amount": 464000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Donation Attack",
+          "defillamaId": "3491",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-16",
+      "incidents": [
+        {
+          "name": "Bungee",
+          "date": "2024-01-16",
+          "amount": 3300000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Input Validation",
+          "technique": "Missing Input Validation",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Hector Network",
+          "date": "2024-01-16",
+          "amount": 2700000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-17",
+      "incidents": [
+        {
+          "name": "BasketDAO",
+          "date": "2024-01-17",
+          "amount": 1200000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Access Control",
+          "technique": "Arbitrary External Call",
+          "defillamaId": "250",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-22",
+      "incidents": [
+        {
+          "name": "Concentric",
+          "date": "2024-01-22",
+          "amount": 1720000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Social Engineering",
+          "technique": "Phishing",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-23",
+      "incidents": [
+        {
+          "name": "Gamee",
+          "date": "2024-01-23",
+          "amount": 7000000,
+          "chain": [
+            "Polygon"
+          ],
+          "classification": "Frontend & Infrastructure",
+          "technique": "Key Leaked via Infrastructure",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-25",
+      "incidents": [
+        {
+          "name": "Nebula Revelation",
+          "date": "2024-01-25",
+          "amount": 180264,
+          "chain": [
+            "Optimism"
+          ],
+          "classification": "Reentrancy",
+          "technique": "Reentrancy",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Saga",
+          "date": "2024-01-25",
+          "amount": 65800,
+          "chain": [
+            "Solana"
+          ],
+          "classification": "Key Compromise",
+          "technique": "Private Key Compromised",
+          "defillamaId": "4639",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-27",
+      "incidents": [
+        {
+          "name": "Citadel.one",
+          "date": "2024-01-27",
+          "amount": 93000,
+          "chain": [
+            "Arbitrum"
+          ],
+          "classification": "Access Control",
+          "technique": "Improper Access Control",
+          "targetType": "DeFi Protocol"
+        },
+        {
+          "name": "Somesing",
+          "date": "2024-01-27",
+          "amount": 11580000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Unbacked Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-28",
+      "incidents": [
+        {
+          "name": "Goledo",
+          "date": "2024-01-28",
+          "amount": 1700000,
+          "chain": [
+            "Conflux"
+          ],
+          "classification": "Oracle Manipulation",
+          "technique": "Spot Price Manipulation",
+          "defillamaId": "2576",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-29",
+      "incidents": [
+        {
+          "name": "Barley Finance",
+          "date": "2024-01-29",
+          "amount": 130000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Infinite Mint",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    },
+    {
+      "day": "2024-01-30",
+      "incidents": [
+        {
+          "name": "Abracadabra Spell",
+          "date": "2024-01-30",
+          "amount": 6500000,
+          "chain": [
+            "Ethereum"
+          ],
+          "classification": "Token & Share Accounting",
+          "technique": "Rounding Error",
+          "defillamaId": "347",
+          "targetType": "DeFi Protocol"
+        }
+      ]
+    }
+  ]
+}
