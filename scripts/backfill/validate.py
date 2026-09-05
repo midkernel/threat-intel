@@ -22,6 +22,23 @@ from common import (
     parse_day,
 )
 
+
+def resolve_under_root(root: Path, rel: str) -> Path:
+    """Resolve rel under root. Reject absolute paths and `..` escapes."""
+    text = str(rel).strip()
+    if not text:
+        raise ValueError("empty path")
+    candidate = Path(text)
+    if candidate.is_absolute() or candidate.drive or text.startswith(("/", "\\")):
+        raise ValueError(f"absolute path not allowed: {rel!r}")
+    if any(part == ".." for part in candidate.parts):
+        raise ValueError(f"path escapes root via '..': {rel!r}")
+    resolved = (root / candidate).resolve()
+    root_res = root.resolve()
+    if not resolved.is_relative_to(root_res):
+        raise ValueError(f"path escapes {root}: {rel!r}")
+    return resolved
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 DEFAULT_DIR = ROOT / "backfill"
 
@@ -138,7 +155,11 @@ def validate_tree(root: Path) -> list[str]:
         if src.get("schema") != expected:
             errors.append(f"{manifest_path}: {sid} schema {src.get('schema')!r} != {expected}")
         rel = str(src.get("path") or f"{sid}/by-month/")
-        directory = root / rel
+        try:
+            directory = resolve_under_root(root, rel)
+        except ValueError as exc:
+            errors.append(f"{manifest_path}: {sid} path rejected: {exc}")
+            continue
         if not directory.is_dir():
             errors.append(f"{directory}: missing month directory")
             continue
@@ -146,8 +167,13 @@ def validate_tree(root: Path) -> list[str]:
         if not files:
             errors.append(f"{directory}: no YYYY-MM.json shards")
             continue
+        root_res = root.resolve()
         for path in files:
-            errors.extend(validate_month_file(path, expected))
+            resolved = path.resolve()
+            if not resolved.is_relative_to(root_res):
+                errors.append(f"{path}: resolved path escapes {root}")
+                continue
+            errors.extend(validate_month_file(resolved, expected))
         declared = src.get("files")
         if isinstance(declared, int) and declared != len(files):
             errors.append(f"{manifest_path}: {sid} files {declared} != {len(files)} on disk")

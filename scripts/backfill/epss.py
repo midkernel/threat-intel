@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import csv
-import gzip
-import io
 import json
 import urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -18,8 +16,11 @@ from common import (
     EPSS_FIRST_DAY,
     EPSS_HIGH_THRESHOLD,
     LAST_DAY,
+    MAX_DECOMPRESS_BYTES,
     SAMPLE_CAP,
     SCHEMA_EPSS,
+    BodyTooLargeError,
+    decompress_gzip_capped,
     each_day,
     fetch_bytes,
     fmt_day,
@@ -48,9 +49,14 @@ def derive_epss_day(
     sample_cap: int = SAMPLE_CAP,
 ) -> dict:
     """Derive one day's high-EPSS counts from a daily CSV (gz or plain). Do not keep the CSV."""
-    payload = raw
     if raw[:2] == b"\x1f\x8b":
-        payload = gzip.decompress(raw)
+        payload = decompress_gzip_capped(raw, label=f"epss {fmt_day(day)}")
+    elif len(raw) > MAX_DECOMPRESS_BYTES:
+        raise BodyTooLargeError(
+            f"{fmt_day(day)}: EPSS CSV exceeds {MAX_DECOMPRESS_BYTES} bytes"
+        )
+    else:
+        payload = raw
     text = payload.decode("utf-8")
     model_version = ""
     body_lines: list[str] = []

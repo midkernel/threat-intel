@@ -1,7 +1,8 @@
 name: Backfill rebuild
 
 # Full live generate. Not on pull_request — EPSS daily CSVs are large.
-# CI smokes fixtures only (see ci.yml). This job does not invent daily-* Releases.
+# CI smokes fixtures only (see ci.yml). Artifact-only: upload backfill/, never
+# gh release create / invent daily-* Releases.
 on:
   workflow_dispatch:
     inputs:

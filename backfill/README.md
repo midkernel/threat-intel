@@ -172,6 +172,8 @@ Full rebuild on GitHub: Actions → **Backfill rebuild** → Run workflow. That 
 
 User-Agent: `MidkernelThreatIntel/0.1 (+https://github.com/midkernel/threat-intel)` (same as the daily fetch).
 
+Fetches abort if the response exceeds 32 MiB or a gzip body decompresses past 64 MiB (zip-bomb / OOM guard). `validate.py` resolves each manifest `path` under `backfill/` and rejects absolute paths and `..` escapes.
+
 ## Out of scope
 
 - Ranking or a 1–N score

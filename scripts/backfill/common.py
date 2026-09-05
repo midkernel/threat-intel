@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import gzip
+import io
 import json
 import re
 import time
@@ -33,6 +35,13 @@ SAMPLE_CAP = 8
 USER_AGENT = "MidkernelThreatIntel/0.1 (+https://github.com/midkernel/threat-intel)"
 DAY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 MONTH_RE = re.compile(r"^\d{4}-\d{2}$")
+
+# Hard caps against hostile/unexpected upstream bodies (zip-bomb / OOM).
+# Official KEV JSON is ~2 MiB, DeFiLlama hacks ~0.4 MiB, EPSS daily CSV.gz ~3 MiB
+# (~15–20 MiB uncompressed). These limits leave headroom without unbounded reads.
+MAX_FETCH_BYTES = 32 * 1024 * 1024
+MAX_DECOMPRESS_BYTES = 64 * 1024 * 1024
+_READ_CHUNK = 64 * 1024
 
 # Ranking / class / Midkernel-score keys must never appear on backfill documents.
 FORBIDDEN_KEYS = {
@@ -123,12 +132,43 @@ def write_monthly_shards(
     return written
 
 
+class BodyTooLargeError(ValueError):
+    """Upstream body or decompressed payload exceeded the hard byte cap."""
+
+
+def read_capped(stream, max_bytes: int = MAX_FETCH_BYTES, *, label: str = "body") -> bytes:
+    """Read from a file-like object, aborting if the byte cap is exceeded."""
+    chunks: list[bytes] = []
+    total = 0
+    while True:
+        chunk = stream.read(_READ_CHUNK)
+        if not chunk:
+            break
+        total += len(chunk)
+        if total > max_bytes:
+            raise BodyTooLargeError(f"{label} exceeds {max_bytes} bytes")
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
+def decompress_gzip_capped(
+    raw: bytes,
+    max_bytes: int = MAX_DECOMPRESS_BYTES,
+    *,
+    label: str = "gzip",
+) -> bytes:
+    """gunzip with a hard uncompressed-size cap (zip-bomb guard)."""
+    with gzip.GzipFile(fileobj=io.BytesIO(raw), mode="rb") as handle:
+        return read_capped(handle, max_bytes, label=f"{label} decompressed")
+
+
 def fetch_bytes(
     url: str,
     *,
     accept: str | None = None,
     timeout: int = 90,
     retries: int = 4,
+    max_bytes: int = MAX_FETCH_BYTES,
 ) -> bytes:
     headers = {"User-Agent": USER_AGENT}
     if accept:
@@ -138,7 +178,14 @@ def fetch_bytes(
         request = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
-                return response.read()
+                declared = response.headers.get("Content-Length")
+                if declared and declared.isdigit() and int(declared) > max_bytes:
+                    raise BodyTooLargeError(
+                        f"{url}: Content-Length {declared} exceeds {max_bytes} bytes"
+                    )
+                return read_capped(response, max_bytes, label=url)
+        except BodyTooLargeError:
+            raise
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
                 raise

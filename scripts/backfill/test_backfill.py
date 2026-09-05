@@ -22,14 +22,18 @@ from common import (  # noqa: E402
     SCHEMA_EPSS,
     SCHEMA_KEV,
     SCHEMA_MANIFEST,
+    BodyTooLargeError,
     assert_no_forbidden_keys,
+    decompress_gzip_capped,
+    dump_simple_yaml,
     load_simple_yaml,
+    read_capped,
 )
+from validate import resolve_under_root, validate_tree  # noqa: E402
 from defillama import derive_defillama_days, load_hacks  # noqa: E402
 from epss import derive_epss_day, derive_epss_from_dir  # noqa: E402
 from generate import main as generate_main  # noqa: E402
 from kev import derive_kev_days, load_kev_catalog  # noqa: E402
-from validate import validate_tree  # noqa: E402
 
 FIXTURES = HERE / "fixtures"
 
@@ -261,6 +265,58 @@ class SmokeGenerateTests(unittest.TestCase):
             self.assertIn("EPSS:", text)
             self.assertIn("DeFiLlama:", text)
             self.assertFalse(out.exists())
+
+
+class SecurityGuardTests(unittest.TestCase):
+    def test_read_capped_rejects_oversize(self) -> None:
+        with self.assertRaises(BodyTooLargeError):
+            read_capped(io.BytesIO(b"x" * 200), max_bytes=50, label="test")
+
+    def test_gzip_decompress_capped_rejects_zip_bomb(self) -> None:
+        import gzip
+
+        raw = gzip.compress(b"A" * 200_000)
+        self.assertLess(len(raw), 2000)
+        with self.assertRaises(BodyTooLargeError):
+            decompress_gzip_capped(raw, max_bytes=8_000, label="bomb")
+
+    def test_resolve_under_root_rejects_escape(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            root.mkdir()
+            ok = resolve_under_root(root, "kev/by-month/")
+            self.assertTrue(ok.is_relative_to(root.resolve()))
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "/etc/passwd")
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "../secrets")
+            with self.assertRaises(ValueError):
+                resolve_under_root(root, "kev/../../etc")
+
+    def test_validate_rejects_escaped_manifest_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            (root / "kev" / "by-month").mkdir(parents=True)
+            (root / "manifest.yaml").write_text(
+                dump_simple_yaml(
+                    {
+                        "schema": SCHEMA_MANIFEST,
+                        "ranking": False,
+                        "class_taxonomy": False,
+                        "invented_daily_releases": False,
+                        "sources": [
+                            {
+                                "id": "kev",
+                                "schema": SCHEMA_KEV,
+                                "path": "../outside/",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("path rejected" in err or "escapes" in err for err in errors), errors)
 
 
 if __name__ == "__main__":
