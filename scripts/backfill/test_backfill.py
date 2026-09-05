@@ -3,10 +3,13 @@
 
 from __future__ import annotations
 
+import datetime
+import io
 import json
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -114,6 +117,19 @@ class DefillamaDeriveTests(unittest.TestCase):
         self.assertEqual(meta["incidents"], 3)
         assert_no_forbidden_keys(days)
 
+    def test_from_day_clips_pre_window_incidents(self) -> None:
+        rows = load_hacks((FIXTURES / "hacks.json").read_bytes())
+        days, meta = derive_defillama_days(
+            rows,
+            first_day=datetime.date(2021, 4, 14),
+            last_day=LAST_DAY,
+        )
+        by_day = {row["day"]: row for row in days}
+        self.assertNotIn("2019-06-26", by_day)
+        self.assertIn("2021-04-14", by_day)
+        self.assertEqual(meta["before_first_day"], 1)
+        self.assertEqual(meta["incidents"], 2)
+
 
 class SmokeGenerateTests(unittest.TestCase):
     def test_smoke_writes_monthly_shards_and_manifest(self) -> None:
@@ -164,6 +180,87 @@ class SmokeGenerateTests(unittest.TestCase):
                     (b / rel).read_bytes(),
                     rel,
                 )
+
+    def test_from_day_honored_for_defillama_generate(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            rc = generate_main(
+                [
+                    "--sources",
+                    "defillama",
+                    "--hacks-input",
+                    str(FIXTURES / "hacks.json"),
+                    "--from-day",
+                    "2021-04-14",
+                    "--to-day",
+                    "2021-11-04",
+                    "--out",
+                    str(out),
+                ]
+            )
+            self.assertEqual(rc, 0)
+            self.assertFalse((out / "defillama" / "by-month" / "2019-06.json").exists())
+            llama = json.loads(
+                (out / "defillama" / "by-month" / "2021-04.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(llama["days"][0]["incidents"][0]["name"], "WindowStartHack")
+
+    def test_to_day_clamped_before_daily_releases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            err = io.StringIO()
+            with redirect_stderr(err):
+                rc = generate_main(
+                    [
+                        "--sources",
+                        "defillama",
+                        "--hacks-input",
+                        str(FIXTURES / "hacks.json"),
+                        "--to-day",
+                        "2026-09-10",
+                        "--out",
+                        str(out),
+                    ]
+                )
+            self.assertEqual(rc, 0)
+            self.assertIn("clamping --to-day", err.getvalue())
+            self.assertFalse((out / "defillama" / "by-month" / "2026-09.json").exists())
+
+    def test_allow_past_last_day_writes_overlap_window(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            rc = generate_main(
+                [
+                    "--sources",
+                    "defillama",
+                    "--hacks-input",
+                    str(FIXTURES / "hacks.json"),
+                    "--to-day",
+                    "2026-09-10",
+                    "--allow-past-last-day",
+                    "--out",
+                    str(out),
+                ]
+            )
+            self.assertEqual(rc, 0)
+            late = json.loads(
+                (out / "defillama" / "by-month" / "2026-09.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(late["days"][0]["incidents"][0]["name"], "AfterLastDay")
+
+    def test_dry_run_prints_counts_and_writes_nothing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "backfill"
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                rc = generate_main(["--smoke", "--dry-run", "--out", str(out)])
+            self.assertEqual(rc, 0)
+            text = buf.getvalue()
+            self.assertIn("dry-run", text)
+            self.assertIn("KEV:", text)
+            self.assertIn("EPSS:", text)
+            self.assertIn("DeFiLlama:", text)
+            self.assertFalse(out.exists())
 
 
 if __name__ == "__main__":

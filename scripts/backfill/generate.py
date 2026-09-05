@@ -25,12 +25,13 @@ from common import (
     SCHEMA_MANIFEST,
     dump_simple_yaml,
     fmt_day,
+    group_by_month,
     load_simple_yaml,
     parse_day,
 )
-from defillama import fetch_hacks, load_hacks, write_defillama_backfill
+from defillama import derive_defillama_days, fetch_hacks, load_hacks, write_defillama_backfill
 from epss import generate_epss_days, write_epss_backfill
-from kev import fetch_kev_catalog, load_kev_catalog, write_kev_backfill
+from kev import derive_kev_days, fetch_kev_catalog, load_kev_catalog, write_kev_backfill
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -88,8 +89,31 @@ def build_parser() -> argparse.ArgumentParser:
         default="kev,epss,defillama",
         help="Comma-separated: kev,epss,defillama",
     )
-    parser.add_argument("--from-day", dest="from_day", default="", help="YYYY-MM-DD inclusive")
-    parser.add_argument("--to-day", dest="to_day", default="", help="YYYY-MM-DD inclusive")
+    parser.add_argument(
+        "--from-day",
+        dest="from_day",
+        default="",
+        help="YYYY-MM-DD inclusive. Honored by KEV, EPSS, and DeFiLlama.",
+    )
+    parser.add_argument(
+        "--to-day",
+        dest="to_day",
+        default="",
+        help="YYYY-MM-DD inclusive. Clamped to 2026-09-04 unless --allow-past-last-day.",
+    )
+    parser.add_argument(
+        "--allow-past-last-day",
+        action="store_true",
+        help=(
+            "Permit --to-day after 2026-09-04 (overlaps live daily-* Releases). "
+            "Default is to clamp. Do not use this to invent daily Releases."
+        ),
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Print derived counts and write nothing.",
+    )
     parser.add_argument("--out", default=str(DEFAULT_OUT), help="Output directory (default: backfill/)")
     parser.add_argument("--kev-input", default="", help="Local KEV JSON instead of a live fetch")
     parser.add_argument("--hacks-input", default="", help="Local DeFiLlama hacks JSON")
@@ -124,6 +148,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"unknown sources: {', '.join(unknown)}", file=sys.stderr)
         return 2
 
+    from_day_explicit = bool(args.from_day)
     smoke_kev_range = None
     smoke_epss_range = None
     if args.smoke:
@@ -145,8 +170,19 @@ def main(argv: list[str] | None = None) -> int:
     if window_last < window_first:
         print("--to-day must be on or after --from-day", file=sys.stderr)
         return 2
+    if window_last > LAST_DAY and not args.allow_past_last_day:
+        print(
+            f"clamping --to-day {fmt_day(window_last)} to {fmt_day(LAST_DAY)} "
+            "(default last_day; does not overlap daily-* Releases). "
+            "Pass --allow-past-last-day to override.",
+            file=sys.stderr,
+        )
+        window_last = LAST_DAY
 
-    out_dir.mkdir(parents=True, exist_ok=True)
+    if args.dry_run:
+        print("dry-run: printing counts, not writing files")
+    else:
+        out_dir.mkdir(parents=True, exist_ok=True)
     source_rows: list[dict] = []
 
     if "kev" in wanted:
@@ -162,11 +198,16 @@ def main(argv: list[str] | None = None) -> int:
             catalog = fetch_kev_catalog()
             method = "parse official CISA KEV JSON; bucket by dateAdded"
             url = KEV_URL
-        written, meta = write_kev_backfill(
-            out_dir, catalog, first_day=kev_first, last_day=kev_last
-        )
+        if args.dry_run:
+            days, meta = derive_kev_days(catalog, first_day=kev_first, last_day=kev_last)
+            written = []
+            meta["files"] = len(group_by_month(days))
+        else:
+            written, meta = write_kev_backfill(
+                out_dir, catalog, first_day=kev_first, last_day=kev_last
+            )
         print(
-            f"KEV: {meta['window_added']} added across {len(written)} month shards "
+            f"KEV: {meta['window_added']} added across {meta['files']} month shards "
             f"({meta['first_day']}..{meta['last_day']}; catalogVersion={meta['catalog_version']})"
         )
         source_rows.append(
@@ -191,7 +232,11 @@ def main(argv: list[str] | None = None) -> int:
         if smoke_epss_range:
             epss_first, epss_last = smoke_epss_range
         csv_dir = Path(args.epss_dir) if args.epss_dir else None
-        cache_dir = None if args.smoke or csv_dir is not None else (out_dir / ".cache" / "epss")
+        cache_dir = (
+            None
+            if args.smoke or args.dry_run or csv_dir is not None
+            else (out_dir / ".cache" / "epss")
+        )
         days, missing = generate_epss_days(
             first_day=epss_first,
             last_day=epss_last,
@@ -201,7 +246,7 @@ def main(argv: list[str] | None = None) -> int:
             csv_dir=csv_dir,
             cache_dir=cache_dir,
         )
-        written = write_epss_backfill(out_dir, days)
+        written = [] if args.dry_run else write_epss_backfill(out_dir, days)
         method = (
             "read local empiricalsec-format daily CSVs; derive high_count; discard CSV"
             if csv_dir is not None
@@ -211,8 +256,9 @@ def main(argv: list[str] | None = None) -> int:
                 else "FIRST EPSS API date + epss-gt filter; derive high_count; no raw dump"
             )
         )
+        n_months = len(written) if written else len(group_by_month(days))
         print(
-            f"EPSS: {len(days)} derived days in {len(written)} month shards "
+            f"EPSS: {len(days)} derived days in {n_months} month shards "
             f"({fmt_day(epss_first)}..{fmt_day(epss_last)}; missing={len(missing)})"
         )
         if missing[:8]:
@@ -235,12 +281,12 @@ def main(argv: list[str] | None = None) -> int:
                 "last_day": fmt_day(epss_last),
                 "path": "epss/by-month/",
                 "high_threshold": args.epss_threshold,
-                "files": len(written),
+                "files": n_months,
                 "derived_days": len(days),
                 "missing_days": len(missing),
             }
         )
-        if missing:
+        if missing and not args.dry_run:
             (out_dir / "epss").mkdir(parents=True, exist_ok=True)
             (out_dir / "epss" / "missing.txt").write_text(
                 "\n".join(missing) + "\n", encoding="utf-8"
@@ -255,15 +301,26 @@ def main(argv: list[str] | None = None) -> int:
             rows = fetch_hacks()
             method = "parse official DeFiLlama hacks JSON; bucket by incident date"
             url = DEFILLAMA_URL
-        written, meta = write_defillama_backfill(
-            out_dir,
-            rows,
-            last_day=window_last,
-            first_day=None,
-        )
+        # Default (no --from-day) keeps the catalog's full incident history.
+        # An explicit --from-day is honored — including when --smoke is also set.
+        llama_first = window_first if from_day_explicit else None
+        if args.dry_run:
+            days, meta = derive_defillama_days(
+                rows, last_day=window_last, first_day=llama_first
+            )
+            written = []
+            meta["files"] = len(group_by_month(days))
+        else:
+            written, meta = write_defillama_backfill(
+                out_dir,
+                rows,
+                last_day=window_last,
+                first_day=llama_first,
+            )
         print(
             f"DeFiLlama: {meta['incidents']} incidents on {meta['incident_days']} days "
-            f"in {len(written)} month shards ({meta['first_day']}..{meta['last_day']})"
+            f"in {meta['files']} month shards ({meta['first_day']}..{meta['last_day']})"
+            + (f"; before_from_day={meta['before_first_day']}" if llama_first else "")
         )
         source_rows.append(
             {
@@ -278,6 +335,7 @@ def main(argv: list[str] | None = None) -> int:
                 "incidents": meta["incidents"],
                 "incident_days": meta["incident_days"],
                 "after_last_day": meta["after_last_day"],
+                "before_first_day": meta["before_first_day"],
             }
         )
 
@@ -287,6 +345,12 @@ def main(argv: list[str] | None = None) -> int:
         manifest_first, manifest_last = fmt_day(window_first), fmt_day(window_last)
     else:
         manifest_first, manifest_last = fmt_day(EPSS_FIRST_DAY), fmt_day(LAST_DAY)
+    if args.dry_run:
+        print(
+            f"dry-run: would write manifest {manifest_first}..{manifest_last} "
+            f"({len(source_rows)} source(s))"
+        )
+        return 0
     manifest = _write_manifest(
         out_dir,
         source_rows,

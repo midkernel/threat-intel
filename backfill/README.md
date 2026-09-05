@@ -28,9 +28,15 @@ CI never downloads the full EPSS daily archive. It validates this tree plus fixt
 
 There are **no** invented `daily-*` GitHub Releases for RSS/Atom sources. Those feeds are rolling windows. History for blogs and commit Atoms starts at the first real daily Release.
 
-## 2022 KEV backlog year
+Generate **clamps `--to-day` to 2026-09-04** so shards cannot overlap live `daily-*` Releases. To write past that day you must pass **`--allow-past-last-day`** (documented override; do not use it to invent Releases).
 
-CISA published the KEV catalog on **2021-11-03** (seed day, 287 rows in the current catalog). **2022 is a backlog-drain year**, not a real exploit spike. Hundreds of older CVEs were added that year as CISA caught up on historically exploited issues. `dateAdded` in 2022 is a cataloguing date, not “first exploited in 2022.” Trend charts that treat 2022 `added` counts as activity will lie. This repo still cites those rows; it does not reinterpret them.
+## How to read these series
+
+These files are citations, not a ranking product. A few reading rules:
+
+- **EPSS `high_count` is a daily stock**, not a flow. It is “how many scored CVEs were `epss >= 0.5` **on that day**,” not “how many became high that day.” Do not difference adjacent days and call the result “new highs.” `scored_total` is the same kind of stock (size of that day’s scored population).
+- **The 9 missing EPSS archive days are zero, not interpolated.** They were never published (`archive_unavailable` in `epss/missing.txt`). A consumer that needs a calendar walk should treat a missing day as `high_count = 0` / no sample — not a copy of the previous day, not a linear fill.
+- **2022 KEV `dateAdded` is backlog drain, not an exploit spike.** CISA published the catalog on **2021-11-03** (seed day, 287 rows in the current catalog). Hundreds of older CVEs were added in 2022 as CISA caught up on historically exploited issues. `dateAdded` that year is a cataloguing date, not “first exploited in 2022.” Trend charts that treat 2022 `added` counts as activity will lie. This repo still cites those rows; it does not reinterpret them.
 
 ## Schemas (additive only)
 
@@ -74,7 +80,7 @@ Bucket by `dateAdded`. Every calendar day from 2021-11-03 through 2026-09-04 is 
 
 Method: download `https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz` (official empiricalsec daily archive; FIRST historical API `?date=` is an alternate). Parse, count, discard the CSV.
 
-High row: **`epss >= 0.5`**. That is a documented FIRST-score threshold, not a Midkernel score and not a percentile rank. `sample_cves` is the first eight source rows that meet the threshold (**document order**, not sorted by score).
+High row: **`epss >= 0.5`**. That is a documented FIRST-score threshold, not a Midkernel score and not a percentile rank. `high_count` is the **stock** of CVEs at or above that threshold on that day (not new highs / not a day-over-day flow). `sample_cves` is the first eight source rows that meet the threshold (**document order**, not sorted by score).
 
 ```json
 {
@@ -100,7 +106,7 @@ High row: **`epss >= 0.5`**. That is a documented FIRST-score threshold, not a M
 - v4 (`v2025.03.14`): publishing 2025-03-17
 - v5 (`v2026.06.15`): publishing 2026-06-15
 
-A few official archive days were **never published** (confirmed against [empiricalsec/epss_scores](https://github.com/empiricalsec/epss_scores); FIRST `?date=` returns 422). Those days are omitted, not invented. Current gaps:
+A few official archive days were **never published** (confirmed against [empiricalsec/epss_scores](https://github.com/empiricalsec/epss_scores); FIRST `?date=` returns 422). Those days are omitted, not invented. Treat them as **zero** (no score file that day). Do not interpolate from neighbors. Current gaps:
 
 `2021-04-22`–`2021-04-26`, `2021-06-07`, `2021-06-18`, `2022-07-14`, `2024-12-01`
 
@@ -142,11 +148,16 @@ Bucket by incident `date` (unix seconds → UTC `YYYY-MM-DD`). Only days that ha
 
 ```bash
 # live catalogs → backfill/  (EPSS downloads daily CSVs, derives, discards)
+# --to-day is clamped to 2026-09-04 unless --allow-past-last-day
 python3 scripts/backfill/generate.py
 
-# one source / a shorter window
+# one source / a shorter window (--from-day is honored by KEV, EPSS, and DeFiLlama)
 python3 scripts/backfill/generate.py --sources kev,defillama
+python3 scripts/backfill/generate.py --sources defillama --from-day 2021-04-14 --to-day 2021-04-30
 python3 scripts/backfill/generate.py --sources epss --from-day 2021-04-14 --to-day 2021-04-30
+
+# counts only, no writes
+python3 scripts/backfill/generate.py --dry-run --sources kev,defillama
 
 # FIRST API instead of CSV (still derived counts only)
 python3 scripts/backfill/generate.py --sources epss --epss-method api --from-day 2021-04-14 --to-day 2021-04-16

@@ -14,9 +14,14 @@ on:
         required: false
         default: ""
       to_day:
-        description: "Inclusive end YYYY-MM-DD (default: 2026-09-04)"
+        description: "Inclusive end YYYY-MM-DD (clamped to 2026-09-04 unless allow_past_last_day)"
         required: false
         default: ""
+      allow_past_last_day:
+        description: "Allow --to-day after 2026-09-04 (overlaps daily Releases). Default false."
+        required: false
+        default: false
+        type: boolean
       epss_method:
         description: "EPSS live method"
         required: false
@@ -40,6 +45,7 @@ jobs:
           SOURCES: ${{ inputs.sources }}
           FROM_DAY: ${{ inputs.from_day }}
           TO_DAY: ${{ inputs.to_day }}
+          ALLOW_PAST: ${{ inputs.allow_past_last_day }}
           EPSS_METHOD: ${{ inputs.epss_method }}
         run: |
           set -euo pipefail
@@ -49,6 +55,9 @@ jobs:
           fi
           if [[ -n "${TO_DAY}" ]]; then
             args+=(--to-day "$TO_DAY")
+          fi
+          if [[ "${ALLOW_PAST}" == "true" ]]; then
+            args+=(--allow-past-last-day)
           fi
           python3 scripts/backfill/generate.py "${args[@]}"
       - name: Validate shards

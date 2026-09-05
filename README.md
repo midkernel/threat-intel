@@ -208,9 +208,10 @@ Markdown `summary.md` remains the human-readable index. The tarball and `summary
 
 [`backfill/`](backfill/README.md) holds monthly shards (`*/by-month/YYYY-MM.json`) derived from the official KEV JSON, empiricalsec EPSS daily CSVs (high-EPSS counts only; threshold `epss >= 0.5`), and the DeFiLlama hacks JSON.
 
-- Max backfill day: **2021-04-14** (EPSS archive start). Last backfill day: **2026-09-04** (the UTC day before the first daily Release).
-- KEV `dateAdded` starts **2021-11-03** (seed day). **2022 is a KEV backlog year, not a real exploit spike.**
-- DeFiLlama incident dates span years; days without incidents are omitted.
+- Max backfill day: **2021-04-14** (EPSS archive start). Last backfill day: **2026-09-04** (the UTC day before the first daily Release). Generate clamps `--to-day` there unless `--allow-past-last-day`.
+- EPSS `high_count` is a **daily stock** (CVEs with `epss >= 0.5` that day), not new highs. Nine unpublished archive days are **zero**, not interpolated.
+- KEV `dateAdded` starts **2021-11-03** (seed day). **2022 is a KEV backlog-drain year, not a real exploit spike.**
+- DeFiLlama incident dates span years; `--from-day` is honored when set. Days without incidents are omitted.
 - RSS/Atom sources are **not** backfilled. Do not invent old `daily-*` Releases.
 
 Schemas are additive only: `midkernel.threat-intel.backfill.{kev,epss,defillama,manifest}/v1`. See [`backfill/README.md`](backfill/README.md).
