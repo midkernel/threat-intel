@@ -4,7 +4,7 @@ Public catalog of threat-intel **RSS/Atom** feeds and a few official **JSON** ca
 
 We **package and cite**. We do not originate. We do not rank here.
 
-The public git product is this catalog plus a GitHub Action that fetches the listed URLs once a day and publishes a snapshot as a GitHub Release (raw bodies + a day's index). Aggregation, ranking, and class mapping live elsewhere (private).
+The public git product is this catalog plus a GitHub Action that fetches the listed URLs once a day and publishes a snapshot as a GitHub Release (raw bodies + a day's markdown index + a structured JSON index). Aggregation, ranking, and class mapping live elsewhere (private).
 
 ## What this repo is
 
@@ -139,7 +139,8 @@ These are documented so nobody “fixes” the catalog with a dead or wrong URL:
 - User-Agent: `MidkernelThreatIntel/0.1 (+https://github.com/midkernel/threat-intel)`
 - Each listed URL is fetched with `curl` (timeout, follow redirects). Raw bodies land under `output/<id>/`. JSON sources send `Accept: application/json` only — FIRST EPSS returns 400 if Accept lists RSS types.
 - `summary.md` lists, for each source: name, url, HTTP status, content-type, byte size. For RSS/Atom it copies item titles, links, and pubDates from the feed (document order, not ranked). For JSON catalogs it copies a count and the newest few ids/names the JSON already contains (KEV `cveID`, DeFiLlama hacks `name`/`date`, Solidity bugs `uid`). This is an index, not intelligence.
-- After the fetch, the job publishes a soft GitHub Release tagged `daily-YYYY-MM-DD` (title `Threat-intel fetch — YYYY-MM-DD UTC`) with the same payload as today's artifact: `summary-YYYY-MM-DD.md` (the day's index) and `threat-intel-YYYY-MM-DD.tar.gz` (`output/` — raw bodies + `summary.md` in document order). That is the durable public download path — browse [Releases](https://github.com/midkernel/threat-intel/releases) without an Actions login.
+- `index.json` is the same day's index in a stable machine-readable schema (see [Daily index JSON](#daily-index-json)). Prefer this asset for ingest; do not scrape `summary.md`.
+- After the fetch, the job publishes a soft GitHub Release tagged `daily-YYYY-MM-DD` (title `Threat-intel fetch — YYYY-MM-DD UTC`) with the same payload as today's artifact: `summary-YYYY-MM-DD.md` (human index), `index-YYYY-MM-DD.json` (structured index; also `output/index.json` inside the tarball), and `threat-intel-YYYY-MM-DD.tar.gz` (`output/` — raw bodies + `summary.md` + `index.json` in document order). That is the durable public download path — browse [Releases](https://github.com/midkernel/threat-intel/releases) without an Actions login.
 - The same `output/` tree is also uploaded as an Actions artifact named `threat-intel-YYYY-MM-DD` (14-day debug cache).
 - Dumps stay out of git. Do not commit `output/`.
 - **Failure policy:** a single source 5xx is a warning. The job fails only if a **majority** of sources fail. One dead blog must not kill the daily run.
@@ -149,9 +150,61 @@ These are documented so nobody “fixes” the catalog with a dead or wrong URL:
 bash scripts/fetch.sh
 ```
 
+## Daily index JSON
+
+Each Release attaches `index-YYYY-MM-DD.json`. The tarball carries the same document as `output/index.json`. Midkernel/app should ingest that JSON instead of scraping the markdown summary.
+
+This is a **feeds-only index**. It does not rank, classify, score, or attach Midkernel threat labels. The public repo stays catalog + fetch. No `--threat`.
+
+### Schema (`midkernel.threat-intel.index/v1`)
+
+Stable identifier: `schema` is the constant `midkernel.threat-intel.index/v1`. Additive fields may appear later; existing fields keep their meaning. Ranking, class taxonomy, scores, and `--threat` fields will not be added here.
+
+**Document**
+
+| Field | Type | Meaning |
+| --- | --- | --- |
+| `schema` | string | Constant `midkernel.threat-intel.index/v1` |
+| `day` | string | Fetch day `YYYY-MM-DD` (UTC) |
+| `generated_at` | string | UTC timestamp when the index was written (`YYYY-MM-DDTHH:MM:SSZ`) |
+| `note` | string | Reminder that this is not ranking / not intelligence |
+| `sources` | array | Catalog sources in `sources.yaml` document order |
+
+**Source**
+
+| Field | Type | Meaning |
+| --- | --- | --- |
+| `id` | string | Catalog id |
+| `name` | string | Catalog name |
+| `url` | string | Fetched URL |
+| `format` | string | `rss` \| `atom` \| `json` |
+| `surface` | string | `web2` \| `web3` |
+| `http_status` | int \| null | HTTP status from the fetch; `null` if that source was not fetched |
+| `fetched_at` | string \| null | UTC timestamp when that URL was fetched (`YYYY-MM-DDTHH:MM:SSZ`) |
+| `item_count` | int | `len(items)` in this snapshot — not a remote catalog total |
+| `items` | array | Entries in **document / catalog order**, not ranked |
+
+**Item**
+
+| Field | Type | Meaning |
+| --- | --- | --- |
+| `title` | string | Title, name, or CVE id already in the source |
+| `url` | string \| null | Item link if the source provided one |
+| `published_at` | string \| null | Source date string (copied, not normalized). Unix timestamps become `YYYY-MM-DD` |
+| `id` | string \| null | RSS `guid`, Atom `id`, CVE id, Solidity `uid`, or other source-native id |
+
+JSON catalogs map as follows (scores are omitted):
+
+- CISA KEV: `vulnerabilityName` → `title`, `cveID` → `id`, `dateAdded` → `published_at`
+- FIRST EPSS: `cve` → `title` and `id`, `date` → `published_at` (no `epss` / `percentile`)
+- DeFiLlama hacks: `name` → `title`, `date` → `published_at`
+- Solidity bugs: `name` → `title`, `uid` → `id`
+
+Markdown `summary.md` remains the human-readable index. The tarball and `summary-YYYY-MM-DD.md` stay in the Release for backward compatibility.
+
 ## CI
 
-Pull requests run a cheap check: `sources.yaml` parses, required fields are present, and every `url` looks like `https://…`. Offline unit checks cover the index helpers. Live fetches stay on the daily / `workflow_dispatch` workflow.
+Pull requests run a cheap check: `sources.yaml` parses, required fields are present, and every `url` looks like `https://…`. Offline unit checks cover the index helpers and the JSON emitter (fixture feeds, no live URLs). Live fetches stay on the daily / `workflow_dispatch` workflow.
 
 ## Voice
 

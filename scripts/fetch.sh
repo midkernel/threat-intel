@@ -82,9 +82,12 @@ fetch_one() {
     rm -f "$err"
   fi
 
-  python3 - "$dir/meta.json" "$id" "$url" "$format" "$status" "$ctype" "$bytes" "$curl_exit" "$error" <<'PY'
+  local fetched_at
+  fetched_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+  python3 - "$dir/meta.json" "$id" "$url" "$format" "$status" "$ctype" "$bytes" "$curl_exit" "$error" "$fetched_at" <<'PY'
 import json, sys
-path, sid, url, fmt, status, ctype, nbytes, curl_exit, error = sys.argv[1:10]
+path, sid, url, fmt, status, ctype, nbytes, curl_exit, error, fetched_at = sys.argv[1:11]
 meta = {
     "id": sid,
     "url": url,
@@ -94,6 +97,7 @@ meta = {
     "bytes": int(nbytes or 0),
     "curl_exit": int(curl_exit or 0),
     "error": error,
+    "fetched_at": fetched_at,
 }
 with open(path, "w", encoding="utf-8") as fh:
     json.dump(meta, fh, indent=2)

@@ -35,7 +35,9 @@ jobs:
         run: |
           set -euo pipefail
           test -f output/summary.md
+          test -f output/index.json
           cp output/summary.md "summary-${DATE}.md"
+          cp output/index.json "index-${DATE}.json"
           tar czf "threat-intel-${DATE}.tar.gz" output/
       - name: Write release notes
         env:
@@ -46,11 +48,12 @@ jobs:
             echo "# Threat-intel fetch — ${DATE} UTC"
             echo
             echo "Feeds-only snapshot of cataloged public RSS/Atom/JSON URLs."
-            echo "Raw bodies plus \`summary.md\` in catalog document order."
+            echo "Raw bodies plus \`summary.md\` and \`index.json\` in catalog document order."
             echo "No ranking, classes, adapters, or scores."
             echo
-            echo "The excerpt below is the first ~80 lines of the day's index."
-            echo "The full index is attached as \`summary-${DATE}.md\`."
+            echo "The excerpt below is the first ~80 lines of the day's markdown index."
+            echo "The full human index is attached as \`summary-${DATE}.md\`."
+            echo "The structured machine-readable index is \`index-${DATE}.json\` (also \`output/index.json\` inside the tarball)."
             echo "The same payload as today's Actions artifact is \`threat-intel-${DATE}.tar.gz\`."
             echo
             echo "---"
@@ -65,7 +68,7 @@ jobs:
           set -euo pipefail
           TAG="daily-${DATE}"
           TITLE="Threat-intel fetch — ${DATE} UTC"
-          ASSETS=("summary-${DATE}.md" "threat-intel-${DATE}.tar.gz")
+          ASSETS=("summary-${DATE}.md" "index-${DATE}.json" "threat-intel-${DATE}.tar.gz")
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" "${ASSETS[@]}" --clobber
             gh release edit "$TAG" --title "$TITLE" --notes-file release-notes.md --latest
