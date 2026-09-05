@@ -110,7 +110,7 @@ A few official archive days were **never published** (confirmed against [empiric
 
 `2021-04-22`–`2021-04-26`, `2021-06-07`, `2021-06-18`, `2022-07-14`, `2024-12-01`
 
-Any generate-time miss is listed in `epss/missing.txt`.
+Any generate-time miss is listed in `epss/missing.txt`. `validate.py` pins that file to the omitted calendar days in the EPSS window: a listed day must not appear in a shard, and an omitted shard day must be listed (zero, not interpolated). Manifest `missing_days` / `derived_days` must match.
 
 ### DeFiLlama — `midkernel.threat-intel.backfill.defillama/v1`
 
@@ -159,7 +159,7 @@ python3 scripts/backfill/generate.py --sources epss --from-day 2021-04-14 --to-d
 # counts only, no writes
 python3 scripts/backfill/generate.py --dry-run --sources kev,defillama
 
-# FIRST API instead of CSV (still derived counts only)
+# FIRST API instead of CSV (still derived counts only; high_count is API `total`, never len(sample))
 python3 scripts/backfill/generate.py --sources epss --epss-method api --from-day 2021-04-14 --to-day 2021-04-16
 
 # CI / local smoke (fixtures only, no live URLs)

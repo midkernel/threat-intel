@@ -17,6 +17,7 @@ from common import (
     SCHEMA_KEV,
     SCHEMA_MANIFEST,
     assert_no_forbidden_keys,
+    each_day,
     load_simple_yaml,
     month_key,
     parse_day,
@@ -113,6 +114,9 @@ def validate_month_file(path: Path, expected_schema: str) -> list[str]:
                 errors.append(f"{loc}: sample_cves longer than 8")
             if "scored_total" in row and not isinstance(row.get("scored_total"), int):
                 errors.append(f"{loc}: scored_total must be an int when present")
+            if isinstance(row.get("high_count"), int) and isinstance(sample, list):
+                if row["high_count"] < len(sample):
+                    errors.append(f"{loc}: high_count {row['high_count']} < len(sample_cves)")
         elif expected_schema == SCHEMA_DEFILLAMA:
             incidents = row.get("incidents")
             if not isinstance(incidents, list) or not incidents:
@@ -177,6 +181,108 @@ def validate_tree(root: Path) -> list[str]:
         declared = src.get("files")
         if isinstance(declared, int) and declared != len(files):
             errors.append(f"{manifest_path}: {sid} files {declared} != {len(files)} on disk")
+        if sid == "epss":
+            errors.extend(_validate_epss_missing(root, src, files, manifest_path))
+    return errors
+
+
+def parse_missing_txt(path: Path) -> tuple[set[str], list[str]]:
+    """Return (days, errors) from epss/missing.txt (`YYYY-MM-DD` or `YYYY-MM-DD:reason`)."""
+    days: set[str] = set()
+    errors: list[str] = []
+    text = path.read_text(encoding="utf-8")
+    for lineno, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        day_text = line.split(":", 1)[0].strip()
+        try:
+            day = parse_day(day_text).isoformat()
+        except ValueError:
+            errors.append(f"{path}:{lineno}: expected YYYY-MM-DD, got {line!r}")
+            continue
+        if day in days:
+            errors.append(f"{path}:{lineno}: duplicate {day}")
+        days.add(day)
+    return days, errors
+
+
+def _shard_days(files: list[Path]) -> tuple[set[str], list[str]]:
+    present: set[str] = set()
+    errors: list[str] = []
+    for path in files:
+        try:
+            data = _load_json(path)
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            errors.append(f"{path}: {exc}")
+            continue
+        for row in data.get("days") or []:
+            if isinstance(row, dict) and row.get("day"):
+                present.add(str(row["day"]))
+    return present, errors
+
+
+def _validate_epss_missing(
+    root: Path,
+    src: dict,
+    files: list[Path],
+    manifest_path: Path,
+) -> list[str]:
+    """Pin missing.txt to omitted EPSS days in the source window. Treat listed days as zero."""
+    errors: list[str] = []
+    try:
+        missing_path = resolve_under_root(root, "epss/missing.txt")
+    except ValueError as exc:
+        return [f"{manifest_path}: epss missing.txt path rejected: {exc}"]
+
+    listed: set[str] = set()
+    if missing_path.is_file():
+        listed, parse_errors = parse_missing_txt(missing_path)
+        errors.extend(parse_errors)
+    elif src.get("missing_days"):
+        errors.append(f"{missing_path}: missing (manifest missing_days={src.get('missing_days')})")
+
+    present, shard_errors = _shard_days(files)
+    errors.extend(shard_errors)
+
+    overlap = sorted(present & listed)
+    if overlap:
+        errors.append(
+            f"{missing_path}: days also present in shards (must be omitted): "
+            + ", ".join(overlap[:8])
+        )
+
+    first = src.get("first_day")
+    last = src.get("last_day")
+    if first and last:
+        try:
+            window = {d.isoformat() for d in each_day(parse_day(str(first)), parse_day(str(last)))}
+        except ValueError as exc:
+            errors.append(f"{manifest_path}: epss window: {exc}")
+            window = set()
+        if window:
+            omitted = window - present
+            extra_listed = sorted(listed - window)
+            if extra_listed:
+                errors.append(
+                    f"{missing_path}: days outside epss window {first}..{last}: "
+                    + ", ".join(extra_listed[:8])
+                )
+            unlisted = sorted(omitted - listed)
+            if unlisted:
+                errors.append(
+                    f"{missing_path}: omitted shard days not listed (treat as zero, do not interpolate): "
+                    + ", ".join(unlisted[:8])
+                )
+
+    if isinstance(src.get("missing_days"), int) and src["missing_days"] != len(listed):
+        errors.append(
+            f"{manifest_path}: epss missing_days {src['missing_days']} != {len(listed)} in missing.txt"
+        )
+    if isinstance(src.get("derived_days"), int) and src["derived_days"] != len(present):
+        errors.append(
+            f"{manifest_path}: epss derived_days {src['derived_days']} != {len(present)} shard days"
+        )
     return errors
 
 

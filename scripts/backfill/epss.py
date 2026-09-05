@@ -108,10 +108,20 @@ def derive_epss_day(
 
 
 def derive_epss_day_from_api(payload: dict, day: date, *, threshold: float = EPSS_HIGH_THRESHOLD) -> dict:
-    """Derive from a FIRST API page. high_count comes from `total` when filtered."""
+    """Derive from a FIRST API page. high_count is the API `total` (filtered).
+
+    Never fall back to len(sample). Sample is a citation slice; `total` is the
+    derived stock count for that day.
+    """
     rows = payload.get("data") if isinstance(payload, dict) else None
     if not isinstance(rows, list):
         raise ValueError(f"{fmt_day(day)}: API payload missing data list")
+    high = payload.get("total")
+    if not isinstance(high, int) or high < 0:
+        raise ValueError(
+            f"{fmt_day(day)}: API payload missing integer total "
+            "(refuse high_count=len(sample))"
+        )
     cutoff = _parse_threshold(threshold)
     sample: list[dict[str, str]] = []
     for row in rows:
@@ -128,12 +138,14 @@ def derive_epss_day_from_api(payload: dict, day: date, *, threshold: float = EPS
             continue
         if len(sample) < SAMPLE_CAP:
             sample.append({"cve": cve, "epss": epss_raw})
-    high = payload.get("total")
-    high_count = int(high) if isinstance(high, int) else len(sample)
+    if high < len(sample):
+        raise ValueError(
+            f"{fmt_day(day)}: API total {high} < sample size {len(sample)}"
+        )
     scored = payload.get("scored_total")
     out = {
         "day": fmt_day(day),
-        "high_count": high_count,
+        "high_count": high,
         "high_threshold": float(cutoff),
         "sample_cves": sample,
     }

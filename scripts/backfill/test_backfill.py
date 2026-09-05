@@ -31,7 +31,7 @@ from common import (  # noqa: E402
 )
 from validate import resolve_under_root, validate_tree  # noqa: E402
 from defillama import derive_defillama_days, load_hacks  # noqa: E402
-from epss import derive_epss_day, derive_epss_from_dir  # noqa: E402
+from epss import derive_epss_day, derive_epss_day_from_api, derive_epss_from_dir  # noqa: E402
 from generate import main as generate_main  # noqa: E402
 from kev import derive_kev_days, load_kev_catalog  # noqa: E402
 
@@ -105,6 +105,34 @@ class EpssDeriveTests(unittest.TestCase):
         )
         self.assertEqual([row["day"] for row in days], ["2021-04-14", "2021-04-15"])
         self.assertEqual(missing, ["2021-04-16"])
+
+    def test_api_high_count_uses_total_not_sample_len(self) -> None:
+        day = derive_epss_day_from_api(
+            {
+                "total": 235,
+                "scored_total": 64712,
+                "data": [
+                    {"cve": "CVE-2020-5902", "epss": "0.65117"},
+                    {"cve": "CVE-2019-0232", "epss": "0.99457"},
+                ],
+            },
+            datetime.date(2021, 4, 14),
+        )
+        self.assertEqual(day["high_count"], 235)
+        self.assertEqual(len(day["sample_cves"]), 2)
+        self.assertEqual(day["scored_total"], 64712)
+
+    def test_api_refuses_high_count_from_sample_len(self) -> None:
+        with self.assertRaises(ValueError) as ctx:
+            derive_epss_day_from_api(
+                {
+                    "data": [
+                        {"cve": "CVE-2020-5902", "epss": "0.65117"},
+                    ]
+                },
+                datetime.date(2021, 4, 14),
+            )
+        self.assertIn("refuse high_count=len(sample)", str(ctx.exception))
 
 
 class DefillamaDeriveTests(unittest.TestCase):
@@ -317,6 +345,72 @@ class SecurityGuardTests(unittest.TestCase):
             )
             errors = validate_tree(root)
             self.assertTrue(any("path rejected" in err or "escapes" in err for err in errors), errors)
+
+    def test_validate_pins_missing_txt_to_omitted_epss_days(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "backfill"
+            month_dir = root / "epss" / "by-month"
+            month_dir.mkdir(parents=True)
+            (month_dir / "2021-04.json").write_text(
+                json.dumps(
+                    {
+                        "schema": SCHEMA_EPSS,
+                        "month": "2021-04",
+                        "days": [
+                            {
+                                "day": "2021-04-14",
+                                "high_count": 3,
+                                "high_threshold": 0.5,
+                                "sample_cves": [{"cve": "CVE-2020-5902", "epss": "0.65"}],
+                            },
+                            {
+                                "day": "2021-04-15",
+                                "high_count": 1,
+                                "high_threshold": 0.5,
+                                "sample_cves": [{"cve": "CVE-2019-0232", "epss": "0.51"}],
+                            },
+                        ],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (root / "manifest.yaml").write_text(
+                dump_simple_yaml(
+                    {
+                        "schema": SCHEMA_MANIFEST,
+                        "ranking": False,
+                        "class_taxonomy": False,
+                        "invented_daily_releases": False,
+                        "sources": [
+                            {
+                                "id": "epss",
+                                "schema": SCHEMA_EPSS,
+                                "path": "epss/by-month/",
+                                "first_day": "2021-04-14",
+                                "last_day": "2021-04-16",
+                                "files": 1,
+                                "derived_days": 2,
+                                "missing_days": 1,
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("not listed" in err for err in errors), errors)
+
+            (root / "epss" / "missing.txt").write_text(
+                "2021-04-16:archive_unavailable\n", encoding="utf-8"
+            )
+            self.assertEqual(validate_tree(root), [])
+
+            (root / "epss" / "missing.txt").write_text(
+                "2021-04-15:archive_unavailable\n", encoding="utf-8"
+            )
+            errors = validate_tree(root)
+            self.assertTrue(any("also present in shards" in err for err in errors), errors)
 
 
 if __name__ == "__main__":
