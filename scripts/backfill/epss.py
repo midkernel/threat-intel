@@ -137,8 +137,27 @@ def derive_epss_day_from_api(payload: dict, day: date, *, threshold: float = EPS
 
 
 def fetch_epss_csv(day: date) -> bytes:
-    url = EPSS_CSV_URL.format(day=fmt_day(day))
-    return fetch_bytes(url, timeout=120)
+    urls = [
+        EPSS_CSV_URL.format(day=fmt_day(day)),
+        (
+            "https://raw.githubusercontent.com/empiricalsec/epss_scores/main/"
+            f"{day.year}/epss_scores-{fmt_day(day)}.csv.gz"
+        ),
+    ]
+    last_error: Exception | None = None
+    for url in urls:
+        try:
+            return fetch_bytes(url, timeout=120)
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code in {403, 404}:
+                continue
+            raise
+        except Exception as exc:
+            last_error = exc
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError(f"no EPSS CSV URL tried for {fmt_day(day)}")
 
 
 def fetch_epss_api(day: date, *, threshold: float = EPSS_HIGH_THRESHOLD) -> dict:
@@ -165,11 +184,26 @@ def _one_csv_day(day: date, threshold: float) -> tuple[date, dict | None, str | 
         raw = fetch_epss_csv(day)
         return day, derive_epss_day(raw, day, threshold=threshold), None
     except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            return day, None, "http_404"
+        if exc.code in {403, 404}:
+            return day, None, "archive_unavailable"
+        if exc.code == 429:
+            try:
+                payload = fetch_epss_api(day, threshold=threshold)
+                return day, derive_epss_day_from_api(payload, day, threshold=threshold), None
+            except Exception as api_exc:
+                return day, None, f"http_429_api:{api_exc}"
         return day, None, f"http_{exc.code}"
     except Exception as exc:
-        return day, None, str(exc)
+        text = str(exc)
+        if "429" in text:
+            try:
+                payload = fetch_epss_api(day, threshold=threshold)
+                return day, derive_epss_day_from_api(payload, day, threshold=threshold), None
+            except Exception as api_exc:
+                return day, None, f"{text}; api:{api_exc}"
+        if "403" in text or "404" in text:
+            return day, None, "archive_unavailable"
+        return day, None, text
 
 
 def _one_api_day(day: date, threshold: float) -> tuple[date, dict | None, str | None]:

@@ -142,6 +142,8 @@ def fetch_bytes(
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
                 raise
+            if exc.code in {403, 429} and attempt == retries - 1:
+                raise
             last_error = exc
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
             last_error = exc

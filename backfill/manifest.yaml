@@ -20,6 +20,17 @@ sources:
     date_released: "2026-09-04T16:47:03.5197Z"
     files: 59
     window_added: 1695
+  - id: epss
+    schema: midkernel.threat-intel.backfill.epss/v1
+    method: download empiricalsec daily CSV; derive high_count; never commit CSV
+    url: "https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz (github.com/empiricalsec/epss_scores fallback)"
+    first_day: 2021-04-14
+    last_day: 2026-09-04
+    path: epss/by-month/
+    high_threshold: 0.5
+    files: 66
+    derived_days: 1961
+    missing_days: 9
   - id: defillama
     schema: midkernel.threat-intel.backfill.defillama/v1
     method: parse official DeFiLlama hacks JSON; bucket by incident date

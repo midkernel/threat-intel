@@ -226,7 +226,7 @@ def main(argv: list[str] | None = None) -> int:
                     str(csv_dir)
                     if csv_dir is not None
                     else (
-                        "https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz"
+                        "https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz (github.com/empiricalsec/epss_scores fallback)"
                         if args.epss_method == "csv"
                         else "https://api.first.org/data/v1/epss"
                     )

@@ -100,7 +100,11 @@ High row: **`epss >= 0.5`**. That is a documented FIRST-score threshold, not a M
 - v4 (`v2025.03.14`): publishing 2025-03-17
 - v5 (`v2026.06.15`): publishing 2026-06-15
 
-Missing archive days (HTTP 404 / fetch error) are listed in `epss/missing.txt` when a generate run finds any.
+A few official archive days were **never published** (confirmed against [empiricalsec/epss_scores](https://github.com/empiricalsec/epss_scores); FIRST `?date=` returns 422). Those days are omitted, not invented. Current gaps:
+
+`2021-04-22`–`2021-04-26`, `2021-06-07`, `2021-06-18`, `2022-07-14`, `2024-12-01`
+
+Any generate-time miss is listed in `epss/missing.txt`.
 
 ### DeFiLlama — `midkernel.threat-intel.backfill.defillama/v1`
 
