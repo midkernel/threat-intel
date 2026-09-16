@@ -69,7 +69,7 @@ RDF = b"""<?xml version="1.0" encoding="UTF-8"?>
 class CatalogTests(unittest.TestCase):
     def test_sources_yaml_validates(self) -> None:
         sources = load_sources(ROOT / "sources.yaml")
-        self.assertEqual(len(sources), 74)
+        self.assertEqual(len(sources), 89)
         self.assertEqual(validate_sources(sources), [])
         ids = [src["id"] for src in sources]
         self.assertEqual(ids[:21], [
