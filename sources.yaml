@@ -1,6 +1,7 @@
 # Public catalog of threat-intel RSS/Atom feeds and official JSON catalogs.
 # Package and cite only. No ranking, classes, adapters, or scores live here.
-# URLs below returned HTTP 200 on 2026-09-04.
+# Original URLs returned HTTP 200 on 2026-09-04.
+# The 2026-09-16 additions also passed the existing feed parser; see docs/source-expansion.md.
 
 sources:
   # --- existing ---
@@ -12,11 +13,11 @@ sources:
     why: Official KEV catalog; CISA retired the KEV RSS feed in 2025.
 
   - id: circl-kev
-    name: CIRCL Vulnerability-Lookup CISA KEV Atom
+    name: CIRCL Vulnerability-Lookup aggregated KEV Atom
     url: https://vulnerability.circl.lu/known-exploited-vulnerabilities.atom
     format: atom
     surface: web2
-    why: Third-party Atom feed of the same CISA KEV list.
+    why: Aggregated KEV entries from CISA and other providers; retain per-item provider attribution.
 
   - id: github-security-blog
     name: GitHub Security blog RSS
@@ -100,7 +101,7 @@ sources:
     url: https://api.first.org/data/v1/epss?limit=100
     format: json
     surface: web2
-    why: Official FIRST EPSS catalog slice (no RSS); recent 100 rows only, not the full 367k dump.
+    why: Official FIRST EPSS bounded 100-row score slice; score dates do not establish vulnerability publication recency.
 
   - id: immunefi-blog
     name: Immunefi blog RSS
@@ -248,7 +249,7 @@ sources:
     url: https://www.cisa.gov/cybersecurity-advisories/all.xml
     format: rss
     surface: web2
-    why: Official CISA advisories and alerts feed; KEV RSS is gone but this one still serves.
+    why: Official CISA cybersecurity advisories and alerts; separate from the retired KEV RSS.
 
   - id: cvelistv5-commits
     name: CVE List V5 commits Atom
@@ -523,3 +524,95 @@ sources:
     format: rss
     surface: web3
     why: Audit firm research posts (Solana, EVM).
+
+  # --- 2026-09-16 coverage additions ---
+  - id: aws-security-bulletins
+    name: AWS Security Bulletins
+    url: https://aws.amazon.com/security/security-bulletins/rss/feed/
+    format: rss
+    surface: web2
+    why: First-party cloud bulletins covering AWS services and AWS-maintained software, with customer mitigation guidance.
+  - id: google-cloud-security-bulletins
+    name: Google Cloud Security Bulletins
+    url: https://cloud.google.com/feeds/google-cloud-security-bulletins.xml
+    format: atom
+    surface: web2
+    why: First-party Google Cloud security bulletins with affected services, remediation and vulnerability references.
+  - id: kubernetes-official-cve
+    name: Kubernetes Official CVE Feed
+    url: https://kubernetes.io/docs/reference/issues-security/official-cve-feed/feed.xml
+    format: rss
+    surface: web2
+    why: Official Kubernetes CVE announcements for core and covered project components.
+  - id: jenkins-security-advisories
+    name: Jenkins Security Advisories
+    url: https://www.jenkins.io/security/advisories/rss.xml
+    format: rss
+    surface: web2
+    why: First-party Jenkins core and plugin advisories with affected components and remediation context.
+  - id: hashicorp-security
+    name: HashiCorp Security Updates
+    url: https://discuss.hashicorp.com/c/security/52.rss
+    format: rss
+    surface: web2
+    why: First-party HashiCorp security announcements covering Vault, Consul, Terraform and related components.
+  - id: okta-security
+    name: Okta Security
+    url: https://sec.okta.com/rss.xml
+    format: rss
+    surface: web2
+    why: Original Okta identity-threat reporting, security advisories and security research.
+  - id: nodejs-security
+    name: Node.js Vulnerability Reports
+    url: https://nodejs.org/en/feed/vulnerability.xml
+    format: rss
+    surface: web2
+    why: First-party Node.js vulnerability and security-release announcements for runtime and dependency exposure.
+  - id: socket-blog
+    name: Socket Blog
+    url: https://socket.dev/api/blog/feed.atom
+    format: atom
+    surface: web2
+    why: Original malicious-package and software supply-chain investigations from Socket.
+  - id: stepsecurity-blog
+    name: StepSecurity Blog
+    url: https://www.stepsecurity.io/blog/rss.xml
+    format: rss
+    surface: web2
+    why: Original GitHub Actions, CI/CD and package compromise investigations with defensive guidance.
+  - id: chrome-stable-releases
+    name: Chrome Stable Releases
+    url: https://chromereleases.googleblog.com/feeds/posts/default/-/Stable%20updates?alt=rss
+    format: rss
+    surface: web2
+    why: First-party Chrome Stable updates label; security and release notices, excluding other release-channel labels.
+  - id: bitcoin-core-blog
+    name: Bitcoin Core blog
+    url: https://bitcoincore.org/en/rss.xml
+    format: rss
+    surface: web3
+    why: First-party Bitcoin node disclosures and update notices fill the missing Bitcoin/client layer.
+  - id: asymmetric-research
+    name: Asymmetric Research
+    url: https://blog.asymmetric.re/rss/
+    format: rss
+    surface: web3
+    why: Original protocol, validator, Solana and bridge research complements incident aggregators.
+  - id: ottersec-blog
+    name: OtterSec research
+    url: https://osec.io/rss.xml
+    format: rss
+    surface: web3
+    why: Independent original research on wallet integrations, proof systems, protocol risk and multi-chain audits.
+  - id: sigma-prime-blog
+    name: Sigma Prime blog
+    url: https://sigmaprime.io/blog/feed.xml
+    format: rss
+    surface: web3
+    why: Adds consensus-client/Lighthouse engineering and cryptography security context, underrepresented by contract-centric feeds.
+  - id: ledger-donjon-research
+    name: Ledger Donjon research
+    url: https://donjon.ledger.com/blog/rss.xml
+    format: rss
+    surface: web3
+    why: Wallet hardware, signing and cryptographic implementation research; excludes the separate Ledger security bulletins.

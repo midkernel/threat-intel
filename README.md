@@ -34,14 +34,16 @@ Issues [#1](https://github.com/midkernel/threat-intel/issues/1)–[#4](https://g
 
 ## Sources
 
-URLs below returned HTTP 200 on 2026-09-04. Do not invent replacements without checking.
+The catalog contains **89 sources** (65 Web2, 24 Web3). Original URLs were verified on 2026-09-04; the 15 additions on 2026-09-16 returned HTTP 200 and parsed with nonempty items using the existing index parser. Availability and publication frequency can change. Do not invent replacement URLs without checking.
+
+See [source expansion and taxonomy proposal](docs/source-expansion.md) for verification evidence, feed limitations, optional sources, and proposed metadata improvements.
 
 ### Web2
 
 | Name | Format | Why |
 | --- | --- | --- |
 | [CISA KEV catalog JSON](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) | json | Official KEV catalog; CISA retired the KEV RSS feed in 2025 |
-| [CIRCL Vulnerability-Lookup CISA KEV Atom](https://vulnerability.circl.lu/known-exploited-vulnerabilities.atom) | atom | Third-party Atom feed of the same CISA KEV list |
+| [CIRCL Vulnerability-Lookup aggregated KEV Atom](https://vulnerability.circl.lu/known-exploited-vulnerabilities.atom) | atom | Aggregated KEV entries from CISA and other providers; retain per-item provider attribution |
 | [GitHub Security blog RSS](https://github.blog/security/feed/) | rss | Official GitHub Security blog posts |
 | [GitHub advisory-database commits Atom](https://github.com/github/advisory-database/commits/main.atom) | atom | Change signal for the GHSA dump; not a per-advisory RSS |
 | [MSRC Security Update Guide RSS](https://api.msrc.microsoft.com/update-guide/rss) | rss | Microsoft Security Update Guide feed |
@@ -53,7 +55,7 @@ URLs below returned HTTP 200 on 2026-09-04. Do not invent replacements without c
 | [Krebs on Security RSS](https://krebsonsecurity.com/feed/) | rss | Krebs on Security news posts |
 | [Cloudflare security RSS](https://blog.cloudflare.com/tag/security/rss/) | rss | Cloudflare blog posts tagged security |
 | [Nuclei templates commits Atom](https://github.com/projectdiscovery/nuclei-templates/commits/main.atom) | atom | Public weaponization index signal (template commits) |
-| [FIRST EPSS JSON](https://api.first.org/data/v1/epss?limit=100) | json | Official scores; no RSS; recent slice only — do not dump ~367k rows |
+| [FIRST EPSS JSON](https://api.first.org/data/v1/epss?limit=100) | json | Official bounded 100-row score slice; score dates do not establish vulnerability publication recency |
 | [CERT/CC Vulnerability Notes](https://www.kb.cert.org/vuls/atomfeed/) | atom | Coordinated vulnerability notes with affected-product, impact, mitigation, and vendor context |
 | [Zero Day Initiative Published Advisories](https://www.zerodayinitiative.com/rss/published/) | rss | Original coordinated vulnerability disclosures with technical and remediation details |
 | [SANS Internet Storm Center Handler's Diary](https://isc.sans.edu/rssfeed_full.xml) | rss | Operational observations on active scanning, exploitation, malware, phishing, and incident patterns |
@@ -67,7 +69,7 @@ URLs below returned HTTP 200 on 2026-09-04. Do not invent replacements without c
 | [GitLab Patch Releases](https://docs.gitlab.com/releases/patch-releases.xml) | atom | First-party GitLab patch and security releases with affected and fixed versions |
 | [CERT-FR Threat and Incident Reports](https://www.cert.ssi.gouv.fr/cti/feed/) | rss | ANSSI and CERT-FR analysis of threat actors, campaigns, malware, and incident investigations |
 | [JPCERT/CC English Alerts](https://www.jpcert.or.jp/english/rss/jpcert-en.rdf) | rss | English-language security alerts and incident information from Japan's national CSIRT |
-| [CISA Cybersecurity Advisories RSS](https://www.cisa.gov/cybersecurity-advisories/all.xml) | rss | Official CISA advisories and alerts feed; KEV RSS is gone but this one still serves |
+| [CISA Cybersecurity Advisories RSS](https://www.cisa.gov/cybersecurity-advisories/all.xml) | rss | Official CISA cybersecurity advisories and alerts; separate from the retired KEV RSS |
 | [CVE List V5 commits Atom](https://github.com/CVEProject/cvelistV5/commits/main.atom) | atom | Change signal for the official CVE record repo; NVD has no RSS |
 | [Metasploit Framework commits Atom](https://github.com/rapid7/metasploit-framework/commits/master.atom) | atom | Public weaponization signal from module commits, same idea as nuclei-templates |
 | [PoC-in-GitHub commits Atom](https://github.com/nomi-sec/PoC-in-GitHub/commits/master.atom) | atom | Auto-collected index of CVE PoCs on GitHub; PoC-availability signal |
@@ -95,6 +97,16 @@ URLs below returned HTTP 200 on 2026-09-04. Do not invent replacements without c
 | [Microsoft Security blog RSS](https://www.microsoft.com/en-us/security/blog/feed) | rss | Microsoft Threat Intelligence posts; complements the MSRC update guide |
 | [BleepingComputer RSS](https://www.bleepingcomputer.com/feed) | rss | Fast news on actively exploited bugs and breaches |
 | [The Record RSS](https://therecord.media/feed) | rss | Recorded Future News; cybercrime and policy coverage |
+| [AWS Security Bulletins](https://aws.amazon.com/security/security-bulletins/rss/feed/) | rss | First-party cloud bulletins covering AWS services and AWS-maintained software, with customer mitigation guidance |
+| [Google Cloud Security Bulletins](https://cloud.google.com/feeds/google-cloud-security-bulletins.xml) | atom | First-party Google Cloud security bulletins with affected services, remediation and vulnerability references |
+| [Kubernetes Official CVE Feed](https://kubernetes.io/docs/reference/issues-security/official-cve-feed/feed.xml) | rss | Official Kubernetes CVE announcements for core and covered project components |
+| [Jenkins Security Advisories](https://www.jenkins.io/security/advisories/rss.xml) | rss | First-party Jenkins core and plugin advisories with affected components and remediation context |
+| [HashiCorp Security Updates](https://discuss.hashicorp.com/c/security/52.rss) | rss | First-party HashiCorp security announcements covering Vault, Consul, Terraform and related components |
+| [Okta Security](https://sec.okta.com/rss.xml) | rss | Original Okta identity-threat reporting, security advisories and security research |
+| [Node.js Vulnerability Reports](https://nodejs.org/en/feed/vulnerability.xml) | rss | First-party Node.js vulnerability and security-release announcements for runtime and dependency exposure |
+| [Socket Blog](https://socket.dev/api/blog/feed.atom) | atom | Original malicious-package and software supply-chain investigations from Socket |
+| [StepSecurity Blog](https://www.stepsecurity.io/blog/rss.xml) | rss | Original GitHub Actions, CI/CD and package compromise investigations with defensive guidance |
+| [Chrome Stable Releases](https://chromereleases.googleblog.com/feeds/posts/default/-/Stable%20updates?alt=rss) | rss | First-party Chrome Stable updates label; security and release notices, excluding other release-channel labels |
 
 ### Web3
 
@@ -119,14 +131,19 @@ URLs below returned HTTP 200 on 2026-09-04. Do not invent replacements without c
 | [Neodyme blog RSS](https://neodyme.io/rss.xml) | rss | Solana and cross-chain security research; non-EVM coverage |
 | [Chainalysis blog RSS](https://blog.chainalysis.com/feed) | rss | Hack and crypto-crime reporting with fund-flow analysis |
 | [Ackee Blockchain blog RSS](https://ackee.xyz/blog/feed) | rss | Audit firm research posts (Solana, EVM) |
+| [Bitcoin Core blog](https://bitcoincore.org/en/rss.xml) | rss | First-party Bitcoin node disclosures and update notices fill the missing Bitcoin/client layer |
+| [Asymmetric Research](https://blog.asymmetric.re/rss/) | rss | Original protocol, validator, Solana and bridge research complements incident aggregators |
+| [OtterSec research](https://osec.io/rss.xml) | rss | Independent original research on wallet integrations, proof systems, protocol risk and multi-chain audits |
+| [Sigma Prime blog](https://sigmaprime.io/blog/feed.xml) | rss | Adds consensus-client/Lighthouse engineering and cryptography security context, underrepresented by contract-centric feeds |
+| [Ledger Donjon research](https://donjon.ledger.com/blog/rss.xml) | rss | Wallet hardware, signing and cryptographic implementation research; excludes the separate Ledger security bulletins |
 
 ### Wanted, not fetched
 
 These are documented so nobody “fixes” the catalog with a dead or wrong URL:
 
 - **Rekt.news `/rss`, `/feed`, `/feed.xml`** — still 500 as of 2026-09-04. Do not substitute those. The live URL is [`https://rekt.news/rss/feed.xml`](https://rekt.news/rss/feed.xml) (research posts only, not hack post-mortems), listed under Web3.
-- **OSV** — API only (`POST /v1/query`), not RSS. A future/private aggregator may query it. This Action does not.
-- **CISA official KEV RSS** — retired May 2025. Use the JSON catalog above (and the CIRCL Atom mirror). The broader CISA advisories RSS is listed.
+- **OSV** — provides APIs, individual JSON records, archive downloads, and incremental `modified_id.csv` manifests ([official distribution documentation](https://google.github.io/osv.dev/data/)). These require supported record parsing and collection semantics; this Action does not fetch them yet.
+- **CISA official KEV RSS** — retired May 2025. Use the official JSON catalog above. CIRCL also aggregates KEV entries from CISA and other providers; it is not a CISA-only mirror. The broader CISA advisories RSS is listed.
 - **NVD CVE RSS** — 404. Not listed. CVE List V5 commits Atom is the change signal.
 - **DeFiLlama research RSS** — market research, not hacks. The hacks JSON is the catalog we fetch.
 - **Immunefi Medium** — omitted because the official Immunefi blog RSS is already listed.
