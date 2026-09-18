@@ -22,6 +22,8 @@ from catalog import load_sources
 from index import write_outputs
 
 MAX_BYTES = 128 * 1024 * 1024
+SOURCE_SECONDS = 10 * 60
+RUN_SECONDS = 30 * 60  # Leave 15 minutes for indexing, packing and release uploads.
 UA = "MidkernelThreatIntel/0.2 (+https://github.com/midkernel/threat-intel)"
 OSV_LIST = "https://storage.googleapis.com/osv-vulnerabilities/modified_id.csv"
 OSV_ECOSYSTEMS = ("npm", "PyPI", "Go", "crates.io", "Maven", "NuGet", "RubyGems", "Packagist", "GitHub Actions", "[EMPTY]")
@@ -46,7 +48,24 @@ def save(path: Path, data: object) -> None:
     tmp.replace(path)
 
 
-def request(url: str) -> tuple[bytes, int, dict]:
+class CollectionDeadline(RuntimeError):
+    pass
+
+
+class TimeBudget:
+    def __init__(self, deadline: float, clock=time.monotonic):
+        self.deadline, self.clock = deadline, clock
+
+    def remaining(self) -> float:
+        seconds = self.deadline - self.clock()
+        if seconds <= 0:
+            raise CollectionDeadline("collection_time_budget_exhausted")
+        return seconds
+
+
+def request(url: str, *, budget: TimeBudget | None = None) -> tuple[bytes, int, dict]:
+    # A slow, continually streaming body must also yield to the collection budget.
+    budget = budget or TimeBudget(time.monotonic() + 3 * 60)
     headers = {"User-Agent": UA, "Accept": "*/*"}
     if urllib.parse.urlparse(url).hostname == "api.github.com":
         headers.update({"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"})
@@ -54,31 +73,42 @@ def request(url: str) -> tuple[bytes, int, dict]:
             headers["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as response:
-                raw = response.read(MAX_BYTES + 1)
-                if len(raw) > MAX_BYTES:
-                    raise ValueError("body exceeds collection byte budget")
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=min(60, budget.remaining())) as response:
+                chunks, size = [], 0
+                while True:
+                    budget.remaining()
+                    chunk = response.read1(min(64 * 1024, MAX_BYTES + 1 - size))
+                    if not chunk:
+                        break
+                    chunks.append(chunk)
+                    size += len(chunk)
+                    if size > MAX_BYTES:
+                        raise ValueError("body exceeds collection byte budget")
+                raw = b"".join(chunks)
                 return raw, response.status, {k.lower(): v for k, v in response.headers.items()
                     if k.lower() in {"content-type", "etag", "last-modified", "link", "retry-after", "content-length"}}
         except urllib.error.HTTPError as exc:
             if exc.code not in {429, 500, 502, 503, 504} or attempt == 2:
                 raise
-            time.sleep(min(5, 2 ** attempt))
+            time.sleep(min(5, 2 ** attempt, budget.remaining()))
         except (TimeoutError, urllib.error.URLError):
             if attempt == 2:
                 raise
-            time.sleep(2 ** attempt)
+            time.sleep(min(2 ** attempt, budget.remaining()))
     raise RuntimeError("request did not complete")
 
 
 class Archive:
-    def __init__(self, directory: Path, fetch=request):
+    def __init__(self, directory: Path, fetch=request, budget: TimeBudget | None = None):
         directory.mkdir(parents=True, exist_ok=True)
         self.directory, self.fetch, self.count = directory, fetch, 0
+        self.budget = budget
         self.requests = []
 
     def get(self, url: str) -> tuple[bytes, int, dict]:
-        raw, code, headers = self.fetch(url)
+        if self.budget:
+            self.budget.remaining()
+        raw, code, headers = request(url, budget=self.budget) if self.fetch is request else self.fetch(url)
         self.count += 1
         path = self.directory / "inputs" / f"{self.count:05d}-{digest(raw)[:16]}.body.gz"
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -173,6 +203,8 @@ def incremental_result(collector: str, records: list, state: dict, pending: bool
         reasons.append("collection_budget_pending")
     if error:
         reasons.append("collection_error")
+        if "collection_time_budget_exhausted" in error:
+            reasons.append("collection_time_budget_exhausted")
     return {"collector": collector, "records": records,
             "status": {"coverage": "incremental", "completeness": "partial", "reasons": reasons,
                        "received_count": len(records), "rejected_count": 0},
@@ -236,6 +268,9 @@ def osv(archive: Archive, state: dict, state_dir: Path, *, at: str, max_records:
                 key = ecosystem + "/" + identifier
                 if processed.get(key, "") < stamp:
                     candidates[key] = stamp
+        except CollectionDeadline as exc:
+            errors.insert(0, f"{ecosystem}: {exc}")
+            break
         except Exception as exc:
             errors.append(f"{ecosystem}: {str(exc)[:160]}")
     pending = sorted(candidates, key=lambda key: (candidates[key], key), reverse=True)
@@ -252,6 +287,9 @@ def osv(archive: Archive, state: dict, state_dir: Path, *, at: str, max_records:
                 raise ValueError("OSV record is older than its manifest version; retry required")
             records.append(row)
             processed[key] = candidates[key]
+        except CollectionDeadline as exc:
+            errors.insert(0, f"{key}: {exc}")
+            break
         except Exception as exc:
             errors.append(f"{key}: {str(exc)[:160]}")
     state["pending"] = len(candidates) - len(records)
@@ -335,6 +373,11 @@ def cna(archive: Archive, state: dict, output: Path, *, at: str, max_records: in
             entry.update({"sha256": version, "checked_at": at, "modified_at": metadata.get("dateUpdated"),
                           "state": metadata["state"], "url": url, "error": None})
             checked += 1
+        except CollectionDeadline as exc:
+            # Never mark unattempted/unfinished records checked when the run is due
+            # to archive. Their queue positions remain eligible next collection.
+            errors.insert(0, f"{identifier}: {exc}")
+            break
         except Exception as exc:
             entry.update({"checked_at": at, "error": str(exc)[:200]})
             errors.append(f"{identifier}: {str(exc)[:160]}")
@@ -344,7 +387,9 @@ def cna(archive: Archive, state: dict, output: Path, *, at: str, max_records: in
         state["through"] = at
     result = incremental_result("cve-cna", records, state, pending > 0 or unresolved > 0,
                                 "; ".join(errors)[:1000] or None)
-    result["status"]["reasons"] = ["observed_identifier_scope"] + (["collection_budget_pending"] if pending else []) + (["collection_error"] if unresolved else [])
+    result["status"]["reasons"] = ["observed_identifier_scope"] + [reason for reason in result["status"]["reasons"] if reason != "bounded_history"]
+    if unresolved and "collection_error" not in result["status"]["reasons"]:
+        result["status"]["reasons"].append("collection_error")
     result["checkpoint"].update({"target_count": len(targets), "checked_count": checked, "unchanged_count": unchanged,
                                  "pending_count": pending, "failed_identifiers": unresolved,
                                  "refresh_interval_hours": 24, "scope": "identifiers_observed_in_kev_and_ghsa"})
@@ -352,11 +397,14 @@ def cna(archive: Archive, state: dict, output: Path, *, at: str, max_records: in
     return result
 
 
-def collect_source(src: dict, output: Path, state_dir: Path, *, fetch=request, at: str | None = None) -> bool:
+def collect_source(src: dict, output: Path, state_dir: Path, *, fetch=request, at: str | None = None,
+                   run_deadline: float | None = None, budget: TimeBudget | None = None) -> bool:
     at = at or now()
     directory = output / src["id"]
     directory.mkdir(parents=True, exist_ok=True)
-    archive = Archive(directory, fetch)
+    budget = budget or TimeBudget(min(time.monotonic() + SOURCE_SECONDS,
+                                      run_deadline if run_deadline is not None else float("inf")))
+    archive = Archive(directory, fetch, budget)
     meta = {"id": src["id"], "url": src["url"], "fetched_at": at, "status": 0, "diagnostics": []}
     try:
         if src["id"] in SPECIAL:
@@ -386,6 +434,7 @@ def collect_source(src: dict, output: Path, state_dir: Path, *, fetch=request, a
                          "content_type": headers.get("content-type"), "headers": headers})
     except Exception as exc:
         meta.update({"status": getattr(exc, "code", 0), "error": str(exc)[:400]})
+        meta["time_budget_exhausted"] = isinstance(exc, CollectionDeadline)
         meta["diagnostics"].append({"stage": "fetch", "message": meta["error"]})
     save(directory / "meta.json", meta)
     return 200 <= meta["status"] < 300 and not meta.get("error")
@@ -404,12 +453,14 @@ def main() -> int:
     if not sources:
         parser.error("no sources selected")
     started_at = now()
+    run_deadline = time.monotonic() + RUN_SECONDS
     independent = [src for src in sources if src["id"] != "cve-cna"]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        results = list(pool.map(lambda src: collect_source(src, args.output, args.state, at=started_at), independent))
+        results = list(pool.map(lambda src: collect_source(src, args.output, args.state, at=started_at,
+                                                         run_deadline=run_deadline), independent))
     for src in sources:
         if src["id"] == "cve-cna":
-            results.append(collect_source(src, args.output, args.state, at=started_at))
+            results.append(collect_source(src, args.output, args.state, at=started_at, run_deadline=run_deadline))
     write_outputs(args.output, sources, day=os.environ.get("COLLECTION_DAY") or started_at[:10])
     manifest = {"schema": "midkernel.threat-intel.archive/v1", "generated_at": now(), "files": []}
     for path in sorted(args.output.rglob("*")):

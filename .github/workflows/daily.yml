@@ -65,7 +65,7 @@ jobs:
           tar czf "threat-intel-${DATE}.tar.gz" output/
           tar czf collection-state.tar.gz collection-state/
           sha256sum "summary-${DATE}.md" "index-${DATE}.json" "threat-intel-${DATE}.tar.gz" collection-state.tar.gz > SHA256SUMS
-          cp output/summary.md release-notes.md
+          python3 scripts/release_notes.py output/summary.md "${DATE}" > release-notes.md
       - name: Archive immutable run with raw inputs, sidecars and checkpoint
         id: archive
         if: always() && steps.collect.outcome != 'skipped'

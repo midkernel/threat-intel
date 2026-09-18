@@ -255,6 +255,8 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
     status["fetch"] = "ok" if ok else "error"
     if not ok or not body_path.exists():
         status["reasons"].append("http_error" if not ok else "missing_body")
+        if meta.get("time_budget_exhausted"):
+            status["reasons"].append("collection_time_budget_exhausted")
         return [], extra
     raw = body_path.read_bytes()
     extra["body_sha256"] = hashlib.sha256(raw).hexdigest()

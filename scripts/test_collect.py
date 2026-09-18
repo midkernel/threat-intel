@@ -4,9 +4,11 @@ import gzip
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
-from collect import Archive, cna, collect_source, epss, ghsa, osv, parse_epss, KEV_MIRROR, observed_cves
+from collect import Archive, CollectionDeadline, TimeBudget, cna, collect_source, epss, ghsa, osv, parse_epss, request, KEV_MIRROR, observed_cves
 from index import feed_items, json_items, source_details
+from release_notes import NOTES_LIMIT, release_notes
 
 AT = "2026-09-18T11:00:00Z"
 CSV = b"#model_version:v2025.03.14,score_date:2026-09-17T12:00:00Z\ncve,epss,percentile\nCVE-2026-1000,0.1,0.2\nCVE-2026-1001,0.5,0.8\nCVE-2026-1002,1,1\n"
@@ -47,6 +49,114 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(info['status']['completeness'], 'partial')
 
 class CollectionTests(unittest.TestCase):
+    def test_network_timeout_does_not_retry_after_source_deadline(self):
+        clock=[0]; calls=[]
+        def urlopen(req, *, timeout):
+            calls.append(timeout)
+            clock[0] += timeout
+            raise TimeoutError('upstream timed out')
+        with patch('collect.urllib.request.urlopen', urlopen), patch('collect.time.sleep') as sleep:
+            with self.assertRaises(CollectionDeadline):
+                request('https://example.test/feed',budget=TimeBudget(10,lambda:clock[0]))
+            self.assertEqual(calls, [10])
+            sleep.assert_not_called()
+
+    def test_continually_streaming_body_yields_to_deadline(self):
+        clock=[0]; reads=[]
+        class Response:
+            status=200
+            headers={}
+            def __enter__(self): return self
+            def __exit__(self,*args): return False
+            def read1(self,size):
+                reads.append(size)
+                clock[0] += 10
+                return b'evidence'
+        with patch('collect.urllib.request.urlopen', return_value=Response()):
+            with self.assertRaises(CollectionDeadline):
+                request('https://example.test/feed',budget=TimeBudget(15,lambda:clock[0]))
+        self.assertEqual(len(reads), 2)
+
+    def test_release_notes_stay_bounded_with_large_catalog_and_long_title(self):
+        summary = "\n".join(f"- Source {i}: " + "Evidence " * 300 for i in range(93 * 25))
+        notes = release_notes(summary, "2026-09-18")
+        self.assertLessEqual(len(notes), NOTES_LIMIT)
+        self.assertIn("summary-2026-09-18.md", notes)
+        self.assertIn("index-2026-09-18.json", notes)
+        self.assertGreater(len(summary), 125_000)
+
+    def test_osv_deadline_archives_partial_results_and_resumes_unfinished_versions(self):
+        clock = [0]
+        calls = []
+        def fetch(url):
+            calls.append(url)
+            if url.endswith('modified_id.csv'):
+                return b'2026-09-18T09:00:00Z,PYSEC-1\n2026-09-18T08:00:00Z,PYSEC-2\n', 200, {}
+            clock[0] += 10
+            if url.endswith('PYSEC-1.json'):
+                return json.dumps({'id':'PYSEC-1','modified':AT}).encode(), 200, {}
+            raise TimeoutError('upstream timed out')
+        with tempfile.TemporaryDirectory() as tmp:
+            directory = Path(tmp); state = {}
+            result = osv(Archive(directory/'first', fetch, TimeBudget(15, lambda:clock[0])), state, directory,
+                         at=AT, ecosystems=('PyPI',), max_records=500)
+            self.assertEqual(len(result['records']), 1)
+            self.assertEqual(set(state['processed']), {'PyPI/PYSEC-1'})
+            self.assertIsNone(state.get('through'))
+            self.assertEqual(result['checkpoint']['pending_count'], 1)
+            self.assertTrue((directory/'first/requests.json').exists())
+            calls_before = len(calls)
+            next_result = osv(Archive(directory/'expired', fetch, TimeBudget(15, lambda:clock[0])), state, directory,
+                              at=AT, ecosystems=('PyPI',), max_records=500)
+            self.assertEqual(len(calls), calls_before)
+            self.assertIn('collection_time_budget_exhausted', next_result['status']['reasons'])
+            self.assertFalse(next_result['checkpoint']['cycle_complete'])
+            def recovered(url):
+                if url.endswith('modified_id.csv'):
+                    return b'2026-09-18T09:00:00Z,PYSEC-1\n2026-09-18T08:00:00Z,PYSEC-2\n', 200, {}
+                return json.dumps({'id':'PYSEC-2','modified':AT}).encode(), 200, {}
+            last = osv(Archive(directory/'resumed', recovered), state, directory, at=AT, ecosystems=('PyPI',))
+            self.assertEqual([row['id'] for row in last['records']], ['PYSEC-2'])
+            self.assertTrue(last['checkpoint']['cycle_complete'])
+
+    def test_source_deadline_keeps_cna_queue_and_writes_partial_indexable_evidence(self):
+        clock = [0]
+        calls = []
+        def fetch(url):
+            calls.append(url)
+            clock[0] += 10
+            identifier = url.rsplit('/',1)[-1][:-5]
+            return json.dumps({'cveMetadata':{'cveId':identifier,'state':'PUBLISHED'},
+                               'containers':{'cna':{'title':'Native record'}}}).encode(), 200, {}
+        with tempfile.TemporaryDirectory() as tmp:
+            output=Path(tmp); state_dir=output/'state'; state_dir.mkdir()
+            state={'targets':{f'CVE-2026-{i}':{'first_seen':AT,'origins':['cisa-kev']} for i in (1000,1001,1002)}}
+            (state_dir/'cve-cna.json').write_text(json.dumps(state))
+            source={'id':'cve-cna','url':'https://example.test/cna','format':'json'}
+            self.assertFalse(collect_source(source,output,state_dir,fetch=fetch,at=AT,budget=TimeBudget(10,lambda:clock[0])))
+            saved=json.loads((state_dir/'cve-cna.json').read_text())
+            self.assertEqual(len(calls), 1)
+            self.assertNotIn('checked_at', saved['targets']['CVE-2026-1001'])
+            meta=json.loads((output/'cve-cna/meta.json').read_text())
+            rows, info=source_details(source,meta,output/'cve-cna/body.json')
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(info['checkpoint']['pending_count'], 2)
+            self.assertIn('collection_time_budget_exhausted', info['status']['reasons'])
+            self.assertEqual(info['status']['completeness'], 'partial')
+
+    def test_expired_run_budget_does_not_start_another_source_request(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output=Path(tmp); calls=[]
+            def fetch(url):
+                calls.append(url)
+                raise AssertionError('no request may start after collection deadline')
+            source={'id':'example-rss','url':'https://example.test/feed','format':'rss'}
+            self.assertFalse(collect_source(source,output,output/'state',fetch=fetch,run_deadline=0))
+            self.assertEqual(calls, [])
+            meta=json.loads((output/'example-rss/meta.json').read_text())
+            _, info=source_details(source,meta,output/'example-rss/body.xml')
+            self.assertIn('collection_time_budget_exhausted', info['status']['reasons'])
+
     def test_full_epss_preserves_sidecar_and_stock_date_not_fetch_day(self):
         raw = gzip.compress(CSV)
         with tempfile.TemporaryDirectory() as tmp:
