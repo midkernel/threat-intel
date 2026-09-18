@@ -35,6 +35,7 @@ def fetch_hacks(url: str = DEFILLAMA_URL) -> list[dict]:
 
 def _incident(row: dict, day: str) -> dict:
     item: dict = {
+        "raw": row,
         "name": str(row.get("name") or "").strip(),
         "date": day,
     }

@@ -4,13 +4,13 @@ Public catalog of threat-intel **RSS/Atom** feeds and a few official **JSON** ca
 
 We **package and cite**. We do not originate. We do not rank here.
 
-The public git product is this catalog plus a GitHub Action that fetches the listed URLs once a day and publishes a snapshot as a GitHub Release (raw bodies + a day's markdown index + a structured JSON index). Aggregation, ranking, and class mapping live elsewhere (private).
+The public git product is this catalog plus a GitHub Action that fetches the listed URLs every four hours and archives each collection as an immutable GitHub Release (raw bodies + a day's markdown index + a structured JSON index). This repository preserves upstream evidence and produces descriptive stock statistics; application aggregation and class mapping live elsewhere (private).
 
 ## What this repo is
 
 - `sources.yaml` — the catalog (name, url, format, surface, one-line why)
-- `.github/workflows/daily.yml` — daily fetch, artifact upload, and a soft Release
-- A tiny fetch/index script (bash `curl` + Python stdlib XML/JSON). No ranking library, no ML, no class mapping
+- `.github/workflows/daily.yml` — four-hour collection, durable per-run archives/checkpoints, and a compatible daily view
+- Python stdlib collectors for feeds, structured advisory changes and complete EPSS snapshots. No ranking library, ML, or class mapping
 
 Daily dumps are **not** committed to git. They can be large. Download `daily-YYYY-MM-DD` from [Releases](https://github.com/midkernel/threat-intel/releases). Actions artifacts remain a 14-day debug cache.
 
@@ -34,7 +34,7 @@ Issues [#1](https://github.com/midkernel/threat-intel/issues/1)–[#4](https://g
 
 ## Sources
 
-The catalog contains **89 sources** (65 Web2, 24 Web3). Original URLs were verified on 2026-09-04; the 15 additions on 2026-09-16 returned HTTP 200 and parsed with nonempty items using the existing index parser. Availability and publication frequency can change. Do not invent replacement URLs without checking.
+The catalog contains **93 sources** (69 Web2, 24 Web3). Original URLs were verified on 2026-09-04; the 15 additions on 2026-09-16 returned HTTP 200 and parsed with nonempty items using the existing index parser. Availability and publication frequency can change. Do not invent replacement URLs without checking.
 
 See [source expansion and taxonomy proposal](docs/source-expansion.md) for verification evidence, feed limitations, optional sources, and proposed metadata improvements.
 
@@ -55,7 +55,11 @@ See [source expansion and taxonomy proposal](docs/source-expansion.md) for verif
 | [Krebs on Security RSS](https://krebsonsecurity.com/feed/) | rss | Krebs on Security news posts |
 | [Cloudflare security RSS](https://blog.cloudflare.com/tag/security/rss/) | rss | Cloudflare blog posts tagged security |
 | [Nuclei templates commits Atom](https://github.com/projectdiscovery/nuclei-templates/commits/main.atom) | atom | Public weaponization index signal (template commits) |
-| [FIRST EPSS JSON](https://api.first.org/data/v1/epss?limit=100) | json | Official bounded 100-row score slice; score dates do not establish vulnerability publication recency |
+| [FIRST EPSS daily CSV](https://epss.empiricalsecurity.com/epss_scores-current.csv.gz) | json + csv.gz | Complete per-CVE sidecar and dated stock statistics; score date is not publication date |
+| [GitHub reviewed advisories](https://api.github.com/advisories?type=reviewed) | json | Structured affected packages, aliases, modifications and withdrawals |
+| [GitHub malware advisories](https://api.github.com/advisories?type=malware) | json | Explicit malware stream, with affected package versions and upstream evidence |
+| [CVE Program CNA records](https://github.com/CVEProject/cvelistV5) | json | Bounded enrichment of KEV/GHSA identifiers with CNA affected versions, CWEs and rejected state |
+| [OSV exports](https://google.github.io/osv.dev/data/) | json | Scoped incremental records from per-ecosystem manifests, including withdrawals |
 | [CERT/CC Vulnerability Notes](https://www.kb.cert.org/vuls/atomfeed/) | atom | Coordinated vulnerability notes with affected-product, impact, mitigation, and vendor context |
 | [Zero Day Initiative Published Advisories](https://www.zerodayinitiative.com/rss/published/) | rss | Original coordinated vulnerability disclosures with technical and remediation details |
 | [SANS Internet Storm Center Handler's Diary](https://isc.sans.edu/rssfeed_full.xml) | rss | Operational observations on active scanning, exploitation, malware, phishing, and incident patterns |
@@ -142,91 +146,37 @@ See [source expansion and taxonomy proposal](docs/source-expansion.md) for verif
 These are documented so nobody “fixes” the catalog with a dead or wrong URL:
 
 - **Rekt.news `/rss`, `/feed`, `/feed.xml`** — still 500 as of 2026-09-04. Do not substitute those. The live URL is [`https://rekt.news/rss/feed.xml`](https://rekt.news/rss/feed.xml) (research posts only, not hack post-mortems), listed under Web3.
-- **OSV** — provides APIs, individual JSON records, archive downloads, and incremental `modified_id.csv` manifests ([official distribution documentation](https://google.github.io/osv.dev/data/)). These require supported record parsing and collection semantics; this Action does not fetch them yet.
 - **CISA official KEV RSS** — retired May 2025. Use the official JSON catalog above. CIRCL also aggregates KEV entries from CISA and other providers; it is not a CISA-only mirror. The broader CISA advisories RSS is listed.
 - **NVD CVE RSS** — 404. Not listed. CVE List V5 commits Atom is the change signal.
 - **DeFiLlama research RSS** — market research, not hacks. The hacks JSON is the catalog we fetch.
 - **Immunefi Medium** — omitted because the official Immunefi blog RSS is already listed.
 - **CERT/CC `/vulfeed`** — omitted; `certcc-vulnerability-notes` (`/vuls/atomfeed/`) is the listed CERT/CC feed.
 
-## Daily Action
+## Collection and evidence contract
 
-`.github/workflows/daily.yml`:
+The workflow runs at 03:00, 07:00, 11:00, 15:00, 19:00 and 23:00 UTC. Each run archives an immutable `collection-YYYYMMDDTHHMMSSZ-RUN_ID-ATTEMPT` release with raw inputs, index, checksums, sidecars and its matching incremental checkpoint. These releases are prereleases (`latest=false`); they are never overwritten by the workflow. Successful runs also refresh the compatible `daily-YYYY-MM-DD` release. Actions artifacts are a 14-day debug cache only.
 
-- Schedule: **every day at 11:00 UTC**, including weekends (morning in America/Sao_Paulo). Threat intel is time-critical.
-- Also `workflow_dispatch` for a manual dry run. That is enough; CI does **not** hammer third parties on every pull request.
-- User-Agent: `MidkernelThreatIntel/0.1 (+https://github.com/midkernel/threat-intel)`
-- Each listed URL is fetched with `curl` (timeout, follow redirects). Raw bodies land under `output/<id>/`. JSON sources send `Accept: application/json` only — FIRST EPSS returns 400 if Accept lists RSS types.
-- `summary.md` lists, for each source: name, url, HTTP status, content-type, byte size. For RSS/Atom it copies item titles, links, and pubDates from the feed (document order, not ranked). For JSON catalogs it copies a count and the newest few ids/names the JSON already contains (KEV `cveID`, DeFiLlama hacks `name`/`date`, Solidity bugs `uid`). This is an index, not intelligence.
-- `index.json` is the same day's index in a stable machine-readable schema (see [Daily index JSON](#daily-index-json)). Prefer this asset for ingest; do not scrape `summary.md`.
-- After the fetch, the job publishes a soft GitHub Release tagged `daily-YYYY-MM-DD` (title `Threat-intel fetch — YYYY-MM-DD UTC`) with the same payload as today's artifact: `summary-YYYY-MM-DD.md` (human index), `index-YYYY-MM-DD.json` (structured index; also `output/index.json` inside the tarball), and `threat-intel-YYYY-MM-DD.tar.gz` (`output/` — raw bodies + `summary.md` + `index.json` in document order). That is the durable public download path — browse [Releases](https://github.com/midkernel/threat-intel/releases) without an Actions login.
-- The same `output/` tree is also uploaded as an Actions artifact named `threat-intel-YYYY-MM-DD` (14-day debug cache).
-- Dumps stay out of git. Do not commit `output/`.
-- **Failure policy:** a single source 5xx is a warning. The job fails only if a **majority** of sources fail. One dead blog must not kill the daily run.
+**Incremental consumers must replay all `collection-*` indexes**, using immutable run identities and a durable cursor. The daily alias is only the latest view: it cannot recover earlier intraday GHSA/OSV batches. Raw inputs and checkpoints live in durable release assets, independent of Actions cache eviction. GitHub Release assets are administratively mutable; “immutable” here means the workflow never clobbers a collection run. Verify checksums on download.
+
+[Evidence contract and operational details](docs/evidence-contract.md) document the additive v1 fields, coverage semantics, upstream limits, resumption and replay. Existing schema/fields keep their meanings; `parser_version` is now `2`. Source-native scores are preserved as attributed evidence, never a Midkernel ranking.
 
 ```bash
-# local dry run (writes ./output; do not commit it)
+# Collect all catalog sources (network; writes ignored output and state directories).
 bash scripts/fetch.sh
+
+# Bounded source smoke collection.
+GHSA_MAX_PAGES=1 OSV_MAX_RECORDS=2 python3 scripts/collect.py /tmp/intel-smoke \
+  --state /tmp/intel-state --sources first-epss github-advisories-reviewed osv-vulnerabilities
 ```
 
-## Daily index JSON
-
-Each Release attaches `index-YYYY-MM-DD.json`. The tarball carries the same document as `output/index.json`. Midkernel/app should ingest that JSON instead of scraping the markdown summary.
-
-This is a **feeds-only index**. It does not rank, classify, score, or attach Midkernel threat labels. The public repo stays catalog + fetch. No `--threat`.
-
-### Schema (`midkernel.threat-intel.index/v1`)
-
-Stable identifier: `schema` is the constant `midkernel.threat-intel.index/v1`. Additive fields may appear later; existing fields keep their meaning. Ranking, class taxonomy, scores, and `--threat` fields will not be added here.
-
-**Document**
-
-| Field | Type | Meaning |
-| --- | --- | --- |
-| `schema` | string | Constant `midkernel.threat-intel.index/v1` |
-| `day` | string | Fetch day `YYYY-MM-DD` (UTC) |
-| `generated_at` | string | UTC timestamp when the index was written (`YYYY-MM-DDTHH:MM:SSZ`) |
-| `note` | string | Reminder that this is not ranking / not intelligence |
-| `sources` | array | Catalog sources in `sources.yaml` document order |
-
-**Source**
-
-| Field | Type | Meaning |
-| --- | --- | --- |
-| `id` | string | Catalog id |
-| `name` | string | Catalog name |
-| `url` | string | Fetched URL |
-| `format` | string | `rss` \| `atom` \| `json` |
-| `surface` | string | `web2` \| `web3` |
-| `http_status` | int \| null | HTTP status from the fetch; `null` if that source was not fetched |
-| `fetched_at` | string \| null | UTC timestamp when that URL was fetched (`YYYY-MM-DDTHH:MM:SSZ`) |
-| `item_count` | int | `len(items)` in this snapshot — not a remote catalog total |
-| `items` | array | Entries in **document / catalog order**, not ranked |
-
-**Item**
-
-| Field | Type | Meaning |
-| --- | --- | --- |
-| `title` | string | Title, name, or CVE id already in the source |
-| `url` | string \| null | Item link if the source provided one |
-| `published_at` | string \| null | Source date string (copied, not normalized). Unix timestamps become `YYYY-MM-DD` |
-| `id` | string \| null | RSS `guid`, Atom `id`, CVE id, Solidity `uid`, or other source-native id |
-
-JSON catalogs map as follows (scores are omitted):
-
-- CISA KEV: `vulnerabilityName` → `title`, `cveID` → `id`, `dateAdded` → `published_at`
-- FIRST EPSS: `cve` → `title` and `id`, `date` → `published_at` (no `epss` / `percentile`)
-- DeFiLlama hacks: `name` → `title`, `date` → `published_at`
-- Solidity bugs: `name` → `title`, `uid` → `id`
-
-Markdown `summary.md` remains the human-readable index. The tarball and `summary-YYYY-MM-DD.md` stay in the Release for backward compatibility.
+Sources that fail to fetch or parse remain explicit failed observations. A majority of collection failures fails the job, but successful partial inputs and their corresponding checkpoints are still archived. Four-hour polling reduces rolling-feed gaps; it cannot recover material that disappeared before any successful observation.
 
 ## Historical backfill
 
 [`backfill/`](backfill/README.md) holds monthly shards (`*/by-month/YYYY-MM.json`) derived from the official KEV JSON, empiricalsec EPSS daily CSVs (high-EPSS counts only; threshold `epss >= 0.5`), and the DeFiLlama hacks JSON.
 
 - Max backfill day: **2021-04-14** (EPSS archive start). Last backfill day: **2026-09-04** (the UTC day before the first daily Release). Generate clamps `--to-day` there unless `--allow-past-last-day`.
-- EPSS `high_count` is a **daily stock** (CVEs with `epss >= 0.5` that day), not new highs. Nine unpublished archive days are **zero**, not interpolated.
+- EPSS `high_count` is a **daily stock** (CVEs with `epss >= 0.5` that day), not new highs. Nine unavailable archive days are **unknown**, not zero or interpolated.
 - KEV `dateAdded` starts **2021-11-03** (seed day). **2022 is a KEV backlog-drain year, not a real exploit spike.**
 - DeFiLlama incident dates span years; `--from-day` is honored when set. Days without incidents are omitted.
 - RSS/Atom sources are **not** backfilled. Do not invent old `daily-*` Releases.

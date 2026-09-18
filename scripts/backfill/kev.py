@@ -33,6 +33,7 @@ def fetch_kev_catalog(url: str = KEV_URL) -> dict:
 
 def _added_row(row: dict) -> dict:
     return {
+        "raw": row,
         "cveId": str(row.get("cveID") or "").strip(),
         "vendorProject": str(row.get("vendorProject") or "").strip(),
         "product": str(row.get("product") or "").strip(),

@@ -69,7 +69,7 @@ RDF = b"""<?xml version="1.0" encoding="UTF-8"?>
 class CatalogTests(unittest.TestCase):
     def test_sources_yaml_validates(self) -> None:
         sources = load_sources(ROOT / "sources.yaml")
-        self.assertEqual(len(sources), 89)
+        self.assertEqual(len(sources), 93)
         self.assertEqual(validate_sources(sources), [])
         ids = [src["id"] for src in sources]
         self.assertEqual(ids[:21], [
@@ -288,7 +288,7 @@ class IndexJsonTests(unittest.TestCase):
         self.assertEqual(items[0]["published_at"], "2026-01-01")
         self.assertIsNone(items[0]["url"])
 
-    def test_json_items_epss_omits_scores(self) -> None:
+    def test_json_items_epss_retains_upstream_scores(self) -> None:
         data = {
             "total": 367633,
             "data": [
@@ -306,9 +306,8 @@ class IndexJsonTests(unittest.TestCase):
         self.assertEqual(items[0]["title"], "CVE-2026-9")
         self.assertEqual(items[0]["published_at"], "2026-09-03")
         blob = json.dumps(items)
-        self.assertNotIn("0.9", blob)
-        self.assertNotIn("0.99", blob)
-        self.assertNotIn("epss", blob)
+        self.assertEqual(items[0]["raw"]["epss"], "0.9")
+        self.assertEqual(items[0]["raw"]["percentile"], "0.99")
 
     def test_json_items_llama_and_solidity(self) -> None:
         llama = [

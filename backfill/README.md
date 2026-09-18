@@ -35,7 +35,7 @@ Generate **clamps `--to-day` to 2026-09-04** so shards cannot overlap live `dail
 These files are citations, not a ranking product. A few reading rules:
 
 - **EPSS `high_count` is a daily stock**, not a flow. It is “how many scored CVEs were `epss >= 0.5` **on that day**,” not “how many became high that day.” Do not difference adjacent days and call the result “new highs.” `scored_total` is the same kind of stock (size of that day’s scored population).
-- **The 9 missing EPSS archive days are zero, not interpolated.** They were never published (`archive_unavailable` in `epss/missing.txt`). A consumer that needs a calendar walk should treat a missing day as `high_count = 0` / no sample — not a copy of the previous day, not a linear fill.
+- **The 9 missing EPSS archive days are unknown, not zero.** No score snapshot was collected (`archive_unavailable` in `epss/missing.txt`). A calendar walk must leave these values null; do not copy or interpolate adjacent observations.
 - **2022 KEV `dateAdded` is backlog drain, not an exploit spike.** CISA published the catalog on **2021-11-03** (seed day, 287 rows in the current catalog). Hundreds of older CVEs were added in 2022 as CISA caught up on historically exploited issues. `dateAdded` that year is a cataloguing date, not “first exploited in 2022.” Trend charts that treat 2022 `added` counts as activity will lie. This repo still cites those rows; it does not reinterpret them.
 
 ## Schemas (additive only)
@@ -106,11 +106,11 @@ High row: **`epss >= 0.5`**. That is a documented FIRST-score threshold, not a M
 - v4 (`v2025.03.14`): publishing 2025-03-17
 - v5 (`v2026.06.15`): publishing 2026-06-15
 
-A few official archive days were **never published** (confirmed against [empiricalsec/epss_scores](https://github.com/empiricalsec/epss_scores); FIRST `?date=` returns 422). Those days are omitted, not invented. Treat them as **zero** (no score file that day). Do not interpolate from neighbors. Current gaps:
+A few official archive days were **never published** (confirmed against [empiricalsec/epss_scores](https://github.com/empiricalsec/epss_scores); FIRST `?date=` returns 422). Those days are omitted, not invented. Treat them as **unknown** (no score file that day). Do not interpolate from neighbors. Current gaps:
 
 `2021-04-22`–`2021-04-26`, `2021-06-07`, `2021-06-18`, `2022-07-14`, `2024-12-01`
 
-Any generate-time miss is listed in `epss/missing.txt`. `validate.py` pins that file to the omitted calendar days in the EPSS window: a listed day must not appear in a shard, and an omitted shard day must be listed (zero, not interpolated). Manifest `missing_days` / `derived_days` must match.
+Any generate-time miss is listed in `epss/missing.txt`. `validate.py` pins that file to the omitted calendar days in the EPSS window: a listed day must not appear in a shard, and an omitted shard day must be listed (unknown, not zero or interpolated). Manifest `missing_days` / `derived_days` must match.
 
 ### DeFiLlama — `midkernel.threat-intel.backfill.defillama/v1`
 

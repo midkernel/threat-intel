@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import os
+import hashlib
 import sys
 import time
 from pathlib import Path
@@ -61,61 +63,68 @@ def _strip_bom(raw: bytes) -> bytes:
     return raw
 
 
-def feed_items(raw: bytes) -> tuple[str, list[dict[str, str | None]]]:
-    """Return ('rss'|'atom'|'unknown', items in document order)."""
+def _native_xml(node: ET.Element) -> dict:
+    """Keep repeated names, namespace URIs, attributes and markup without guessing semantics."""
+    fields: dict = {}
+    for child in node:
+        value = {"text": "".join(child.itertext()).strip(), "attributes": dict(child.attrib)}
+        if len(child):
+            value["xml"] = ET.tostring(child, encoding="unicode")
+        fields.setdefault(child.tag, []).append(value)
+    return {"tag": node.tag, "attributes": dict(node.attrib), "fields": fields}
+
+
+def _with_evidence(item: dict, raw: dict, **extra) -> dict:
+    item.update({
+        "summary": None, "content": None, "modified_at": None,
+        "withdrawn_at": None, "aliases": [], "references": [],
+        "raw": raw,
+        "raw_sha256": hashlib.sha256(json.dumps(raw, sort_keys=True, ensure_ascii=False,
+                                                separators=(",", ":")).encode()).hexdigest(),
+    })
+    item.update(extra)
+    return item
+
+
+def feed_items(raw: bytes) -> tuple[str, list[dict]]:
+    """Copy every feed record and its native evidence, including nonstandard Talos IDs."""
     try:
         root = ET.fromstring(_strip_bom(raw))
     except ET.ParseError:
         return "unknown", []
-
     kind = _local(root.tag).lower()
-    items: list[dict[str, str | None]] = []
-
-    if kind == "rss" or kind == "rdf":
-        for node in root.iter():
-            if _local(node.tag) != "item":
-                continue
-            items.append(
-                _index_item(
-                    _child_text(node, "title"),
-                    _child_text(node, "link"),
-                    _child_text(node, "pubDate") or _child_text(node, "date"),
-                    _child_text(node, "guid")
-                    or _child_text(node, "id")
-                    or _attr(node, "about"),
-                )
-            )
-        return "rss", items
-
-    if kind == "feed":
-        for node in root.iter():
-            if _local(node.tag) != "entry":
-                continue
-            link = ""
-            for child in list(node):
-                if _local(child.tag) != "link":
-                    continue
-                href = (child.get("href") or "").strip()
-                rel = child.get("rel") or "alternate"
-                if href and rel in {"alternate", ""}:
-                    link = href
-                    break
-                if href and not link:
-                    link = href
-            items.append(
-                _index_item(
-                    _child_text(node, "title"),
-                    link,
-                    _child_text(node, "published") or _child_text(node, "updated"),
-                    _child_text(node, "id"),
-                )
-            )
-        return "atom", items
-
-    return "unknown", []
+    if kind not in {"rss", "rdf", "feed"}:
+        return "unknown", []
+    atom = kind == "feed"
+    items = []
+    for node in root.iter():
+        if _local(node.tag) != ("entry" if atom else "item"):
+            continue
+        links = [dict(c.attrib) for c in node if _local(c.tag) == "link"]
+        link = _child_text(node, "link")
+        if atom:
+            link = next((x.get("href", "") for x in links if x.get("rel", "alternate") == "alternate"), "")
+        item = _index_item(
+            _child_text(node, "title"), link,
+            (_child_text(node, "published") or _child_text(node, "updated")) if atom else
+            (_child_text(node, "pubDate") or _child_text(node, "date")),
+            _child_text(node, "guid") or _child_text(node, "id") or
+            _child_text(node, "report_id") or _attr(node, "about"),
+        )
+        references = [x["href"] for x in links if x.get("href")]
+        if link and link not in references:
+            references.append(link)
+        items.append(_with_evidence(item, _native_xml(node),
+            summary=_child_text(node, "summary") or _child_text(node, "description") or None,
+            content=_child_text(node, "content") or _child_text(node, "encoded") or None,
+            modified_at=_child_text(node, "updated") or None,
+            references=references))
+    return "atom" if atom else "rss", items
 
 
 def _as_date(value: object) -> str:
+    if value in (None, ""):
+        return ""
     if isinstance(value, (int, float)) and value > 10_000_000:
         return time.strftime("%Y-%m-%d", time.gmtime(int(value)))
     return str(value).strip()
@@ -184,60 +193,118 @@ def json_preview(data: object) -> tuple[int, list[str]]:
     return 0, ["(no catalog rows recognized; raw body is in the artifact)"]
 
 
-def json_items(data: object) -> list[dict[str, str | None]]:
-    """Copy catalog rows already in the JSON. Document order. No scores."""
-    if isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list):
-        items: list[dict[str, str | None]] = []
-        for row in data["vulnerabilities"]:
-            if not isinstance(row, dict):
-                continue
-            cve = _nz(row.get("cveID"))
-            items.append(
-                _index_item(
-                    _nz(row.get("vulnerabilityName")) or cve,
-                    "",
-                    _nz(row.get("dateAdded")),
-                    cve,
-                )
-            )
-        return items
+def json_items(data: object) -> list[dict]:
+    """Preserve structured upstream records; upstream scores are evidence, never our ranking."""
+    if isinstance(data, dict) and data.get("collector") == "epss":
+        return []  # Complete per-CVE rows live in the compressed sidecar.
+    kev = isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list)
+    rows = data.get("vulnerabilities") if kev else (
+        data.get("records", data.get("data", [])) if isinstance(data, dict) else data)
+    if not isinstance(rows, list):
+        return []
+    items = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        cve_meta = row.get("cveMetadata") if isinstance(row.get("cveMetadata"), dict) else {}
+        cna = row.get("containers", {}).get("cna", {}) if cve_meta else {}
+        if cve_meta:
+            title, ident, published = cna.get("title"), cve_meta.get("cveId"), cve_meta.get("datePublished")
+        elif kev:
+            title, ident, published = row.get("vulnerabilityName"), row.get("cveID"), row.get("dateAdded")
+        elif row.get("ghsa_id"):
+            title, ident, published = row.get("summary"), row.get("ghsa_id"), row.get("published_at")
+        elif row.get("id") and ("affected" in row or "modified" in row):
+            title, ident, published = row.get("summary"), row.get("id"), row.get("published")
+        elif row.get("uid"):
+            title, ident, published = row.get("name"), row.get("uid"), None
+        elif row.get("cve"):
+            title, ident, published = row.get("cve"), row.get("cve"), row.get("date")
+        else:
+            title, ident, published = row.get("name"), row.get("id"), row.get("date")
+        if not (title or ident):
+            continue
+        refs = cna.get("references", []) if cve_meta else row.get("references") if isinstance(row.get("references"), list) else []
+        aliases = list(row.get("aliases") or [])
+        aliases += [x["value"] for x in row.get("identifiers", []) if isinstance(x, dict) and x.get("value")]
+        if row.get("cve_id"):
+            aliases.append(row["cve_id"])
+        url = row.get("html_url") or row.get("link") or row.get("url") or row.get("source") or row.get("linkSource")
+        items.append(_with_evidence(_index_item(_nz(title or ident), _nz(url), _as_date(published), _nz(ident)),
+            row, summary=row.get("summary") or row.get("shortDescription") or cna.get("title"),
+            content=row.get("details") or row.get("description") or "\n".join(x.get("value", "") for x in cna.get("descriptions", []) if isinstance(x, dict)) or None,
+            modified_at=row.get("modified") or row.get("updated_at") or cve_meta.get("dateUpdated"),
+            withdrawn_at=row.get("withdrawn") or row.get("withdrawn_at") or cve_meta.get("dateRejected"),
+            aliases=sorted(set(aliases)), references=refs))
+    return items
 
-    if isinstance(data, dict) and isinstance(data.get("data"), list):
-        items = []
-        for row in data["data"]:
-            if not isinstance(row, dict):
-                continue
-            cve = _nz(row.get("cve"))
-            items.append(_index_item(cve, "", _nz(row.get("date")), cve))
-        return items
 
-    if isinstance(data, list):
-        if data and isinstance(data[0], dict) and data[0].get("uid"):
-            items = []
-            for row in data:
-                if not isinstance(row, dict):
-                    continue
-                uid = _nz(row.get("uid"))
-                items.append(_index_item(_nz(row.get("name")) or uid, "", "", uid))
-            return items
-        items = []
-        for row in data:
-            if not isinstance(row, dict):
-                continue
-            name = _nz(row.get("name"))
-            if not name:
-                continue
-            items.append(
-                _index_item(
-                    name,
-                    _nz(row.get("link") or row.get("url")),
-                    _as_date(row.get("date")) if row.get("date") not in (None, "") else "",
-                    _nz(row.get("id")),
-                )
-            )
-        return items
-
-    return []
+def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list, dict]:
+    """Report failed/partial parsing distinctly from a successfully empty observation."""
+    status = {"fetch": "not_fetched", "parse": "not_attempted", "completeness": "unknown",
+              "coverage": "rolling_window" if src["format"] in {"rss", "atom"} else "full_snapshot",
+              "reasons": [], "received_count": 0, "parsed_count": 0, "rejected_count": 0}
+    extra = {"status": status, "body_sha256": None, "diagnostics": []}
+    if not meta:
+        status["reasons"].append("not_fetched")
+        return [], extra
+    extra["diagnostics"] = meta.get("diagnostics", [])
+    if meta.get("provenance"):
+        extra["provenance"] = meta["provenance"]
+    ok = isinstance(meta.get("status"), int) and 200 <= meta["status"] < 300
+    status["fetch"] = "ok" if ok else "error"
+    if not ok or not body_path.exists():
+        status["reasons"].append("http_error" if not ok else "missing_body")
+        if meta.get("time_budget_exhausted"):
+            status["reasons"].append("collection_time_budget_exhausted")
+        return [], extra
+    raw = body_path.read_bytes()
+    extra["body_sha256"] = hashlib.sha256(raw).hexdigest()
+    try:
+        if src["format"] in {"rss", "atom"}:
+            kind, items = feed_items(raw)
+            if kind == "unknown":
+                raise ValueError("unrecognized or malformed XML feed")
+            status["received_count"] = len(items)
+            status["reasons"].append("rolling_feed_has_no_historical_completeness_guarantee")
+        else:
+            data = json.loads(raw.decode("utf-8-sig"))
+            items = json_items(data)
+            if isinstance(data, dict) and data.get("collector"):
+                status.update(data.get("status", {}))
+                for key in ("statistics", "snapshot", "checkpoint", "raw"):
+                    if key in data:
+                        extra[key] = data[key]
+            else:
+                rows = data if isinstance(data, list) else data.get("vulnerabilities", data.get("data"))
+                if not isinstance(rows, list):
+                    raise ValueError("unrecognized JSON catalog")
+                status["received_count"] = len(rows)
+                status["completeness"] = "complete"
+                if isinstance(data, dict):
+                    extra["raw"] = {k: v for k, v in data.items() if k not in {"vulnerabilities", "data"}}
+                    if isinstance(data.get("total"), int) and data["total"] > len(rows):
+                        status["completeness"] = "partial"
+                        status["reasons"].append("bounded_api_slice")
+                    if isinstance(data.get("count"), int) and data["count"] != len(rows):
+                        status["completeness"] = "partial"
+                        status["reasons"].append("catalog_count_mismatch")
+        status["parse"] = "ok"
+        status["parsed_count"] = len(items)
+        if not (isinstance(locals().get("data"), dict) and data.get("collector")):
+            status["rejected_count"] = status["received_count"] - len(items)
+        if status["rejected_count"]:
+            status["completeness"] = "partial"
+            status["reasons"].append("rejected_records")
+        if meta.get("error"):
+            status["completeness"] = "partial"
+            status["reasons"].append(meta["error"])
+        return items, extra
+    except (ValueError, TypeError, UnicodeDecodeError) as exc:
+        status["parse"] = "error"
+        status["reasons"].append("parse_error")
+        extra["diagnostics"].append({"stage": "parse", "message": str(exc)[:400]})
+        return [], extra
 
 
 def _read_meta(path: Path) -> dict:
@@ -261,106 +328,28 @@ def _utc_day() -> str:
     return time.strftime("%Y-%m-%d", time.gmtime())
 
 
-def build_summary(
-    output_dir: Path,
-    sources: list[dict[str, str]],
-    *,
-    day: str | None = None,
-) -> str:
-    day = day or _utc_day()
-    lines = [
-        f"# Threat-intel fetch index — {day} UTC",
-        "",
-        "This file is a day's index of fetched public feeds. It is not ranking,",
-        "not a class taxonomy, and not Midkernel intelligence.",
-        "",
-    ]
-
-    for src in sources:
-        meta_path = output_dir / src["id"] / "meta.json"
-        body_path = _body_path(output_dir, src["id"])
-
-        lines.append(f"## {src['name']}")
+def build_summary(output_dir: Path, sources: list[dict], *, day: str | None = None) -> str:
+    document = build_index(output_dir, sources, day=day)
+    lines = [f"# Threat-intel fetch index — {document['day']} UTC", "",
+             "Public evidence in source order; not ranking or a Midkernel class taxonomy.", ""]
+    for src in document["sources"]:
+        status = src["status"]
+        lines += [f"## {src['name']}", "", f"- id: `{src['id']}`", f"- url: {src['url']}",
+                  f"- http status: {src['http_status']}",
+                  f"- parse: {status['parse']}; coverage: {status['coverage']}; completeness: {status['completeness']}",
+                  f"- indexed items: {src['item_count']}; rejected: {status['rejected_count']}"]
+        if status['reasons']:
+            lines.append("- completeness notes: " + "; ".join(status['reasons']))
+        if src.get("statistics"):
+            stats = src['statistics']
+            lines.append(f"- EPSS stock on {stats['score_date']}: {stats['scored_total']} scored CVEs; {stats['high_count']} at or above {stats['high_threshold']}")
+            lines.append(f"- complete per-CVE artifact: {src['snapshot']['path']}")
+        for item in src['items'][:ITEM_CAP]:
+            lines.append(f"- {item['title']}" + (f" ({item['published_at']})" if item.get('published_at') else "") +
+                         (f" {item['url']}" if item.get('url') else ""))
         lines.append("")
-        lines.append(f"- id: `{src['id']}`")
-        lines.append(f"- url: {src['url']}")
-        lines.append(f"- format: {src['format']}")
-        lines.append(f"- surface: {src['surface']}")
+    return "\n".join(lines)
 
-        if not meta_path.exists():
-            lines.append("- http status: (not fetched)")
-            lines.append("")
-            continue
-
-        meta = _read_meta(meta_path)
-        status = meta.get("status")
-        lines.append(f"- http status: {status}")
-        lines.append(f"- content-type: {meta.get('content_type') or '(none)'}")
-        lines.append(f"- byte size: {meta.get('bytes', 0)}")
-        if meta.get("error"):
-            lines.append(f"- error: {meta['error']}")
-
-        status_ok = isinstance(status, int) and 200 <= status < 300
-        if status_ok and body_path.exists():
-            raw = body_path.read_bytes()
-            if src["format"] in {"rss", "atom"}:
-                kind, items = feed_items(raw)
-                lines.append(f"- parsed as: {kind}")
-                lines.append(f"- item count: {len(items)}")
-                shown = items[:ITEM_CAP]
-                if shown:
-                    lines.append("")
-                    lines.append("Items (document order; not ranked):")
-                    for item in shown:
-                        bit = f"- {item['title']}"
-                        if item.get("published_at"):
-                            bit += f"  ({item['published_at']})"
-                        if item.get("url"):
-                            bit += f"  {item['url']}"
-                        lines.append(bit)
-                    if len(items) > ITEM_CAP:
-                        lines.append(
-                            f"- … {len(items) - ITEM_CAP} more items in the raw body"
-                        )
-            elif src["format"] == "json":
-                try:
-                    data = json.loads(raw.decode("utf-8"))
-                    count, preview = json_preview(data)
-                    lines.append(f"- catalog row count: {count}")
-                    if preview:
-                        lines.append("")
-                        lines.append("Newest ids/names already in the JSON:")
-                        for row in preview:
-                            lines.append(f"- {row}")
-                except json.JSONDecodeError as exc:
-                    lines.append(f"- json parse error: {exc}")
-        lines.append("")
-
-    return "\n".join(lines).rstrip() + "\n"
-
-
-def _source_items(
-    src: dict[str, str],
-    meta: dict | None,
-    body_path: Path,
-) -> list[dict[str, str | None]]:
-    if not meta:
-        return []
-    status = meta.get("status")
-    status_ok = isinstance(status, int) and 200 <= status < 300
-    if not status_ok or not body_path.exists():
-        return []
-    raw = body_path.read_bytes()
-    if src["format"] in {"rss", "atom"}:
-        _kind, items = feed_items(raw)
-        return items
-    if src["format"] == "json":
-        try:
-            data = json.loads(raw.decode("utf-8"))
-        except (json.JSONDecodeError, UnicodeDecodeError):
-            return []
-        return json_items(data)
-    return []
 
 
 def build_index(
@@ -378,7 +367,7 @@ def build_index(
         meta_path = output_dir / src["id"] / "meta.json"
         body_path = _body_path(output_dir, src["id"])
         meta = _read_meta(meta_path) if meta_path.exists() else None
-        items = _source_items(src, meta, body_path)
+        items, details = source_details(src, meta, body_path)
         status = meta.get("status") if meta else None
         fetched_at = None
         if meta and meta.get("fetched_at"):
@@ -394,12 +383,16 @@ def build_index(
                 "fetched_at": fetched_at,
                 "item_count": len(items),
                 "items": items,
+                **details,
             }
         )
     return {
         "schema": INDEX_SCHEMA,
         "day": day,
         "generated_at": generated_at,
+        "parser_version": "2",
+        "run_id": os.environ.get("COLLECTION_RUN_ID") or None,
+        "archive_url": os.environ.get("COLLECTION_RELEASE_URL") or None,
         "note": (
             "Day's index of fetched public feeds. Not ranking, not a class "
             "taxonomy, and not Midkernel intelligence."
