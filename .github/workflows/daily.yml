@@ -1,80 +1,98 @@
-name: Daily feed fetch
+name: Evidence feed collection
 
-# 11:00 UTC daily, including weekends — threat intel is time-critical.
-# That is morning in America/Sao_Paulo. workflow_dispatch is the dry-run path;
-# CI does not fetch third-party URLs on every pull request.
 on:
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "0 3,7,11,15,19,23 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+# Only one writer may advance durable incremental checkpoints.
+concurrency:
+  group: threat-intel-collection
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - name: Date
-        id: date
-        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
-      - name: Fetch cataloged URLs
+      - name: Name immutable run
+        id: run
+        run: |
+          echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "tag=collection-$(date -u +%Y%m%dT%H%M%SZ)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
+      - name: Restore durable checkpoint from last archived collection
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release list --limit 100 --json tagName > releases.json
+          TAG=$(python3 -c 'import json; rows=json.load(open("releases.json")); print(next((x["tagName"] for x in rows if x["tagName"].startswith("collection-")), ""))')
+          mkdir -p collection-state
+          if [[ -n "$TAG" ]]; then
+            gh release download "$TAG" --pattern collection-state.tar.gz --pattern SHA256SUMS --dir restored
+            (cd restored && sha256sum --check --ignore-missing SHA256SUMS)
+            tar xzf restored/collection-state.tar.gz
+          fi
+      - name: Fetch and index public evidence
+        id: collect
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COLLECTION_DAY: ${{ steps.run.outputs.date }}
+          COLLECTION_RUN_ID: ${{ steps.run.outputs.tag }}
+          COLLECTION_RELEASE_URL: https://github.com/${{ github.repository }}/releases/download/${{ steps.run.outputs.tag }}
         run: bash scripts/fetch.sh output
-      - name: Upload day's artifact
+      - name: Upload run debug artifact
+        if: always() && steps.collect.outcome != 'skipped'
         uses: actions/upload-artifact@v4
         with:
-          name: threat-intel-${{ steps.date.outputs.date }}
+          name: ${{ steps.run.outputs.tag }}
           path: output/
           if-no-files-found: error
           retention-days: 14
-      - name: Pack release assets
+      - name: Pack evidence and matching checkpoint
+        if: always() && steps.collect.outcome != 'skipped'
         env:
-          DATE: ${{ steps.date.outputs.date }}
+          DATE: ${{ steps.run.outputs.date }}
         run: |
           set -euo pipefail
-          test -f output/summary.md
           test -f output/index.json
           cp output/summary.md "summary-${DATE}.md"
           cp output/index.json "index-${DATE}.json"
           tar czf "threat-intel-${DATE}.tar.gz" output/
-      - name: Write release notes
-        env:
-          DATE: ${{ steps.date.outputs.date }}
-        run: |
-          set -euo pipefail
-          {
-            echo "# Threat-intel fetch — ${DATE} UTC"
-            echo
-            echo "Feeds-only snapshot of cataloged public RSS/Atom/JSON URLs."
-            echo "Raw bodies plus \`summary.md\` and \`index.json\` in catalog document order."
-            echo "No ranking, classes, adapters, or scores."
-            echo
-            echo "The excerpt below is the first ~80 lines of the day's markdown index."
-            echo "The full human index is attached as \`summary-${DATE}.md\`."
-            echo "The structured machine-readable index is \`index-${DATE}.json\` (also \`output/index.json\` inside the tarball)."
-            echo "The same payload as today's Actions artifact is \`threat-intel-${DATE}.tar.gz\`."
-            echo
-            echo "---"
-            echo
-            head -n 80 output/summary.md
-          } > release-notes.md
-      - name: Publish daily Release
+          tar czf collection-state.tar.gz collection-state/
+          sha256sum "summary-${DATE}.md" "index-${DATE}.json" "threat-intel-${DATE}.tar.gz" collection-state.tar.gz > SHA256SUMS
+          cp output/summary.md release-notes.md
+      - name: Archive immutable run with raw inputs, sidecars and checkpoint
+        id: archive
+        if: always() && steps.collect.outcome != 'skipped'
         env:
           GH_TOKEN: ${{ github.token }}
-          DATE: ${{ steps.date.outputs.date }}
+          TAG: ${{ steps.run.outputs.tag }}
+          DATE: ${{ steps.run.outputs.date }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          SIDECARS=(output/first-epss/*.csv.gz)
+          # Never clobber a run. Checkpoints are reusable only with the archived evidence.
+          gh release create "$TAG" "summary-${DATE}.md" "index-${DATE}.json" \
+            "threat-intel-${DATE}.tar.gz" collection-state.tar.gz SHA256SUMS "${SIDECARS[@]}" \
+            --title "Evidence collection $TAG" --notes-file release-notes.md --prerelease --latest=false
+      - name: Refresh compatible daily view
+        if: steps.collect.outcome == 'success' && steps.archive.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATE: ${{ steps.run.outputs.date }}
         run: |
           set -euo pipefail
           TAG="daily-${DATE}"
-          TITLE="Threat-intel fetch — ${DATE} UTC"
-          ASSETS=("summary-${DATE}.md" "index-${DATE}.json" "threat-intel-${DATE}.tar.gz")
+          ASSETS=("summary-${DATE}.md" "index-${DATE}.json" "threat-intel-${DATE}.tar.gz" SHA256SUMS)
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" "${ASSETS[@]}" --clobber
-            gh release edit "$TAG" --title "$TITLE" --notes-file release-notes.md --latest
+            gh release edit "$TAG" --title "Threat-intel fetch — $DATE UTC" --notes-file release-notes.md --latest
           else
-            gh release create "$TAG" "${ASSETS[@]}" \
-              --title "$TITLE" \
-              --notes-file release-notes.md \
-              --latest
+            gh release create "$TAG" "${ASSETS[@]}" --title "Threat-intel fetch — $DATE UTC" --notes-file release-notes.md --latest
           fi

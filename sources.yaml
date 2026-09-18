@@ -94,14 +94,14 @@ sources:
     url: https://github.com/projectdiscovery/nuclei-templates/commits/main.atom
     format: atom
     surface: web2
-    why: Public weaponization index signal from template commits.
+    why: Template repository change feed, including maintenance; commits alone do not establish exploitation.
 
   - id: first-epss
-    name: FIRST EPSS JSON
-    url: https://api.first.org/data/v1/epss?limit=100
+    name: FIRST EPSS complete daily scores
+    url: https://epss.empiricalsecurity.com/epss_scores-current.csv.gz
     format: json
     surface: web2
-    why: Official FIRST EPSS bounded 100-row score slice; score dates do not establish vulnerability publication recency.
+    why: Complete official daily CSV; compressed per-CVE sidecar and dated distribution stock statistics.
 
   - id: immunefi-blog
     name: Immunefi blog RSS
@@ -263,7 +263,7 @@ sources:
     url: https://github.com/rapid7/metasploit-framework/commits/master.atom
     format: atom
     surface: web2
-    why: Public weaponization signal from module commits, same idea as nuclei-templates.
+    why: Framework repository changes, including maintenance; commits alone do not establish exploitation.
 
   - id: poc-in-github
     name: PoC-in-GitHub commits Atom
@@ -616,3 +616,31 @@ sources:
     format: rss
     surface: web3
     why: Wallet hardware, signing and cryptographic implementation research; excludes the separate Ledger security bulletins.
+
+  - id: github-advisories-reviewed
+    name: GitHub reviewed structured advisories
+    url: https://api.github.com/advisories?type=reviewed
+    format: json
+    surface: web2
+    why: Structured package versions, aliases, upstream severity, modifications and withdrawals; bounded resumable history
+
+  - id: github-advisories-malware
+    name: GitHub structured malware advisories
+    url: https://api.github.com/advisories?type=malware
+    format: json
+    surface: web2
+    why: Explicit malware advisory stream with affected packages and withdrawal provenance; bounded resumable history
+
+  - id: osv-vulnerabilities
+    name: OSV structured vulnerability records
+    url: https://storage.googleapis.com/osv-vulnerabilities/modified_id.csv
+    format: json
+    surface: web2
+    why: Scoped changes from official package ecosystem exports plus withdrawn records; bounded resumable history
+
+  - id: cve-cna
+    name: CVE Program structured CNA records
+    url: https://github.com/CVEProject/cvelistV5
+    format: json
+    surface: web2
+    why: Bounded enrichment of KEV and GHSA CVE identifiers; authoritative CWE, affected versions, CNA provenance and rejected revisions
