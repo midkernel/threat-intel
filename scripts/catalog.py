@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 REQUIRED = ("id", "name", "url", "format", "surface", "why")
-FORMATS = {"rss", "atom", "json"}
+FORMATS = {"rss", "atom", "json", "txt", "csv"}
 SURFACES = {"web2", "web3"}
 ID_RE = re.compile(r"^[a-z][a-z0-9-]*$")
 HTTPS_RE = re.compile(r"^https://[^\s]+$")
@@ -73,7 +73,7 @@ def validate_sources(sources: list[dict[str, str]]) -> list[str]:
             errors.append(f"source {i}: duplicate id {sid!r}")
         seen_ids.add(sid)
         if src["format"] not in FORMATS:
-            errors.append(f"source {sid}: format must be rss|atom|json")
+            errors.append(f"source {sid}: format must be rss|atom|json|txt|csv")
         if src["surface"] not in SURFACES:
             errors.append(f"source {sid}: surface must be web2|web3")
         if not HTTPS_RE.match(src["url"]):

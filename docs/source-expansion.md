@@ -15,10 +15,12 @@ A later catalog batch (James-approved Dev survey, **2026-09-22**) adds **56
 sources** (30 High + 22 Medium + 4 Low) to [sources.yaml](../sources.yaml),
 taking the catalog from **93 to 149**. Coverage includes abuse.ch malware/C2
 exports, ransomware.live APIs, phishing lists, CISA ICS channels, GKE /
-CloudVulnDB, NVD API 2.0, and industry news RSS. Non-RSS/Atom downloads are
-catalogued as `format: json` with the real transport noted in `why` (schema
-allows only `rss|atom|json`). Notable caveats: OpenPhish non-commercial ToS,
-ransomware.live **1 req/min**, and NVD API 2.0 rate limits.
+CloudVulnDB, NVD API 2.0, and industry news RSS. Transport formats are honest:
+`rss|atom|json|txt|csv`. Plaintext and CSV downloads use `txt`/`csv` and the
+indexer emits up to **`PLAINTEXT_ITEM_CAP` (500)** structured items per source
+(title + url/native id + publishedAt when available); full bodies remain in the
+archive. Notable caveats: OpenPhish non-commercial ToS, ransomware.live
+**1 req/min**, and NVD API 2.0 rate limits.
 
 The catalog keeps its six fields (`id`, `name`, `url`, `format`, `surface`, `why`)
 and the index remains `midkernel.threat-intel.index/v1`. The taxonomy and

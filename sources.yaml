@@ -650,49 +650,49 @@ sources:
   - id: abuse-ch-feodo-ipblocklist
     name: Abuse.ch Feodo Tracker IP blocklist
     url: https://feodotracker.abuse.ch/downloads/ipblocklist.txt
-    format: json
+    format: txt
     surface: web2
     why: Botnet C2 IPs for Feodo-family malware (txt download); ToS on feodotracker; free Auth-Key increasingly pushed for APIs.
 
   - id: abuse-ch-malwarebazaar-sha256
     name: Abuse.ch MalwareBazaar recent SHA256
     url: https://bazaar.abuse.ch/export/txt/sha256/recent/
-    format: json
+    format: txt
     surface: web2
     why: Recent malware sample hashes as plaintext SHA256 list; free Auth-Key may be required later per docs.
 
   - id: abuse-ch-sslbl-ja3
     name: Abuse.ch SSLBL JA3 fingerprints
     url: https://sslbl.abuse.ch/blacklist/ja3_fingerprints.csv
-    format: json
+    format: csv
     surface: web2
     why: Malware TLS JA3 fingerprints as CSV blacklist with comment headers.
 
   - id: abuse-ch-sslbl-sslip
     name: Abuse.ch SSLBL Botnet C2 IP (CSV)
     url: https://sslbl.abuse.ch/blacklist/sslipblacklist.csv
-    format: json
+    format: csv
     surface: web2
     why: SSLBL botnet C2 IP blacklist CSV; last-updated header may lag Feodo/ThreatFox — prefer those if stale.
 
   - id: abuse-ch-threatfox-urls
     name: Abuse.ch ThreatFox recent URLs
     url: https://threatfox.abuse.ch/export/csv/urls/recent/
-    format: json
+    format: csv
     surface: web2
     why: Shared malware/C2 URL IOCs as recent CSV export; Auth-Key trend applies per abuse.ch docs.
 
   - id: abuse-ch-urlhaus-recent
     name: Abuse.ch URLhaus recent malware URLs
     url: https://urlhaus.abuse.ch/downloads/csv_recent/
-    format: json
+    format: csv
     surface: web2
     why: Malware distribution URLs as CSV; see ToS at urlhaus.abuse.ch/api/.
 
   - id: c2intelfeeds-ipc2s-30day
     name: C2IntelFeeds IPC2s (30-day)
     url: https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv
-    format: json
+    format: csv
     surface: web2
     why: Community C2 IP feed (30-day CSV) used widely in hunting playbooks; GitHub raw, no auth.
 
@@ -706,7 +706,7 @@ sources:
   - id: cert-pl-phishing-domains
     name: CERT.PL phishing domains register
     url: https://hole.cert.pl/domains/domains.csv
-    format: json
+    format: csv
     surface: web2
     why: Polish CERT phishing domain register as structured CSV (~7MB; Polish column headers).
 
@@ -776,7 +776,7 @@ sources:
   - id: ecrimelabs-metasploit-cve
     name: eCrimeLabs Metasploit-mapped CVEs
     url: https://feeds.ecrimelabs.net/data/metasploit-cve
-    format: json
+    format: txt
     surface: web2
     why: Plaintext CVE IDs with Metasploit modules — weaponization adjacent to KEV.
 
@@ -804,14 +804,14 @@ sources:
   - id: openphish-community
     name: OpenPhish Community Feed
     url: https://openphish.com/feed.txt
-    format: json
+    format: txt
     surface: web2
     why: Fresh phishing URLs as plaintext community feed; non-commercial ToS — verify licensing fit before commercial use.
 
   - id: phishing-army-extended
     name: Phishing Army (extended)
     url: https://phishing.army/download/phishing_army_blocklist_extended.txt
-    format: json
+    format: txt
     surface: web2
     why: Extended phishing domain blocklist (plaintext).
 
@@ -846,14 +846,14 @@ sources:
   - id: threatview-cobaltstrike-c2
     name: ThreatView Cobalt Strike C2
     url: https://threatview.io/Downloads/High-Confidence-CobaltStrike-C2%20-Feeds.txt
-    format: json
+    format: txt
     surface: web2
     why: High-confidence Cobalt Strike C2 IPs as plaintext list.
 
   - id: tweetfeed-week
     name: TweetFeed (week)
     url: https://raw.githubusercontent.com/0xDanielLopez/TweetFeed/master/week.csv
-    format: json
+    format: csv
     surface: web2
     why: Community Twitter/X IOC harvest CSV (IP/URL/hash); noisier than curated feeds — weak signal.
 
@@ -867,28 +867,28 @@ sources:
   - id: alienvault-ip-reputation
     name: AlienVault IP Reputation
     url: https://reputation.alienvault.com/reputation.data
-    format: json
+    format: txt
     surface: web2
     why: Classic open IP reputation dump (#-delimited fields; aging format but still served).
 
   - id: aptnotes-index
     name: APT Notes index CSV
     url: https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv
-    format: json
+    format: csv
     surface: web2
     why: Catalog of public APT report PDFs with metadata (research index, not live IOCs).
 
   - id: binary-defense-banlist
     name: Binary Defense banlist
     url: https://www.binarydefense.com/banlist.txt
-    format: json
+    format: txt
     surface: web2
     why: Long-running public IP banlist (plaintext).
 
   - id: botvrij-sha256
     name: Botvrij.eu SHA256 IOC list
     url: https://www.botvrij.eu/data/ioclist.sha256
-    format: json
+    format: txt
     surface: web2
     why: CERT.be–adjacent community IOC hashes; use-at-own-risk header on source.
 
@@ -909,7 +909,7 @@ sources:
   - id: cinsscore-badguys
     name: CINSscore bad guys
     url: https://cinsscore.com/list/ci-badguys.txt
-    format: json
+    format: txt
     surface: web2
     why: Collective Intelligence Network Security bad-guys IP list (plaintext).
 
@@ -930,21 +930,21 @@ sources:
   - id: emerging-threats-compromised-ips
     name: Emerging Threats compromised IPs
     url: https://rules.emergingthreats.net/blockrules/compromised-ips.txt
-    format: json
+    format: txt
     surface: web2
     why: Proofpoint Emerging Threats compromised-host IP blockrules list.
 
   - id: firehol-level1
     name: FireHOL level1 ipset
     url: https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset
-    format: json
+    format: txt
     surface: web2
     why: Curated low-FP aggregate of public IP blacklists; cite upstream ToS of constituent lists.
 
   - id: ipsum-level3
     name: IPsum level 3
     url: https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt
-    format: json
+    format: txt
     surface: web2
     why: Multi-list IP reputation (occurrence ≥3); L3 is a balanced default among levels 1–8.
 
@@ -979,7 +979,7 @@ sources:
   - id: cisa-kev-csv
     name: CISA KEV CSV (alt format)
     url: https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv
-    format: json
+    format: csv
     surface: web2
     why: Same catalog as owned cisa-kev JSON — CSV format convenience for tabular ingest, not new data.
 
@@ -1000,7 +1000,7 @@ sources:
   - id: spamhaus-drop
     name: Spamhaus DROP
     url: https://www.spamhaus.org/drop/drop.txt
-    format: json
+    format: txt
     surface: web2
     why: Don’t Route Or Peer hijacked-netblock list (eDROP merged into DROP).
 
