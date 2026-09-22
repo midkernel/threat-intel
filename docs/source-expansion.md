@@ -9,6 +9,17 @@ endpoints. It adds first-party cloud, infrastructure and runtime advisories;
 identity and software supply-chain research; and Bitcoin, consensus-client,
 non-EVM and wallet-security coverage.
 
+## 2026-09-22 GitHub TI list survey
+
+A later catalog batch (James-approved Dev survey, **2026-09-22**) adds **56
+sources** (30 High + 22 Medium + 4 Low) to [sources.yaml](../sources.yaml),
+taking the catalog from **93 to 149**. Coverage includes abuse.ch malware/C2
+exports, ransomware.live APIs, phishing lists, CISA ICS channels, GKE /
+CloudVulnDB, NVD API 2.0, and industry news RSS. Non-RSS/Atom downloads are
+catalogued as `format: json` with the real transport noted in `why` (schema
+allows only `rss|atom|json`). Notable caveats: OpenPhish non-commercial ToS,
+ransomware.live **1 req/min**, and NVD API 2.0 rate limits.
+
 The catalog keeps its six fields (`id`, `name`, `url`, `format`, `surface`, `why`)
 and the index remains `midkernel.threat-intel.index/v1`. The taxonomy and
 collection changes below are **proposals, not implemented by this expansion**.

@@ -2,6 +2,7 @@
 # Package and cite only. No ranking, classes, adapters, or scores live here.
 # Original URLs returned HTTP 200 on 2026-09-04.
 # The 2026-09-16 additions also passed the existing feed parser; see docs/source-expansion.md.
+# The 2026-09-22 batch adds 56 sources from the GitHub TI list survey; see docs/source-expansion.md.
 
 sources:
   # --- existing ---
@@ -644,3 +645,396 @@ sources:
     format: json
     surface: web2
     why: Bounded enrichment of KEV and GHSA CVE identifiers; authoritative CWE, affected versions, CNA provenance and rejected revisions
+
+  # --- 2026-09-22 GitHub TI list survey (56 sources; High/Medium/Low) ---
+  - id: abuse-ch-feodo-ipblocklist
+    name: Abuse.ch Feodo Tracker IP blocklist
+    url: https://feodotracker.abuse.ch/downloads/ipblocklist.txt
+    format: json
+    surface: web2
+    why: Botnet C2 IPs for Feodo-family malware (txt download); ToS on feodotracker; free Auth-Key increasingly pushed for APIs.
+
+  - id: abuse-ch-malwarebazaar-sha256
+    name: Abuse.ch MalwareBazaar recent SHA256
+    url: https://bazaar.abuse.ch/export/txt/sha256/recent/
+    format: json
+    surface: web2
+    why: Recent malware sample hashes as plaintext SHA256 list; free Auth-Key may be required later per docs.
+
+  - id: abuse-ch-sslbl-ja3
+    name: Abuse.ch SSLBL JA3 fingerprints
+    url: https://sslbl.abuse.ch/blacklist/ja3_fingerprints.csv
+    format: json
+    surface: web2
+    why: Malware TLS JA3 fingerprints as CSV blacklist with comment headers.
+
+  - id: abuse-ch-sslbl-sslip
+    name: Abuse.ch SSLBL Botnet C2 IP (CSV)
+    url: https://sslbl.abuse.ch/blacklist/sslipblacklist.csv
+    format: json
+    surface: web2
+    why: SSLBL botnet C2 IP blacklist CSV; last-updated header may lag Feodo/ThreatFox — prefer those if stale.
+
+  - id: abuse-ch-threatfox-urls
+    name: Abuse.ch ThreatFox recent URLs
+    url: https://threatfox.abuse.ch/export/csv/urls/recent/
+    format: json
+    surface: web2
+    why: Shared malware/C2 URL IOCs as recent CSV export; Auth-Key trend applies per abuse.ch docs.
+
+  - id: abuse-ch-urlhaus-recent
+    name: Abuse.ch URLhaus recent malware URLs
+    url: https://urlhaus.abuse.ch/downloads/csv_recent/
+    format: json
+    surface: web2
+    why: Malware distribution URLs as CSV; see ToS at urlhaus.abuse.ch/api/.
+
+  - id: c2intelfeeds-ipc2s-30day
+    name: C2IntelFeeds IPC2s (30-day)
+    url: https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv
+    format: json
+    surface: web2
+    why: Community C2 IP feed (30-day CSV) used widely in hunting playbooks; GitHub raw, no auth.
+
+  - id: cert-polska-en
+    name: CERT Polska (EN)
+    url: https://www.cert.pl/en/feed/
+    format: rss
+    surface: web2
+    why: National CERT advisories and incident reporting from CERT Polska (English feed).
+
+  - id: cert-pl-phishing-domains
+    name: CERT.PL phishing domains register
+    url: https://hole.cert.pl/domains/domains.csv
+    format: json
+    surface: web2
+    why: Polish CERT phishing domain register as structured CSV (~7MB; Polish column headers).
+
+  - id: cert-eu-security-advisories
+    name: CERT-EU Security Advisories
+    url: https://cert.europa.eu/publications/security-advisories-rss
+    format: rss
+    surface: web2
+    why: EU-level CERT-EU security advisories RSS.
+
+  - id: cccs-canada-alerts
+    name: CCCS Canada alerts & advisories
+    url: https://www.cyber.gc.ca/api/cccs/rss/v1/get?feed=alerts_advisories&lang=en
+    format: atom
+    surface: web2
+    why: Official Canadian Centre for Cyber Security alerts and advisories (Atom).
+
+  - id: cis-security-advisories
+    name: CIS Security Advisories
+    url: https://www.cisecurity.org/feed/advisories
+    format: rss
+    surface: web2
+    why: Center for Internet Security advisory stream.
+
+  - id: cisa-ics-advisories
+    name: CISA ICS Advisories
+    url: https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml
+    format: rss
+    surface: web2
+    why: CISA ICS/OT advisories channel distinct from the all.xml advisories firehose.
+
+  - id: cisa-ics-medical-advisories
+    name: CISA ICS Medical Advisories
+    url: https://www.cisa.gov/cybersecurity-advisories/ics-medical-advisories.xml
+    format: rss
+    surface: web2
+    why: CISA medical device / ICS-MED advisories.
+
+  - id: cisa-ncas-analysis-reports
+    name: CISA NCAS Analysis Reports
+    url: https://us-cert.cisa.gov/ncas/analysis-reports.xml
+    format: rss
+    surface: web2
+    why: Deep NCAS analysis reports (AA-style) beyond the advisory firehose; redirects to cisa.gov.
+
+  - id: cisa-ncas-current-activity
+    name: CISA NCAS Current Activity
+    url: https://us-cert.cisa.gov/ncas/current-activity.xml
+    format: rss
+    surface: web2
+    why: Short-form CISA NCAS current cyber activity notices.
+
+  - id: cloudvulndb
+    name: CloudVulnDB
+    url: https://www.cloudvulndb.org/rss/feed.xml
+    format: rss
+    surface: web2
+    why: Open cloud vulnerability and security issue database RSS.
+
+  - id: drupal-security-advisories
+    name: Drupal Security Advisories
+    url: https://www.drupal.org/security/rss.xml
+    format: rss
+    surface: web2
+    why: Official Drupal SA stream for CMS supply-chain advisories.
+
+  - id: ecrimelabs-metasploit-cve
+    name: eCrimeLabs Metasploit-mapped CVEs
+    url: https://feeds.ecrimelabs.net/data/metasploit-cve
+    format: json
+    surface: web2
+    why: Plaintext CVE IDs with Metasploit modules — weaponization adjacent to KEV.
+
+  - id: gke-security-bulletins
+    name: GKE Security Bulletins
+    url: https://cloud.google.com/feeds/gke-security-bulletins.xml
+    format: atom
+    surface: web2
+    why: Google Kubernetes Engine–specific security bulletins (complements general GCP feed).
+
+  - id: gentoo-glsa
+    name: Gentoo GLSA
+    url: https://security.gentoo.org/glsa/feed.rss
+    format: rss
+    surface: web2
+    why: Gentoo Linux Security Advisories (GLSA) RSS.
+
+  - id: nvd-cve-api-2
+    name: NVD CVE API 2.0
+    url: https://services.nvd.nist.gov/rest/json/cves/2.0
+    format: json
+    surface: web2
+    why: Official structured CVE JSON API 2.0; rate limits apply — API key recommended for production volume.
+
+  - id: openphish-community
+    name: OpenPhish Community Feed
+    url: https://openphish.com/feed.txt
+    format: json
+    surface: web2
+    why: Fresh phishing URLs as plaintext community feed; non-commercial ToS — verify licensing fit before commercial use.
+
+  - id: phishing-army-extended
+    name: Phishing Army (extended)
+    url: https://phishing.army/download/phishing_army_blocklist_extended.txt
+    format: json
+    surface: web2
+    why: Extended phishing domain blocklist (plaintext).
+
+  - id: ransomware-live-cyberattacks
+    name: Ransomware.live recent cyberattacks
+    url: https://api.ransomware.live/v2/recentcyberattacks
+    format: json
+    surface: web2
+    why: Structured recent ransomware cyberattacks JSON; 1 req/min rate limit; free tier with personal-use caveats.
+
+  - id: ransomware-live-victims
+    name: Ransomware.live recent victims
+    url: https://api.ransomware.live/v2/recentvictims
+    format: json
+    surface: web2
+    why: Leak-site victim claims JSON; same 1 req/min rate limit and ToS caveats as ransomware.live.
+
+  - id: siemens-productcert
+    name: Siemens ProductCERT Advisories
+    url: https://cert-portal.siemens.com/productcert/rss/advisories.atom
+    format: atom
+    surface: web2
+    why: Industrial / ICS vendor advisories from Siemens ProductCERT (large Atom feed).
+
+  - id: sploitus-exploits
+    name: Sploitus Exploits
+    url: https://sploitus.com/rss
+    format: rss
+    surface: web2
+    why: Exploit aggregator RSS; complements Exploit-DB and PoC-in-GitHub.
+
+  - id: threatview-cobaltstrike-c2
+    name: ThreatView Cobalt Strike C2
+    url: https://threatview.io/Downloads/High-Confidence-CobaltStrike-C2%20-Feeds.txt
+    format: json
+    surface: web2
+    why: High-confidence Cobalt Strike C2 IPs as plaintext list.
+
+  - id: tweetfeed-week
+    name: TweetFeed (week)
+    url: https://raw.githubusercontent.com/0xDanielLopez/TweetFeed/master/week.csv
+    format: json
+    surface: web2
+    why: Community Twitter/X IOC harvest CSV (IP/URL/hash); noisier than curated feeds — weak signal.
+
+  - id: ahnlab-asec-en
+    name: AhnLab ASEC Blog (EN)
+    url: https://asec.ahnlab.com/en/feed/
+    format: rss
+    surface: web2
+    why: Asia malware and APT research from AhnLab ASEC (English).
+
+  - id: alienvault-ip-reputation
+    name: AlienVault IP Reputation
+    url: https://reputation.alienvault.com/reputation.data
+    format: json
+    surface: web2
+    why: Classic open IP reputation dump (#-delimited fields; aging format but still served).
+
+  - id: aptnotes-index
+    name: APT Notes index CSV
+    url: https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv
+    format: json
+    surface: web2
+    why: Catalog of public APT report PDFs with metadata (research index, not live IOCs).
+
+  - id: binary-defense-banlist
+    name: Binary Defense banlist
+    url: https://www.binarydefense.com/banlist.txt
+    format: json
+    surface: web2
+    why: Long-running public IP banlist (plaintext).
+
+  - id: botvrij-sha256
+    name: Botvrij.eu SHA256 IOC list
+    url: https://www.botvrij.eu/data/ioclist.sha256
+    format: json
+    surface: web2
+    why: CERT.be–adjacent community IOC hashes; use-at-own-risk header on source.
+
+  - id: bushidotoken-threat-intel
+    name: BushidoToken Threat Intel
+    url: https://blog.bushidotoken.net/feeds/posts/default
+    format: atom
+    surface: web2
+    why: Independent CTI blog with technical threat-intel posts (Atom).
+
+  - id: certik-medium
+    name: Certik (Medium)
+    url: https://medium.com/feed/certik
+    format: rss
+    surface: web3
+    why: Web3 security research and incident writeups via Medium RSS.
+
+  - id: cinsscore-badguys
+    name: CINSscore bad guys
+    url: https://cinsscore.com/list/ci-badguys.txt
+    format: json
+    surface: web2
+    why: Collective Intelligence Network Security bad-guys IP list (plaintext).
+
+  - id: crowdstrike-blog
+    name: CrowdStrike Blog
+    url: https://www.crowdstrike.com/blog/feed/
+    format: rss
+    surface: web2
+    why: Vendor research and incident narratives from CrowdStrike.
+
+  - id: cvefeed-io-latest
+    name: CVEFeed.io latest
+    url: https://cvefeed.io/rssfeed/latest.xml
+    format: rss
+    surface: web2
+    why: Third-party CVE RSS aggregator; may overlap NVD/GHSA/OSV already owned.
+
+  - id: emerging-threats-compromised-ips
+    name: Emerging Threats compromised IPs
+    url: https://rules.emergingthreats.net/blockrules/compromised-ips.txt
+    format: json
+    surface: web2
+    why: Proofpoint Emerging Threats compromised-host IP blockrules list.
+
+  - id: firehol-level1
+    name: FireHOL level1 ipset
+    url: https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset
+    format: json
+    surface: web2
+    why: Curated low-FP aggregate of public IP blacklists; cite upstream ToS of constituent lists.
+
+  - id: ipsum-level3
+    name: IPsum level 3
+    url: https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt
+    format: json
+    surface: web2
+    why: Multi-list IP reputation (occurrence ≥3); L3 is a balanced default among levels 1–8.
+
+  - id: jpcert-cc-blog-en
+    name: JPCERT/CC Blog (EN)
+    url: https://blogs.jpcert.or.jp/en/atom.xml
+    format: atom
+    surface: web2
+    why: JPCERT/CC English blog Atom; complements existing JPCERT English alerts RSS.
+
+  - id: malware-traffic-analysis
+    name: Malware-Traffic-Analysis.net
+    url: https://www.malware-traffic-analysis.net/blog-entries.rss
+    format: rss
+    surface: web2
+    why: PCAP and malware traffic writeups with IOCs.
+
+  - id: mozilla-security-blog
+    name: Mozilla Security Blog
+    url: https://blog.mozilla.org/security/feed/
+    format: rss
+    surface: web2
+    why: Browser/platform security posts; official MFSA XML was unavailable — blog feed instead.
+
+  - id: psirt-com-cisa-kev-rss
+    name: PSIRT.COM CISA KEV RSS
+    url: https://psirt.com/feed/kev.xml
+    format: rss
+    surface: web2
+    why: RSS wrapper of CISA KEV — format alt of owned cisa-kev JSON; prefer official JSON for authoritative data.
+
+  - id: cisa-kev-csv
+    name: CISA KEV CSV (alt format)
+    url: https://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv
+    format: json
+    surface: web2
+    why: Same catalog as owned cisa-kev JSON — CSV format convenience for tabular ingest, not new data.
+
+  - id: sans-isc-intelfeed
+    name: SANS ISC Intel Feed JSON
+    url: https://isc.sans.edu/api/intelfeed?json
+    format: json
+    surface: web2
+    why: ISC tagged IP intel JSON (openresolver, scanner, etc.); complements owned SANS diary RSS.
+
+  - id: sentinelone-blog
+    name: SentinelOne Blog
+    url: https://www.sentinelone.com/blog/feed/
+    format: rss
+    surface: web2
+    why: EDR vendor research and ransomware notes from SentinelOne.
+
+  - id: spamhaus-drop
+    name: Spamhaus DROP
+    url: https://www.spamhaus.org/drop/drop.txt
+    format: json
+    surface: web2
+    why: Don’t Route Or Peer hijacked-netblock list (eDROP merged into DROP).
+
+  - id: vuldb-cve-rss
+    name: VulDB CVE RSS
+    url: https://vuldb.com/rss/cve
+    format: rss
+    surface: web2
+    why: Third-party CVE commentary RSS; commercial product behind site — RSS free.
+
+  - id: dark-reading
+    name: Dark Reading
+    url: https://www.darkreading.com/rss.xml
+    format: rss
+    surface: web2
+    why: Broad industry security news digest (low structured-evidence fit).
+
+  - id: schneier-on-security
+    name: Schneier on Security
+    url: https://www.schneier.com/feed/atom/
+    format: atom
+    surface: web2
+    why: Security commentary and policy Atom feed; not structured evidence.
+
+  - id: securityweek
+    name: SecurityWeek
+    url: https://feeds.feedburner.com/securityweek
+    format: rss
+    surface: web2
+    why: Industry security news RSS.
+
+  - id: the-hacker-news
+    name: The Hacker News
+    url: https://feeds.feedburner.com/TheHackersNews
+    format: rss
+    surface: web2
+    why: High-volume security news RSS; noisy relative to curated evidence feeds.

@@ -34,7 +34,7 @@ Issues [#1](https://github.com/midkernel/threat-intel/issues/1)–[#4](https://g
 
 ## Sources
 
-The catalog contains **93 sources** (69 Web2, 24 Web3). Original URLs were verified on 2026-09-04; the 15 additions on 2026-09-16 returned HTTP 200 and parsed with nonempty items using the existing index parser. Availability and publication frequency can change. Do not invent replacement URLs without checking.
+The catalog contains **149 sources** (124 Web2, 25 Web3). Original URLs were verified on 2026-09-04; the 15 additions on 2026-09-16 returned HTTP 200 and parsed with nonempty items using the existing index parser; the 2026-09-22 GitHub TI list survey added 56 more (abuse.ch, ransomware.live, ICS, cloud, news). Availability and publication frequency can change. Do not invent replacement URLs without checking.
 
 See [source expansion and taxonomy proposal](docs/source-expansion.md) for verification evidence, feed limitations, optional sources, and proposed metadata improvements.
 
