@@ -11,7 +11,17 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from catalog import load_sources, validate_sources
-from index import INDEX_SCHEMA, build_index, feed_items, json_items, json_preview, write_outputs
+from index import (
+    INDEX_SCHEMA,
+    PLAINTEXT_ITEM_CAP,
+    build_index,
+    csv_items,
+    feed_items,
+    json_items,
+    json_preview,
+    text_items,
+    write_outputs,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -101,10 +111,17 @@ class CatalogTests(unittest.TestCase):
             by_id["certcc-vulnerability-notes"]["url"],
             "https://www.kb.cert.org/vuls/atomfeed/",
         )
+        self.assertEqual(by_id["abuse-ch-feodo-ipblocklist"]["format"], "txt")
+        self.assertEqual(by_id["abuse-ch-urlhaus-recent"]["format"], "csv")
+        self.assertEqual(by_id["openphish-community"]["format"], "txt")
+        self.assertEqual(by_id["cisa-kev-csv"]["format"], "csv")
+        self.assertEqual(by_id["ransomware-live-victims"]["format"], "json")
+        self.assertEqual(by_id["nvd-cve-api-2"]["format"], "json")
         self.assertFalse(any("vulfeed" in src["url"] for src in sources))
         for src in sources:
             self.assertTrue(src["url"].startswith("https://"))
             self.assertNotIn("[curl]", src["why"])
+            self.assertIn(src["format"], {"rss", "atom", "json", "txt", "csv"})
 
     def test_rejects_http_url(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -475,6 +492,201 @@ class IndexJsonTests(unittest.TestCase):
             payload = json.loads(index_path.read_text(encoding="utf-8"))
             self.assertEqual(payload["schema"], INDEX_SCHEMA)
             self.assertEqual(payload["sources"][0]["item_count"], 2)
+
+
+class PlaintextCsvIndexTests(unittest.TestCase):
+    def test_text_items_skip_comments_and_emit_bounded_rows(self) -> None:
+        body = (
+            b"# banner\n"
+            b"162.243.103.246\n"
+            b"178.62.3.223\n"
+            b"# END\n"
+            b"\n"
+            b"27.133.154.218\n"
+        )
+        received, items = text_items(body)
+        self.assertEqual(received, 3)
+        self.assertEqual([row["title"] for row in items], [
+            "162.243.103.246",
+            "178.62.3.223",
+            "27.133.154.218",
+        ])
+        self.assertEqual(items[0]["id"], "162.243.103.246")
+        self.assertIsNone(items[0]["url"])
+        self.assertEqual(items[0]["raw"]["line"], "162.243.103.246")
+
+    def test_text_items_openphish_urls_and_spamhaus_cidr(self) -> None:
+        body = (
+            b"https://evil.example/phish\n"
+            b"1.2.3.0/24 ; SBL123\n"
+            b"8.8.8.8#4#2#Malicious Host\n"
+        )
+        received, items = text_items(body)
+        self.assertEqual(received, 3)
+        self.assertEqual(items[0]["url"], "https://evil.example/phish")
+        self.assertEqual(items[0]["title"], "https://evil.example/phish")
+        self.assertEqual(items[1]["title"], "1.2.3.0/24")
+        self.assertEqual(items[2]["title"], "8.8.8.8")
+
+    def test_text_items_respect_cap(self) -> None:
+        lines = "\n".join(f"10.0.0.{i}" for i in range(PLAINTEXT_ITEM_CAP + 25))
+        received, items = text_items(lines.encode())
+        self.assertEqual(received, PLAINTEXT_ITEM_CAP + 25)
+        self.assertEqual(len(items), PLAINTEXT_ITEM_CAP)
+
+    def test_csv_items_urlhaus_style_comment_header(self) -> None:
+        body = (
+            b"################################################################\n"
+            b"# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter\n"
+            b'"1","2026-09-22 11:00:00","http://evil.example/a","online","2026-09-22",'
+            b'"malware_download","None","https://urlhaus.abuse.ch/url/1/","tester"\n'
+            b'"2","2026-09-22 11:01:00","http://evil.example/b","online","2026-09-22",'
+            b'"malware_download","Mozi","https://urlhaus.abuse.ch/url/2/","tester"\n'
+        )
+        received, items = csv_items(body)
+        self.assertEqual(received, 2)
+        self.assertEqual(items[0]["title"], "http://evil.example/a")
+        self.assertEqual(items[0]["url"], "http://evil.example/a")
+        self.assertEqual(items[0]["id"], "1")
+        self.assertIn("2026-09-22", items[0]["published_at"] or "")
+        self.assertEqual(items[1]["id"], "2")
+
+    def test_csv_items_cert_pl_tsv(self) -> None:
+        body = (
+            "PozycjaRejestru\tAdresDomeny\tDataWpisu\tDataWykreslenia\n"
+            "665069\tevildomain.example\t2026-08-12T12:22:21+00:00\t\n"
+            "607939\tother.example\t2026-05-29T16:26:59+00:00\t\n"
+        ).encode()
+        received, items = csv_items(body)
+        self.assertEqual(received, 2)
+        self.assertEqual(items[0]["title"], "evildomain.example")
+        self.assertEqual(items[0]["id"], "665069")
+        self.assertIn("2026-08-12", items[0]["published_at"] or "")
+
+    def test_csv_items_respect_cap(self) -> None:
+        header = "id,url\n"
+        rows = "\n".join(f'{i},http://example.invalid/{i}' for i in range(PLAINTEXT_ITEM_CAP + 10))
+        received, items = csv_items((header + rows).encode())
+        self.assertEqual(received, PLAINTEXT_ITEM_CAP + 10)
+        self.assertEqual(len(items), PLAINTEXT_ITEM_CAP)
+
+    def test_build_index_txt_csv_fixtures(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            _write_source(
+                out,
+                "example-txt",
+                status=200,
+                body=b"# note\n1.1.1.1\n2.2.2.2\n",
+                ext="txt",
+            )
+            _write_source(
+                out,
+                "example-csv",
+                status=200,
+                body=b"id,url,dateadded\n9,https://phish.example/,2026-09-22\n",
+                ext="csv",
+            )
+            sources = [
+                {
+                    "id": "example-txt",
+                    "name": "Example TXT",
+                    "url": "https://example.invalid/list.txt",
+                    "format": "txt",
+                    "surface": "web2",
+                    "why": "fixture",
+                },
+                {
+                    "id": "example-csv",
+                    "name": "Example CSV",
+                    "url": "https://example.invalid/list.csv",
+                    "format": "csv",
+                    "surface": "web2",
+                    "why": "fixture",
+                },
+            ]
+            index = build_index(out, sources, day="2026-09-22", generated_at="2026-09-22T12:00:00Z")
+            txt = index["sources"][0]
+            self.assertEqual(txt["format"], "txt")
+            self.assertEqual(txt["item_count"], 2)
+            self.assertEqual(txt["status"]["parse"], "ok")
+            self.assertEqual(txt["status"]["received_count"], 2)
+            self.assertEqual(txt["items"][0]["title"], "1.1.1.1")
+            csv_row = index["sources"][1]
+            self.assertEqual(csv_row["item_count"], 1)
+            self.assertEqual(csv_row["items"][0]["url"], "https://phish.example/")
+            self.assertEqual(csv_row["items"][0]["id"], "9")
+
+    def test_json_items_nvd_ransomware_and_sans(self) -> None:
+        nvd = {
+            "resultsPerPage": 1,
+            "totalResults": 10,
+            "vulnerabilities": [
+                {
+                    "cve": {
+                        "id": "CVE-2026-1",
+                        "published": "2026-01-02T00:00:00.000",
+                        "lastModified": "2026-01-03T00:00:00.000",
+                        "descriptions": [
+                            {"lang": "en", "value": "Example NVD CVE"},
+                            {"lang": "es", "value": "Ejemplo"},
+                        ],
+                        "references": [{"url": "https://example.invalid/cve"}],
+                    }
+                }
+            ],
+        }
+        items = json_items(nvd)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["id"], "CVE-2026-1")
+        self.assertEqual(items[0]["title"], "Example NVD CVE")
+        self.assertEqual(items[0]["url"], "https://example.invalid/cve")
+
+        victims = [
+            {
+                "group": "akira",
+                "domain": "paylogix.com",
+                "victim": "Paylogix",
+                "discovered": "2026-01-15T13:48:29+00:00",
+                "claim_url": "",
+            }
+        ]
+        items = json_items(victims)
+        self.assertEqual(items[0]["id"], "paylogix.com")
+        self.assertIn("akira", items[0]["title"])
+        self.assertIn("2026-01-15", items[0]["published_at"] or "")
+
+        attacks = [
+            {
+                "title": "City attacked",
+                "domain": "ville.example",
+                "date": "2026-08-27",
+                "url": "https://news.example/story",
+                "claim_gang": False,
+                "victim": "Ville",
+            }
+        ]
+        items = json_items(attacks)
+        self.assertEqual(items[0]["title"], "City attacked")
+        self.assertEqual(items[0]["url"], "https://news.example/story")
+
+        sans = [{"ip": "1.2.3.4", "description": "openresolver"}]
+        items = json_items(sans)
+        self.assertEqual(items[0]["id"], "1.2.3.4")
+        self.assertEqual(items[0]["title"], "openresolver")
+
+        # Victims with empty domain still itemize via group+victim
+        empty_domain = [
+            {
+                "group": "akira",
+                "domain": "",
+                "victim": "Mystery Corp",
+                "discovered": "2026-01-15T13:48:29+00:00",
+            }
+        ]
+        items = json_items(empty_domain)
+        self.assertEqual(items[0]["id"], "Mystery Corp")
+        self.assertEqual(items[0]["title"], "akira: Mystery Corp")
 
 
 if __name__ == "__main__":

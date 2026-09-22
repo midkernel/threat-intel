@@ -26,8 +26,18 @@ Source `body_sha256` identifies the exact parser input. Source `raw` contains JS
 | `parse` | `ok`, `error`, `not_attempted` |
 | `coverage` | `full_snapshot`, `rolling_window`, `incremental` |
 | `completeness` | `complete`, `partial`, `unknown` |
-| `reasons` | Such as `not_fetched`, `http_error`, `parse_error`, `rejected_records`, `bounded_history`, `selected_ecosystems`, `collection_budget_pending`, `collection_error` |
+| `reasons` | Such as `not_fetched`, `http_error`, `parse_error`, `rejected_records`, `bounded_history`, `bounded_item_cap`, `selected_ecosystems`, `collection_budget_pending`, `collection_error` |
 | `received_count`, `parsed_count`, `rejected_count` | Input rows, indexed items, rejected rows; EPSS receives full CSV rows but emits zero inline items |
+
+Plaintext (`txt`) and tabular (`csv`) sources are indexed with a hard
+**`PLAINTEXT_ITEM_CAP` of 500** items per source per day. Homogeneous
+IP-reputation JSON arrays (for example SANS ISC `intelfeed`) share the same
+cap. `received_count` is the full non-comment line/row count in the archived
+body; `parsed_count` / `item_count` are the capped ledger-facing items (title +
+url or stable native id + `published_at` when present). When the body exceeds
+the cap, completeness is `partial` with reason `bounded_item_cap`. Truncation
+is not counted as `rejected_records` — the complete body remains in the
+collection archive.
 
 `item_count` always equals `len(items)`, never the upstream population size. A syntactically empty feed is a successful empty observation of that feed window, not proof of zero historical activity. Rolling feeds retain unknown historical completeness. Partial catalogs must not overwrite historical observations. Collector-generated `body.json` may contain successfully collected records despite later request failures; its diagnostics and checkpoint error explicitly retain that partial state.
 

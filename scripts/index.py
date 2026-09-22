@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import json
 import os
 import hashlib
@@ -16,6 +17,9 @@ from catalog import load_sources
 
 ITEM_CAP = 25
 JSON_CAP = 8
+# Max structured items emitted per txt/csv source into the daily index.
+# Full raw bodies remain archived; this only bounds ledger-facing itemization.
+PLAINTEXT_ITEM_CAP = 500
 INDEX_SCHEMA = "midkernel.threat-intel.index/v1"
 
 
@@ -197,6 +201,36 @@ def json_items(data: object) -> list[dict]:
     """Preserve structured upstream records; upstream scores are evidence, never our ranking."""
     if isinstance(data, dict) and data.get("collector") == "epss":
         return []  # Complete per-CVE rows live in the compressed sidecar.
+    # NVD CVE API 2.0: {vulnerabilities: [{cve: {id, published, descriptions, ...}}]}
+    if isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list):
+        sample = next((row for row in data["vulnerabilities"] if isinstance(row, dict)), None)
+        if sample and isinstance(sample.get("cve"), dict):
+            items = []
+            for row in data["vulnerabilities"]:
+                if not isinstance(row, dict) or not isinstance(row.get("cve"), dict):
+                    continue
+                cve = row["cve"]
+                ident = _nz(cve.get("id"))
+                if not ident:
+                    continue
+                descs = cve.get("descriptions") if isinstance(cve.get("descriptions"), list) else []
+                title = next(
+                    (_nz(d.get("value")) for d in descs
+                     if isinstance(d, dict) and d.get("lang") == "en" and _nz(d.get("value"))),
+                    "",
+                ) or ident
+                refs = []
+                for ref in cve.get("references") or []:
+                    if isinstance(ref, dict) and ref.get("url"):
+                        refs.append(ref["url"])
+                items.append(_with_evidence(
+                    _index_item(title, refs[0] if refs else "", _as_date(cve.get("published")), ident),
+                    row,
+                    summary=title if title != ident else None,
+                    modified_at=_as_date(cve.get("lastModified")) or None,
+                    references=refs,
+                ))
+            return items
     kev = isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list)
     rows = data.get("vulnerabilities") if kev else (
         data.get("records", data.get("data", [])) if isinstance(data, dict) else data)
@@ -220,6 +254,22 @@ def json_items(data: object) -> list[dict]:
             title, ident, published = row.get("name"), row.get("uid"), None
         elif row.get("cve"):
             title, ident, published = row.get("cve"), row.get("cve"), row.get("date")
+        elif row.get("ip"):
+            # SANS ISC intelfeed and similar IP reputation JSON arrays
+            title = row.get("description") or row.get("ip")
+            ident, published = row.get("ip"), row.get("date")
+        elif row.get("title") and (row.get("victim") is not None or row.get("claim_gang") is not None
+                                   or row.get("group") is not None):
+            # ransomware.live recentcyberattacks (and similar incident JSON)
+            title = row.get("title")
+            ident = row.get("id") or row.get("domain") or row.get("link") or row.get("url")
+            published = row.get("date") or row.get("added") or row.get("discovered")
+        elif row.get("group") and (row.get("domain") or row.get("victim")):
+            # ransomware.live recentvictims (domain may be empty for some claims)
+            victim = _nz(row.get("victim")) or _nz(row.get("domain"))
+            title = f"{row.get('group')}: {victim}"
+            ident = _nz(row.get("domain")) or victim
+            published = row.get("discovered") or row.get("attackdate") or row.get("date") or row.get("added")
         else:
             title, ident, published = row.get("name"), row.get("id"), row.get("date")
         if not (title or ident):
@@ -229,14 +279,140 @@ def json_items(data: object) -> list[dict]:
         aliases += [x["value"] for x in row.get("identifiers", []) if isinstance(x, dict) and x.get("value")]
         if row.get("cve_id"):
             aliases.append(row["cve_id"])
-        url = row.get("html_url") or row.get("link") or row.get("url") or row.get("source") or row.get("linkSource")
+        url = ""
+        for key in ("html_url", "link", "url", "claim_url", "source", "linkSource"):
+            value = row.get(key)
+            if isinstance(value, str) and value.strip() and value.strip().lower() not in {"false", "none"}:
+                url = value.strip()
+                break
         items.append(_with_evidence(_index_item(_nz(title or ident), _nz(url), _as_date(published), _nz(ident)),
-            row, summary=row.get("summary") or row.get("shortDescription") or cna.get("title"),
+            row, summary=row.get("summary") or row.get("shortDescription") or row.get("description") or cna.get("title"),
             content=row.get("details") or row.get("description") or "\n".join(x.get("value", "") for x in cna.get("descriptions", []) if isinstance(x, dict)) or None,
             modified_at=row.get("modified") or row.get("updated_at") or cve_meta.get("dateUpdated"),
             withdrawn_at=row.get("withdrawn") or row.get("withdrawn_at") or cve_meta.get("dateRejected"),
             aliases=sorted(set(aliases)), references=refs))
     return items
+
+
+_CSV_VALUE_KEYS = (
+    "url", "URL", "ioc", "IOC", "indicator", "Indicator",
+    "domain", "Domain", "AdresDomeny", "host", "Host",
+    "ip", "IP", "dstip", "DstIP", "srcip",
+    "sha256", "SHA256", "sha1", "md5", "hash", "Hash",
+    "cve", "CVE", "cve_id", "value", "Value", "name", "Name", "title", "Title",
+)
+_CSV_ID_KEYS = (
+    "id", "ID", "PozycjaRejestru", "uid", "UUID", "sha256", "SHA256", "cve", "CVE",
+)
+_CSV_URL_KEYS = ("url", "URL", "urlhaus_link", "link", "Link", "reference", "Reference")
+_CSV_DATE_KEYS = (
+    "dateadded", "date_added", "date", "Date", "DataWpisu", "published", "timestamp",
+    "first_seen", "last_seen", "discovered", "datetime",
+)
+
+
+def _csv_pick(row: dict[str, str], keys: tuple[str, ...]) -> str:
+    lower = {k.lower(): v for k, v in row.items()}
+    for key in keys:
+        value = row.get(key) or lower.get(key.lower())
+        if value and str(value).strip() and str(value).strip().lower() not in {"none", "null"}:
+            return str(value).strip()
+    return ""
+
+
+def _csv_header_and_rows(raw: bytes) -> tuple[list[str] | None, list[list[str]]]:
+    """Parse CSV/TSV bodies that may use # comment banners and a # column header."""
+    text = raw.decode("utf-8-sig", errors="replace")
+    header: list[str] | None = None
+    data_lines: list[str] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith("#"):
+            candidate = stripped.lstrip("#").strip()
+            if candidate and ("," in candidate or "\t" in candidate):
+                # Prefer the last comment that looks like a column header.
+                delim = "\t" if candidate.count("\t") > candidate.count(",") else ","
+                header = [part.strip().strip('"') for part in candidate.split(delim)]
+            continue
+        data_lines.append(stripped)
+    if not data_lines:
+        return header, []
+    sample = data_lines[0]
+    delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
+    reader = csv.reader(data_lines, delimiter=delimiter)
+    rows = [list(row) for row in reader if any(cell.strip() for cell in row)]
+    if header is None and rows:
+        # Treat first data row as header when it looks non-IOC (contains letters beyond hex/IP).
+        first = rows[0]
+        joined = " ".join(first).lower()
+        if any(token in joined for token in ("url", "domain", "ip", "cve", "sha", "date", "adres", "title", "name", "ioc")):
+            header = [cell.strip() for cell in first]
+            rows = rows[1:]
+    return header, rows
+
+
+def csv_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[dict]]:
+    """Line/row → bounded index items for CSV/TSV IOC and catalog downloads."""
+    header, rows = _csv_header_and_rows(raw)
+    items: list[dict] = []
+    for row_cells in rows:
+        if header and len(header) >= 1:
+            mapped = {header[i]: row_cells[i] if i < len(row_cells) else "" for i in range(len(header))}
+            value = _csv_pick(mapped, _CSV_VALUE_KEYS)
+            if not value:
+                value = next((str(v).strip() for v in mapped.values() if str(v).strip()), "")
+            ident = _csv_pick(mapped, _CSV_ID_KEYS) or value
+            url = _csv_pick(mapped, _CSV_URL_KEYS)
+            if not url and value.startswith(("http://", "https://")):
+                url = value
+            published = _as_date(_csv_pick(mapped, _CSV_DATE_KEYS))
+            raw_row: dict = mapped
+        else:
+            value = (row_cells[0] if row_cells else "").strip().strip('"')
+            if not value:
+                continue
+            ident = value
+            url = value if value.startswith(("http://", "https://")) else ""
+            published = ""
+            raw_row = {"columns": row_cells}
+        if not value:
+            continue
+        if len(items) < cap:
+            items.append(_with_evidence(
+                _index_item(value, url, published, ident),
+                raw_row,
+                summary=None,
+            ))
+    return len(rows), items
+
+
+def text_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[dict]]:
+    """Line → bounded index items for plaintext IOC / blocklist downloads."""
+    text = raw.decode("utf-8-sig", errors="replace")
+    received = 0
+    items: list[dict] = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        # Spamhaus DROP: "CIDR ; SBL…" — keep the network, drop the comment.
+        value = stripped.split(";", 1)[0].strip()
+        # AlienVault reputation.data: IP#score#categories…
+        if "#" in value and not value.startswith(("http://", "https://")):
+            value = value.split("#", 1)[0].strip()
+        if not value:
+            continue
+        received += 1
+        if len(items) >= cap:
+            continue
+        url = value if value.startswith(("http://", "https://")) else ""
+        items.append(_with_evidence(
+            _index_item(value, url, "", value),
+            {"line": stripped},
+        ))
+    return received, items
 
 
 def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list, dict]:
@@ -260,6 +436,7 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
         return [], extra
     raw = body_path.read_bytes()
     extra["body_sha256"] = hashlib.sha256(raw).hexdigest()
+    data = None
     try:
         if src["format"] in {"rss", "atom"}:
             kind, items = feed_items(raw)
@@ -267,6 +444,20 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
                 raise ValueError("unrecognized or malformed XML feed")
             status["received_count"] = len(items)
             status["reasons"].append("rolling_feed_has_no_historical_completeness_guarantee")
+        elif src["format"] == "txt":
+            received, items = text_items(raw)
+            status["received_count"] = received
+            status["completeness"] = "complete"
+            if received > len(items):
+                status["completeness"] = "partial"
+                status["reasons"].append("bounded_item_cap")
+        elif src["format"] == "csv":
+            received, items = csv_items(raw)
+            status["received_count"] = received
+            status["completeness"] = "complete"
+            if received > len(items):
+                status["completeness"] = "partial"
+                status["reasons"].append("bounded_item_cap")
         else:
             data = json.loads(raw.decode("utf-8-sig"))
             items = json_items(data)
@@ -276,26 +467,49 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
                     if key in data:
                         extra[key] = data[key]
             else:
-                rows = data if isinstance(data, list) else data.get("vulnerabilities", data.get("data"))
+                if isinstance(data, dict) and isinstance(data.get("vulnerabilities"), list):
+                    rows = data["vulnerabilities"]
+                else:
+                    rows = data if isinstance(data, list) else (
+                        data.get("vulnerabilities", data.get("data")) if isinstance(data, dict) else None)
                 if not isinstance(rows, list):
                     raise ValueError("unrecognized JSON catalog")
                 status["received_count"] = len(rows)
                 status["completeness"] = "complete"
+                # Homogeneous IP-reputation JSON arrays (e.g. SANS ISC intelfeed) can be
+                # 100k+ rows — share the plaintext ledger cap so the daily index stays bounded.
+                if (isinstance(data, list) and data and isinstance(data[0], dict)
+                        and "ip" in data[0] and not any(k in data[0] for k in ("cveID", "ghsa_id", "uid"))):
+                    if len(items) > PLAINTEXT_ITEM_CAP:
+                        items = items[:PLAINTEXT_ITEM_CAP]
+                        status["completeness"] = "partial"
+                        status["reasons"].append("bounded_item_cap")
                 if isinstance(data, dict):
                     extra["raw"] = {k: v for k, v in data.items() if k not in {"vulnerabilities", "data"}}
+                    if isinstance(data.get("totalResults"), int) and data["totalResults"] > len(rows):
+                        status["completeness"] = "partial"
+                        status["reasons"].append("bounded_api_slice")
                     if isinstance(data.get("total"), int) and data["total"] > len(rows):
                         status["completeness"] = "partial"
                         status["reasons"].append("bounded_api_slice")
+                    if isinstance(data.get("resultsPerPage"), int) and isinstance(data.get("totalResults"), int):
+                        if data["totalResults"] > len(rows):
+                            status["completeness"] = "partial"
+                            if "bounded_api_slice" not in status["reasons"]:
+                                status["reasons"].append("bounded_api_slice")
                     if isinstance(data.get("count"), int) and data["count"] != len(rows):
                         status["completeness"] = "partial"
                         status["reasons"].append("catalog_count_mismatch")
         status["parse"] = "ok"
         status["parsed_count"] = len(items)
-        if not (isinstance(locals().get("data"), dict) and data.get("collector")):
-            status["rejected_count"] = status["received_count"] - len(items)
-        if status["rejected_count"]:
-            status["completeness"] = "partial"
-            status["reasons"].append("rejected_records")
+        if src["format"] in {"txt", "csv"} or "bounded_item_cap" in status["reasons"]:
+            # Cap truncates intentionally; remaining rows are archived, not rejected.
+            status["rejected_count"] = 0
+        elif not (isinstance(data, dict) and data.get("collector")):
+            status["rejected_count"] = max(0, status["received_count"] - len(items))
+            if status["rejected_count"]:
+                status["completeness"] = "partial"
+                status["reasons"].append("rejected_records")
         if meta.get("error"):
             status["completeness"] = "partial"
             status["reasons"].append(meta["error"])
@@ -313,7 +527,7 @@ def _read_meta(path: Path) -> dict:
 
 def _body_path(output_dir: Path, src_id: str) -> Path:
     body_path = output_dir / src_id / "body"
-    for ext in (".json", ".xml", ""):
+    for ext in (".json", ".xml", ".txt", ".csv", ""):
         candidate = output_dir / src_id / f"body{ext}"
         if candidate.exists():
             return candidate

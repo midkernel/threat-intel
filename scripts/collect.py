@@ -31,6 +31,7 @@ EPSS_URL = "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz"
 KEV_MIRROR = "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
 CVE_ROOT = "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves"
 SPECIAL = {"cve-cna", "first-epss", "github-advisories-reviewed", "github-advisories-malware", "osv-vulnerabilities"}
+BODY_EXT = {"json": "json", "rss": "xml", "atom": "xml", "txt": "txt", "csv": "csv"}
 
 
 def now() -> str:
@@ -429,7 +430,8 @@ def collect_source(src: dict, output: Path, state_dir: Path, *, fetch=request, a
                 meta["diagnostics"].append({"stage": "collection", "message": meta["error"]})
         else:
             raw, code, headers = kev(archive, src["url"], meta) if src["id"] == "cisa-kev" else archive.get(src["url"])
-            (directory / ("body.json" if src["format"] == "json" else "body.xml")).write_bytes(raw)
+            ext = BODY_EXT.get(src["format"], "bin")
+            (directory / f"body.{ext}").write_bytes(raw)
             meta.update({"status": code, "bytes": len(raw), "sha256": digest(raw),
                          "content_type": headers.get("content-type"), "headers": headers})
     except Exception as exc:

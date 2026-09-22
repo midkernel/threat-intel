@@ -1,6 +1,7 @@
 # Midkernel Threat Intel
 
-Public catalog of threat-intel **RSS/Atom** feeds and a few official **JSON** catalogs that have no RSS.
+Public catalog of threat-intel **RSS/Atom** feeds, official **JSON** catalogs,
+and bounded **txt/csv** IOC downloads that have no RSS.
 
 We **package and cite**. We do not originate. We do not rank here.
 
