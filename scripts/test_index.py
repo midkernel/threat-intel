@@ -534,6 +534,30 @@ class PlaintextCsvIndexTests(unittest.TestCase):
         self.assertEqual(received, PLAINTEXT_ITEM_CAP + 25)
         self.assertEqual(len(items), PLAINTEXT_ITEM_CAP)
 
+    def test_csv_provider_columns_and_quoted_spacing(self) -> None:
+        fixtures = [
+            (b'cveID,vendorProject,dateAdded\nCVE-2026-1234,Vendor,2026-09-22\n', "CVE-2026-1234", "2026-09-22"),
+            (b'# first_seen_utc,ioc_id,ioc_value\n"2026-09-22", "123", "https://example.invalid/a"\n', "https://example.invalid/a", "2026-09-22"),
+            (b'# Listingdate,DstIP,DstPort\n2026-09-22,192.0.2.1,443\n', "192.0.2.1", "2026-09-22"),
+            (b'# ja3_md5,first_seen\nabc123,2026-09-22\n', "abc123", "2026-09-22"),
+        ]
+        for raw, title, date in fixtures:
+            with self.subTest(title=title):
+                received, items = csv_items(raw)
+                self.assertEqual(received, 1)
+                self.assertEqual(items[0]["title"], title)
+                self.assertTrue(items[0]["published_at"].startswith(date))
+
+    def test_csv_headerless_values_and_prose_comments_are_not_headers(self) -> None:
+        for value in ("https://example.invalid/domain", "CVE-2026-1234"):
+            received, items = csv_items(f"# Example banner, updated daily\n{value}\n".encode())
+            self.assertEqual(received, 1)
+            self.assertEqual(items[0]["title"], value)
+
+    def test_plaintext_url_preserves_semicolon(self) -> None:
+        _, items = text_items(b"https://example.invalid/a;param=1\n")
+        self.assertEqual(items[0]["url"], "https://example.invalid/a;param=1")
+
     def test_csv_items_urlhaus_style_comment_header(self) -> None:
         body = (
             b"################################################################\n"

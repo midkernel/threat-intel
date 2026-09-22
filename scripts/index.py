@@ -299,15 +299,15 @@ _CSV_VALUE_KEYS = (
     "domain", "Domain", "AdresDomeny", "host", "Host",
     "ip", "IP", "dstip", "DstIP", "srcip",
     "sha256", "SHA256", "sha1", "md5", "hash", "Hash",
-    "cve", "CVE", "cve_id", "value", "Value", "name", "Name", "title", "Title",
+    "cve", "CVE", "cve_id", "cveID", "ioc_value", "ip_address", "ja3_md5", "value", "Value", "name", "Name", "title", "Title",
 )
 _CSV_ID_KEYS = (
-    "id", "ID", "PozycjaRejestru", "uid", "UUID", "sha256", "SHA256", "cve", "CVE",
+    "id", "ID", "PozycjaRejestru", "uid", "UUID", "sha256", "SHA256", "cve", "CVE", "cveID",
 )
 _CSV_URL_KEYS = ("url", "URL", "urlhaus_link", "link", "Link", "reference", "Reference")
 _CSV_DATE_KEYS = (
     "dateadded", "date_added", "date", "Date", "DataWpisu", "published", "timestamp",
-    "first_seen", "last_seen", "discovered", "datetime",
+    "first_seen", "first_seen_utc", "last_seen", "discovered", "datetime", "Listingdate",
 )
 
 
@@ -318,6 +318,9 @@ def _csv_pick(row: dict[str, str], keys: tuple[str, ...]) -> str:
         if value and str(value).strip() and str(value).strip().lower() not in {"none", "null"}:
             return str(value).strip()
     return ""
+
+
+_CSV_HEADER_KEYS = {key.lower() for key in (*_CSV_VALUE_KEYS, *_CSV_ID_KEYS, *_CSV_URL_KEYS, *_CSV_DATE_KEYS)}
 
 
 def _csv_header_and_rows(raw: bytes) -> tuple[list[str] | None, list[list[str]]]:
@@ -334,20 +337,21 @@ def _csv_header_and_rows(raw: bytes) -> tuple[list[str] | None, list[list[str]]]
             if candidate and ("," in candidate or "\t" in candidate):
                 # Prefer the last comment that looks like a column header.
                 delim = "\t" if candidate.count("\t") > candidate.count(",") else ","
-                header = [part.strip().strip('"') for part in candidate.split(delim)]
+                columns = next(csv.reader([candidate], delimiter=delim, skipinitialspace=True))
+                if any(part.strip().lower() in _CSV_HEADER_KEYS for part in columns):
+                    header = [part.strip() for part in columns]
             continue
         data_lines.append(stripped)
     if not data_lines:
         return header, []
     sample = data_lines[0]
     delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
-    reader = csv.reader(data_lines, delimiter=delimiter)
+    reader = csv.reader(data_lines, delimiter=delimiter, skipinitialspace=True)
     rows = [list(row) for row in reader if any(cell.strip() for cell in row)]
     if header is None and rows:
-        # Treat first data row as header when it looks non-IOC (contains letters beyond hex/IP).
+        # Match whole column names; IOC values and CVE IDs are not headers.
         first = rows[0]
-        joined = " ".join(first).lower()
-        if any(token in joined for token in ("url", "domain", "ip", "cve", "sha", "date", "adres", "title", "name", "ioc")):
+        if any(cell.strip().lower() in _CSV_HEADER_KEYS for cell in first):
             header = [cell.strip() for cell in first]
             rows = rows[1:]
     return header, rows
@@ -398,7 +402,7 @@ def text_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[
         if not stripped or stripped.startswith("#"):
             continue
         # Spamhaus DROP: "CIDR ; SBL…" — keep the network, drop the comment.
-        value = stripped.split(";", 1)[0].strip()
+        value = stripped if stripped.startswith(("http://", "https://")) else stripped.split(";", 1)[0].strip()
         # AlienVault reputation.data: IP#score#categories…
         if "#" in value and not value.startswith(("http://", "https://")):
             value = value.split("#", 1)[0].strip()
