@@ -463,7 +463,12 @@ def main() -> int:
     for src in sources:
         if src["id"] == "cve-cna":
             results.append(collect_source(src, args.output, args.state, at=started_at, run_deadline=run_deadline))
-    write_outputs(args.output, sources, day=os.environ.get("COLLECTION_DAY") or started_at[:10])
+    write_outputs(
+        args.output,
+        sources,
+        day=os.environ.get("COLLECTION_DAY") or started_at[:10],
+        state_dir=args.state,
+    )
     manifest = {"schema": "midkernel.threat-intel.archive/v1", "generated_at": now(), "files": []}
     for path in sorted(args.output.rglob("*")):
         if path.is_file():

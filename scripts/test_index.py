@@ -12,6 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from catalog import load_sources, validate_sources
 from index import (
+    ABUSECH_CSV_SAFETY_CEILING,
     INDEX_SCHEMA,
     PLAINTEXT_ITEM_CAP,
     build_index,
@@ -711,6 +712,207 @@ class PlaintextCsvIndexTests(unittest.TestCase):
         items = json_items(empty_domain)
         self.assertEqual(items[0]["id"], "Mystery Corp")
         self.assertEqual(items[0]["title"], "akira: Mystery Corp")
+
+
+def _urlhaus_csv(rows: list[tuple[str, str, str]]) -> bytes:
+    lines = ["# id,dateadded,url,url_status,threat"]
+    for ident, added, url in rows:
+        lines.append(f'"{ident}","{added}","{url}","online","malware_download"')
+    return ("\n".join(lines) + "\n").encode()
+
+
+def _abusech_source(src_id: str = "abuse-ch-urlhaus-recent") -> dict[str, str]:
+    return {
+        "id": src_id,
+        "name": "Abuse.ch URLhaus recent malware URLs",
+        "url": "https://urlhaus.abuse.ch/downloads/csv_recent/",
+        "format": "csv",
+        "surface": "web2",
+        "why": "fixture",
+    }
+
+
+class AbusechCsvIncrementalTests(unittest.TestCase):
+    def test_safety_ceiling_is_above_the_old_ledger_cap(self) -> None:
+        self.assertGreaterEqual(ABUSECH_CSV_SAFETY_CEILING, 50_000)
+        self.assertGreater(ABUSECH_CSV_SAFETY_CEILING, PLAINTEXT_ITEM_CAP)
+
+    def test_over_cap_fixture_ingests_fully_and_non_abuse_csv_stays_capped(self) -> None:
+        count = PLAINTEXT_ITEM_CAP + 25
+        rows = [
+            (str(i), f"2026-10-06 12:00:{i % 60:02d}", f"http://evil.example/{i}")
+            for i in range(count)
+        ]
+        body = _urlhaus_csv(rows)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            state = out / "state"
+            _write_source(out, "abuse-ch-urlhaus-recent", status=200, body=body, ext="csv")
+            _write_source(out, "example-csv", status=200, body=body, ext="csv")
+            sources = [
+                _abusech_source(),
+                {
+                    "id": "example-csv",
+                    "name": "Example CSV",
+                    "url": "https://example.invalid/list.csv",
+                    "format": "csv",
+                    "surface": "web2",
+                    "why": "fixture",
+                },
+            ]
+            with self.assertNoLogs("threat-intel", level="WARNING"):
+                index = build_index(
+                    out, sources, day="2026-10-06", generated_at="2026-10-06T13:00:00Z", state_dir=state,
+                )
+            abuse = index["sources"][0]
+            self.assertEqual(abuse["item_count"], count)
+            self.assertEqual(abuse["status"]["received_count"], count)
+            self.assertEqual(abuse["status"]["parsed_count"], count)
+            self.assertEqual(abuse["status"]["completeness"], "complete")
+            self.assertEqual(abuse["status"]["coverage"], "incremental")
+            self.assertNotIn("bounded_item_cap", abuse["status"]["reasons"])
+            self.assertEqual(abuse["status"]["rejected_count"], 0)
+            self.assertEqual([item["id"] for item in abuse["items"]], [str(i) for i in range(count)])
+            self.assertEqual(abuse["items"][0]["title"], "http://evil.example/0")
+            self.assertEqual(abuse["items"][0]["url"], "http://evil.example/0")
+            self.assertEqual(abuse["checkpoint"]["ceiling_hit"], False)
+            self.assertEqual(abuse["checkpoint"]["safety_ceiling"], ABUSECH_CSV_SAFETY_CEILING)
+            self.assertGreaterEqual(abuse["checkpoint"]["high_water"], "2026-10-06T12:00:00Z")
+            saved = json.loads((state / "abuse-ch-urlhaus-recent.json").read_text(encoding="utf-8"))
+            self.assertEqual(saved["high_water"], abuse["checkpoint"]["high_water"])
+            self.assertIsNone(saved["previous_high_water"])
+
+            other = index["sources"][1]
+            self.assertEqual(other["item_count"], PLAINTEXT_ITEM_CAP)
+            self.assertEqual(other["status"]["completeness"], "partial")
+            self.assertIn("bounded_item_cap", other["status"]["reasons"])
+            self.assertNotIn("checkpoint", other)
+
+            again = build_index(
+                out, sources[:1], day="2026-10-06", generated_at="2026-10-06T13:00:00Z", state_dir=state,
+            )
+            self.assertEqual(again["sources"][0]["item_count"], count)
+
+    def test_incremental_high_water_keeps_only_newer_rows(self) -> None:
+        first = _urlhaus_csv([
+            ("1", "2026-10-01 00:00:00", "http://evil.example/1"),
+            ("2", "2026-10-02 00:00:00", "http://evil.example/2"),
+            ("3", "2026-10-03 00:00:00", "http://evil.example/3"),
+        ])
+        second = _urlhaus_csv([
+            ("1", "2026-10-01 00:00:00", "http://evil.example/1"),
+            ("3", "2026-10-03 00:00:00", "http://evil.example/3"),
+            ("9", "2026-09-01 00:00:00", "http://evil.example/old"),
+            ("4", "2026-10-04 08:30:00", "http://evil.example/4"),
+        ])
+        threatfox = (
+            b"# first_seen_utc,ioc_id,ioc_value,ioc_type\n"
+            b'"2026-10-03 00:00:00","10","http://c2.example/old","url"\n'
+            b'"2026-10-05 01:02:03","11","http://c2.example/new","url"\n'
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            state = out / "state"
+            _write_source(out, "abuse-ch-urlhaus-recent", status=200, body=first, ext="csv")
+            _write_source(out, "abuse-ch-threatfox-urls", status=200, body=threatfox, ext="csv")
+            fox = {
+                "id": "abuse-ch-threatfox-urls",
+                "name": "Abuse.ch ThreatFox recent URLs",
+                "url": "https://threatfox.abuse.ch/export/csv/urls/recent/",
+                "format": "csv",
+                "surface": "web2",
+                "why": "fixture",
+            }
+            first_index = build_index(
+                out, [_abusech_source(), fox], day="2026-10-05",
+                generated_at="2026-10-05T00:00:00Z", state_dir=state,
+            )
+            self.assertEqual([item["id"] for item in first_index["sources"][0]["items"]], ["1", "2", "3"])
+            self.assertEqual(first_index["sources"][0]["checkpoint"]["high_water"], "2026-10-03T00:00:00Z")
+            fox_items = first_index["sources"][1]["items"]
+            self.assertEqual([item["id"] for item in fox_items], ["http://c2.example/old", "http://c2.example/new"])
+            self.assertEqual(fox_items[1]["title"], "http://c2.example/new")
+            self.assertEqual(fox_items[1]["published_at"], "2026-10-05 01:02:03")
+            self.assertEqual(first_index["sources"][1]["checkpoint"]["high_water"], "2026-10-05T01:02:03Z")
+
+            (out / "abuse-ch-urlhaus-recent" / "body.csv").write_bytes(second)
+            (out / "abuse-ch-urlhaus-recent" / "meta.json").write_text(json.dumps({
+                "status": 200, "fetched_at": "2026-10-05T12:00:00Z", "diagnostics": [],
+            }))
+            second_index = build_index(
+                out, [_abusech_source()], day="2026-10-05",
+                generated_at="2026-10-05T12:00:00Z", state_dir=state,
+            )
+            row = second_index["sources"][0]
+            self.assertEqual([item["id"] for item in row["items"]], ["4"])
+            self.assertEqual(row["items"][0]["published_at"], "2026-10-04 08:30:00")
+            self.assertEqual(row["status"]["received_count"], 4)
+            self.assertEqual(row["status"]["parsed_count"], 1)
+            self.assertEqual(row["status"]["completeness"], "complete")
+            self.assertIn("incremental_high_water", row["status"]["reasons"])
+            self.assertNotIn("bounded_item_cap", row["status"]["reasons"])
+            self.assertEqual(row["checkpoint"]["previous_high_water"], "2026-10-03T00:00:00Z")
+            self.assertEqual(row["checkpoint"]["high_water"], "2026-10-04T08:30:00Z")
+            saved = json.loads((state / "abuse-ch-urlhaus-recent.json").read_text(encoding="utf-8"))
+            self.assertEqual(saved["high_water"], "2026-10-04T08:30:00Z")
+            self.assertEqual(saved["previous_high_water"], "2026-10-03T00:00:00Z")
+
+    def test_safety_ceiling_warns_and_resumes_from_contiguous_mark(self) -> None:
+        rows = [(str(i), f"2026-10-0{i} 00:00:00", f"http://evil.example/{i}") for i in range(1, 6)]
+        body = _urlhaus_csv(rows)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            state = out / "state"
+            directory = out / "abuse-ch-urlhaus-recent"
+            directory.mkdir()
+            (directory / "body.csv").write_bytes(body)
+            (directory / "meta.json").write_text(json.dumps({
+                "status": 200, "fetched_at": "2026-10-06T00:00:00Z", "diagnostics": [],
+            }))
+            with self.assertLogs("threat-intel", level="WARNING") as logs:
+                first = build_index(
+                    out, [_abusech_source()], day="2026-10-06",
+                    generated_at="2026-10-06T00:00:00Z", state_dir=state, abusech_ceiling=3,
+                )
+            self.assertTrue(any("safety ceiling" in line for line in logs.output))
+            row = first["sources"][0]
+            self.assertEqual([item["id"] for item in row["items"]], ["1", "2", "3"])
+            self.assertEqual(row["status"]["completeness"], "partial")
+            self.assertIn("bounded_item_cap", row["status"]["reasons"])
+            self.assertTrue(row["checkpoint"]["ceiling_hit"])
+            self.assertEqual(row["checkpoint"]["safety_ceiling"], 3)
+            self.assertEqual(row["checkpoint"]["high_water"], "2026-10-03T00:00:00Z")
+
+            (directory / "body.csv").write_bytes(body + b"\n")
+            (directory / "meta.json").write_text(json.dumps({
+                "status": 200, "fetched_at": "2026-10-06T04:00:00Z", "diagnostics": [],
+            }))
+            second = build_index(
+                out, [_abusech_source()], day="2026-10-06",
+                generated_at="2026-10-06T04:00:00Z", state_dir=state, abusech_ceiling=3,
+            )
+            self.assertEqual([item["id"] for item in second["sources"][0]["items"]], ["4", "5"])
+            self.assertEqual(second["sources"][0]["checkpoint"]["high_water"], "2026-10-05T00:00:00Z")
+            self.assertEqual(second["sources"][0]["status"]["completeness"], "complete")
+
+    def test_same_timestamp_burst_does_not_advance_past_unindexed_rows(self) -> None:
+        rows = [(str(i), "2026-10-06 01:02:03", f"http://evil.example/{i}") for i in range(4)]
+        body = _urlhaus_csv(rows)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            state = out / "state"
+            _write_source(out, "abuse-ch-urlhaus-recent", status=200, body=body, ext="csv")
+            with self.assertLogs("threat-intel", level="WARNING"):
+                index = build_index(
+                    out, [_abusech_source()], day="2026-10-06",
+                    generated_at="2026-10-06T02:00:00Z", state_dir=state, abusech_ceiling=2,
+                )
+            row = index["sources"][0]
+            self.assertEqual(row["item_count"], 2)
+            self.assertIsNone(row["checkpoint"]["high_water"])
+            self.assertTrue(row["checkpoint"]["ceiling_hit"])
+            saved = json.loads((state / "abuse-ch-urlhaus-recent.json").read_text(encoding="utf-8"))
+            self.assertIsNone(saved["high_water"])
 
 
 if __name__ == "__main__":

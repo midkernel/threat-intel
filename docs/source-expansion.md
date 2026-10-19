@@ -19,7 +19,8 @@ CloudVulnDB, NVD API 2.0, and industry news RSS. Transport formats are honest:
 `rss|atom|json|txt|csv`. Plaintext and CSV downloads use `txt`/`csv` and the
 indexer emits up to **`PLAINTEXT_ITEM_CAP` (500)** structured items per source
 (title + url/native id + publishedAt when available); full bodies remain in the
-archive. Notable caveats: OpenPhish non-commercial ToS, ransomware.live
+archive. abuse.ch CSV feeds are the exception: they stream every row newer
+than the last high-water mark, up to a 50,000-row safety ceiling. Notable caveats: OpenPhish non-commercial ToS, ransomware.live
 **1 req/min**, and NVD API 2.0 rate limits.
 
 The catalog keeps its six fields (`id`, `name`, `url`, `format`, `surface`, `why`)

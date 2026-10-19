@@ -4,11 +4,14 @@
 from __future__ import annotations
 
 import csv
-import json
-import os
 import hashlib
+import heapq
+import json
+import logging
+import os
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -20,7 +23,12 @@ JSON_CAP = 8
 # Max structured items emitted per txt/csv source into the daily index.
 # Full raw bodies remain archived; this only bounds ledger-facing itemization.
 PLAINTEXT_ITEM_CAP = 500
+# abuse.ch recent CSVs can dump well past the ledger cap (URLhaus csv_recent
+# carried 14,449 URLs on 2026-10-06). Index every row newer than the last
+# run's high-water mark, and stop only at this safety ceiling — with a warning.
+ABUSECH_CSV_SAFETY_CEILING = 50_000
 INDEX_SCHEMA = "midkernel.threat-intel.index/v1"
+logger = logging.getLogger("threat-intel")
 
 
 def _local(tag: str) -> str:
@@ -307,7 +315,8 @@ _CSV_ID_KEYS = (
 _CSV_URL_KEYS = ("url", "URL", "urlhaus_link", "link", "Link", "reference", "Reference")
 _CSV_DATE_KEYS = (
     "dateadded", "date_added", "date", "Date", "DataWpisu", "published", "timestamp",
-    "first_seen", "first_seen_utc", "last_seen", "discovered", "datetime", "Listingdate",
+    "first_seen_utc", "first_seen", "firstseen", "last_seen", "lastseen",
+    "discovered", "datetime", "Listingdate",
 )
 
 
@@ -323,73 +332,281 @@ def _csv_pick(row: dict[str, str], keys: tuple[str, ...]) -> str:
 _CSV_HEADER_KEYS = {key.lower() for key in (*_CSV_VALUE_KEYS, *_CSV_ID_KEYS, *_CSV_URL_KEYS, *_CSV_DATE_KEYS)}
 
 
-def _csv_header_and_rows(raw: bytes) -> tuple[list[str] | None, list[list[str]]]:
-    """Parse CSV/TSV bodies that may use # comment banners and a # column header."""
-    text = raw.decode("utf-8-sig", errors="replace")
+def _text_lines(text: str):
+    """Yield lines without retaining a second list of the whole CSV."""
+    start = 0
+    length = len(text)
+    while start < length:
+        end = text.find("\n", start)
+        if end == -1:
+            line = text[start:]
+            start = length
+        else:
+            line = text[start:end]
+            start = end + 1
+        if line.endswith("\r"):
+            line = line[:-1]
+        yield line
+
+
+def _comment_header(text: str) -> list[str] | None:
+    """Last # comment that names known columns, matching the historical parser."""
     header: list[str] | None = None
-    data_lines: list[str] = []
-    for line in text.splitlines():
+    for line in _text_lines(text):
         stripped = line.strip()
-        if not stripped:
+        if not stripped.startswith("#"):
             continue
-        if stripped.startswith("#"):
-            candidate = stripped.lstrip("#").strip()
-            if candidate and ("," in candidate or "\t" in candidate):
-                # Prefer the last comment that looks like a column header.
-                delim = "\t" if candidate.count("\t") > candidate.count(",") else ","
-                columns = next(csv.reader([candidate], delimiter=delim, skipinitialspace=True))
-                if any(part.strip().lower() in _CSV_HEADER_KEYS for part in columns):
-                    header = [part.strip() for part in columns]
+        candidate = stripped.lstrip("#").strip()
+        if not candidate or ("," not in candidate and "\t" not in candidate):
             continue
-        data_lines.append(stripped)
-    if not data_lines:
-        return header, []
-    sample = data_lines[0]
-    delimiter = "\t" if sample.count("\t") > sample.count(",") else ","
-    reader = csv.reader(data_lines, delimiter=delimiter, skipinitialspace=True)
-    rows = [list(row) for row in reader if any(cell.strip() for cell in row)]
-    if header is None and rows:
-        # Match whole column names; IOC values and CVE IDs are not headers.
-        first = rows[0]
-        if any(cell.strip().lower() in _CSV_HEADER_KEYS for cell in first):
-            header = [cell.strip() for cell in first]
-            rows = rows[1:]
-    return header, rows
+        delim = "\t" if candidate.count("\t") > candidate.count(",") else ","
+        columns = next(csv.reader([candidate], delimiter=delim, skipinitialspace=True))
+        if any(part.strip().lower() in _CSV_HEADER_KEYS for part in columns):
+            header = [part.strip() for part in columns]
+    return header
+
+
+def _iter_csv_rows(raw: bytes):
+    """Stream data rows as (header, cells). Does not retain parsed rows."""
+    text = raw.decode("utf-8-sig", errors="replace")
+    header = _comment_header(text)
+
+    def data_lines():
+        for line in _text_lines(text):
+            stripped = line.strip()
+            if stripped and not stripped.startswith("#"):
+                yield stripped
+
+    lines = data_lines()
+    try:
+        first = next(lines)
+    except StopIteration:
+        return
+    delimiter = "\t" if first.count("\t") > first.count(",") else ","
+
+    def chained():
+        yield first
+        yield from lines
+
+    reader = csv.reader(chained(), delimiter=delimiter, skipinitialspace=True)
+    header_locked = header is not None
+    for row in reader:
+        if not any(cell.strip() for cell in row):
+            continue
+        if not header_locked:
+            # Match whole column names; IOC values and CVE IDs are not headers.
+            if any(cell.strip().lower() in _CSV_HEADER_KEYS for cell in row):
+                header = [cell.strip() for cell in row]
+                header_locked = True
+                continue
+            header_locked = True
+        yield header, row
+
+
+def _row_instant(value: str) -> datetime | None:
+    """UTC instant for first_seen/dateadded high-water comparisons."""
+    text = value.strip()
+    if not text or text.lower() in {"none", "null"}:
+        return None
+    if text.isdigit():
+        try:
+            return datetime.fromtimestamp(int(text), timezone.utc).replace(microsecond=0)
+        except (OverflowError, OSError, ValueError):
+            return None
+    normalized = text.replace("Z", "+00:00")
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        try:
+            parsed = datetime.strptime(text[:10], "%Y-%m-%d")
+        except ValueError:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).replace(microsecond=0)
+
+
+def _instant_text(value: datetime) -> str:
+    return value.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _csv_record(header: list[str] | None, row_cells: list[str]) -> tuple[dict, datetime | None] | None:
+    """One index item plus the row's first_seen/dateadded instant, if any."""
+    if header and len(header) >= 1:
+        mapped = {header[i]: row_cells[i] if i < len(row_cells) else "" for i in range(len(header))}
+        value = _csv_pick(mapped, _CSV_VALUE_KEYS)
+        if not value:
+            value = next((str(v).strip() for v in mapped.values() if str(v).strip()), "")
+        ident = _csv_pick(mapped, _CSV_ID_KEYS) or value
+        url = _csv_pick(mapped, _CSV_URL_KEYS)
+        if not url and value.startswith(("http://", "https://")):
+            url = value
+        published_raw = _csv_pick(mapped, _CSV_DATE_KEYS)
+        published = _as_date(published_raw)
+        raw_row: dict = mapped
+        instant = _row_instant(published_raw)
+    else:
+        value = (row_cells[0] if row_cells else "").strip().strip('"')
+        if not value:
+            return None
+        ident = value
+        url = value if value.startswith(("http://", "https://")) else ""
+        published = ""
+        raw_row = {"columns": row_cells}
+        instant = None
+    if not value:
+        return None
+    item = _with_evidence(_index_item(value, url, published, ident), raw_row, summary=None)
+    return item, instant
 
 
 def csv_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[dict]]:
     """Line/row → bounded index items for CSV/TSV IOC and catalog downloads."""
-    header, rows = _csv_header_and_rows(raw)
     items: list[dict] = []
-    for row_cells in rows:
-        if header and len(header) >= 1:
-            mapped = {header[i]: row_cells[i] if i < len(row_cells) else "" for i in range(len(header))}
-            value = _csv_pick(mapped, _CSV_VALUE_KEYS)
-            if not value:
-                value = next((str(v).strip() for v in mapped.values() if str(v).strip()), "")
-            ident = _csv_pick(mapped, _CSV_ID_KEYS) or value
-            url = _csv_pick(mapped, _CSV_URL_KEYS)
-            if not url and value.startswith(("http://", "https://")):
-                url = value
-            published = _as_date(_csv_pick(mapped, _CSV_DATE_KEYS))
-            raw_row: dict = mapped
-        else:
-            value = (row_cells[0] if row_cells else "").strip().strip('"')
-            if not value:
-                continue
-            ident = value
-            url = value if value.startswith(("http://", "https://")) else ""
-            published = ""
-            raw_row = {"columns": row_cells}
-        if not value:
+    received = 0
+    for header, row_cells in _iter_csv_rows(raw):
+        received += 1
+        built = _csv_record(header, row_cells)
+        if built is None or len(items) >= cap:
             continue
-        if len(items) < cap:
-            items.append(_with_evidence(
-                _index_item(value, url, published, ident),
-                raw_row,
-                summary=None,
-            ))
-    return len(rows), items
+        items.append(built[0])
+    return received, items
+
+
+def _is_abusech_csv(src: dict) -> bool:
+    if src.get("format") != "csv":
+        return False
+    ident = str(src.get("id") or "")
+    url = str(src.get("url") or "")
+    return ident.startswith("abuse-ch-") or "abuse.ch" in url.lower()
+
+
+class AbusechCsvIngest:
+    """Rows newer than the previous high-water mark, bounded by the safety ceiling."""
+
+    def __init__(self) -> None:
+        self.received = 0
+        self.items: list[dict] = []
+        self.skipped_existing = 0
+        self.truncated = False
+        self.previous_high_water: str | None = None
+        self.high_water: str | None = None
+
+
+def ingest_abusech_csv(
+    raw: bytes,
+    *,
+    high_water: str | None,
+    ceiling: int,
+    source_id: str,
+) -> AbusechCsvIngest:
+    """Stream an abuse.ch CSV and keep every row newer than ``high_water``.
+
+    When more than ``ceiling`` new rows are present, keep the oldest ones so
+    the mark can advance contiguously, and log a warning. Rows that share the
+    cutoff timestamp stay eligible on the next run instead of being skipped.
+    """
+    result = AbusechCsvIngest()
+    previous = _row_instant(high_water) if high_water else None
+    result.previous_high_water = _instant_text(previous) if previous else None
+    if ceiling < 1:
+        raise ValueError("abuse.ch CSV safety ceiling must be positive")
+    # Min-heap evicts the newest dated row (and undated rows first) once full.
+    # Tuple prefix is unique via seq, so item dicts are never compared.
+    heap: list[tuple] = []
+    eligible = 0
+    evicted_min: datetime | None = None
+    seq = 0
+    for header, row_cells in _iter_csv_rows(raw):
+        result.received += 1
+        built = _csv_record(header, row_cells)
+        if built is None:
+            continue
+        item, instant = built
+        if previous is not None and (instant is None or instant <= previous):
+            result.skipped_existing += 1
+            continue
+        eligible += 1
+        seq += 1
+        if instant is None:
+            key = (0, 0, -seq)
+        else:
+            key = (1, -instant.timestamp(), -seq)
+        heapq.heappush(heap, (key, seq, item, instant))
+        if len(heap) > ceiling:
+            popped = heapq.heappop(heap)
+            popped_instant = popped[3]
+            if isinstance(popped_instant, datetime):
+                evicted_min = popped_instant if evicted_min is None else min(evicted_min, popped_instant)
+    result.truncated = eligible > ceiling
+    result.items = [entry[2] for entry in sorted(heap, key=lambda entry: entry[1])]
+    selected = [entry[3] for entry in heap if isinstance(entry[3], datetime)]
+    advanced: datetime | None = None
+    if not result.truncated:
+        if selected:
+            advanced = max(selected)
+    elif evicted_min is None:
+        if selected:
+            advanced = max(selected)
+    else:
+        fully_kept = [instant for instant in selected if instant < evicted_min]
+        if fully_kept:
+            advanced = max(fully_kept)
+    if advanced is not None and (previous is None or advanced > previous):
+        result.high_water = _instant_text(advanced)
+    else:
+        result.high_water = result.previous_high_water
+    if result.truncated:
+        logger.warning(
+            "abuse.ch CSV safety ceiling hit for %s: indexed %s of %s rows newer than %s (ceiling %s)",
+            source_id,
+            len(result.items),
+            eligible,
+            result.previous_high_water or "bootstrap",
+            ceiling,
+        )
+    return result
+
+
+def _read_abusech_state(state_dir: Path | None, src_id: str) -> dict:
+    if state_dir is None:
+        return {}
+    path = state_dir / f"{src_id}.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _filter_mark(state: dict, body_sha: str | None) -> str | None:
+    """Re-indexing the same body repeats that run; a new body uses the saved mark."""
+    if body_sha and state.get("body_sha256") == body_sha:
+        previous = state.get("previous_high_water")
+        return previous if isinstance(previous, str) and previous.strip() else None
+    current = state.get("high_water")
+    return current if isinstance(current, str) and current.strip() else None
+
+
+def _commit_abusech_state(
+    state_dir: Path,
+    src_id: str,
+    *,
+    used_mark: str | None,
+    stored_mark: str | None,
+    body_sha: str,
+) -> None:
+    path = state_dir / f"{src_id}.json"
+    data = _read_abusech_state(state_dir, src_id)
+    data["previous_high_water"] = used_mark
+    data["high_water"] = stored_mark
+    data["body_sha256"] = body_sha
+    state_dir.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.replace(path)
 
 
 def text_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[dict]]:
@@ -419,7 +636,14 @@ def text_items(raw: bytes, *, cap: int = PLAINTEXT_ITEM_CAP) -> tuple[int, list[
     return received, items
 
 
-def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list, dict]:
+def source_details(
+    src: dict,
+    meta: dict | None,
+    body_path: Path,
+    *,
+    high_water: str | None = None,
+    abusech_ceiling: int | None = None,
+) -> tuple[list, dict]:
     """Report failed/partial parsing distinctly from a successfully empty observation."""
     status = {"fetch": "not_fetched", "parse": "not_attempted", "completeness": "unknown",
               "coverage": "rolling_window" if src["format"] in {"rss", "atom"} else "full_snapshot",
@@ -441,6 +665,7 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
     raw = body_path.read_bytes()
     extra["body_sha256"] = hashlib.sha256(raw).hexdigest()
     data = None
+    abusech_checkpoint = None
     try:
         if src["format"] in {"rss", "atom"}:
             kind, items = feed_items(raw)
@@ -455,6 +680,26 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
             if received > len(items):
                 status["completeness"] = "partial"
                 status["reasons"].append("bounded_item_cap")
+        elif src["format"] == "csv" and _is_abusech_csv(src):
+            ceiling = ABUSECH_CSV_SAFETY_CEILING if abusech_ceiling is None else abusech_ceiling
+            ingested = ingest_abusech_csv(
+                raw, high_water=high_water, ceiling=ceiling, source_id=str(src.get("id") or "")
+            )
+            items = ingested.items
+            status["received_count"] = ingested.received
+            status["coverage"] = "incremental"
+            status["completeness"] = "partial" if ingested.truncated else "complete"
+            if ingested.truncated:
+                status["reasons"].append("bounded_item_cap")
+            if ingested.skipped_existing:
+                status["reasons"].append("incremental_high_water")
+            abusech_checkpoint = {
+                "high_water": ingested.high_water,
+                "previous_high_water": ingested.previous_high_water,
+                "safety_ceiling": ceiling,
+                "ceiling_hit": ingested.truncated,
+                "commit": True,
+            }
         elif src["format"] == "csv":
             received, items = csv_items(raw)
             status["received_count"] = received
@@ -517,6 +762,8 @@ def source_details(src: dict, meta: dict | None, body_path: Path) -> tuple[list,
         if meta.get("error"):
             status["completeness"] = "partial"
             status["reasons"].append(meta["error"])
+        if abusech_checkpoint is not None:
+            extra["checkpoint"] = abusech_checkpoint
         return items, extra
     except (ValueError, TypeError, UnicodeDecodeError) as exc:
         status["parse"] = "error"
@@ -546,8 +793,7 @@ def _utc_day() -> str:
     return time.strftime("%Y-%m-%d", time.gmtime())
 
 
-def build_summary(output_dir: Path, sources: list[dict], *, day: str | None = None) -> str:
-    document = build_index(output_dir, sources, day=day)
+def render_summary(document: dict) -> str:
     lines = [f"# Threat-intel fetch index — {document['day']} UTC", "",
              "Public evidence in source order; not ranking or a Midkernel class taxonomy.", ""]
     for src in document["sources"]:
@@ -570,12 +816,18 @@ def build_summary(output_dir: Path, sources: list[dict], *, day: str | None = No
 
 
 
+def build_summary(output_dir: Path, sources: list[dict], *, day: str | None = None) -> str:
+    return render_summary(build_index(output_dir, sources, day=day))
+
+
 def build_index(
     output_dir: Path,
     sources: list[dict[str, str]],
     *,
     day: str | None = None,
     generated_at: str | None = None,
+    state_dir: Path | None = None,
+    abusech_ceiling: int | None = None,
 ) -> dict:
     """Structured day's index. Not ranking, not a class taxonomy."""
     day = day or _utc_day()
@@ -585,7 +837,25 @@ def build_index(
         meta_path = output_dir / src["id"] / "meta.json"
         body_path = _body_path(output_dir, src["id"])
         meta = _read_meta(meta_path) if meta_path.exists() else None
-        items, details = source_details(src, meta, body_path)
+        abusech = _is_abusech_csv(src)
+        state = _read_abusech_state(state_dir, src["id"]) if abusech else {}
+        body_sha = None
+        if abusech and body_path.exists():
+            body_sha = hashlib.sha256(body_path.read_bytes()).hexdigest()
+        used_mark = _filter_mark(state, body_sha) if abusech else None
+        items, details = source_details(
+            src, meta, body_path, high_water=used_mark, abusech_ceiling=abusech_ceiling,
+        )
+        checkpoint = details.get("checkpoint")
+        if isinstance(checkpoint, dict) and checkpoint.pop("commit", False):
+            if state_dir is not None and isinstance(details.get("body_sha256"), str):
+                _commit_abusech_state(
+                    state_dir,
+                    src["id"],
+                    used_mark=used_mark,
+                    stored_mark=checkpoint.get("high_water") if isinstance(checkpoint.get("high_water"), str) else used_mark,
+                    body_sha=details["body_sha256"],
+                )
         status = meta.get("status") if meta else None
         fetched_at = None
         if meta and meta.get("fetched_at"):
@@ -625,28 +895,25 @@ def write_outputs(
     *,
     day: str | None = None,
     generated_at: str | None = None,
+    state_dir: Path | None = None,
+    abusech_ceiling: int | None = None,
 ) -> tuple[Path, Path]:
     day = day or _utc_day()
     generated_at = generated_at or _utc_now()
     output_dir.mkdir(parents=True, exist_ok=True)
+    document = build_index(
+        output_dir,
+        sources,
+        day=day,
+        generated_at=generated_at,
+        state_dir=state_dir,
+        abusech_ceiling=abusech_ceiling,
+    )
     summary_path = output_dir / "summary.md"
     index_path = output_dir / "index.json"
-    summary_path.write_text(
-        build_summary(output_dir, sources, day=day),
-        encoding="utf-8",
-    )
+    summary_path.write_text(render_summary(document), encoding="utf-8")
     index_path.write_text(
-        json.dumps(
-            build_index(
-                output_dir,
-                sources,
-                day=day,
-                generated_at=generated_at,
-            ),
-            indent=2,
-            ensure_ascii=False,
-        )
-        + "\n",
+        json.dumps(document, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     return summary_path, index_path
@@ -656,7 +923,8 @@ def main() -> int:
     root = Path(__file__).resolve().parent.parent
     output = Path(sys.argv[1]) if len(sys.argv) > 1 else root / "output"
     sources = load_sources(root / "sources.yaml")
-    summary, index = write_outputs(output, sources)
+    state = Path(os.environ.get("COLLECTION_STATE", root / "collection-state"))
+    summary, index = write_outputs(output, sources, state_dir=state)
     print(f"wrote {summary}")
     print(f"wrote {index}")
     return 0
