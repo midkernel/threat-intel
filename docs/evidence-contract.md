@@ -42,9 +42,12 @@ collection archive.
 abuse.ch CSV feeds (`abuse-ch-urlhaus-recent`, `abuse-ch-threatfox-urls`,
 `abuse-ch-sslbl-ja3`, `abuse-ch-sslbl-sslip`, and any other `abuse.ch` CSV)
 do not use that 500-row ledger cap. The indexer streams the CSV and emits
-every row whose `dateadded` / `first_seen` / `firstseen` instant is **strictly
-newer** than the source's high-water mark in `collection-state/<id>.json`.
-The first run (no mark) takes the whole fetched export. A safety ceiling of
+every row whose `dateadded` / `first_seen` / `firstseen` instant is **at or
+newer than** the source's high-water mark in `collection-state/<id>.json`.
+abuse.ch writes same-second batches, so a later export can still contain new
+ids at the mark's second; those rows are kept. Rows strictly older than the
+mark are skipped. Re-sent mark-second rows are upserted by the app. The first
+run (no mark) takes the whole fetched export. A safety ceiling of
 **`ABUSECH_CSV_SAFETY_CEILING` (50,000)** bounds memory: when more new rows
 than that are present, the oldest new rows are indexed, a warning is logged,
 completeness is `partial` with `bounded_item_cap`, and the mark advances only
@@ -59,7 +62,12 @@ fetch.
 (`src/app/api/cron/threat-intel-ingest/route.ts`, `maxDuration` 800s) has no
 item-count cap. `persistEvidence` writes batches of 400 rows / 1 MiB inside
 one transaction limited to 600s, and the index schema check does not require
-copying every citation before those batches. A 14,449-row URLhaus delta fits.
+copying every citation before those batches. A 14,449-row URLhaus delta fits. A live bootstrap on 2026-10-19
+indexed 33,585 URLhaus rows, 917 ThreatFox URL rows, and 97 SSLBL JA3 rows
+into a 35.6 MB pretty `index.json` for those sources. Those items are about
+0.9 KB each, so the ledger's 400-row cap binds before the 1 MiB cap (about
+87 batches). That is inside the 600s transaction unless a batch is unusually
+slow.
 Steady-state runs only put the new rows in that collection's `index.json`;
 the app already replays each `collection-*` release, which is what keeps
 intraday deltas. A single safety-ceiling burst (up to 50k rows on one source,

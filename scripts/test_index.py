@@ -803,6 +803,7 @@ class AbusechCsvIncrementalTests(unittest.TestCase):
             ("1", "2026-10-01 00:00:00", "http://evil.example/1"),
             ("3", "2026-10-03 00:00:00", "http://evil.example/3"),
             ("9", "2026-09-01 00:00:00", "http://evil.example/old"),
+            ("3b", "2026-10-03 00:00:00", "http://evil.example/3b"),
             ("4", "2026-10-04 08:30:00", "http://evil.example/4"),
         ])
         threatfox = (
@@ -844,10 +845,13 @@ class AbusechCsvIncrementalTests(unittest.TestCase):
                 generated_at="2026-10-05T12:00:00Z", state_dir=state,
             )
             row = second_index["sources"][0]
-            self.assertEqual([item["id"] for item in row["items"]], ["4"])
-            self.assertEqual(row["items"][0]["published_at"], "2026-10-04 08:30:00")
-            self.assertEqual(row["status"]["received_count"], 4)
-            self.assertEqual(row["status"]["parsed_count"], 1)
+            # "3" is the previous mark's second and is re-sent. "3b" is a new id
+            # at that same second and must be indexed; only strictly older rows drop.
+            self.assertEqual([item["id"] for item in row["items"]], ["3", "3b", "4"])
+            self.assertEqual(row["items"][2]["published_at"], "2026-10-04 08:30:00")
+            self.assertEqual(row["items"][1]["published_at"], "2026-10-03 00:00:00")
+            self.assertEqual(row["status"]["received_count"], 5)
+            self.assertEqual(row["status"]["parsed_count"], 3)
             self.assertEqual(row["status"]["completeness"], "complete")
             self.assertIn("incremental_high_water", row["status"]["reasons"])
             self.assertNotIn("bounded_item_cap", row["status"]["reasons"])
@@ -891,7 +895,8 @@ class AbusechCsvIncrementalTests(unittest.TestCase):
                 out, [_abusech_source()], day="2026-10-06",
                 generated_at="2026-10-06T04:00:00Z", state_dir=state, abusech_ceiling=3,
             )
-            self.assertEqual([item["id"] for item in second["sources"][0]["items"]], ["4", "5"])
+            # Row 3 shares the previous mark's second, so it is indexed again.
+            self.assertEqual([item["id"] for item in second["sources"][0]["items"]], ["3", "4", "5"])
             self.assertEqual(second["sources"][0]["checkpoint"]["high_water"], "2026-10-05T00:00:00Z")
             self.assertEqual(second["sources"][0]["status"]["completeness"], "complete")
 

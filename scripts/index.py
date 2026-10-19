@@ -482,7 +482,7 @@ def _is_abusech_csv(src: dict) -> bool:
 
 
 class AbusechCsvIngest:
-    """Rows newer than the previous high-water mark, bounded by the safety ceiling."""
+    """Rows at or newer than the previous high-water mark, bounded by the safety ceiling."""
 
     def __init__(self) -> None:
         self.received = 0
@@ -500,11 +500,15 @@ def ingest_abusech_csv(
     ceiling: int,
     source_id: str,
 ) -> AbusechCsvIngest:
-    """Stream an abuse.ch CSV and keep every row newer than ``high_water``.
+    """Stream an abuse.ch CSV and keep every row at or newer than ``high_water``.
 
-    When more than ``ceiling`` new rows are present, keep the oldest ones so
-    the mark can advance contiguously, and log a warning. Rows that share the
-    cutoff timestamp stay eligible on the next run instead of being skipped.
+    abuse.ch writes same-second batches. The mark is that second, so a later
+    export can still contain new ids at exactly the mark. Those rows are kept;
+    rows strictly older than the mark are not. Re-sending the mark second is
+    safe because the app upserts on source id. When more than ``ceiling``
+    eligible rows are present, keep the oldest ones so the mark can advance
+    contiguously, and log a warning. The ceiling holds the mark strictly below
+    the newest evicted timestamp, so an unfinished second stays eligible.
     """
     result = AbusechCsvIngest()
     previous = _row_instant(high_water) if high_water else None
@@ -523,7 +527,7 @@ def ingest_abusech_csv(
         if built is None:
             continue
         item, instant = built
-        if previous is not None and (instant is None or instant <= previous):
+        if previous is not None and (instant is None or instant < previous):
             result.skipped_existing += 1
             continue
         eligible += 1
@@ -558,7 +562,7 @@ def ingest_abusech_csv(
         result.high_water = result.previous_high_water
     if result.truncated:
         logger.warning(
-            "abuse.ch CSV safety ceiling hit for %s: indexed %s of %s rows newer than %s (ceiling %s)",
+            "abuse.ch CSV safety ceiling hit for %s: indexed %s of %s rows at or newer than %s (ceiling %s)",
             source_id,
             len(result.items),
             eligible,
