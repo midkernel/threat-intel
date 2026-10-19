@@ -26,18 +26,75 @@ Source `body_sha256` identifies the exact parser input. Source `raw` contains JS
 | `parse` | `ok`, `error`, `not_attempted` |
 | `coverage` | `full_snapshot`, `rolling_window`, `incremental` |
 | `completeness` | `complete`, `partial`, `unknown` |
-| `reasons` | Such as `not_fetched`, `http_error`, `parse_error`, `rejected_records`, `bounded_history`, `bounded_item_cap`, `selected_ecosystems`, `collection_budget_pending`, `collection_error` |
+| `reasons` | Such as `not_fetched`, `http_error`, `parse_error`, `rejected_records`, `bounded_history`, `bounded_item_cap`, `incremental_high_water`, `selected_ecosystems`, `collection_budget_pending`, `collection_error` |
 | `received_count`, `parsed_count`, `rejected_count` | Input rows, indexed items, rejected rows; EPSS receives full CSV rows but emits zero inline items |
 
-Plaintext (`txt`) and tabular (`csv`) sources are indexed with a hard
-**`PLAINTEXT_ITEM_CAP` of 500** items per source per day. Homogeneous
-IP-reputation JSON arrays (for example SANS ISC `intelfeed`) share the same
-cap. `received_count` is the full non-comment line/row count in the archived
-body; `parsed_count` / `item_count` are the capped ledger-facing items (title +
-url or stable native id + `published_at` when present). When the body exceeds
-the cap, completeness is `partial` with reason `bounded_item_cap`. Truncation
-is not counted as `rejected_records` — the complete body remains in the
+Plaintext (`txt`) sources, non-abuse.ch tabular (`csv`) sources, and
+homogeneous IP-reputation JSON arrays (for example SANS ISC `intelfeed`) are
+indexed with a hard **`PLAINTEXT_ITEM_CAP` of 500** items per source per day.
+`received_count` is the full non-comment line/row count in the archived body;
+`parsed_count` / `item_count` are the ledger-facing items (title + url or
+stable native id + `published_at` when present). When the body exceeds the
+cap, completeness is `partial` with reason `bounded_item_cap`. Truncation is
+not counted as `rejected_records` — the complete body remains in the
 collection archive.
+
+abuse.ch CSV feeds (`abuse-ch-urlhaus-recent`, `abuse-ch-threatfox-urls`,
+`abuse-ch-sslbl-ja3`, `abuse-ch-sslbl-sslip`, and any other `abuse.ch` CSV)
+do not use that 500-row ledger cap. The indexer streams the CSV and emits
+every row whose `dateadded` / `first_seen` / `firstseen` instant is **at or
+newer than** the source's high-water mark in `collection-state/<id>.json`.
+abuse.ch writes same-second batches, so a later export can still contain new
+ids at the mark's second; those rows are kept. Rows strictly older than the
+mark are skipped. Re-sent mark-second rows are upserted by the app. The first
+run (no mark) takes the whole fetched export. A safety ceiling of
+**`ABUSECH_CSV_SAFETY_CEILING` (50,000)** bounds memory: when more new rows
+than that are present, the oldest new rows are indexed, a warning is logged,
+completeness is `partial` with `bounded_item_cap`, and the mark advances only
+through timestamps that were fully consumed. Rows that share the cutoff
+timestamp stay eligible next run. Already-seen rows are not rejections;
+`incremental_high_water` records that filter. Coverage for these sources is
+`incremental`. Re-indexing the same body repeats that run's delta; a new body
+uses the saved mark. The raw CSV in the collection archive is still the full
+fetch.
+
+`midkernel/app`'s threat-intel ingest route
+(`src/app/api/cron/threat-intel-ingest/route.ts`, `maxDuration` 800s) has no
+item-count cap. `persistEvidence` writes batches of 400 rows / 1 MiB inside
+one transaction limited to 600s, and the index schema check does not require
+copying every citation before those batches. A 14,449-row URLhaus delta fits. A live bootstrap on 2026-10-19
+indexed 33,585 URLhaus rows, 917 ThreatFox URL rows, and 97 SSLBL JA3 rows
+into a 35.6 MB pretty `index.json` for those sources. Those items are about
+0.9 KB each, so the ledger's 400-row cap binds before the 1 MiB cap (about
+87 batches). That is inside the 600s transaction unless a batch is unusually
+slow.
+Steady-state runs only put the new rows in that collection's `index.json`;
+the app already replays each `collection-*` release, which is what keeps
+intraday deltas. A single safety-ceiling burst (up to 50k rows on one source,
+plus the rest of the catalog) is still one transaction — if it exceeds 600s
+the app fails that release closed and can retry it, rather than silently
+dropping rows.
+
+## VulDB CVE RSS is the provider's 500-item window
+
+`vuldb-cve-rss` (`https://vuldb.com/rss/cve`) is RSS, so `PLAINTEXT_ITEM_CAP`
+does not apply and `feed_items` indexes every `<item>`. A live fetch on
+**2026-10-19** returned **exactly 500** items (643,599 bytes), newest
+`Mon, 19 Oct 2026 14:17:01 +0200` through oldest `Sun, 18 Oct 2026 18:44:22 +0200`.
+Repeating the fetch with `limit`, `count`, `page`, `offset`, and `since`
+query parameters returned the same body. The channel has a self link and no
+`rel=next` link. The 500-item count is VulDB's public RSS cap, not ours.
+
+The authenticated JSON API (`https://vuldb.com/?api`) can page with `offset`
+and resume with `entry_timestamp_create_start` (Unix timestamp cursor; the
+next request uses the max `entry_timestamp_create` plus one). Page size is
+account-limited (`response_querylimitmax`, 500 for most commercial request
+types) and each detailed entry spends an API credit. This catalog source is
+the unauthenticated RSS, and the collector has no VulDB API key, so the RSS
+is not paginated. At the observed rate those 500 items span about 20 hours,
+and collection runs every four hours, so successive polls overlap. A burst of
+more than 500 new CVEs inside one poll interval would drop the oldest part of
+that burst; closing the gap requires the keyed API.
 
 `item_count` always equals `len(items)`, never the upstream population size. A syntactically empty feed is a successful empty observation of that feed window, not proof of zero historical activity. Rolling feeds retain unknown historical completeness. Partial catalogs must not overwrite historical observations. Collector-generated `body.json` may contain successfully collected records despite later request failures; its diagnostics and checkpoint error explicitly retain that partial state.
 

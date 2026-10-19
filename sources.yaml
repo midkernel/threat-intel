@@ -1009,7 +1009,7 @@ sources:
     url: https://vuldb.com/rss/cve
     format: rss
     surface: web2
-    why: Third-party CVE commentary RSS; commercial product behind site — RSS free.
+    why: Third-party CVE commentary RSS; commercial product behind site — RSS free. Public feed is VulDB's newest 500 items with no pagination (see evidence contract).
 
   - id: dark-reading
     name: Dark Reading
