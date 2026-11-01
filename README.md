@@ -197,3 +197,10 @@ Pull requests run a cheap check: `sources.yaml` parses, required fields are pres
 ## Voice
 
 Public voice is **Midkernel**, never MidKernel.
+
+## Contributor checks
+
+Run `sh scripts/setup-dev.sh` to verify the stdlib Python prerequisites and enroll
+this worktree's pre-push validators. See [setup, exact coverage and limitations](docs/prepush.md)
+and [CI performance evidence](docs/ci-performance.md). Setup does not collect or
+generate data, and ordinary CI does not install Git hooks.
