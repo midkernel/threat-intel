@@ -1,7 +1,6 @@
 # Midkernel Threat Intel
 
-Public catalog of threat-intel **RSS/Atom** feeds, official **JSON** catalogs,
-and bounded **txt/csv** IOC downloads that have no RSS.
+Public catalog of threat-intel feeds and official catalogs, collected every four hours and archived as GitHub Releases. Part of [Midkernel Security](https://www.midkernel.com/security): the class-mapped board built on these sources is at [midkernel.com/security/threat-intel](https://www.midkernel.com/security/threat-intel), and agents can read it over the free, no-login [Threat Intel MCP](https://www.midkernel.com/security/docs/mcp).
 
 We **package and cite**. We do not originate. We do not rank here.
 
