@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.midkernel/threat-intel",
   "title": "Midkernel Threat Intel",
-  "description": "Free, read-only public-source threat intel over MCP. No account or API key.",
-  "version": "0.5.0",
+  "description": "Free CVE lookup and CISA KEV known exploited vulnerabilities over MCP. Read-only, no login or key.",
+  "version": "0.5.1",
   "websiteUrl": "https://www.midkernel.com/security/docs/mcp",
   "remotes": [
     {
